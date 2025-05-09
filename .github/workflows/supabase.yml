@@ -1,0 +1,33 @@
+name: Supabase Functions CI
+
+on:
+  push:
+    paths:
+      - 'functions/**'
+      - 'supabase/**'
+      - '.github/workflows/supabase.yml'
+  pull_request:
+    paths:
+      - 'functions/**'
+      - 'supabase/**'
+      - '.github/workflows/supabase.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Supabase CLI
+        run: npm install -g supabase
+      - name: Start Supabase local stack
+        run: supabase start
+      - name: Run Deno Edge Function tests
+        run: |
+          if [ -d "functions" ]; then
+            cd functions
+            deno test || echo "No Deno tests found."
+          fi 

@@ -1,0 +1,29 @@
+name: iOS CI
+
+on:
+  push:
+    paths:
+      - 'tong-ios/**'
+      - '.github/workflows/ios.yml'
+  pull_request:
+    paths:
+      - 'tong-ios/**'
+      - '.github/workflows/ios.yml'
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.2.app
+      - name: Install dependencies
+        run: |
+          cd tong-ios
+          if [ -f "Podfile" ]; then
+            pod install
+          fi
+      - name: Run iOS Unit Tests
+        run: |
+          cd ..
+          xcodebuild test -project tong-ios.xcodeproj -scheme tong_ios -destination 'platform=iOS Simulator,name=iPhone 15' 
