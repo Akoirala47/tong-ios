@@ -229,7 +229,7 @@ struct ProfileView: View {
     }
     
     private func getUserEmail() -> String {
-        return SupabaseManager.shared.client.auth.currentUser?.email ?? "User"
+        return SupabaseService.shared.client.auth.currentUser?.email ?? "User"
     }
     
     private func formatDate() -> String {

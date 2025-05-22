@@ -174,8 +174,7 @@ class LanguageDashboardViewModel: ObservableObject {
                             if let matchingSupabaseLevel = self.languageLevels.first(where: { $0.code == levelEnum.rawValue }) {
                                 self.currentLevel = matchingSupabaseLevel
                                 self.completedLevels = self.languageLevels.filter { sl -> Bool in
-                                    guard let currentOrdinal = matchingSupabaseLevel.ordinal, let slOrdinal = sl.ordinal else { return false }
-                                    return slOrdinal < currentOrdinal
+                                    return sl.ordinal < matchingSupabaseLevel.ordinal
                                 }
                             } else {
                                 print("[WARNING] Could not find matching SupabaseLanguageLevel for code: \(levelEnum.rawValue)")
@@ -233,8 +232,7 @@ class LanguageDashboardViewModel: ObservableObject {
             await MainActor.run {
                 self.currentLevel = supabaseLevelToSave
                 self.completedLevels = self.languageLevels.filter { sl -> Bool in
-                    guard let currentOrdinal = supabaseLevelToSave.ordinal, let slOrdinal = sl.ordinal else { return false }
-                    return slOrdinal < currentOrdinal
+                    return sl.ordinal < supabaseLevelToSave.ordinal
                 }
                 calculateGlobalProgress()
             }
@@ -396,9 +394,8 @@ class LanguageDashboardViewModel: ObservableObject {
                 .eq("lang_code", value: languageCode)
                 .execute()
 
-            if let data = userLevelsResponse.data,
-               let userLevelDataString = String(data: data, encoding: .utf8),
-               let userLevelJsonData = userLevelDataString.data(using: .utf8),
+            if let dataString = String(data: userLevelsResponse.data, encoding: .utf8),
+               let userLevelJsonData = dataString.data(using: .utf8),
                let userLevelsArray = try? JSONSerialization.jsonObject(with: userLevelJsonData) as? [[String: Any]] {
 
                 var loadedCompletedLevels: [SupabaseLanguageLevel] = []
@@ -451,17 +448,18 @@ class LanguageDashboardViewModel: ObservableObject {
 extension SupabaseLanguageLevel {
     // Add a property to get a sample word for flashcard preview
     var flashcardPreviewWord: String {
-        switch self {
-        case .noviceLow: return "Hola"
-        case .noviceMid: return "Buenos días"
-        case .noviceHigh: return "¿Cómo estás?"
-        case .intermediateLow: return "Necesito ayuda"
-        case .intermediateMid: return "Me gustaría"
-        case .intermediateHigh: return "Estoy aprendiendo"
-        case .advancedLow: return "Considerando"
-        case .advancedMid: return "Sin embargo"
-        case .advancedHigh: return "A pesar de"
-        case .superior: return "En mi opinión"
+        switch code {
+        case "NL": return "Hola"
+        case "NM": return "Buenos días"
+        case "NH": return "¿Cómo estás?"
+        case "IL": return "Necesito ayuda"
+        case "IM": return "Me gustaría"
+        case "IH": return "Estoy aprendiendo"
+        case "AL": return "Considerando"
+        case "AM": return "Sin embargo"
+        case "AH": return "A pesar de"
+        case "S": return "En mi opinión"
+        default: return "Palabra"
         }
     }
 }
