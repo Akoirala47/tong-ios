@@ -1,0 +1,362 @@
+{
+  "level_code": "NH",
+  "topic_slug": "talk-about-upcoming-plans",
+  "topic_title": "talk about upcoming plans.",
+  "can_do_statement": "I can talk about upcoming plans.",
+  "lessons": [
+    {
+      "slug": "introducing-plans",
+      "title": "Introducing Plans",
+      "objective": "Learners will be able to introduce upcoming plans using basic phrases.",
+      "cards": [
+        {
+          "front": "Voy a...",
+          "back": "I am going to...",
+          "ipa": "/ˈboi̯ a/",
+          "example_sentence": "Voy a ir al cine mañana. (I am going to go to the cinema tomorrow.)"
+        },
+        {
+          "front": "Pienso...",
+          "back": "I plan to...",
+          "ipa": "/ˈpjen.so/",
+          "example_sentence": "Pienso ir de compras el sábado. (I plan to go shopping on Saturday.)"
+        },
+        {
+          "front": "Quiero...",
+          "back": "I want to...",
+          "ipa": "/ˈkje.ɾo/",
+          "example_sentence": "Quiero visitar a mis abuelos pronto. (I want to visit my grandparents soon.)"
+        },
+        {
+          "front": "El próximo...",
+          "back": "Next...",
+          "ipa": "/el ˈpɾok.si.mo/",
+          "example_sentence": "El próximo fin de semana voy a la playa. (Next weekend I am going to the beach.)"
+        },
+        {
+          "front": "Este...",
+          "back": "This...",
+          "ipa": "/ˈes.te/",
+          "example_sentence": "Este martes voy a estudiar. (This Tuesday I am going to study.)"
+        },
+        {
+          "front": "Mañana",
+          "back": "Tomorrow",
+          "ipa": "/maˈɲa.na/",
+          "example_sentence": "Mañana voy a trabajar. (Tomorrow I am going to work.)"
+        },
+        {
+          "front": "Luego",
+          "back": "Later",
+          "ipa": "/ˈlwe.ɣo/",
+          "example_sentence": "Luego voy a comer. (Later I am going to eat.)"
+        },
+        {
+          "front": "Después",
+          "back": "Afterwards",
+          "ipa": "/desˈpweis/",
+          "example_sentence": "Después voy a leer. (Afterwards I am going to read.)"
+        }
+      ]
+    },
+    {
+      "slug": "plans-with-friends",
+      "title": "Plans with Friends",
+      "objective": "Learners will be able to talk about plans they have with friends.",
+      "cards": [
+        {
+          "front": "Con mis amigos",
+          "back": "With my friends",
+          "ipa": "/kon mis aˈmi.ɣos/",
+          "example_sentence": "Voy a salir con mis amigos. (I am going out with my friends.)"
+        },
+        {
+          "front": "Vamos a...",
+          "back": "We are going to...",
+          "ipa": "/ˈba.mos a/",
+          "example_sentence": "Vamos a ver una película. (We are going to see a movie.)"
+        },
+        {
+          "front": "¿Quieres ir...?",
+          "back": "Do you want to go...?",
+          "ipa": "/ˈkje.ɾes iɾ/",
+          "example_sentence": "¿Quieres ir al parque? (Do you want to go to the park?)"
+        },
+        {
+          "front": "Nosotros vamos a...",
+          "back": "We are going to...",
+          "ipa": "/noˈso.tɾos ˈba.mos a/",
+          "example_sentence": "Nosotros vamos a jugar fútbol. (We are going to play soccer.)"
+        },
+        {
+          "front": "¿Qué vas a hacer?",
+          "back": "What are you going to do?",
+          "ipa": "/ke ˈβas a aˈθeɾ/",
+          "example_sentence": "¿Qué vas a hacer este fin de semana? (What are you going to do this weekend?)"
+        },
+        {
+          "front": "Tal vez",
+          "back": "Maybe",
+          "ipa": "/tal ˈβes/",
+          "example_sentence": "Tal vez vaya a la fiesta. (Maybe I'll go to the party.)"
+        },
+        {
+          "front": "Una fiesta",
+          "back": "A party",
+          "ipa": "/ˈu.na ˈfjes.ta/",
+          "example_sentence": "Hay una fiesta el sábado. (There is a party on Saturday.)"
+        },
+        {
+          "front": "Un rato",
+          "back": "A while",
+          "ipa": "/un ˈra.to/",
+          "example_sentence": "Voy a estudiar un rato. (I'm going to study for a while.)"
+        },
+        {
+          "front": "Cerca",
+          "back": "Near",
+          "ipa": "/ˈθeɾ.ka/",
+          "example_sentence": "Vamos a comer cerca de mi casa. (We are going to eat near my house.)"
+        }
+      ]
+    },
+    {
+      "slug": "family-plans",
+      "title": "Family Plans",
+      "objective": "Learners will be able to discuss upcoming plans with their family.",
+      "cards": [
+        {
+          "front": "Con mi familia",
+          "back": "With my family",
+          "ipa": "/kon mi faˈmi.lja/",
+          "example_sentence": "Voy a cenar con mi familia. (I am going to have dinner with my family.)"
+        },
+        {
+          "front": "Mis padres",
+          "back": "My parents",
+          "ipa": "/mis ˈpa.ðɾes/",
+          "example_sentence": "Voy a visitar a mis padres. (I am going to visit my parents.)"
+        },
+        {
+          "front": "Mis hermanos",
+          "back": "My siblings",
+          "ipa": "/mis eɾˈma.nos/",
+          "example_sentence": "Voy a jugar con mis hermanos. (I am going to play with my siblings.)"
+        },
+        {
+          "front": "Vamos a comer...",
+          "back": "We are going to eat...",
+          "ipa": "/ˈba.mos a koˈmeɾ/",
+          "example_sentence": "Vamos a comer pizza. (We are going to eat pizza.)"
+        },
+        {
+          "front": "Vamos a visitar...",
+          "back": "We are going to visit...",
+          "ipa": "/ˈba.mos a bi.siˈtaɾ/",
+          "example_sentence": "Vamos a visitar un museo. (We are going to visit a museum.)"
+        },
+        {
+          "front": "Una película",
+          "back": "A movie",
+          "ipa": "/ˈu.na peˈli.ku.la/",
+          "example_sentence": "Vamos a ver una película en casa. (We are going to watch a movie at home.)"
+        },
+        {
+          "front": "Un museo",
+          "back": "A museum",
+          "ipa": "/un muˈse.o/",
+          "example_sentence": "Vamos a ir a un museo de arte. (We are going to go to an art museum.)"
+        },
+        {
+          "front": "El domingo",
+          "back": "On Sunday",
+          "ipa": "/el doˈmin.go/",
+          "example_sentence": "El domingo vamos al parque. (On Sunday we are going to the park.)"
+        }
+      ]
+    },
+    {
+      "slug": "school-plans",
+      "title": "School Plans",
+      "objective": "Learners will be able to describe upcoming school-related plans.",
+      "cards": [
+        {
+          "front": "Voy a estudiar",
+          "back": "I am going to study",
+          "ipa": "/ˈboi̯ a es.tuˈðjaɾ/",
+          "example_sentence": "Voy a estudiar para el examen. (I am going to study for the exam.)"
+        },
+        {
+          "front": "La clase de...",
+          "back": "The class of...",
+          "ipa": "/la ˈkla.se ðe/",
+          "example_sentence": "Tengo la clase de español mañana. (I have Spanish class tomorrow.)"
+        },
+        {
+          "front": "El examen",
+          "back": "The exam",
+          "ipa": "/el ekˈsa.men/",
+          "example_sentence": "Tengo un examen el lunes. (I have an exam on Monday.)"
+        },
+        {
+          "front": "Después de la escuela",
+          "back": "After school",
+          "ipa": "/desˈpwes de la esˈkwe.la/",
+          "example_sentence": "Voy a jugar baloncesto después de la escuela. (I am going to play basketball after school.)"
+        },
+        {
+          "front": "Un proyecto",
+          "back": "A project",
+          "ipa": "/un pɾoˈʝek.to/",
+          "example_sentence": "Tengo que hacer un proyecto. (I have to do a project.)"
+        },
+        {
+          "front": "La tarea",
+          "back": "Homework",
+          "ipa": "/la taˈɾe.a/",
+          "example_sentence": "Tengo mucha tarea. (I have a lot of homework.)"
+        },
+        {
+          "front": "El lunes",
+          "back": "On Monday",
+          "ipa": "/el ˈlun.des/",
+          "example_sentence": "Tengo una clase el lunes. (I have a class on Monday.)"
+        },
+        {
+          "front": "Escribir",
+          "back": "To write",
+          "ipa": "/es.kɾiˈβiɾ/",
+          "example_sentence": "Voy a escribir un ensayo. (I am going to write an essay.)"
+        },
+        {
+          "front": "Leer",
+          "back": "To read",
+          "ipa": "/leˈeɾ/",
+          "example_sentence": "Voy a leer un libro. (I am going to read a book.)"
+        }
+      ]
+    },
+    {
+      "slug": "weekend-plans",
+      "title": "Weekend Plans",
+      "objective": "Learners will be able to discuss weekend plans and activities.",
+      "cards": [
+        {
+          "front": "El fin de semana",
+          "back": "The weekend",
+          "ipa": "/el ˈfin de seˈma.na/",
+          "example_sentence": "Voy a descansar el fin de semana. (I am going to rest on the weekend.)"
+        },
+        {
+          "front": "Voy a ir de compras",
+          "back": "I am going to go shopping",
+          "ipa": "/ˈboi̯ a iɾ de ˈkom.pɾas/",
+          "example_sentence": "Voy a ir de compras el sábado. (I am going to go shopping on Saturday.)"
+        },
+        {
+          "front": "La playa",
+          "back": "The beach",
+          "ipa": "/la ˈpla.ʝa/",
+          "example_sentence": "Voy a ir a la playa. (I am going to go to the beach.)"
+        },
+        {
+          "front": "Un concierto",
+          "back": "A concert",
+          "ipa": "/un konˈθjeɾ.to/",
+          "example_sentence": "Voy a ir a un concierto. (I am going to go to a concert.)"
+        },
+        {
+          "front": "Un partido",
+          "back": "A game",
+          "ipa": "/un paɾˈti.ðo/",
+          "example_sentence": "Voy a ver un partido de fútbol. (I am going to watch a soccer game.)"
+        },
+        {
+          "front": "El sábado",
+          "back": "On Saturday",
+          "ipa": "/el ˈsa.βa.do/",
+          "example_sentence": "El sábado voy al cine. (On Saturday I am going to the cinema.)"
+        },
+        {
+          "front": "Descansar",
+          "back": "To rest",
+          "ipa": "/des.kanˈsaɾ/",
+          "example_sentence": "Quiero descansar el domingo. (I want to rest on Sunday.)"
+        },
+        {
+          "front": "Salir",
+          "back": "To go out",
+          "ipa": "/saˈliɾ/",
+          "example_sentence": "Voy a salir con amigos. (I am going to go out with friends.)"
+        },
+        {
+          "front": "Cocinar",
+          "back": "To cook",
+          "ipa": "/ko.θiˈnaɾ/",
+          "example_sentence": "Voy a cocinar el domingo. (I am going to cook on Sunday.)"
+        }
+      ]
+    },
+    {
+      "slug": "future-events",
+      "title": "Future Events",
+      "objective": "Learners will be able to talk about future events like birthdays or holidays.",
+      "cards": [
+        {
+          "front": "Mi cumpleaños",
+          "back": "My birthday",
+          "ipa": "/mi kum.pleˈa.ɲos/",
+          "example_sentence": "Voy a celebrar mi cumpleaños. (I am going to celebrate my birthday.)"
+        },
+        {
+          "front": "Las vacaciones",
+          "back": "The holidays",
+          "ipa": "/las ba.kaˈθjo.nes/",
+          "example_sentence": "Voy a viajar en las vacaciones. (I am going to travel during the holidays.)"
+        },
+        {
+          "front": "Navidad",
+          "back": "Christmas",
+          "ipa": "/na.βiˈðað/",
+          "example_sentence": "Voy a pasar Navidad con mi familia. (I am going to spend Christmas with my family.)"
+        },
+        {
+          "front": "El año nuevo",
+          "back": "New Year's",
+          "ipa": "/el ˈa.ɲo ˈnwe.βo/",
+          "example_sentence": "Voy a celebrar el año nuevo. (I am going to celebrate New Year's.)"
+        },
+        {
+          "front": "Un regalo",
+          "back": "A gift",
+          "ipa": "/un reˈɣa.lo/",
+          "example_sentence": "Quiero un regalo para mi cumpleaños. (I want a gift for my birthday.)"
+        },
+        {
+          "front": "Celebrar",
+          "back": "To celebrate",
+          "ipa": "/θe.leˈβɾaɾ/",
+          "example_sentence": "Voy a celebrar con mis amigos. (I am going to celebrate with my friends.)"
+        },
+        {
+          "front": "Viajar",
+          "back": "To travel",
+          "ipa": "/bjaˈxaɾ/",
+          "example_sentence": "Quiero viajar a España. (I want to travel to Spain.)"
+        },
+        {
+          "front": "En el futuro",
+          "back": "In the future",
+          "ipa": "/en el fuˈtu.ɾo/",
+          "example_sentence": "En el futuro quiero tener una casa. (In the future I want to have a house.)"
+        },
+        {
+          "front": "Un evento",
+          "back": "An event",
+          "ipa": "/un eˈβen.to/",
+          "example_sentence": "Hay un evento importante. (There is an important event.)"
+        }
+      ]
+    }
+  ]
+}

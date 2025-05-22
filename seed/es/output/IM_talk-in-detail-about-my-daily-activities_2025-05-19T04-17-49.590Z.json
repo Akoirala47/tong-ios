@@ -1,0 +1,414 @@
+{
+  "level_code": "IM",
+  "topic_slug": "talk-in-detail-about-my-daily-activities",
+  "topic_title": "talk in detail about my daily activities.",
+  "can_do_statement": "I can talk in detail about my daily activities.",
+  "lessons": [
+    {
+      "slug": "morning-routine",
+      "title": "Morning Routine",
+      "objective": "Describe your typical morning routine, including specific times and activities.",
+      "cards": [
+        {
+          "front": "Me despierto",
+          "back": "I wake up",
+          "ipa": "/me desˈpjeɾ.to/",
+          "example_sentence": "Me despierto a las siete de la mañana.",
+          "grammar_explanation": "Reflexive verb conjugation."
+        },
+        {
+          "front": "Me levanto",
+          "back": "I get up",
+          "ipa": "/me leˈβan.to/",
+          "example_sentence": "Después de despertarme, me levanto inmediatamente.",
+          "grammar_explanation": "Reflexive verb conjugation."
+        },
+        {
+          "front": "Me lavo la cara",
+          "back": "I wash my face",
+          "ipa": "/me ˈla.βo la ˈka.ɾa/",
+          "example_sentence": "Primero me lavo la cara y luego me cepillo los dientes.",
+          "grammar_explanation": "Reflexive verb conjugation."
+        },
+        {
+          "front": "Me cepillo los dientes",
+          "back": "I brush my teeth",
+          "ipa": "/me θe.ˈpi.ʎo los ˈdjen.tes/",
+          "example_sentence": "Siempre me cepillo los dientes después del desayuno.",
+          "grammar_explanation": "Reflexive verb conjugation."
+        },
+        {
+          "front": "Desayuno",
+          "back": "I have breakfast",
+          "ipa": "/de.saˈʝu.no/",
+          "example_sentence": "Desayuno café y pan tostado.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Me visto",
+          "back": "I get dressed",
+          "ipa": "/me ˈβis.to/",
+          "example_sentence": "Después del desayuno, me visto para ir a trabajar.",
+          "grammar_explanation": "Reflexive verb conjugation."
+        },
+        {
+          "front": "Salgo de casa",
+          "back": "I leave home",
+          "ipa": "/ˈsal.ɣo de ˈka.sa/",
+          "example_sentence": "Salgo de casa a las ocho en punto.",
+          "grammar_explanation": "Irregular verb 'salir'."
+        },
+        {
+          "front": "Camino al trabajo",
+          "back": "I walk to work",
+          "ipa": "/ka.ˈmi.no al tɾa.ˈβa.xo/",
+          "example_sentence": "Normalmente camino al trabajo porque está cerca.",
+          "grammar_explanation": "Regular -ar verb."
+        }
+      ]
+    },
+    {
+      "slug": "work-day",
+      "title": "Work Day",
+      "objective": "Describe your activities during a typical workday.",
+      "cards": [
+        {
+          "front": "Empiezo a trabajar",
+          "back": "I start working",
+          "ipa": "/emˈpje.θo a tɾa.βa.ˈxaɾ/",
+          "example_sentence": "Empiezo a trabajar a las nueve de la mañana.",
+          "grammar_explanation": "Irregular 'empezar' (e > ie)."
+        },
+        {
+          "front": "Trabajo en",
+          "back": "I work in/at",
+          "ipa": "/tɾa.ˈβa.xo en/",
+          "example_sentence": "Trabajo en una oficina grande.",
+          "grammar_explanation": "Preposition 'en'."
+        },
+        {
+          "front": "Tengo una reunión",
+          "back": "I have a meeting",
+          "ipa": "/ˈten.ɡo ˈu.na re.ˈu.njon/",
+          "example_sentence": "Tengo una reunión con mi jefe a las diez.",
+          "grammar_explanation": "Irregular verb 'tener'."
+        },
+        {
+          "front": "Contesto correos electrónicos",
+          "back": "I answer emails",
+          "ipa": "/konˈtes.to ko.ˈre.os elekˈtɾo.ni.kos/",
+          "example_sentence": "Contesto correos electrónicos durante la mañana.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Almuerzo",
+          "back": "I have lunch",
+          "ipa": "/alˈmweɾ.θo/",
+          "example_sentence": "Almuerzo en la cafetería con mis compañeros.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Termino de trabajar",
+          "back": "I finish working",
+          "ipa": "/teɾˈmi.no de tɾa.βa.ˈxaɾ/",
+          "example_sentence": "Termino de trabajar a las cinco de la tarde.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Estoy ocupado/a",
+          "back": "I'm busy",
+          "ipa": "/esˈtoj o.ku.ˈpa.ðo/a/",
+          "example_sentence": "Hoy estoy muy ocupada con mucho trabajo.",
+          "grammar_explanation": "Use 'ocupado' for male, 'ocupada' for female."
+        },
+        {
+          "front": "Organizo mi tiempo",
+          "back": "I organize my time",
+          "ipa": "/oɾ.ɣaˈni.θo mi ˈtjem.po/",
+          "example_sentence": "Organizo mi tiempo para ser más productivo.",
+          "grammar_explanation": "Regular -ar verb."
+        }
+      ]
+    },
+    {
+      "slug": "evening-activities",
+      "title": "Evening Activities",
+      "objective": "Describe your typical evening activities after work.",
+      "cards": [
+        {
+          "front": "Regreso a casa",
+          "back": "I return home",
+          "ipa": "/re.ˈɣɾe.so a ˈka.sa/",
+          "example_sentence": "Regreso a casa alrededor de las seis.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Preparo la cena",
+          "back": "I prepare dinner",
+          "ipa": "/pɾeˈpa.ɾo la ˈθe.na/",
+          "example_sentence": "Preparo la cena para mi familia.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Ceno",
+          "back": "I have dinner",
+          "ipa": "/ˈθe.no/",
+          "example_sentence": "Ceno con mi familia a las siete.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Miro la televisión",
+          "back": "I watch television",
+          "ipa": "/ˈmi.ɾo la te.le.βiˈsjon/",
+          "example_sentence": "Miro la televisión después de cenar.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Leo un libro",
+          "back": "I read a book",
+          "ipa": "/ˈle.o un ˈli.βɾo/",
+          "example_sentence": "A veces leo un libro antes de dormir.",
+          "grammar_explanation": "Irregular verb 'leer'."
+        },
+        {
+          "front": "Paseo al perro",
+          "back": "I walk the dog",
+          "ipa": "/pa.se.o al ˈpe.ro/",
+          "example_sentence": "Paseo al perro por el parque.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Me relajo",
+          "back": "I relax",
+          "ipa": "/me reˈla.xo/",
+          "example_sentence": "Me relajo escuchando música.",
+          "grammar_explanation": "Reflexive verb conjugation."
+        },
+        {
+          "front": "Me acuesto",
+          "back": "I go to bed",
+          "ipa": "/me a.ˈkwe.sto/",
+          "example_sentence": "Me acuesto a las diez de la noche.",
+          "grammar_explanation": "Reflexive verb conjugation (o > ue)."
+        },
+        {
+          "front": "Duermo",
+          "back": "I sleep",
+          "ipa": "/ˈdweɾ.mo/",
+          "example_sentence": "Duermo ocho horas cada noche.",
+          "grammar_explanation": "Irregular verb 'dormir' (o > ue)."
+        }
+      ]
+    },
+    {
+      "slug": "weekend-plans",
+      "title": "Weekend Plans",
+      "objective": "Discuss your plans for the weekend, including activities and who you'll be with.",
+      "cards": [
+        {
+          "front": "El fin de semana",
+          "back": "The weekend",
+          "ipa": "/el fin de se.ˈma.na/",
+          "example_sentence": "El fin de semana voy a la playa.",
+          "grammar_explanation": "Common phrase."
+        },
+        {
+          "front": "Voy a visitar",
+          "back": "I'm going to visit",
+          "ipa": "/ˈboj a βi.si.ˈtaɾ/",
+          "example_sentence": "Voy a visitar a mis abuelos.",
+          "grammar_explanation": "Ir + a + infinitive (future)."
+        },
+        {
+          "front": "Quedo con amigos",
+          "back": "I meet up with friends",
+          "ipa": "/ˈke.ðo kon a.ˈmi.ɣos/",
+          "example_sentence": "Quedo con amigos para tomar algo.",
+          "grammar_explanation": "Irregular verb 'quedar'."
+        },
+        {
+          "front": "Hago deporte",
+          "back": "I play sports/do exercise",
+          "ipa": "/ˈa.ɣo deˈpoɾ.te/",
+          "example_sentence": "Hago deporte en el gimnasio.",
+          "grammar_explanation": "Irregular verb 'hacer'."
+        },
+        {
+          "front": "Voy de compras",
+          "back": "I go shopping",
+          "ipa": "/ˈboj de ˈkom.pɾas/",
+          "example_sentence": "Voy de compras al centro comercial.",
+          "grammar_explanation": "Ir + de + noun."
+        },
+        {
+          "front": "Paso tiempo con",
+          "back": "I spend time with",
+          "ipa": "/ˈpa.so ˈtjem.po kon/",
+          "example_sentence": "Paso tiempo con mi familia.",
+          "grammar_explanation": "Regular -ar verb 'pasar'."
+        },
+        {
+          "front": "Veo una película",
+          "back": "I watch a movie",
+          "ipa": "/ˈbe.o ˈu.na pe.ˈli.ku.la/",
+          "example_sentence": "Veo una película en el cine.",
+          "grammar_explanation": "Irregular verb 'ver'."
+        },
+        {
+          "front": "Descanso",
+          "back": "I rest",
+          "ipa": "/desˈkan.so/",
+          "example_sentence": "Necesito descansar el fin de semana.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Planeo la semana",
+          "back": "I plan the week",
+          "ipa": "/plaˈne.o la se.ˈma.na/",
+          "example_sentence": "Planeo la semana para ser más organizado.",
+          "grammar_explanation": "Regular -ar verb."
+        }
+      ]
+    },
+    {
+      "slug": "household-chores",
+      "title": "Household Chores",
+      "objective": "Describe the household chores you do regularly.",
+      "cards": [
+        {
+          "front": "Lavo los platos",
+          "back": "I wash the dishes",
+          "ipa": "/ˈla.βo los ˈpla.tos/",
+          "example_sentence": "Lavo los platos después de cenar.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Limpio la casa",
+          "back": "I clean the house",
+          "ipa": "/limˈpjo la ˈka.sa/",
+          "example_sentence": "Limpio la casa los sábados por la mañana.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Hago la colada",
+          "back": "I do the laundry",
+          "ipa": "/ˈa.ɣo la ko.ˈla.ða/",
+          "example_sentence": "Hago la colada los domingos.",
+          "grammar_explanation": "Irregular verb 'hacer'."
+        },
+        {
+          "front": "Paso la aspiradora",
+          "back": "I vacuum",
+          "ipa": "/ˈpa.so la as.pi.ɾaˈðo.ɾa/",
+          "example_sentence": "Paso la aspiradora dos veces por semana.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Saco la basura",
+          "back": "I take out the trash",
+          "ipa": "/ˈsa.ko la βa.ˈsu.ɾa/",
+          "example_sentence": "Saco la basura todos los días.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Cocino",
+          "back": "I cook",
+          "ipa": "/koˈθi.no/",
+          "example_sentence": "Me gusta cocinar platos nuevos.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Arreglo el jardín",
+          "back": "I tend the garden",
+          "ipa": "/aˈre.ɣlo el xaɾ.ˈðin/",
+          "example_sentence": "Arreglo el jardín en primavera.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Hago la compra",
+          "back": "I do the grocery shopping",
+          "ipa": "/ˈa.ɣo la ˈkom.pɾa/",
+          "example_sentence": "Hago la compra en el supermercado.",
+          "grammar_explanation": "Irregular verb 'hacer'."
+        },
+        {
+          "front": "Ordeno la casa",
+          "back": "I tidy the house",
+          "ipa": "/oɾˈðe.no la ˈka.sa/",
+          "example_sentence": "Ordeno la casa antes de recibir visitas.",
+          "grammar_explanation": "Regular -ar verb."
+        }
+      ]
+    },
+    {
+      "slug": "health-wellness",
+      "title": "Health and Wellness",
+      "objective": "Describe your habits for maintaining your health and well-being.",
+      "cards": [
+        {
+          "front": "Hago ejercicio",
+          "back": "I exercise",
+          "ipa": "/ˈa.ɣo e.xer.ˈθi.θjo/",
+          "example_sentence": "Hago ejercicio tres veces por semana.",
+          "grammar_explanation": "Irregular verb 'hacer'."
+        },
+        {
+          "front": "Como sano",
+          "back": "I eat healthy",
+          "ipa": "/ˈko.mo ˈsa.no/",
+          "example_sentence": "Intento comer sano todos los días.",
+          "grammar_explanation": "Regular -er verb."
+        },
+        {
+          "front": "Duermo bien",
+          "back": "I sleep well",
+          "ipa": "/ˈdweɾ.mo bjen/",
+          "example_sentence": "Necesito dormir bien para sentirme con energía.",
+          "grammar_explanation": "Irregular verb 'dormir' (o > ue)."
+        },
+        {
+          "front": "Bebo mucha agua",
+          "back": "I drink a lot of water",
+          "ipa": "/ˈβe.βo ˈmu.t͡ʃa ˈa.ɣwa/",
+          "example_sentence": "Bebo mucha agua durante el día.",
+          "grammar_explanation": "Regular -er verb."
+        },
+        {
+          "front": "Voy al médico",
+          "back": "I go to the doctor",
+          "ipa": "/ˈboj al ˈme.ði.ko/",
+          "example_sentence": "Voy al médico una vez al año.",
+          "grammar_explanation": "Irregular verb 'ir'."
+        },
+        {
+          "front": "Me relajo",
+          "back": "I relax",
+          "ipa": "/me reˈla.xo/",
+          "example_sentence": "Me relajo leyendo o escuchando música.",
+          "grammar_explanation": "Reflexive verb conjugation."
+        },
+        {
+          "front": "Paseo por el parque",
+          "back": "I walk in the park",
+          "ipa": "/paˈse.o poɾ el ˈpaɾ.ke/",
+          "example_sentence": "Paseo por el parque para disfrutar de la naturaleza.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Evito el estrés",
+          "back": "I avoid stress",
+          "ipa": "/eˈβi.to el esˈtɾes/",
+          "example_sentence": "Intento evitar el estrés en mi vida.",
+          "grammar_explanation": "Regular -ar verb."
+        },
+        {
+          "front": "Medito",
+          "back": "I meditate",
+          "ipa": "/meˈði.to/",
+          "example_sentence": "Medito por la mañana para empezar el día con calma.",
+          "grammar_explanation": "Regular -ar verb."
+        }
+      ]
+    }
+  ]
+}

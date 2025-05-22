@@ -1,0 +1,477 @@
+{
+  "level_code": "IL",
+  "topic_slug": "participate-in-simple-conversations-on-familiar-topics",
+  "topic_title": "participate in simple conversations on familiar topics.",
+  "can_do_statement": "I can participate in simple conversations on familiar topics.",
+  "lessons": [
+    {
+      "slug": "greetings-introductions",
+      "title": "Greetings and Introductions",
+      "objective": "To greet people and introduce oneself in simple conversations.",
+      "cards": [
+        {
+          "front": "Hola",
+          "back": "Hello",
+          "ipa": "/ˈo.la/",
+          "example_sentence": "Hola, ¿cómo estás?",
+          "grammar_explanation": "Most common greeting."
+        },
+        {
+          "front": "Buenos días",
+          "back": "Good morning",
+          "ipa": "/ˈbwe.nos ˈdi.as/",
+          "example_sentence": "Buenos días, señor.",
+          "grammar_explanation": "Used until noon."
+        },
+        {
+          "front": "Buenas tardes",
+          "back": "Good afternoon/evening",
+          "ipa": "/ˈbwe.nas ˈtaɾ.ðes/",
+          "example_sentence": "Buenas tardes, señora.",
+          "grammar_explanation": "Used from noon to sunset."
+        },
+        {
+          "front": "Buenas noches",
+          "back": "Good evening/night",
+          "ipa": "/ˈbwe.nas ˈno.t͡ʃes/",
+          "example_sentence": "Buenas noches, mamá.",
+          "grammar_explanation": "Used after sunset."
+        },
+        {
+          "front": "¿Cómo estás?",
+          "back": "How are you?",
+          "ipa": "/ˈko.mo es.ˈtas/",
+          "example_sentence": "¿Cómo estás hoy?",
+          "grammar_explanation": "Informal way to ask 'how are you?'"
+        },
+        {
+          "front": "Bien, gracias",
+          "back": "Well, thank you",
+          "ipa": "/ˈbjen ˈɡɾa.θjas/",
+          "example_sentence": "Bien, gracias, ¿y tú?",
+          "grammar_explanation": "Standard response to 'how are you?'"
+        },
+        {
+          "front": "Me llamo...",
+          "back": "My name is...",
+          "ipa": "/me ˈʝa.mo/",
+          "example_sentence": "Me llamo Juan.",
+          "grammar_explanation": "Common way to introduce yourself."
+        },
+        {
+          "front": "Mucho gusto",
+          "back": "Nice to meet you",
+          "ipa": "/ˈmu.t͡ʃo ˈɣus.to/",
+          "example_sentence": "Mucho gusto, Ana.",
+          "grammar_explanation": "Standard phrase when meeting someone."
+        },
+        {
+          "front": "Encantado/a",
+          "back": "Pleased to meet you",
+          "ipa": "/en.kan.ˈta.ðo/ /en.kan.ˈta.ða/",
+          "example_sentence": "Encantado de conocerte.",
+          "grammar_explanation": "Use 'encantado' if you are male, 'encantada' if you are female."
+        },
+        {
+          "front": "Soy de...",
+          "back": "I am from...",
+          "ipa": "/soi̯ de/",
+          "example_sentence": "Soy de España.",
+          "grammar_explanation": "Expressing your origin."
+        }
+      ]
+    },
+    {
+      "slug": "family-descriptions",
+      "title": "Talking About Family",
+      "objective": "To describe family members in simple terms.",
+      "cards": [
+        {
+          "front": "Mi madre",
+          "back": "My mother",
+          "ipa": "/mi ˈma.ðɾe/",
+          "example_sentence": "Mi madre es muy amable.",
+          "grammar_explanation": "Possessive adjective + noun."
+        },
+        {
+          "front": "Mi padre",
+          "back": "My father",
+          "ipa": "/mi ˈpa.ðɾe/",
+          "example_sentence": "Mi padre trabaja mucho.",
+          "grammar_explanation": "Possessive adjective + noun."
+        },
+        {
+          "front": "Hermano/a",
+          "back": "Brother/Sister",
+          "ipa": "/eɾ.ˈma.no/ /eɾ.ˈma.na/",
+          "example_sentence": "Tengo un hermano y una hermana.",
+          "grammar_explanation": "'Hermano' is brother, 'hermana' is sister."
+        },
+        {
+          "front": "Esposo/a",
+          "back": "Husband/Wife",
+          "ipa": "/es.ˈpo.so/ /es.ˈpo.sa/",
+          "example_sentence": "Él es mi esposo.",
+          "grammar_explanation": "'Esposo' is husband, 'esposa' is wife."
+        },
+        {
+          "front": "Hijo/a",
+          "back": "Son/Daughter",
+          "ipa": "/ˈi.xo/ /ˈi.xa/",
+          "example_sentence": "Ella es mi hija.",
+          "grammar_explanation": "'Hijo' is son, 'hija' is daughter."
+        },
+        {
+          "front": "Abuelo/a",
+          "back": "Grandfather/Grandmother",
+          "ipa": "/a.ˈβwe.lo/ /a.ˈβwe.la/",
+          "example_sentence": "Mi abuela es muy cariñosa.",
+          "grammar_explanation": "'Abuelo' is grandfather, 'abuela' is grandmother."
+        },
+        {
+          "front": "Familia",
+          "back": "Family",
+          "ipa": "/fa.ˈmi.lja/",
+          "example_sentence": "Mi familia es importante para mí.",
+          "grammar_explanation": "A group of people related to each other."
+        },
+        {
+          "front": "Tener",
+          "back": "To have",
+          "ipa": "/te.ˈneɾ/",
+          "example_sentence": "Tengo dos hermanos.",
+          "grammar_explanation": "Important verb for describing possessions."
+        },
+        {
+          "front": "Grande",
+          "back": "Big/Large",
+          "ipa": "/ˈɡɾan.de/",
+          "example_sentence": "Mi familia es grande.",
+          "grammar_explanation": "Adjective to describe size."
+        },
+        {
+          "front": "Pequeño/a",
+          "back": "Small",
+          "ipa": "/pe.ˈke.ɲo/ /pe.ˈke.ɲa/",
+          "example_sentence": "Tengo una familia pequeña.",
+          "grammar_explanation": "Adjective to describe size, masculine and feminine."
+        }
+      ]
+    },
+    {
+      "slug": "hobbies-interests",
+      "title": "Hobbies and Interests",
+      "objective": "To talk about hobbies and interests in a simple manner.",
+      "cards": [
+        {
+          "front": "Me gusta...",
+          "back": "I like...",
+          "ipa": "/me ˈɣus.ta/",
+          "example_sentence": "Me gusta leer libros.",
+          "grammar_explanation": "Common way to express what you like."
+        },
+        {
+          "front": "Leer",
+          "back": "To read",
+          "ipa": "/le.ˈeɾ/",
+          "example_sentence": "Me gusta leer en mi tiempo libre.",
+          "grammar_explanation": "A common hobby."
+        },
+        {
+          "front": "Escribir",
+          "back": "To write",
+          "ipa": "/es.kɾi.ˈβiɾ/",
+          "example_sentence": "A ella le gusta escribir poemas.",
+          "grammar_explanation": "A creative hobby."
+        },
+        {
+          "front": "Escuchar música",
+          "back": "To listen to music",
+          "ipa": "/es.ku.ˈt͡ʃaɾ ˈmu.si.ka/",
+          "example_sentence": "Me gusta escuchar música pop.",
+          "grammar_explanation": "A popular pastime."
+        },
+        {
+          "front": "Bailar",
+          "back": "To dance",
+          "ipa": "/bai̯.ˈlaɾ/",
+          "example_sentence": "Me gusta bailar salsa.",
+          "grammar_explanation": "A lively and fun hobby."
+        },
+        {
+          "front": "Cocinar",
+          "back": "To cook",
+          "ipa": "/ko.θi.ˈnaɾ/",
+          "example_sentence": "Me gusta cocinar comida italiana.",
+          "grammar_explanation": "A practical and creative hobby."
+        },
+        {
+          "front": "Deporte",
+          "back": "Sport",
+          "ipa": "/de.ˈpoɾ.te/",
+          "example_sentence": "Practico deporte todos los días.",
+          "grammar_explanation": "General term for sports."
+        },
+        {
+          "front": "Fútbol",
+          "back": "Soccer",
+          "ipa": "/ˈfuð.βol/",
+          "example_sentence": "Me gusta jugar al fútbol.",
+          "grammar_explanation": "Very popular sport in many Spanish-speaking countries."
+        },
+        {
+          "front": "Viajar",
+          "back": "To travel",
+          "ipa": "/bja.ˈxaɾ/",
+          "example_sentence": "Quiero viajar por el mundo.",
+          "grammar_explanation": "A popular aspiration."
+        },
+        {
+          "front": "Ver la tele",
+          "back": "To watch TV",
+          "ipa": "/beɾ la ˈte.le/",
+          "example_sentence": "Me gusta ver la tele por la noche.",
+          "grammar_explanation": "Common leisure activity."
+        }
+      ]
+    },
+    {
+      "slug": "food-ordering",
+      "title": "Ordering Food",
+      "objective": "To order food in a restaurant or cafe in simple terms.",
+      "cards": [
+        {
+          "front": "Quisiera...",
+          "back": "I would like...",
+          "ipa": "/ki.ˈsje.ɾa/",
+          "example_sentence": "Quisiera un café, por favor.",
+          "grammar_explanation": "Polite way to order."
+        },
+        {
+          "front": "Café",
+          "back": "Coffee",
+          "ipa": "/ka.ˈfe/",
+          "example_sentence": "Quiero un café con leche.",
+          "grammar_explanation": "Common beverage."
+        },
+        {
+          "front": "Té",
+          "back": "Tea",
+          "ipa": "/te/",
+          "example_sentence": "Prefiero un té con limón.",
+          "grammar_explanation": "Another popular beverage."
+        },
+        {
+          "front": "Agua",
+          "back": "Water",
+          "ipa": "/ˈa.ɣwa/",
+          "example_sentence": "Quiero un vaso de agua.",
+          "grammar_explanation": "Essential drink."
+        },
+        {
+          "front": "Cerveza",
+          "back": "Beer",
+          "ipa": "/θeɾ.ˈβe.θa/",
+          "example_sentence": "Una cerveza, por favor.",
+          "grammar_explanation": "A popular alcoholic drink, especially in Spain."
+        },
+        {
+          "front": "Vino",
+          "back": "Wine",
+          "ipa": "/ˈbi.no/",
+          "example_sentence": "Una copa de vino tinto.",
+          "grammar_explanation": "A common alcoholic drink to have with meals."
+        },
+        {
+          "front": "¿Qué me recomienda?",
+          "back": "What do you recommend?",
+          "ipa": "/ke me re.ko.ˈmjen.da/",
+          "example_sentence": "¿Qué me recomienda para cenar?",
+          "grammar_explanation": "Useful when unsure what to order."
+        },
+        {
+          "front": "La cuenta, por favor",
+          "back": "The bill, please",
+          "ipa": "/la ˈkwen.ta por fa.ˈβoɾ/",
+          "example_sentence": "La cuenta, por favor, gracias.",
+          "grammar_explanation": "Requesting the bill."
+        },
+        {
+          "front": "Tener",
+          "back": "To have",
+          "ipa": "/te.ˈneɾ/",
+          "example_sentence": "¿Tiene menú del día?",
+          "grammar_explanation": "Important verb for ordering."
+        },
+        {
+          "front": "Postre",
+          "back": "Dessert",
+          "ipa": "/ˈpos.tɾe/",
+          "example_sentence": "¿Qué postre tiene?",
+          "grammar_explanation": "Sweet ending to a meal."
+        }
+      ]
+    },
+    {
+      "slug": "directions-location",
+      "title": "Asking for Directions",
+      "objective": "To ask for and understand simple directions.",
+      "cards": [
+        {
+          "front": "¿Dónde está...?",
+          "back": "Where is...?",
+          "ipa": "/ˈdon.de es.ˈta/",
+          "example_sentence": "¿Dónde está el banco?",
+          "grammar_explanation": "Useful phrase for asking about locations."
+        },
+        {
+          "front": "Derecha",
+          "back": "Right",
+          "ipa": "/de.ˈɾe.t͡ʃa/",
+          "example_sentence": "Gire a la derecha.",
+          "grammar_explanation": "Direction."
+        },
+        {
+          "front": "Izquierda",
+          "back": "Left",
+          "ipa": "/iθ.ˈkjeɾ.ða/",
+          "example_sentence": "Gire a la izquierda.",
+          "grammar_explanation": "Direction."
+        },
+        {
+          "front": "Recto",
+          "back": "Straight",
+          "ipa": "/ˈrek.to/",
+          "example_sentence": "Siga recto.",
+          "grammar_explanation": "Continue straight ahead."
+        },
+        {
+          "front": "Cerca",
+          "back": "Near/Close",
+          "ipa": "/ˈθeɾ.ka/",
+          "example_sentence": "El banco está cerca.",
+          "grammar_explanation": "Proximity."
+        },
+        {
+          "front": "Lejos",
+          "back": "Far",
+          "ipa": "/ˈle.xos/",
+          "example_sentence": "Está lejos de aquí.",
+          "grammar_explanation": "Distance."
+        },
+        {
+          "front": "Esquina",
+          "back": "Corner",
+          "ipa": "/es.ˈki.na/",
+          "example_sentence": "Está en la esquina.",
+          "grammar_explanation": "Location point."
+        },
+        {
+          "front": "Calle",
+          "back": "Street",
+          "ipa": "/ˈka.ʎe/",
+          "example_sentence": "Está en la calle principal.",
+          "grammar_explanation": "Road."
+        },
+        {
+          "front": "Avenida",
+          "back": "Avenue",
+          "ipa": "/a.βe.ˈni.ða/",
+          "example_sentence": "Está en la Avenida Central.",
+          "grammar_explanation": "Larger road."
+        },
+        {
+          "front": "¿Cómo llego a...?",
+          "back": "How do I get to...?",
+          "ipa": "/ˈko.mo ˈʎe.ɣo a/",
+          "example_sentence": "¿Cómo llego a la estación de tren?",
+          "grammar_explanation": "Asking for instructions."
+        },
+        {
+          "front": "Perdón",
+          "back": "Excuse me",
+          "ipa": "/peɾ.ˈðon/",
+          "example_sentence": "Perdón, ¿dónde está el baño?",
+          "grammar_explanation": "Useful to get someone's attention."
+        }
+      ]
+    },
+    {
+      "slug": "shopping-basics",
+      "title": "Basic Shopping Phrases",
+      "objective": "To engage in basic shopping conversations.",
+      "cards": [
+        {
+          "front": "¿Cuánto cuesta?",
+          "back": "How much does it cost?",
+          "ipa": "/ˈkwan.to ˈkwes.ta/",
+          "example_sentence": "¿Cuánto cuesta esta camisa?",
+          "grammar_explanation": "Essential for asking prices."
+        },
+        {
+          "front": "Caro/a",
+          "back": "Expensive",
+          "ipa": "/ˈka.ɾo/ /ˈka.ɾa/",
+          "example_sentence": "Es muy caro.",
+          "grammar_explanation": "Adjective describing high price."
+        },
+        {
+          "front": "Barato/a",
+          "back": "Cheap",
+          "ipa": "/ba.ˈɾa.to/ /ba.ˈɾa.ta/",
+          "example_sentence": "Es muy barato.",
+          "grammar_explanation": "Adjective describing low price."
+        },
+        {
+          "front": "Dinero",
+          "back": "Money",
+          "ipa": "/di.ˈne.ɾo/",
+          "example_sentence": "No tengo mucho dinero.",
+          "grammar_explanation": "Currency."
+        },
+        {
+          "front": "Tarjeta de crédito",
+          "back": "Credit card",
+          "ipa": "/taɾ.ˈxe.ta de ˈkɾe.ði.to/",
+          "example_sentence": "¿Aceptan tarjeta de crédito?",
+          "grammar_explanation": "Payment method."
+        },
+        {
+          "front": "Efectivo",
+          "back": "Cash",
+          "ipa": "/e.fek.ˈti.βo/",
+          "example_sentence": "Pago en efectivo.",
+          "grammar_explanation": "Payment method."
+        },
+        {
+          "front": "Comprar",
+          "back": "To buy",
+          "ipa": "/kom.ˈpɾaɾ/",
+          "example_sentence": "Quiero comprar zapatos nuevos.",
+          "grammar_explanation": "Essential verb for shopping."
+        },
+        {
+          "front": "Tienda",
+          "back": "Shop/Store",
+          "ipa": "/ˈtjen.da/",
+          "example_sentence": "Voy a la tienda.",
+          "grammar_explanation": "Place to buy things."
+        },
+        {
+          "front": "¿Puedo probarme...?",
+          "back": "Can I try on...?",
+          "ipa": "/ˈpwe.ðo pɾo.ˈβaɾ.me/",
+          "example_sentence": "¿Puedo probarme esta camisa?",
+          "grammar_explanation": "Asking to try on clothes."
+        },
+        {
+          "front": "Talla",
+          "back": "Size",
+          "ipa": "/ˈta.ʎa/",
+          "example_sentence": "¿Qué talla usa?",
+          "grammar_explanation": "Referring to clothing size."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "level_code": "AL",
+  "topic_slug": "communicate-in-formal-and-informal-situations",
+  "topic_title": "communicate in formal and informal situations.",
+  "can_do_statement": "I can communicate in formal and informal situations.",
+  "lessons": [
+    {
+      "slug": "formal-greetings-introductions",
+      "title": "Formal Greetings and Introductions",
+      "objective": "Learn formal greetings and introductions appropriate for professional settings or interactions with elders.",
+      "cards": [
+        {
+          "front": "Buenos días",
+          "back": "Good morning",
+          "ipa": "ˈbwe.nos ˈdi.as",
+          "example_sentence": "Buenos días, señor Pérez. ¿Cómo está?",
+          "grammar_explanation": "Used in the morning, typically until noon."
+        },
+        {
+          "front": "Buenas tardes",
+          "back": "Good afternoon / Good evening",
+          "ipa": "ˈbwe.nas ˈtaɾ.des",
+          "example_sentence": "Buenas tardes, profesora Rodríguez. ¿Cómo le va?",
+          "grammar_explanation": "Used from noon until sunset."
+        },
+        {
+          "front": "Buenas noches",
+          "back": "Good evening / Good night",
+          "ipa": "ˈbwe.nas ˈno.t͡ʃes",
+          "example_sentence": "Buenas noches, señora González. Que descanse.",
+          "grammar_explanation": "Used from sunset onwards."
+        },
+        {
+          "front": "Mucho gusto",
+          "back": "Pleased to meet you",
+          "ipa": "ˈmu.t͡ʃo ˈɣus.to",
+          "example_sentence": "Mucho gusto, soy Juan Pérez.",
+          "grammar_explanation": "Used after an introduction."
+        },
+        {
+          "front": "Encantado/a",
+          "back": "Delighted (male/female)",
+          "ipa": "en.kanˈta.do/a",
+          "example_sentence": "Encantado de conocerle.",
+          "grammar_explanation": "More emphatic than 'mucho gusto'."
+        },
+        {
+          "front": "¿Cómo está?",
+          "back": "How are you? (formal)",
+          "ipa": "ˈko.mo es.ˈta",
+          "example_sentence": "¿Cómo está, Don Francisco?",
+          "grammar_explanation": "Uses the formal 'usted' form."
+        },
+        {
+          "front": "Señor/Señora/Señorita",
+          "back": "Mr./Mrs./Miss",
+          "ipa": "seˈɲoɾ/seˈɲo.ɾa/se.ɲoˈɾi.ta",
+          "example_sentence": "Señorita Gómez, ¿puedo ayudarla?",
+          "grammar_explanation": "Titles used with surnames in formal settings."
+        },
+        {
+          "front": "A sus órdenes",
+          "back": "At your service",
+          "ipa": "a sus ˈoɾ.ðe.nes",
+          "example_sentence": "A sus órdenes, señor.",
+          "grammar_explanation": "A formal way to offer assistance."
+        }
+      ]
+    },
+    {
+      "slug": "informal-greetings-introductions",
+      "title": "Informal Greetings and Introductions",
+      "objective": "Learn informal greetings and introductions appropriate for friends, family, or casual acquaintances.",
+      "cards": [
+        {
+          "front": "Hola",
+          "back": "Hello / Hi",
+          "ipa": "ˈo.la",
+          "example_sentence": "Hola, ¿qué tal?",
+          "grammar_explanation": "The most common informal greeting."
+        },
+        {
+          "front": "¿Qué tal?",
+          "back": "What's up? / How's it going?",
+          "ipa": "ke tal",
+          "example_sentence": "¿Qué tal, amigo?",
+          "grammar_explanation": "A common informal greeting."
+        },
+        {
+          "front": "¿Cómo estás?",
+          "back": "How are you? (informal)",
+          "ipa": "ˈko.mo es.ˈtas",
+          "example_sentence": "¿Cómo estás, Ana?",
+          "grammar_explanation": "Uses the informal 'tú' form."
+        },
+        {
+          "front": "¿Qué pasa?",
+          "back": "What's happening? / What's up?",
+          "ipa": "ke ˈpa.sa",
+          "example_sentence": "¿Qué pasa, hombre?",
+          "grammar_explanation": "Very informal, often used among friends."
+        },
+        {
+          "front": "¿Qué onda?",
+          "back": "What's up? (Mexico)",
+          "ipa": "ke ˈon.da",
+          "example_sentence": "¿Qué onda, güey?",
+          "grammar_explanation": "Mexican slang for \"What's up?\""
+        },
+        {
+          "front": "¿Cómo te va?",
+          "back": "How's it going?",
+          "ipa": "ˈko.mo te βa",
+          "example_sentence": "¿Cómo te va en el trabajo?",
+          "grammar_explanation": "Informal way to ask how someone is doing."
+        },
+        {
+          "front": "Me llamo...",
+          "back": "My name is...",
+          "ipa": "me ˈʝa.mo",
+          "example_sentence": "Me llamo Sofía.",
+          "grammar_explanation": "Used in informal introductions."
+        },
+        {
+          "front": "Un placer",
+          "back": "A pleasure",
+          "ipa": "un plaˈθeɾ",
+          "example_sentence": "Un placer conocerte.",
+          "grammar_explanation": "Informal equivalent of 'Encantado'."
+        }
+      ]
+    },
+    {
+      "slug": "formal-requests-favors",
+      "title": "Making Formal Requests and Asking for Favors",
+      "objective": "Learn polite and formal ways to make requests and ask for favors.",
+      "cards": [
+        {
+          "front": "¿Podría...?",
+          "back": "Could you...?",
+          "ipa": "poˈðɾi.a",
+          "example_sentence": "¿Podría ayudarme, por favor?",
+          "grammar_explanation": "A polite way to make a request."
+        },
+        {
+          "front": "¿Sería tan amable de...?",
+          "back": "Would you be so kind as to...?",
+          "ipa": "seˈɾi.a tan aˈma.βle de",
+          "example_sentence": "¿Sería tan amable de pasarme la sal?",
+          "grammar_explanation": "A very polite and formal request."
+        },
+        {
+          "front": "Le agradecería mucho si...",
+          "back": "I would be very grateful if...",
+          "ipa": "le a.ɣɾa.de.θeˈɾi.a ˈmu.t͡ʃo si",
+          "example_sentence": "Le agradecería mucho si pudiera revisar este documento.",
+          "grammar_explanation": "Expressing gratitude in advance."
+        },
+        {
+          "front": "Disculpe, ¿tendría...?",
+          "back": "Excuse me, would you have...?",
+          "ipa": "disˈkul.pe tenˈdɾi.a",
+          "example_sentence": "Disculpe, ¿tendría un bolígrafo que me preste?",
+          "grammar_explanation": "Politely asking if someone has something."
+        },
+        {
+          "front": "Quisiera pedirle un favor",
+          "back": "I would like to ask you a favor",
+          "ipa": "kiˈsje.ɾa peˈðiɾ.le un faˈβoɾ",
+          "example_sentence": "Quisiera pedirle un favor, si no es mucha molestia.",
+          "grammar_explanation": "Directly asking for a favor."
+        },
+        {
+          "front": "Tengo una consulta",
+          "back": "I have an inquiry",
+          "ipa": "ˈten.ɡo ˈu.na konˈsul.ta",
+          "example_sentence": "Tengo una consulta sobre el contrato.",
+          "grammar_explanation": "Introducing a formal question or inquiry."
+        },
+        {
+          "front": "Por favor",
+          "back": "Please",
+          "ipa": "poɾ faˈβoɾ",
+          "example_sentence": "¿Puede ayudarme, por favor?",
+          "grammar_explanation": "Essential for polite requests."
+        },
+        {
+          "front": "Gracias de antemano",
+          "back": "Thank you in advance",
+          "ipa": "ˈɡɾa.θjas de an.teˈma.no",
+          "example_sentence": "Gracias de antemano por su ayuda.",
+          "grammar_explanation": "Expressing gratitude ahead of time."
+        }
+      ]
+    },
+    {
+      "slug": "informal-requests-favors",
+      "title": "Making Informal Requests and Asking for Favors",
+      "objective": "Learn casual and informal ways to make requests and ask for favors from friends or family.",
+      "cards": [
+        {
+          "front": "¿Me puedes...?",
+          "back": "Can you...?",
+          "ipa": "me ˈpwe.des",
+          "example_sentence": "¿Me puedes ayudar con esto?",
+          "grammar_explanation": "Informal way to ask for help."
+        },
+        {
+          "front": "¿Puedes echarme una mano?",
+          "back": "Can you give me a hand?",
+          "ipa": "ˈpwe.des eˈt͡ʃaɾ.me ˈu.na ˈma.no",
+          "example_sentence": "¿Puedes echarme una mano con la mudanza?",
+          "grammar_explanation": "Idiomatic expression for helping."
+        },
+        {
+          "front": "Oye, ¿tendrías...?",
+          "back": "Hey, would you have...?",
+          "ipa": "ˈo.ʝe tenˈdɾi.as",
+          "example_sentence": "Oye, ¿tendrías un cigarrillo?",
+          "grammar_explanation": "Informal way to ask if someone has something."
+        },
+        {
+          "front": "¿Te importaría...?",
+          "back": "Would you mind...?",
+          "ipa": "te im.poɾ.taˈɾi.a",
+          "example_sentence": "¿Te importaría prestarme tu coche?",
+          "grammar_explanation": "Informal polite request."
+        },
+        {
+          "front": "¿Serías capaz de...?",
+          "back": "Would you be able to...?",
+          "ipa": "seˈɾi.as kaˈpas de",
+          "example_sentence": "¿Serías capaz de venir mañana?",
+          "grammar_explanation": "Informal way to ask if someone is capable of something."
+        },
+        {
+          "front": "Porfa",
+          "back": "Please (informal)",
+          "ipa": "ˈpoɾ.fa",
+          "example_sentence": "Ábreme la puerta, porfa.",
+          "grammar_explanation": "Short for 'por favor', very informal."
+        },
+        {
+          "front": "Hazme el paro",
+          "back": "Do me a favor (Mexico)",
+          "ipa": "ˈaz.me el ˈpa.ɾo",
+          "example_sentence": "Hazme el paro y cómprame unas cervezas.",
+          "grammar_explanation": "Mexican slang for asking a favor."
+        },
+        {
+          "front": "Gracias, eh",
+          "back": "Thanks, eh",
+          "ipa": "ˈɡɾa.θjas e",
+          "example_sentence": "Gracias, eh, me has salvado.",
+          "grammar_explanation": "Informal way to express gratitude."
+        }
+      ]
+    },
+    {
+      "slug": "formal-disagreements-objections",
+      "title": "Expressing Formal Disagreements and Objections",
+      "objective": "Learn how to express disagreements or objections politely and formally.",
+      "cards": [
+        {
+          "front": "Respetuosamente, no estoy de acuerdo",
+          "back": "Respectfully, I disagree",
+          "ipa": "res.pe.tuˈo.saˈmen.te no esˈtoi̯ de aˈkweɾ.ðo",
+          "example_sentence": "Respetuosamente, no estoy de acuerdo con su propuesta.",
+          "grammar_explanation": "A polite and formal way to disagree."
+        },
+        {
+          "front": "Me permito disentir",
+          "back": "I take the liberty of disagreeing",
+          "ipa": "me peɾˈmi.to di.senˈtiɾ",
+          "example_sentence": "Me permito disentir con respecto a ese punto.",
+          "grammar_explanation": "A very formal expression of disagreement."
+        },
+        {
+          "front": "Con el debido respeto",
+          "back": "With all due respect",
+          "ipa": "kon el deˈβi.ðo resˈpe.to",
+          "example_sentence": "Con el debido respeto, creo que está equivocado.",
+          "grammar_explanation": "Acknowledging respect before disagreeing."
+        },
+        {
+          "front": "Comprendo su punto de vista, pero...",
+          "back": "I understand your point of view, but...",
+          "ipa": "komˈpɾen.do su ˈpun.to de ˈβis.ta ˈpe.ɾo",
+          "example_sentence": "Comprendo su punto de vista, pero tengo una opinión diferente.",
+          "grammar_explanation": "Acknowledging the other person's perspective."
+        },
+        {
+          "front": "Lamento discrepar",
+          "back": "I regret to disagree",
+          "ipa": "laˈmen.to dis.kɾeˈpaɾ",
+          "example_sentence": "Lamento discrepar, pero no creo que sea la mejor solución.",
+          "grammar_explanation": "A formal expression of regret before disagreeing."
+        },
+        {
+          "front": "No comparto su opinión",
+          "back": "I don't share your opinion",
+          "ipa": "no komˈpaɾ.to su o.piˈnjon",
+          "example_sentence": "No comparto su opinión sobre este tema.",
+          "grammar_explanation": "A direct but polite way to disagree."
+        },
+        {
+          "front": "Quizás haya otra manera de verlo",
+          "back": "Perhaps there is another way to see it",
+          "ipa": "kiˈθas ˈaʝa ˈo.tɾa maˈne.ɾa de ˈβeɾ.lo",
+          "example_sentence": "Quizás haya otra manera de verlo para llegar a un acuerdo.",
+          "grammar_explanation": "Suggesting an alternative perspective."
+        },
+        {
+          "front": "Sin embargo",
+          "back": "However",
+          "ipa": "sin emˈβaɾ.ɣo",
+          "example_sentence": "Sin embargo, hay otros factores a considerar.",
+          "grammar_explanation": "Introducing a contrasting point."
+        }
+      ]
+    },
+    {
+      "slug": "informal-disagreements-objections",
+      "title": "Expressing Informal Disagreements and Objections",
+      "objective": "Learn how to express disagreements or objections in a casual and informal way.",
+      "cards": [
+        {
+          "front": "No estoy de acuerdo, la verdad",
+          "back": "I don't agree, to be honest",
+          "ipa": "no esˈtoi̯ de aˈkweɾ.ðo la βeɾˈdad",
+          "example_sentence": "No estoy de acuerdo, la verdad, me parece una mala idea.",
+          "grammar_explanation": "A straightforward expression of disagreement."
+        },
+        {
+          "front": "Yo no lo veo así",
+          "back": "I don't see it that way",
+          "ipa": "ˈʝo no lo ˈβe.o aˈsi",
+          "example_sentence": "Yo no lo veo así, creo que estás exagerando.",
+          "grammar_explanation": "Expressing a different perspective."
+        },
+        {
+          "front": "¿En serio?",
+          "back": "Seriously?",
+          "ipa": "en ˈse.ɾjo",
+          "example_sentence": "¿En serio? No creo que sea cierto.",
+          "grammar_explanation": "Expressing disbelief or disagreement."
+        },
+        {
+          "front": "No me parece",
+          "back": "It doesn't seem right to me",
+          "ipa": "no me paˈɾe.θe",
+          "example_sentence": "No me parece justo.",
+          "grammar_explanation": "Expressing that something doesn't seem fair or correct."
+        },
+        {
+          "front": "Qué va!",
+          "back": "No way!/Nonsense!",
+          "ipa": "ke βa",
+          "example_sentence": "- Dice que va a nevar hoy. - ¡Qué va! No lo creo.",
+          "grammar_explanation": "Expressing strong disagreement or disbelief. Spain"
+        },
+        {
+          "front": "Ni hablar",
+          "back": "No way",
+          "ipa": "ni aˈβlaɾ",
+          "example_sentence": "Ni hablar, no voy a hacer eso.",
+          "grammar_explanation": "Expressing firm refusal."
+        },
+        {
+          "front": "Nel",
+          "back": "Nope",
+          "ipa": "nel",
+          "example_sentence": "-¿Vas a ir a la fiesta? -Nel.",
+          "grammar_explanation": "Mexican slang for 'no'."
+        },
+        {
+          "front": "No manches",
+          "back": "No way!/You're kidding!",
+          "ipa": "no ˈman.t͡ʃes",
+          "example_sentence": "-Me gané la lotería. -¡No manches!",
+          "grammar_explanation": "Mexican slang expressing disbelief or surprise."
+        }
+      ]
+    }
+  ]
+}

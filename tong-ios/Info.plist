@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Google Sign-In URL Scheme -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>google</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.549322253943-qfrqk2nckkvfh3ogmho6p799m3kq71f2</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Google Client ID (required for GoogleSignIn SDK) -->
+    <key>GIDClientID</key>
+    <string>549322253943-qfrqk2nckkvfh3ogmho6p799m3kq71f2.apps.googleusercontent.com</string>
+    
+    <!-- Microphone usage description for Practice feature -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Tong needs access to your microphone to record your voice for pronunciation practice and analysis.</string>
+</dict>
+</plist>

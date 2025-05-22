@@ -1,0 +1,470 @@
+{
+  "level_code": "IH",
+  "topic_slug": "narrate-and-describe-in-all-major-time-frames",
+  "topic_title": "narrate and describe in all major time frames.",
+  "can_do_statement": "I can narrate and describe in all major time frames.",
+  "lessons": [
+    {
+      "slug": "past-experiences-childhood",
+      "title": "Describing Past Experiences: Childhood Memories",
+      "objective": "Learners will be able to describe childhood memories using the imperfect tense.",
+      "cards": [
+        {
+          "front": "Cuando era niño/a",
+          "back": "When I was a child",
+          "ipa": "/ˈkwan.do ˈe.ɾa ˈni.ɲo/ /ˈni.ɲa/",
+          "example_sentence": "Cuando era niño, siempre jugaba en el parque.",
+          "grammar_explanation": "Imperfect tense marker for past habits."
+        },
+        {
+          "front": "Solía",
+          "back": "Used to",
+          "ipa": "/so.ˈli.a/",
+          "example_sentence": "Solía visitar a mis abuelos cada verano.",
+          "grammar_explanation": "Used to express habitual actions in the past."
+        },
+        {
+          "front": "Siempre",
+          "back": "Always",
+          "ipa": "/ˈsjem.pɾe/",
+          "example_sentence": "Siempre quería un perro cuando era pequeño.",
+          "grammar_explanation": "Adverb of frequency indicating regular occurrence."
+        },
+        {
+          "front": "Nunca",
+          "back": "Never",
+          "ipa": "/ˈnun.ka/",
+          "example_sentence": "Nunca me gustaba comer verduras.",
+          "grammar_explanation": "Adverb of frequency indicating lack of occurrence."
+        },
+        {
+          "front": "Cada día",
+          "back": "Every day",
+          "ipa": "/ˈka.ða ˈdi.a/",
+          "example_sentence": "Cada día después de la escuela, veía dibujos animados.",
+          "grammar_explanation": "Expresses routine or repeated events."
+        },
+        {
+          "front": "Recordar",
+          "back": "To remember",
+          "ipa": "/re.kor.ˈdaɾ/",
+          "example_sentence": "Recuerdo que siempre me contaba historias mi abuela.",
+          "grammar_explanation": "Verb used to recall past events."
+        },
+        {
+          "front": "Tener (X) años",
+          "back": "To be (X) years old",
+          "ipa": "/te.ˈneɾ (ekis) ˈa.ɲos/",
+          "example_sentence": "Tenía cinco años cuando fuimos a la playa.",
+          "grammar_explanation": "Used with 'tener' to indicate age in the past."
+        },
+        {
+          "front": "Mientras",
+          "back": "While",
+          "ipa": "/ˈmjen.tɾas/",
+          "example_sentence": "Mientras mi madre cocinaba, yo jugaba en el jardín.",
+          "grammar_explanation": "Connects simultaneous actions in the past."
+        },
+        {
+          "front": "Divertido",
+          "back": "Fun",
+          "ipa": "/di.βer.ˈti.ðo/",
+          "example_sentence": "Era muy divertido ir a la feria del pueblo cada año.",
+          "grammar_explanation": "Describes a past experience as enjoyable."
+        },
+        {
+          "front": "Feliz",
+          "back": "Happy",
+          "ipa": "/fe.ˈliθ/",
+          "example_sentence": "Me sentía muy feliz cuando recibía regalos en mi cumpleaños.",
+          "grammar_explanation": "Expresses a feeling or state in the past."
+        }
+      ]
+    },
+    {
+      "slug": "past-events-specific-instances",
+      "title": "Narrating Past Events: Specific Instances",
+      "objective": "Learners will be able to narrate specific past events using the preterite tense.",
+      "cards": [
+        {
+          "front": "Ayer",
+          "back": "Yesterday",
+          "ipa": "/a.ˈʝeɾ/",
+          "example_sentence": "Ayer fui al supermercado a comprar comida.",
+          "grammar_explanation": "Adverb indicating an event occurred the day before."
+        },
+        {
+          "front": "La semana pasada",
+          "back": "Last week",
+          "ipa": "/la se.ˈma.na pa.ˈsa.ða/",
+          "example_sentence": "La semana pasada visité a mis padres en su casa.",
+          "grammar_explanation": "Time expression indicating the previous week."
+        },
+        {
+          "front": "El mes pasado",
+          "back": "Last month",
+          "ipa": "/el ˈmes pa.ˈsa.ðo/",
+          "example_sentence": "El mes pasado viajé a México para mis vacaciones.",
+          "grammar_explanation": "Time expression indicating the previous month."
+        },
+        {
+          "front": "Hace (X) días/meses/años",
+          "back": "(X) days/months/years ago",
+          "ipa": "/ˈa.θe (ekis) ˈdi.as/ˈme.ses/ˈa.ɲos/",
+          "example_sentence": "Hace dos años que terminé la universidad.",
+          "grammar_explanation": "Used to indicate the time elapsed since an event."
+        },
+        {
+          "front": "De repente",
+          "back": "Suddenly",
+          "ipa": "/de re.ˈpen.te/",
+          "example_sentence": "De repente, empezó a llover muy fuerte.",
+          "grammar_explanation": "Adverb used to indicate a sudden or unexpected occurrence."
+        },
+        {
+          "front": "Entonces",
+          "back": "Then",
+          "ipa": "/en.ˈton.θes/",
+          "example_sentence": "Primero fuimos al cine, entonces cenamos en un restaurante.",
+          "grammar_explanation": "Adverb to sequence events."
+        },
+        {
+          "front": "Finalmente",
+          "back": "Finally",
+          "ipa": "/fi.nal.ˈmen.te/",
+          "example_sentence": "Después de mucho trabajo, finalmente terminamos el proyecto.",
+          "grammar_explanation": "Adverb indicating the conclusion of a series of events."
+        },
+        {
+          "front": "Ocurrir",
+          "back": "To happen",
+          "ipa": "/o.ku.ˈriɾ/",
+          "example_sentence": "Lo que ocurrió fue muy extraño.",
+          "grammar_explanation": "Verb to describe something taking place."
+        },
+        {
+          "front": "Terminar",
+          "back": "To finish",
+          "ipa": "/teɾ.mi.ˈnaɾ/",
+          "example_sentence": "Terminé mi tarea a las ocho de la noche.",
+          "grammar_explanation": "Verb describing the end of an action."
+        },
+        {
+          "front": "Empezar",
+          "back": "To begin",
+          "ipa": "/em.pe.ˈθaɾ/",
+          "example_sentence": "La película empezó a las siete en punto.",
+          "grammar_explanation": "Verb describing the start of an action."
+        }
+      ]
+    },
+    {
+      "slug": "future-plans-intentions",
+      "title": "Describing Future Plans and Intentions",
+      "objective": "Learners will be able to express future plans and intentions using 'ir a' + infinitive and the future tense.",
+      "cards": [
+        {
+          "front": "Voy a",
+          "back": "I am going to",
+          "ipa": "/ˈboi a/",
+          "example_sentence": "Voy a estudiar español en España el próximo año.",
+          "grammar_explanation": "'Ir a' + infinitive to express immediate future."
+        },
+        {
+          "front": "El próximo año",
+          "back": "Next year",
+          "ipa": "/el ˈpɾok.si.mo ˈa.ɲo/",
+          "example_sentence": "El próximo año visitaré a mis familiares en Argentina.",
+          "grammar_explanation": "Time expression indicating the following year."
+        },
+        {
+          "front": "Mañana",
+          "back": "Tomorrow",
+          "ipa": "/ma.ˈɲa.na/",
+          "example_sentence": "Mañana iré al gimnasio por la mañana.",
+          "grammar_explanation": "Adverb indicating the day after today."
+        },
+        {
+          "front": "La semana que viene",
+          "back": "Next week",
+          "ipa": "/la se.ˈma.na ke ˈβje.ne/",
+          "example_sentence": "La semana que viene tengo una entrevista de trabajo.",
+          "grammar_explanation": "Time expression indicating the following week."
+        },
+        {
+          "front": "Dentro de (X) días/meses",
+          "back": "In (X) days/months",
+          "ipa": "/ˈden.tɾo de (ekis) ˈdi.as/ˈme.ses/",
+          "example_sentence": "Dentro de dos meses me graduaré de la universidad.",
+          "grammar_explanation": "Used to indicate the time elapsed until an event."
+        },
+        {
+          "front": "Pensar",
+          "back": "To think/plan",
+          "ipa": "/pen.ˈsaɾ/",
+          "example_sentence": "Pienso comprar una casa nueva pronto.",
+          "grammar_explanation": "Used to express plans or intentions."
+        },
+        {
+          "front": "Esperar",
+          "back": "To hope",
+          "ipa": "/es.pe.ˈɾaɾ/",
+          "example_sentence": "Espero viajar por Europa algún día.",
+          "grammar_explanation": "Used to express hopes for the future."
+        },
+        {
+          "front": "Querer",
+          "back": "To want",
+          "ipa": "/ke.ˈɾeɾ/",
+          "example_sentence": "Quiero aprender a tocar la guitarra.",
+          "grammar_explanation": "Used to express desires or wishes for the future."
+        },
+        {
+          "front": "Tener ganas de",
+          "back": "To feel like",
+          "ipa": "/te.ˈneɾ ˈɡa.nas de/",
+          "example_sentence": "Tengo ganas de ir a la playa este fin de semana.",
+          "grammar_explanation": "Expressing a desire or inclination towards something."
+        },
+        {
+          "front": "El futuro",
+          "back": "The future",
+          "ipa": "/el fu.ˈtu.ɾo/",
+          "example_sentence": "No sé qué me depara el futuro.",
+          "grammar_explanation": "General term for time that is to come."
+        }
+      ]
+    },
+    {
+      "slug": "describing-current-situations",
+      "title": "Describing Current Situations and Ongoing Actions",
+      "objective": "Learners will be able to describe current situations and ongoing actions using the present tense and present progressive.",
+      "cards": [
+        {
+          "front": "Ahora mismo",
+          "back": "Right now",
+          "ipa": "/a.ˈo.ɾa ˈmiz.mo/",
+          "example_sentence": "Ahora mismo estoy estudiando español.",
+          "grammar_explanation": "Adverb indicating the present moment."
+        },
+        {
+          "front": "Actualmente",
+          "back": "Currently",
+          "ipa": "/ak.twal.ˈmen.te/",
+          "example_sentence": "Actualmente trabajo en una empresa de tecnología.",
+          "grammar_explanation": "Adverb indicating the current situation."
+        },
+        {
+          "front": "En este momento",
+          "back": "At this moment",
+          "ipa": "/en ˈes.te mo.ˈmen.to/",
+          "example_sentence": "En este momento estoy leyendo un libro interesante.",
+          "grammar_explanation": "Time expression indicating the present moment."
+        },
+        {
+          "front": "Estar + -ando/-iendo",
+          "back": "To be + -ing (present progressive)",
+          "ipa": "/es.ˈtaɾ + -ˈan.do/-ˈjen.do/",
+          "example_sentence": "Estoy comiendo una pizza deliciosa.",
+          "grammar_explanation": "Used to describe actions in progress."
+        },
+        {
+          "front": "Hoy",
+          "back": "Today",
+          "ipa": "/oi/",
+          "example_sentence": "Hoy es un día muy soleado.",
+          "grammar_explanation": "Adverb indicating the current day."
+        },
+        {
+          "front": "Sentirse",
+          "back": "To feel",
+          "ipa": "/sen.ˈtiɾ.se/",
+          "example_sentence": "Me siento muy cansado hoy.",
+          "grammar_explanation": "To express current emotions or feelings."
+        },
+        {
+          "front": "Parecer",
+          "back": "To seem",
+          "ipa": "/pa.ɾe.ˈθeɾ/",
+          "example_sentence": "Parece que va a llover.",
+          "grammar_explanation": "Used to describe current appearances or impressions."
+        },
+        {
+          "front": "Ser",
+          "back": "To be",
+          "ipa": "/seɾ/",
+          "example_sentence": "Soy estudiante de español.",
+          "grammar_explanation": "Used to describe permanent characteristics."
+        },
+        {
+          "front": "Ahora",
+          "back": "Now",
+          "ipa": "/a.ˈo.ɾa/",
+          "example_sentence": "Ahora entiendo la lección.",
+          "grammar_explanation": "Adverb expressing the present."
+        },
+        {
+          "front": "Mientras tanto",
+          "back": "Meanwhile",
+          "ipa": "/ˈmjen.tɾas ˈtan.to/",
+          "example_sentence": "Estoy cocinando la cena, mientras tanto, puedes poner la mesa.",
+          "grammar_explanation": "Indicates something happening at the same time as something else."
+        }
+      ]
+    },
+    {
+      "slug": "describing-hypothetical-situations",
+      "title": "Describing Hypothetical Situations",
+      "objective": "Learners will be able to describe hypothetical situations using the conditional tense.",
+      "cards": [
+        {
+          "front": "Si + imperfecto de subjuntivo, condicional",
+          "back": "If + imperfect subjunctive, conditional",
+          "ipa": "/si + im.per.ˈfek.to de sup.xun.ˈti.βo, kon.di.θjo.ˈnal/",
+          "example_sentence": "Si tuviera más tiempo, viajaría por todo el mundo.",
+          "grammar_explanation": "Conditional sentence structure."
+        },
+        {
+          "front": "Me gustaría",
+          "back": "I would like",
+          "ipa": "/me ɣus.ta.ˈɾi.a/",
+          "example_sentence": "Me gustaría aprender a bailar salsa.",
+          "grammar_explanation": "Conditional form of 'gustar' to express desires."
+        },
+        {
+          "front": "Podría",
+          "back": "I could",
+          "ipa": "/po.ˈðɾi.a/",
+          "example_sentence": "Podría ayudarte con tu tarea si quieres.",
+          "grammar_explanation": "Conditional form of 'poder' to express possibility."
+        },
+        {
+          "front": "Debería",
+          "back": "I should",
+          "ipa": "/de.ˈβe.ɾi.a/",
+          "example_sentence": "Debería estudiar más para el examen.",
+          "grammar_explanation": "Conditional form of 'deber' to express obligation or advice."
+        },
+        {
+          "front": "Querría",
+          "back": "I would want",
+          "ipa": "/ke.ˈre.ɾi.a/",
+          "example_sentence": "Querría ir al concierto, pero no tengo dinero.",
+          "grammar_explanation": "Conditional form of 'querer' to express desires."
+        },
+        {
+          "front": "Si fuera tú",
+          "back": "If I were you",
+          "ipa": "/si ˈfwe.ɾa tu/",
+          "example_sentence": "Si fuera tú, aceptaría el trabajo.",
+          "grammar_explanation": "Common expression used to give advice."
+        },
+        {
+          "front": "Sería",
+          "back": "It would be",
+          "ipa": "/se.ˈɾi.a/",
+          "example_sentence": "Sería genial ir de vacaciones.",
+          "grammar_explanation": "Conditional form of 'ser' to express what would be."
+        },
+        {
+          "front": "Imaginar",
+          "back": "To imagine",
+          "ipa": "/i.ma.xi.ˈnaɾ/",
+          "example_sentence": "Imagino cómo sería vivir en otro país.",
+          "grammar_explanation": "Verb used to describe creating mental images of possibilities."
+        },
+        {
+          "front": "Posiblemente",
+          "back": "Possibly",
+          "ipa": "/po.si.ˈβle.men.te/",
+          "example_sentence": "Posiblemente llueva mañana.",
+          "grammar_explanation": "Adverb expressing a hypothetical possibility."
+        },
+        {
+          "front": "Quizás",
+          "back": "Perhaps",
+          "ipa": "/ki.ˈθas/",
+          "example_sentence": "Quizás vaya a la fiesta si tengo tiempo.",
+          "grammar_explanation": "Adverb expressing uncertainty or possibility."
+        }
+      ]
+    },
+    {
+      "slug": "describing-routines-habits",
+      "title": "Describing Routines and Habits",
+      "objective": "Learners will be able to describe daily routines and habits using reflexive verbs and adverbs of frequency.",
+      "cards": [
+        {
+          "front": "Normalmente",
+          "back": "Normally",
+          "ipa": "/noɾ.mal.ˈmen.te/",
+          "example_sentence": "Normalmente me levanto a las siete de la mañana.",
+          "grammar_explanation": "Adverb of frequency indicating typical behavior."
+        },
+        {
+          "front": "Generalmente",
+          "back": "Generally",
+          "ipa": "/xe.ne.ɾal.ˈmen.te/",
+          "example_sentence": "Generalmente desayuno café y tostadas.",
+          "grammar_explanation": "Adverb of frequency indicating common occurrence."
+        },
+        {
+          "front": "A menudo",
+          "back": "Often",
+          "ipa": "/a ˈme.nu.ðo/",
+          "example_sentence": "A menudo voy al gimnasio después del trabajo.",
+          "grammar_explanation": "Adverb of frequency indicating frequent occurrence."
+        },
+        {
+          "front": "Rara vez",
+          "back": "Rarely",
+          "ipa": "/ˈra.ɾa βeθ/",
+          "example_sentence": "Rara vez como comida rápida.",
+          "grammar_explanation": "Adverb of frequency indicating infrequent occurrence."
+        },
+        {
+          "front": "Levantarse",
+          "back": "To get up",
+          "ipa": "/le.βan.ˈtaɾ.se/",
+          "example_sentence": "Me levanto temprano los días de semana.",
+          "grammar_explanation": "Reflexive verb for getting out of bed."
+        },
+        {
+          "front": "Acostarse",
+          "back": "To go to bed",
+          "ipa": "/a.kos.ˈtaɾ.se/",
+          "example_sentence": "Me acuesto tarde los fines de semana.",
+          "grammar_explanation": "Reflexive verb for going to bed."
+        },
+        {
+          "front": "Ducharse",
+          "back": "To take a shower",
+          "ipa": "/du.ˈt͡ʃaɾ.se/",
+          "example_sentence": "Me ducho por la mañana antes de ir al trabajo.",
+          "grammar_explanation": "Reflexive verb for showering."
+        },
+        {
+          "front": "Vestirse",
+          "back": "To get dressed",
+          "ipa": "/bes.ˈtiɾ.se/",
+          "example_sentence": "Me visto rápidamente para no llegar tarde.",
+          "grammar_explanation": "Reflexive verb for getting dressed."
+        },
+        {
+          "front": "Todos los días",
+          "back": "Every day",
+          "ipa": "/ˈto.ðos los ˈdi.as/",
+          "example_sentence": "Todos los días hago ejercicio.",
+          "grammar_explanation": "Indicates actions performed daily"
+        },
+        {
+          "front": "Cada semana",
+          "back": "Every week",
+          "ipa": "/ˈka.ða se.ˈma.na/",
+          "example_sentence": "Cada semana voy al mercado a comprar frutas y verduras.",
+          "grammar_explanation": "Indicates actions performed weekly."
+        }
+      ]
+    }
+  ]
+}

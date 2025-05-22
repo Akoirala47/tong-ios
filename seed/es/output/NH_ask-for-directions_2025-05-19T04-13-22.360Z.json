@@ -1,0 +1,470 @@
+{
+  "level_code": "NH",
+  "topic_slug": "ask-for-directions",
+  "topic_title": "ask for directions.",
+  "can_do_statement": "I can ask for directions.",
+  "lessons": [
+    {
+      "slug": "directions-basics",
+      "title": "Basic Directional Vocabulary",
+      "objective": "Learn essential vocabulary for understanding and asking for basic directions.",
+      "cards": [
+        {
+          "front": "¿Dónde está...?",
+          "back": "Where is...?",
+          "ipa": "/ˈdon.de esˈta.../",
+          "example_sentence": "¿Dónde está el banco?",
+          "grammar_explanation": "Use 'estar' for location.  'Dónde' means 'where.'"
+        },
+        {
+          "front": "a la derecha",
+          "back": "to the right",
+          "ipa": "/a la deˈɾe.t͡ʃa/",
+          "example_sentence": "Está a la derecha de la tienda.",
+          "grammar_explanation": "Use 'a la' + direction."
+        },
+        {
+          "front": "a la izquierda",
+          "back": "to the left",
+          "ipa": "/a la isˈkjeɾ.da/",
+          "example_sentence": "El museo está a la izquierda.",
+          "grammar_explanation": "Use 'a la' + direction."
+        },
+        {
+          "front": "derecho",
+          "back": "straight",
+          "ipa": "/deˈɾe.t͡ʃo/",
+          "example_sentence": "Sigue derecho por dos cuadras.",
+          "grammar_explanation": "Can also mean 'right' as in not left."
+        },
+        {
+          "front": "aquí",
+          "back": "here",
+          "ipa": "/aˈki/",
+          "example_sentence": "Estoy aquí.",
+          "grammar_explanation": "Adverb of place."
+        },
+        {
+          "front": "allí",
+          "back": "there",
+          "ipa": "/aˈʝi/",
+          "example_sentence": "Está allí.",
+          "grammar_explanation": "More distant than 'aquí'."
+        },
+        {
+          "front": "cerca de",
+          "back": "near to",
+          "ipa": "/ˈθeɾ.ka de/",
+          "example_sentence": "El café está cerca de aquí.",
+          "grammar_explanation": "Use 'de' after 'cerca'."
+        },
+        {
+          "front": "lejos de",
+          "back": "far from",
+          "ipa": "/ˈle.xos de/",
+          "example_sentence": "La estación está lejos de mi casa.",
+          "grammar_explanation": "Use 'de' after 'lejos'."
+        },
+        {
+          "front": "¿Perdón?",
+          "back": "Excuse me?",
+          "ipa": "/peɾˈðon/",
+          "example_sentence": "¿Perdón? No te entiendo.",
+          "grammar_explanation": "Used to politely interrupt or ask for clarification."
+        },
+        {
+          "front": "la dirección",
+          "back": "the address/direction",
+          "ipa": "/la di.ɾekˈθjon/",
+          "example_sentence": "¿Cuál es la dirección?",
+          "grammar_explanation": "Feminine noun. Important for asking where to go."
+        }
+      ]
+    },
+    {
+      "slug": "landmarks",
+      "title": "Landmarks and Points of Interest",
+      "objective": "Learn vocabulary for common landmarks and places to ask for directions to.",
+      "cards": [
+        {
+          "front": "el banco",
+          "back": "the bank",
+          "ipa": "/el ˈbaŋ.ko/",
+          "example_sentence": "Quiero ir al banco.",
+          "grammar_explanation": "Masculine noun; use 'el'."
+        },
+        {
+          "front": "el restaurante",
+          "back": "the restaurant",
+          "ipa": "/el res.tau.ˈɾan.te/",
+          "example_sentence": "¿Dónde está el restaurante?",
+          "grammar_explanation": "Masculine noun; use 'el'."
+        },
+        {
+          "front": "la tienda",
+          "back": "the store",
+          "ipa": "/la ˈtjen.da/",
+          "example_sentence": "Necesito ir a la tienda.",
+          "grammar_explanation": "Feminine noun; use 'la'."
+        },
+        {
+          "front": "el hotel",
+          "back": "the hotel",
+          "ipa": "/el oˈtel/",
+          "example_sentence": "Mi hotel está cerca.",
+          "grammar_explanation": "Masculine noun; use 'el'."
+        },
+        {
+          "front": "la estación",
+          "back": "the station",
+          "ipa": "/la es.taˈθjon/",
+          "example_sentence": "Estoy en la estación de tren.",
+          "grammar_explanation": "Feminine noun; use 'la'."
+        },
+        {
+          "front": "el museo",
+          "back": "the museum",
+          "ipa": "/el muˈse.o/",
+          "example_sentence": "El museo es muy interesante.",
+          "grammar_explanation": "Masculine noun; use 'el'."
+        },
+        {
+          "front": "el parque",
+          "back": "the park",
+          "ipa": "/el ˈpaɾ.ke/",
+          "example_sentence": "Me gusta caminar en el parque.",
+          "grammar_explanation": "Masculine noun; use 'el'."
+        },
+        {
+          "front": "la calle",
+          "back": "the street",
+          "ipa": "/la ˈka.ʝe/",
+          "example_sentence": "Vivo en esta calle.",
+          "grammar_explanation": "Feminine noun; use 'la'."
+        },
+        {
+          "front": "la plaza",
+          "back": "the square",
+          "ipa": "/la ˈpla.θa/",
+          "example_sentence": "La plaza es muy bonita.",
+          "grammar_explanation": "Feminine noun; use 'la'."
+        },
+        {
+          "front": "el cine",
+          "back": "the cinema",
+          "ipa": "/el ˈθi.ne/",
+          "example_sentence": "Vamos al cine este fin de semana.",
+          "grammar_explanation": "Masculine noun; use 'el'."
+        }
+      ]
+    },
+    {
+      "slug": "giving-instructions",
+      "title": "Giving Simple Instructions",
+      "objective": "Learn common phrases used when giving simple directions.",
+      "cards": [
+        {
+          "front": "Siga",
+          "back": "Follow/Continue",
+          "ipa": "/ˈsi.ɣa/",
+          "example_sentence": "Siga derecho.",
+          "grammar_explanation": "Formal command of 'seguir'."
+        },
+        {
+          "front": "doble",
+          "back": "Turn",
+          "ipa": "/ˈdo.βle/",
+          "example_sentence": "Doble a la derecha.",
+          "grammar_explanation": "Imperative form of 'doblar'."
+        },
+        {
+          "front": "camine",
+          "back": "Walk",
+          "ipa": "/kaˈmi.ne/",
+          "example_sentence": "Camine dos cuadras.",
+          "grammar_explanation": "Imperative form of 'caminar'."
+        },
+        {
+          "front": "la esquina",
+          "back": "the corner",
+          "ipa": "/la esˈki.na/",
+          "example_sentence": "Está en la esquina.",
+          "grammar_explanation": "Feminine noun; use 'la'."
+        },
+        {
+          "front": "la cuadra",
+          "back": "the block",
+          "ipa": "/la ˈkwa.ðɾa/",
+          "example_sentence": "Camine una cuadra.",
+          "grammar_explanation": "Feminine noun; use 'la'."
+        },
+        {
+          "front": "primero",
+          "back": "first",
+          "ipa": "/pɾiˈme.ɾo/",
+          "example_sentence": "Primero, siga derecho.",
+          "grammar_explanation": "Adjective; describes order."
+        },
+        {
+          "front": "después",
+          "back": "after/afterwards",
+          "ipa": "/desˈpwes/",
+          "example_sentence": "Después, doble a la izquierda.",
+          "grammar_explanation": "Adverb of time."
+        },
+        {
+          "front": "hasta",
+          "back": "until",
+          "ipa": "/ˈas.ta/",
+          "example_sentence": "Siga hasta la esquina.",
+          "grammar_explanation": "Preposition; indicates a limit."
+        },
+        {
+          "front": "entre",
+          "back": "between",
+          "ipa": "/ˈen.tɾe/",
+          "example_sentence": "Está entre el banco y la tienda.",
+          "grammar_explanation": "Preposition; indicates position relative to two things."
+        },
+        {
+          "front": "al lado de",
+          "back": "next to",
+          "ipa": "/al ˈla.ðo de/",
+          "example_sentence": "Está al lado del hotel.",
+          "grammar_explanation": "Phrase indicating nearness."
+        }
+      ]
+    },
+    {
+      "slug": "polite-requests",
+      "title": "Polite Requests and Clarification",
+      "objective": "Learn polite phrases for asking for and clarifying directions.",
+      "cards": [
+        {
+          "front": "Por favor",
+          "back": "Please",
+          "ipa": "/poɾ faˈβoɾ/",
+          "example_sentence": "¿Me puede ayudar, por favor?",
+          "grammar_explanation": "Used to make requests polite."
+        },
+        {
+          "front": "¿Me puede decir...?",
+          "back": "Can you tell me...?",
+          "ipa": "/me ˈpwe.de deˈθiɾ/",
+          "example_sentence": "¿Me puede decir dónde está el banco?",
+          "grammar_explanation": "Polite way to ask for information."
+        },
+        {
+          "front": "Gracias",
+          "back": "Thank you",
+          "ipa": "/ˈɡɾa.θjas/",
+          "example_sentence": "Muchas gracias por su ayuda.",
+          "grammar_explanation": "Standard expression of gratitude."
+        },
+        {
+          "front": "No entiendo",
+          "back": "I don't understand",
+          "ipa": "/no enˈtjen.do/",
+          "example_sentence": "Lo siento, no entiendo.",
+          "grammar_explanation": "Useful when you need clarification."
+        },
+        {
+          "front": "¿Puede repetir, por favor?",
+          "back": "Can you repeat, please?",
+          "ipa": "/ˈpwe.de re.peˈtiɾ poɾ faˈβoɾ/",
+          "example_sentence": "¿Puede repetir, por favor? No entendí.",
+          "grammar_explanation": "Useful when you need clarification."
+        },
+        {
+          "front": "Lo siento",
+          "back": "I'm sorry",
+          "ipa": "/lo ˈsjen.to/",
+          "example_sentence": "Lo siento, no hablo español muy bien.",
+          "grammar_explanation": "Expresses regret or apology."
+        },
+        {
+          "front": "Ayuda",
+          "back": "Help",
+          "ipa": "/aˈʝu.ða/",
+          "example_sentence": "Necesito ayuda.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Disculpe",
+          "back": "Excuse me",
+          "ipa": "/disˈkul.pe/",
+          "example_sentence": "Disculpe, ¿sabe dónde está...?",
+          "grammar_explanation": "Formal way to get someone's attention."
+        },
+        {
+          "front": "Perdón",
+          "back": "Excuse me / Sorry",
+          "ipa": "/peɾˈðon/",
+          "example_sentence": "Perdón, ¿me puede ayudar?",
+          "grammar_explanation": "Another way to get someone's attention or apologize."
+        },
+        {
+          "front": "Con permiso",
+          "back": "Excuse me (passing through)",
+          "ipa": "/kon peɾˈmi.so/",
+          "example_sentence": "Con permiso, necesito pasar.",
+          "grammar_explanation": "Used when you need to pass by someone."
+        }
+      ]
+    },
+    {
+      "slug": "estimating-distance",
+      "title": "Estimating Distance and Time",
+      "objective": "Learn phrases to estimate distance and time to reach a destination.",
+      "cards": [
+        {
+          "front": "¿Está lejos?",
+          "back": "Is it far?",
+          "ipa": "/esˈta ˈle.xos/",
+          "example_sentence": "¿Está lejos el museo?",
+          "grammar_explanation": "Question asking about distance."
+        },
+        {
+          "front": "¿Cuánto tiempo?",
+          "back": "How much time?",
+          "ipa": "/ˈkwan.to ˈtjem.po/",
+          "example_sentence": "¿Cuánto tiempo se tarda en llegar?",
+          "grammar_explanation": "Asking about time needed."
+        },
+        {
+          "front": "minutos",
+          "back": "minutes",
+          "ipa": "/miˈnu.tos/",
+          "example_sentence": "Está a cinco minutos caminando.",
+          "grammar_explanation": "Plural noun."
+        },
+        {
+          "front": "más o menos",
+          "back": "more or less",
+          "ipa": "/mas o ˈme.nos/",
+          "example_sentence": "Está a diez minutos, más o menos.",
+          "grammar_explanation": "Indicates an approximation."
+        },
+        {
+          "front": "unos",
+          "back": "about/approximately",
+          "ipa": "/ˈu.nos/",
+          "example_sentence": "Está a unos quince minutos.",
+          "grammar_explanation": "Used before a number to indicate approximation."
+        },
+        {
+          "front": "hora",
+          "back": "hour",
+          "ipa": "/ˈo.ɾa/",
+          "example_sentence": "Está a una hora de aquí.",
+          "grammar_explanation": "Feminine Noun."
+        },
+        {
+          "front": "kilómetros",
+          "back": "kilometers",
+          "ipa": "/kiˈlo.me.tɾos/",
+          "example_sentence": "Está a dos kilómetros de aquí.",
+          "grammar_explanation": "Plural noun; common unit of distance."
+        },
+        {
+          "front": "aproximadamente",
+          "back": "approximately",
+          "ipa": "/a.pɾok.si.maˈða.men.te/",
+          "example_sentence": "El viaje durará aproximadamente una hora.",
+          "grammar_explanation": "Adverb; indicates an estimate."
+        },
+        {
+          "front": "casi",
+          "back": "almost",
+          "ipa": "/ˈka.si/",
+          "example_sentence": "Ya casi llegamos.",
+          "grammar_explanation": "Adverb indicating nearness to a point."
+        },
+        {
+          "front": "enseguida",
+          "back": "right away/soon",
+          "ipa": "/en.seˈɣi.ða/",
+          "example_sentence": "Llegaremos enseguida.",
+          "grammar_explanation": "Adverb indicating imminence."
+        }
+      ]
+    },
+    {
+      "slug": "follow-up-questions",
+      "title": "Follow-Up Questions",
+      "objective": "Learn phrases to ask follow-up questions for clarification.",
+      "cards": [
+        {
+          "front": "¿Hay...?",
+          "back": "Is there...?",
+          "ipa": "/ai/",
+          "example_sentence": "¿Hay un banco cerca de aquí?",
+          "grammar_explanation": "Used to ask if something exists."
+        },
+        {
+          "front": "¿Hay una señal?",
+          "back": "Is there a sign?",
+          "ipa": "/ai uˈna seˈɲal/",
+          "example_sentence": "¿Hay una señal que diga 'Museo'?",
+          "grammar_explanation": "Looking for an indication."
+        },
+        {
+          "front": "¿Es fácil de encontrar?",
+          "back": "Is it easy to find?",
+          "ipa": "/es ˈfa.θil de en.konˈtɾaɾ/",
+          "example_sentence": "¿Es fácil de encontrar la estación?",
+          "grammar_explanation": "Asking about ease of locating something."
+        },
+        {
+          "front": "¿Está a la vista?",
+          "back": "Is it in sight?",
+          "ipa": "/esˈta a la ˈβis.ta/",
+          "example_sentence": "¿Está a la vista desde aquí?",
+          "grammar_explanation": "Asking if it's visible."
+        },
+        {
+          "front": "¿En qué dirección?",
+          "back": "In what direction?",
+          "ipa": "/en ke di.ɾekˈθjon/",
+          "example_sentence": "¿En qué dirección está el parque?",
+          "grammar_explanation": "Useful when you need clarification."
+        },
+        {
+          "front": "¿Puede mostrarme en el mapa?",
+          "back": "Can you show me on the map?",
+          "ipa": "/ˈpwe.de mosˈtɾaɾ.me en el ˈma.pa/",
+          "example_sentence": "¿Puede mostrarme en el mapa, por favor?",
+          "grammar_explanation": "Useful if you have a map."
+        },
+        {
+          "front": "Gracias por todo",
+          "back": "Thank you for everything",
+          "ipa": "/ˈɡɾa.θjas poɾ ˈto.ðo/",
+          "example_sentence": "Gracias por todo, me ayudaste mucho.",
+          "grammar_explanation": "Expressing gratitude for comprehensive help."
+        },
+        {
+          "front": "¿Por dónde?",
+          "back": "Which way?",
+          "ipa": "/poɾ ˈdon.de/",
+          "example_sentence": "¿Para ir al centro, por dónde?",
+          "grammar_explanation": "Asking for specific route information."
+        },
+        {
+          "front": "¿Está bien por aquí?",
+          "back": "Is this the right way?",
+          "ipa": "/esˈta bjen poɾ aˈki/",
+          "example_sentence": "¿Está bien por aquí para el museo?",
+          "grammar_explanation": "Confirming that you are on the correct route."
+        },
+        {
+          "front": "¿Hay alguna referencia?",
+          "back": "Is there any landmark?",
+          "ipa": "/ai alˈɣu.na re.feˈɾen.θja/",
+          "example_sentence": "¿Hay alguna referencia cerca del hotel?",
+          "grammar_explanation": "Asking about identifiable markers to help find the location."
+        }
+      ]
+    }
+  ]
+}

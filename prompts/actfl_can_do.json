@@ -1,0 +1,60 @@
+{
+  "NL": [
+    "I can introduce myself.",
+    "I can greet and say goodbye to someone.",
+    "I can count from 1-10.",
+    "I can communicate basic information about myself."
+  ],
+  "NM": [
+    "I can order a meal.",
+    "I can make a purchase.",
+    "I can state the time.",
+    "I can talk about my family members and friends.",
+    "I can talk about my hobbies and what I like to do."
+  ],
+  "NH": [
+    "I can describe my daily routine.",
+    "I can talk about upcoming plans.",
+    "I can ask for directions.",
+    "I can talk about my living arrangements.",
+    "I can handle simple transactions in a store or restaurant."
+  ],
+  "IL": [
+    "I can participate in simple conversations on familiar topics.",
+    "I can ask and answer questions about everyday life.",
+    "I can exchange information about personal events.",
+    "I can handle short social interactions."
+  ],
+  "IM": [
+    "I can handle uncomplicated tasks and social situations.",
+    "I can talk in detail about my daily activities.",
+    "I can express my opinions on familiar topics.",
+    "I can describe past activities and personal experiences."
+  ],
+  "IH": [
+    "I can participate fully in casual conversations.",
+    "I can narrate and describe in all major time frames.",
+    "I can handle situations with a complication.",
+    "I can explain my viewpoint on issues of interest."
+  ],
+  "AL": [
+    "I can communicate in formal and informal situations.",
+    "I can discuss topics of community, national, or international interest.",
+    "I can support my opinion and construct hypotheses."
+  ],
+  "AM": [
+    "I can engage effectively with a variety of topics not typically discussed in everyday life.",
+    "I can discuss abstract topics and handle linguistically unfamiliar situations.",
+    "I can support arguments and construct hypotheses with increased detail."
+  ],
+  "AH": [
+    "I can communicate with accuracy and fluency to participate fully in discussions on a variety of topics.",
+    "I can provide a structured argument to support my opinions.",
+    "I can construct and develop hypotheses to explore alternative possibilities."
+  ],
+  "S": [
+    "I can communicate with precision and accuracy in all time frames.",
+    "I can discuss specialized topics in detail.",
+    "I can tailor language to a variety of audiences."
+  ]
+} 

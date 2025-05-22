@@ -1,0 +1,456 @@
+{
+  "level_code": "AH",
+  "topic_slug": "communicate-with-accuracy-and-fluency-to-participate-fully-in-discussions-on-a-variety-of-topics",
+  "topic_title": "communicate with accuracy and fluency to participate fully in discussions on a variety of topics.",
+  "can_do_statement": "I can communicate with accuracy and fluency to participate fully in discussions on a variety of topics.",
+  "lessons": [
+    {
+      "slug": "expressing-opinions-arguments",
+      "title": "Expressing Opinions and Arguments",
+      "objective": "Learners will be able to express nuanced opinions and construct arguments with appropriate supporting evidence.",
+      "cards": [
+        {
+          "front": "A mi parecer",
+          "back": "In my opinion",
+          "ipa": "a mi pa.ˈɾe.θeɾ",
+          "example_sentence": "A mi parecer, la solución a este problema es más compleja.",
+          "grammar_explanation": "Useful phrase for introducing an opinion."
+        },
+        {
+          "front": "Sin embargo",
+          "back": "However",
+          "ipa": "sin em.ˈβaɾ.ɣo",
+          "example_sentence": "La economía está mejorando; sin embargo, el desempleo sigue siendo alto.",
+          "grammar_explanation": "Common conjunction to contrast ideas."
+        },
+        {
+          "front": "Por lo tanto",
+          "back": "Therefore",
+          "ipa": "poɾ lo ˈtan.to",
+          "example_sentence": "Hubo mucha lluvia; por lo tanto, la cosecha será buena.",
+          "grammar_explanation": "Signals a conclusion or consequence."
+        },
+        {
+          "front": "A pesar de",
+          "back": "Despite",
+          "ipa": "a pe.ˈsaɾ de",
+          "example_sentence": "A pesar de las dificultades, seguimos adelante.",
+          "grammar_explanation": "Introduces a contrasting element."
+        },
+        {
+          "front": "Es crucial que",
+          "back": "It is crucial that",
+          "ipa": "es kɾu.ˈθjal ke",
+          "example_sentence": "Es crucial que todos participemos en el debate.",
+          "grammar_explanation": "Emphasizes the importance of something."
+        },
+        {
+          "front": "En cuanto a",
+          "back": "Regarding/As for",
+          "ipa": "en ˈkwan.to a",
+          "example_sentence": "En cuanto a la reforma, todavía hay mucho que discutir.",
+          "grammar_explanation": "Used to introduce a specific topic."
+        },
+        {
+          "front": "Según",
+          "back": "According to",
+          "ipa": "se.ˈɣun",
+          "example_sentence": "Según el informe, la situación ha mejorado.",
+          "grammar_explanation": "Attributes information to a source."
+        },
+        {
+          "front": "Considerando que",
+          "back": "Considering that",
+          "ipa": "kon.si.de.ˈɾan.do ke",
+          "example_sentence": "Considerando que no hay tiempo, debemos ser breves.",
+          "grammar_explanation": "Introduces a reason or condition."
+        }
+      ]
+    },
+    {
+      "slug": "discussing-social-issues",
+      "title": "Discussing Social Issues",
+      "objective": "Learners will be able to discuss complex social issues with appropriate vocabulary and sensitivity.",
+      "cards": [
+        {
+          "front": "La desigualdad",
+          "back": "Inequality",
+          "ipa": "la i.ɣwal.dað",
+          "example_sentence": "La desigualdad social es un problema grave en muchos países.",
+          "grammar_explanation": "Noun referring to disparities."
+        },
+        {
+          "front": "El desempleo",
+          "back": "Unemployment",
+          "ipa": "el de.sem.ˈple.o",
+          "example_sentence": "El desempleo juvenil es una preocupación constante.",
+          "grammar_explanation": "Noun referring to joblessness."
+        },
+        {
+          "front": "La pobreza",
+          "back": "Poverty",
+          "ipa": "la po.ˈβɾe.θa",
+          "example_sentence": "La pobreza extrema afecta a millones de personas.",
+          "grammar_explanation": "Noun indicating a state of being poor."
+        },
+        {
+          "front": "Los derechos humanos",
+          "back": "Human rights",
+          "ipa": "los de.ˈɾe.t͡ʃos u.ˈma.nos",
+          "example_sentence": "La defensa de los derechos humanos es fundamental.",
+          "grammar_explanation": "Basic rights inherent to all human beings."
+        },
+        {
+          "front": "La discriminación",
+          "back": "Discrimination",
+          "ipa": "la dis.kɾi.mi.na.ˈθjon",
+          "example_sentence": "La discriminación racial es inaceptable.",
+          "grammar_explanation": "Unjust treatment based on certain characteristics."
+        },
+        {
+          "front": "El racismo",
+          "back": "Racism",
+          "ipa": "el ra.ˈθis.mo",
+          "example_sentence": "El racismo estructural perpetúa la desigualdad.",
+          "grammar_explanation": "Prejudice, discrimination, or antagonism directed against someone of a different race."
+        },
+        {
+          "front": "La xenofobia",
+          "back": "Xenophobia",
+          "ipa": "la kse.no.ˈfo.βja",
+          "example_sentence": "La xenofobia ha aumentado en algunos países debido a la inmigración.",
+          "grammar_explanation": "Dislike of or prejudice against people from other countries."
+        },
+        {
+          "front": "El acceso a",
+          "back": "Access to",
+          "ipa": "el ak.ˈθe.so a",
+          "example_sentence": "El acceso a la educación es un derecho fundamental.",
+          "grammar_explanation": "Ability to obtain or make use of something."
+        },
+        {
+          "front": "Abordar",
+          "back": "To address/tackle",
+          "ipa": "a.βor.ˈdaɾ",
+          "example_sentence": "Es importante abordar estos problemas con seriedad.",
+          "grammar_explanation": "Verb meaning to deal with a problem."
+        },
+        {
+          "front": "La justicia social",
+          "back": "Social justice",
+          "ipa": "la χus.ˈti.θja so.ˈθjal",
+          "example_sentence": "La justicia social busca la igualdad de oportunidades.",
+          "grammar_explanation": "Justice in terms of the distribution of wealth, opportunities, and privileges within a society."
+        }
+      ]
+    },
+    {
+      "slug": "discussing-environmental-issues",
+      "title": "Discussing Environmental Issues",
+      "objective": "Learners will be able to discuss environmental issues and related policies.",
+      "cards": [
+        {
+          "front": "El cambio climático",
+          "back": "Climate change",
+          "ipa": "el ˈt͡ʃam.bjo kli.ˈma.ti.ko",
+          "example_sentence": "El cambio climático es una amenaza global.",
+          "grammar_explanation": "Noun referring to long-term shifts in temperatures and weather patterns."
+        },
+        {
+          "front": "La deforestación",
+          "back": "Deforestation",
+          "ipa": "la de.fo.ɾes.ta.ˈθjon",
+          "example_sentence": "La deforestación contribuye al cambio climático.",
+          "grammar_explanation": "Noun referring to the clearing of forests."
+        },
+        {
+          "front": "La sostenibilidad",
+          "back": "Sustainability",
+          "ipa": "la sos.te.ni.βi.li.ˈðað",
+          "example_sentence": "La sostenibilidad es clave para el futuro del planeta.",
+          "grammar_explanation": "Noun referring to the ability to be maintained at a certain rate or level."
+        },
+        {
+          "front": "La energía renovable",
+          "back": "Renewable energy",
+          "ipa": "la e.neɾ.ˈxi.a re.no.ˈβa.βle",
+          "example_sentence": "La energía renovable es una alternativa a los combustibles fósiles.",
+          "grammar_explanation": "Energy that is collected from renewable resources."
+        },
+        {
+          "front": "La contaminación",
+          "back": "Pollution",
+          "ipa": "la kon.ta.mi.na.ˈθjon",
+          "example_sentence": "La contaminación del aire es un problema en muchas ciudades.",
+          "grammar_explanation": "Noun referring to the presence or introduction into the environment of a substance which has harmful or poisonous effects."
+        },
+        {
+          "front": "Los recursos naturales",
+          "back": "Natural resources",
+          "ipa": "los re.ˈkuɾ.sos na.tu.ˈɾa.les",
+          "example_sentence": "La gestión de los recursos naturales es esencial.",
+          "grammar_explanation": "Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain."
+        },
+        {
+          "front": "Proteger",
+          "back": "To protect",
+          "ipa": "pɾo.te.ˈxeɾ",
+          "example_sentence": "Debemos proteger el medio ambiente para las futuras generaciones.",
+          "grammar_explanation": "Verb meaning to keep safe from harm or injury."
+        },
+        {
+          "front": "Conservar",
+          "back": "To conserve",
+          "ipa": "kon.seɾ.ˈβaɾ",
+          "example_sentence": "Es importante conservar el agua.",
+          "grammar_explanation": "Verb meaning to protect from harm or destruction."
+        },
+        {
+          "front": "El calentamiento global",
+          "back": "Global warming",
+          "ipa": "el ka.len.ta.ˈmjen.to ɣlo.ˈβal",
+          "example_sentence": "El calentamiento global causa el derretimiento de los glaciares.",
+          "grammar_explanation": "A gradual increase in the overall temperature of the earth's atmosphere generally attributed to the greenhouse effect caused by increased levels of carbon dioxide, CFCs, and other pollutants."
+        },
+        {
+          "front": "Las emisiones",
+          "back": "Emissions",
+          "ipa": "las e.mi.ˈsjo.nes",
+          "example_sentence": "Hay que reducir las emisiones de gases de efecto invernadero.",
+          "grammar_explanation": "The production and discharge of something, especially gas or radiation."
+        }
+      ]
+    },
+    {
+      "slug": "discussing-economic-issues",
+      "title": "Discussing Economic Issues",
+      "objective": "Learners will be able to discuss economic issues such as inflation, trade, and development with appropriate vocabulary.",
+      "cards": [
+        {
+          "front": "La inflación",
+          "back": "Inflation",
+          "ipa": "la in.fla.ˈθjon",
+          "example_sentence": "La inflación ha aumentado los precios de los alimentos.",
+          "grammar_explanation": "Noun referring to a general increase in prices and fall in the purchasing value of money."
+        },
+        {
+          "front": "El comercio internacional",
+          "back": "International trade",
+          "ipa": "el ko.ˈmeɾ.θjo in.teɾ.na.θjo.ˈnal",
+          "example_sentence": "El comercio internacional es crucial para la economía global.",
+          "grammar_explanation": "The exchange of capital, goods, and services across international borders or territories."
+        },
+        {
+          "front": "El Producto Interno Bruto (PIB)",
+          "back": "Gross Domestic Product (GDP)",
+          "ipa": "el pɾo.ˈðuk.to in.ˈteɾ.no ˈβɾu.to",
+          "example_sentence": "El PIB de este país ha crecido un 3%.",
+          "grammar_explanation": "A monetary measure of the market value of all the final goods and services produced and sold (not resold) within a country during a specific period."
+        },
+        {
+          "front": "La globalización",
+          "back": "Globalization",
+          "ipa": "la ɣlo.βa.li.θa.ˈθjon",
+          "example_sentence": "La globalización ha cambiado la forma en que hacemos negocios.",
+          "grammar_explanation": "The process by which businesses or other organizations develop international influence or start operating on an international scale."
+        },
+        {
+          "front": "El desarrollo sostenible",
+          "back": "Sustainable development",
+          "ipa": "el de.sa.ro.ˈʎo sos.te.ˈni.βle",
+          "example_sentence": "El desarrollo sostenible busca equilibrar crecimiento y protección ambiental.",
+          "grammar_explanation": "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs."
+        },
+        {
+          "front": "La recesión",
+          "back": "Recession",
+          "ipa": "la re.se.ˈθjon",
+          "example_sentence": "La economía está en recesión.",
+          "grammar_explanation": "A period of temporary economic decline during which trade and industrial activity are reduced, generally identified by a fall in GDP in two successive quarters."
+        },
+        {
+          "front": "La deuda pública",
+          "back": "Public debt",
+          "ipa": "la ˈde.βða ˈpu.βli.ka",
+          "example_sentence": "La deuda pública de este país es muy alta.",
+          "grammar_explanation": "The total debt owed by a country's government."
+        },
+        {
+          "front": "La inversión extranjera",
+          "back": "Foreign investment",
+          "ipa": "la im.beɾ.ˈsjon eks.tɾan.ˈxe.ɾa",
+          "example_sentence": "La inversión extranjera puede impulsar el crecimiento económico.",
+          "grammar_explanation": "Investment made by a company or entity based in one country, into a company or entity based in another country."
+        },
+        {
+          "front": "Los aranceles",
+          "back": "Tariffs",
+          "ipa": "los a.ɾan.ˈθe.les",
+          "example_sentence": "Los aranceles pueden afectar el comercio internacional.",
+          "grammar_explanation": "A tax or duty to be paid on a particular class of imports or exports."
+        },
+        {
+          "front": "El déficit",
+          "back": "Deficit",
+          "ipa": "el ˈde.fi.θit",
+          "example_sentence": "El gobierno tiene un déficit presupuestario.",
+          "grammar_explanation": "The amount by which something, especially a sum of money, is too small."
+        }
+      ]
+    },
+    {
+      "slug": "discussing-political-systems",
+      "title": "Discussing Political Systems",
+      "objective": "Learners will be able to describe and compare different political systems.",
+      "cards": [
+        {
+          "front": "La democracia",
+          "back": "Democracy",
+          "ipa": "la de.mo.ˈkɾa.θja",
+          "example_sentence": "La democracia es un sistema de gobierno basado en la voluntad popular.",
+          "grammar_explanation": "Noun referring to a system of government by the whole population or all the eligible members of a state, typically through elected representatives."
+        },
+        {
+          "front": "El autoritarismo",
+          "back": "Authoritarianism",
+          "ipa": "el aw.to.ɾi.ta.ˈɾis.mo",
+          "example_sentence": "El autoritarismo limita las libertades individuales.",
+          "grammar_explanation": "Noun referring to the enforcement or advocacy of strict obedience to authority at the expense of personal freedom."
+        },
+        {
+          "front": "El socialismo",
+          "back": "Socialism",
+          "ipa": "el so.θja.ˈlis.mo",
+          "example_sentence": "El socialismo busca una distribución más equitativa de la riqueza.",
+          "grammar_explanation": "A political and economic theory of social organization which advocates that the means of production, distribution, and exchange should be owned or regulated by the community as a whole."
+        },
+        {
+          "front": "El capitalismo",
+          "back": "Capitalism",
+          "ipa": "el ka.pi.ta.ˈlis.mo",
+          "example_sentence": "El capitalismo fomenta la competencia y la innovación.",
+          "grammar_explanation": "An economic and political system in which a country's trade and industry are controlled by private owners for profit, rather than by the state."
+        },
+        {
+          "front": "El populismo",
+          "back": "Populism",
+          "ipa": "el po.pu.ˈlis.mo",
+          "example_sentence": "El populismo a menudo apela a las emociones del pueblo.",
+          "grammar_explanation": "A political approach that strives to appeal to ordinary people who feel that their concerns are disregarded by established elite groups."
+        },
+        {
+          "front": "Las elecciones",
+          "back": "Elections",
+          "ipa": "las e.lek.ˈθjo.nes",
+          "example_sentence": "Las elecciones son un pilar de la democracia.",
+          "grammar_explanation": "A formal and organized choice by vote of a person for a political office or other position."
+        },
+        {
+          "front": "El gobierno",
+          "back": "Government",
+          "ipa": "el ɣo.ˈβjeɾ.no",
+          "example_sentence": "El gobierno está implementando nuevas políticas.",
+          "grammar_explanation": "The system or group of people governing an organized community, often a state."
+        },
+        {
+          "front": "Los partidos políticos",
+          "back": "Political parties",
+          "ipa": "los paɾ.ˈti.ðos po.ˈli.ti.kos",
+          "example_sentence": "Los partidos políticos compiten por el poder.",
+          "grammar_explanation": "An organized group of people with at least roughly similar political aims and opinions, that seeks to influence public policy by getting its candidates elected to public office."
+        },
+        {
+          "front": "La ideología",
+          "back": "Ideology",
+          "ipa": "la i.de.o.lo.ˈxi.a",
+          "example_sentence": "Cada partido político tiene su propia ideología.",
+          "grammar_explanation": "A system of ideas and ideals, especially one which forms the basis of economic or political theory and policy."
+        },
+        {
+          "front": "La constitución",
+          "back": "Constitution",
+          "ipa": "la kon.sti.tu.ˈθjon",
+          "example_sentence": "La constitución garantiza los derechos de los ciudadanos.",
+          "grammar_explanation": "A body of fundamental principles or established precedents according to which a state or other organization is acknowledged to be governed."
+        }
+      ]
+    },
+    {
+      "slug": "discussing-cultural-trends",
+      "title": "Discussing Cultural Trends",
+      "objective": "Learners will be able to analyze and discuss current cultural trends.",
+      "cards": [
+        {
+          "front": "Las redes sociales",
+          "back": "Social networks",
+          "ipa": "las ˈre.ðes so.ˈθja.les",
+          "example_sentence": "Las redes sociales tienen un gran impacto en la sociedad.",
+          "grammar_explanation": "Online platforms used for social networking."
+        },
+        {
+          "front": "La globalización cultural",
+          "back": "Cultural globalization",
+          "ipa": "la ɣlo.βa.li.θa.ˈθjon kul.tu.ˈɾal",
+          "example_sentence": "La globalización cultural influye en las costumbres y tradiciones.",
+          "grammar_explanation": "The transmission of ideas, meanings, and values around the world in such a way as to extend and intensify social relations."
+        },
+        {
+          "front": "La identidad cultural",
+          "back": "Cultural identity",
+          "ipa": "la i.den.ti.ˈðað kul.tu.ˈɾal",
+          "example_sentence": "La identidad cultural es importante para preservar las tradiciones.",
+          "grammar_explanation": "The identity of a group or culture, or of an individual as far as one is influenced by one's belonging to a group or culture."
+        },
+        {
+          "front": "La diversidad",
+          "back": "Diversity",
+          "ipa": "la di.βeɾ.si.ˈðað",
+          "example_sentence": "La diversidad cultural enriquece a las sociedades.",
+          "grammar_explanation": "The state of being diverse; variety."
+        },
+        {
+          "front": "La tradición",
+          "back": "Tradition",
+          "ipa": "la tɾa.ði.ˈθjon",
+          "example_sentence": "La tradición es un conjunto de costumbres y creencias.",
+          "grammar_explanation": "A custom or belief passed on from generation to generation."
+        },
+        {
+          "front": "Las tendencias",
+          "back": "Trends",
+          "ipa": "las ten.ˈden.θjas",
+          "example_sentence": "Las tendencias de moda cambian rápidamente.",
+          "grammar_explanation": "A general direction in which something is developing or changing."
+        },
+        {
+          "front": "El arte contemporáneo",
+          "back": "Contemporary art",
+          "ipa": "el ˈaɾ.te kon.tem.po.ˈɾa.ne.o",
+          "example_sentence": "El arte contemporáneo a menudo desafía las convenciones.",
+          "grammar_explanation": "Art produced at the present period in time."
+        },
+        {
+          "front": "Los valores",
+          "back": "Values",
+          "ipa": "los βa.ˈlo.ɾes",
+          "example_sentence": "Los valores culturales influyen en el comportamiento.",
+          "grammar_explanation": "Principles or standards of behavior; one's judgment of what is important in life."
+        },
+        {
+          "front": "La innovación",
+          "back": "Innovation",
+          "ipa": "la i.no.βa.ˈθjon",
+          "example_sentence": "La innovación es clave para el progreso cultural.",
+          "grammar_explanation": "The introduction of something new; a new idea, method, or device."
+        },
+        {
+          "front": "El patrimonio cultural",
+          "back": "Cultural heritage",
+          "ipa": "el pa.tɾi.ˈmo.njo kul.tu.ˈɾal",
+          "example_sentence": "Es importante preservar el patrimonio cultural de cada país.",
+          "grammar_explanation": "The legacy of physical artifacts and intangible attributes of a group or society that are inherited from past generations, maintained in the present and bestowed for the benefit of future generations."
+        }
+      ]
+    }
+  ]
+}

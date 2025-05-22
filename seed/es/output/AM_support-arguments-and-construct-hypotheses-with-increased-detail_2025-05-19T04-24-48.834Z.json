@@ -1,0 +1,477 @@
+{
+  "level_code": "AM",
+  "topic_slug": "support-arguments-and-construct-hypotheses-with-increased-detail",
+  "topic_title": "support arguments and construct hypotheses with increased detail.",
+  "can_do_statement": "I can support arguments and construct hypotheses with increased detail.",
+  "lessons": [
+    {
+      "slug": "introduccion-al-debate",
+      "title": "Introducción al Debate: Expresar Opiniones",
+      "objective": "Learners will be able to express opinions and provide basic supporting reasons in a debate setting.",
+      "cards": [
+        {
+          "front": "En mi opinión",
+          "back": "In my opinion",
+          "ipa": "/en mi o.pi.ˈnjon/",
+          "example_sentence": "En mi opinión, la energía renovable es el futuro.",
+          "grammar_explanation": "Common phrase to introduce an opinion."
+        },
+        {
+          "front": "Creo que",
+          "back": "I believe that",
+          "ipa": "/ˈkɾe.o ke/",
+          "example_sentence": "Creo que deberíamos invertir más en educación.",
+          "grammar_explanation": "Followed by a clause expressing a belief."
+        },
+        {
+          "front": "Pienso que",
+          "back": "I think that",
+          "ipa": "/ˈpjen.so ke/",
+          "example_sentence": "Pienso que es importante considerar todas las opciones.",
+          "grammar_explanation": "Similar to 'creo que', but sometimes implies more active thought."
+        },
+        {
+          "front": "Por ejemplo",
+          "back": "For example",
+          "ipa": "/poɾ e.ˈxem.plo/",
+          "example_sentence": "Por ejemplo, la contaminación del aire afecta nuestra salud.",
+          "grammar_explanation": "Introduces a specific instance."
+        },
+        {
+          "front": "Además",
+          "back": "Furthermore/In addition",
+          "ipa": "/a.ˈðe.mas/",
+          "example_sentence": "Además, reduce costos a largo plazo.",
+          "grammar_explanation": "Adds another supporting point."
+        },
+        {
+          "front": "Porque",
+          "back": "Because",
+          "ipa": "/ˈpoɾ.ke/",
+          "example_sentence": "Debemos actuar ahora porque el problema está empeorando.",
+          "grammar_explanation": "Introduces the reason for something."
+        },
+        {
+          "front": "Pero",
+          "back": "But",
+          "ipa": "/ˈpe.ɾo/",
+          "example_sentence": "Es una buena idea, pero necesita más planificación.",
+          "grammar_explanation": "Introduces a contrasting idea."
+        },
+        {
+          "front": "También",
+          "back": "Also/Too",
+          "ipa": "/tam.ˈbjen/",
+          "example_sentence": "También necesitamos la colaboración de todos.",
+          "grammar_explanation": "Adds another similar point."
+        },
+        {
+          "front": "Es importante",
+          "back": "It's important",
+          "ipa": "/es im.poɾ.ˈtan.te/",
+          "example_sentence": "Es importante considerar el impacto ambiental.",
+          "grammar_explanation": "Highlights significance."
+        },
+        {
+          "front": "Todo el mundo",
+          "back": "Everyone",
+          "ipa": "/ˈto.ðo el ˈmun.do/",
+          "example_sentence": "Todo el mundo debería tener acceso a agua limpia.",
+          "grammar_explanation": "Refers to all people."
+        }
+      ]
+    },
+    {
+      "slug": "expresando-acuerdo-desacuerdo",
+      "title": "Expresando Acuerdo y Desacuerdo",
+      "objective": "Learners will be able to express agreement and disagreement with arguments and offer counterarguments.",
+      "cards": [
+        {
+          "front": "Estoy de acuerdo",
+          "back": "I agree",
+          "ipa": "/es.ˈtoi̯ de a.ˈkwe.ɾðo/",
+          "example_sentence": "Estoy de acuerdo con tu punto de vista sobre la economía.",
+          "grammar_explanation": "Expresses agreement with a statement or opinion."
+        },
+        {
+          "front": "No estoy de acuerdo",
+          "back": "I disagree",
+          "ipa": "/no es.ˈtoi̯ de a.ˈkwe.ɾðo/",
+          "example_sentence": "No estoy de acuerdo con la propuesta de aumentar los impuestos.",
+          "grammar_explanation": "Expresses disagreement with a statement or opinion."
+        },
+        {
+          "front": "Sin embargo",
+          "back": "However",
+          "ipa": "/sin em.ˈβaɾ.ɣo/",
+          "example_sentence": "Sin embargo, hay otros factores a considerar.",
+          "grammar_explanation": "Introduces a contrasting point after agreement."
+        },
+        {
+          "front": "A pesar de",
+          "back": "Despite",
+          "ipa": "/a pe.ˈsaɾ de/",
+          "example_sentence": "A pesar de los desafíos, podemos lograrlo.",
+          "grammar_explanation": "Introduces a factor that contrasts with a desired outcome."
+        },
+        {
+          "front": "Por otro lado",
+          "back": "On the other hand",
+          "ipa": "/poɾ ˈo.tɾo ˈla.ðo/",
+          "example_sentence": "Por otro lado, hay ventajas significativas.",
+          "grammar_explanation": "Introduces an alternative perspective."
+        },
+        {
+          "front": "En cambio",
+          "back": "Instead",
+          "ipa": "/en ˈkam.bjo/",
+          "example_sentence": "En cambio, sugiero una estrategia diferente.",
+          "grammar_explanation": "Suggests a replacement or alternative."
+        },
+        {
+          "front": "Aunque",
+          "back": "Although/Even though",
+          "ipa": "/ˈau̯n.ke/",
+          "example_sentence": "Aunque es difícil, creo que podemos encontrar una solución.",
+          "grammar_explanation": "Introduces a clause that contrasts with the main point."
+        },
+        {
+          "front": "Considerando que",
+          "back": "Considering that",
+          "ipa": "/kon.si.ðe.ˈɾan.do ke/",
+          "example_sentence": "Considerando que tenemos pocos recursos, debemos priorizar.",
+          "grammar_explanation": "Introduces a factor for consideration."
+        },
+        {
+          "front": "La verdad es que",
+          "back": "The truth is that",
+          "ipa": "/la βeɾ.ˈðað es ke/",
+          "example_sentence": "La verdad es que necesitamos más tiempo.",
+          "grammar_explanation": "Introduces a statement of fact or reality."
+        },
+        {
+          "front": "Es cierto que",
+          "back": "It's true that",
+          "ipa": "/es ˈθjeɾ.to ke/",
+          "example_sentence": "Es cierto que hay riesgos involucrados.",
+          "grammar_explanation": "Acknowledges a fact, often before introducing a counterpoint."
+        },
+        {
+          "front": "Aún así",
+          "back": "Even so",
+          "ipa": "/a.ˈun a.ˈsi/",
+          "example_sentence": "Aún así, pienso que deberíamos intentarlo.",
+          "grammar_explanation": "Introduces a contrasting point that doesn't negate the previous one."
+        }
+      ]
+    },
+    {
+      "slug": "formulando-hipotesis",
+      "title": "Formulando Hipótesis",
+      "objective": "Learners will be able to formulate hypotheses using conditional clauses and modal verbs.",
+      "cards": [
+        {
+          "front": "Si... entonces",
+          "back": "If... then",
+          "ipa": "/si en.ˈton.θes/",
+          "example_sentence": "Si invertimos en educación, entonces tendremos una sociedad mejor.",
+          "grammar_explanation": "Basic conditional structure."
+        },
+        {
+          "front": "Podría ser que",
+          "back": "It could be that",
+          "ipa": "/po.ˈðɾi.a seɾ ke/",
+          "example_sentence": "Podría ser que el cambio climático cause más inundaciones.",
+          "grammar_explanation": "Expresses a possibility."
+        },
+        {
+          "front": "Es posible que",
+          "back": "It's possible that",
+          "ipa": "/es po.ˈsi.βle ke/",
+          "example_sentence": "Es posible que haya vida en otros planetas.",
+          "grammar_explanation": "Similar to 'podría ser que', expresses a possibility."
+        },
+        {
+          "front": "Quizás",
+          "back": "Perhaps/Maybe",
+          "ipa": "/ki.ˈθas/",
+          "example_sentence": "Quizás deberíamos reconsiderar nuestra estrategia.",
+          "grammar_explanation": "Indicates uncertainty."
+        },
+        {
+          "front": "Tal vez",
+          "back": "Maybe/Perhaps",
+          "ipa": "/tal ˈβes/",
+          "example_sentence": "Tal vez sea mejor esperar un poco más.",
+          "grammar_explanation": "Similar to 'quizás', indicates uncertainty."
+        },
+        {
+          "front": "A lo mejor",
+          "back": "Maybe/Probably",
+          "ipa": "/a lo me.ˈxoɾ/",
+          "example_sentence": "A lo mejor llegamos tarde al aeropuerto.",
+          "grammar_explanation": "Expresses a likelihood, more confident than 'quizás'."
+        },
+        {
+          "front": "Es probable que",
+          "back": "It's probable that",
+          "ipa": "/es pɾo.ˈβa.βle ke/",
+          "example_sentence": "Es probable que llueva mañana.",
+          "grammar_explanation": "Expresses a high degree of probability."
+        },
+        {
+          "front": "En caso de que",
+          "back": "In case that",
+          "ipa": "/en ˈka.so de ke/",
+          "example_sentence": "En caso de que haya un terremoto, debemos evacuar.",
+          "grammar_explanation": "Specifies a condition requiring a certain action."
+        },
+        {
+          "front": "A menos que",
+          "back": "Unless",
+          "ipa": "/a ˈme.nos ke/",
+          "example_sentence": "A menos que trabajemos juntos, no lograremos nuestros objetivos.",
+          "grammar_explanation": "Specifies a condition that, if not met, changes the outcome."
+        },
+        {
+          "front": "Siempre y cuando",
+          "back": "As long as",
+          "ipa": "/ˈsjem.pɾe i ˈkwan.do/",
+          "example_sentence": "Siempre y cuando sigamos las reglas, todo estará bien.",
+          "grammar_explanation": "Specifies a condition that must be met for a desired outcome."
+        }
+      ]
+    },
+    {
+      "slug": "analizando-causa-efecto",
+      "title": "Analizando Causa y Efecto",
+      "objective": "Learners will be able to analyze cause-and-effect relationships in arguments.",
+      "cards": [
+        {
+          "front": "Por consiguiente",
+          "back": "Therefore/Consequently",
+          "ipa": "/poɾ kon.se.ˈɣjen.te/",
+          "example_sentence": "Hubo una sequía; por consiguiente, la cosecha fue mala.",
+          "grammar_explanation": "Indicates a direct result of a previous action or event."
+        },
+        {
+          "front": "Como resultado de",
+          "back": "As a result of",
+          "ipa": "/ˈko.mo re.sul.ˈta.ðo de/",
+          "example_sentence": "Como resultado de la contaminación, muchas especies están en peligro.",
+          "grammar_explanation": "Highlights the cause of a particular outcome."
+        },
+        {
+          "front": "Debido a",
+          "back": "Due to/Because of",
+          "ipa": "/de.ˈβi.ðo a/",
+          "example_sentence": "Debido a la lluvia, el partido fue cancelado.",
+          "grammar_explanation": "Explains a cause."
+        },
+        {
+          "front": "A causa de",
+          "back": "Because of/Due to",
+          "ipa": "/a ˈkau̯.sa de/",
+          "example_sentence": "A causa de la crisis económica, muchas empresas cerraron.",
+          "grammar_explanation": "Another way to express 'debido a'."
+        },
+        {
+          "front": "En consecuencia",
+          "back": "Consequently/As a consequence",
+          "ipa": "/en kon.se.ˈkwen.θja/",
+          "example_sentence": "No estudió; en consecuencia, reprobó el examen.",
+          "grammar_explanation": "Similar to 'por consiguiente'."
+        },
+        {
+          "front": "Así que",
+          "back": "So/Therefore",
+          "ipa": "/a.ˈsi ke/",
+          "example_sentence": "Estaba cansado, así que me fui a dormir.",
+          "grammar_explanation": "More informal way to indicate consequence."
+        },
+        {
+          "front": "Por eso",
+          "back": "That's why",
+          "ipa": "/poɾ ˈe.so/",
+          "example_sentence": "No tenía dinero, por eso no pude comprar el libro.",
+          "grammar_explanation": "Indicates the reason for a particular action or situation."
+        },
+        {
+          "front": "Esto lleva a",
+          "back": "This leads to",
+          "ipa": "/ˈes.to ˈʎe.βa a/",
+          "example_sentence": "La falta de inversión lleva a un estancamiento económico.",
+          "grammar_explanation": "Connects a cause to its effect."
+        },
+        {
+          "front": "Lo cual resulta en",
+          "back": "Which results in",
+          "ipa": "/lo ˈkwal re.ˈsul.ta en/",
+          "example_sentence": "La deforestación, lo cual resulta en la pérdida de biodiversidad.",
+          "grammar_explanation": "Highlights the outcome of a previous action."
+        },
+        {
+          "front": "Como quiera que sea",
+          "back": "However that may be",
+          "ipa": "/ˈko.mo kje.ˈɾa ke ˈse.a/",
+          "example_sentence": "Como quiera que sea, debemos encontrar una solución.",
+          "grammar_explanation": "Acknowledges the ambiguity of a situation, emphasizing the need for resolution."
+        }
+      ]
+    },
+    {
+      "slug": "contrastando-ideas",
+      "title": "Contrastando Ideas y Ofreciendo Alternativas",
+      "objective": "Learners will be able to contrast opposing ideas and suggest alternatives.",
+      "cards": [
+        {
+          "front": "Mientras que",
+          "back": "While",
+          "ipa": "/ˈmjen.tɾas ke/",
+          "example_sentence": "Mientras que algunos prefieren el café, otros prefieren el té.",
+          "grammar_explanation": "Introduces a contrasting idea."
+        },
+        {
+          "front": "A diferencia de",
+          "back": "Unlike",
+          "ipa": "/a di.fe.ˈɾen.θja de/",
+          "example_sentence": "A diferencia de Europa, en Latinoamérica la cultura es más diversa.",
+          "grammar_explanation": "Highlights a contrast between two things."
+        },
+        {
+          "front": "En comparación con",
+          "back": "In comparison with",
+          "ipa": "/en kom.pa.ɾa.ˈθjon kon/",
+          "example_sentence": "En comparación con el año pasado, este año hay más turistas.",
+          "grammar_explanation": "Compares two things to show similarities or differences."
+        },
+        {
+          "front": "Al contrario",
+          "back": "On the contrary",
+          "ipa": "/al kon.ˈtɾa.ɾjo/",
+          "example_sentence": "No estoy enojado, al contrario, estoy contento.",
+          "grammar_explanation": "Directly contradicts a previous statement."
+        },
+        {
+          "front": "En vez de",
+          "back": "Instead of",
+          "ipa": "/en ˈbeθ de/",
+          "example_sentence": "En vez de quejarse, deberíamos buscar soluciones.",
+          "grammar_explanation": "Suggests an alternative action."
+        },
+        {
+          "front": "Otra opción es",
+          "back": "Another option is",
+          "ipa": "/ˈo.tɾa op.ˈθjon es/",
+          "example_sentence": "Otra opción es posponer la reunión.",
+          "grammar_explanation": "Introduces an alternative possibility."
+        },
+        {
+          "front": "Una alternativa sería",
+          "back": "An alternative would be",
+          "ipa": "/ˈu.na al.teɾ.na.ˈti.βa ˈse.ɾi.a/",
+          "example_sentence": "Una alternativa sería contratar más personal.",
+          "grammar_explanation": "Suggests a replacement or substitution."
+        },
+        {
+          "front": "Por otro camino",
+          "back": "Another way",
+          "ipa": "/poɾ ˈo.tɾo ka.ˈmi.no/",
+          "example_sentence": "Por otro camino, podríamos reducir los costos.",
+          "grammar_explanation": "Suggests a different approach."
+        },
+        {
+          "front": "Dicho de otra manera",
+          "back": "In other words",
+          "ipa": "/ˈdi.t͡ʃo de ˈo.tɾa ma.ˈne.ɾa/",
+          "example_sentence": "Dicho de otra manera, necesitamos simplificar el proceso.",
+          "grammar_explanation": "Expresses the same idea in a different manner for clarification."
+        },
+        {
+          "front": "Mientras tanto",
+          "back": "Meanwhile",
+          "ipa": "/ˈmjen.tɾas ˈtan.to/",
+          "example_sentence": "Mientras tanto, podemos seguir trabajando en el proyecto.",
+          "grammar_explanation": "Indicates something happening at the same time as something else."
+        }
+      ]
+    },
+    {
+      "slug": "resumiendo-conclusiones",
+      "title": "Resumiendo y Sacando Conclusiones",
+      "objective": "Learners will be able to summarize arguments and draw logical conclusions.",
+      "cards": [
+        {
+          "front": "En resumen",
+          "back": "In summary/In short",
+          "ipa": "/en re.ˈsu.men/",
+          "example_sentence": "En resumen, el proyecto fue un éxito.",
+          "grammar_explanation": "Condenses the main points."
+        },
+        {
+          "front": "Para concluir",
+          "back": "To conclude",
+          "ipa": "/ˈpa.ɾa kon.klu.ˈiɾ/",
+          "example_sentence": "Para concluir, debemos seguir trabajando juntos.",
+          "grammar_explanation": "Signals the end of a discussion or argument."
+        },
+        {
+          "front": "En definitiva",
+          "back": "Ultimately/Definitely",
+          "ipa": "/en de.fi.ni.ˈti.βa/",
+          "example_sentence": "En definitiva, es la mejor opción.",
+          "grammar_explanation": "Expresses a final judgment."
+        },
+        {
+          "front": "Por lo tanto",
+          "back": "Therefore/Thus",
+          "ipa": "/poɾ lo ˈtan.to/",
+          "example_sentence": "Hemos considerado todos los factores, por lo tanto, podemos tomar una decisión.",
+          "grammar_explanation": "Indicates a conclusion based on previous information."
+        },
+        {
+          "front": "Se puede concluir que",
+          "back": "It can be concluded that",
+          "ipa": "/se ˈpwe.ðe kon.klu.ˈiɾ ke/",
+          "example_sentence": "Se puede concluir que la inversión en tecnología es crucial.",
+          "grammar_explanation": "Formally states a deduction or inference."
+        },
+        {
+          "front": "Llegamos a la conclusión de que",
+          "back": "We came to the conclusion that",
+          "ipa": "/ʎe.ˈɣa.mos a la kon.klu.ˈsjon de ke/",
+          "example_sentence": "Llegamos a la conclusión de que necesitamos un nuevo enfoque.",
+          "grammar_explanation": "Expresses an outcome of a deliberative process."
+        },
+        {
+          "front": "En pocas palabras",
+          "back": "In a few words",
+          "ipa": "/en ˈpo.kas pa.ˈla.βɾas/",
+          "example_sentence": "En pocas palabras, el plan es viable.",
+          "grammar_explanation": "Condenses an idea to its essential elements."
+        },
+        {
+          "front": "Para resumir",
+          "back": "To summarize",
+          "ipa": "/ˈpa.ɾa re.su.ˈmiɾ/",
+          "example_sentence": "Para resumir, hemos logrado grandes avances.",
+          "grammar_explanation": "Highlights key points of a discussion or argument."
+        },
+        {
+          "front": "En suma",
+          "back": "In short/To sum up",
+          "ipa": "/en ˈsu.ma/",
+          "example_sentence": "En suma, el proyecto cumplió con las expectativas.",
+          "grammar_explanation": "Another concise way to summarize."
+        },
+        {
+          "front": "A fin de cuentas",
+          "back": "In the end/After all",
+          "ipa": "/a ˈfin de ˈkwen.tas/",
+          "example_sentence": "A fin de cuentas, lo importante es la salud.",
+          "grammar_explanation": "Indicates the most important point, often after considering other factors."
+        }
+      ]
+    }
+  ]
+}

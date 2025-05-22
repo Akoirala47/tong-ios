@@ -1,0 +1,101 @@
+frequency_rank,lemma,pos,translation,ipa
+1,el,determiner,the,/el/
+2,de,preposition,of/from,/de/
+3,que,conjunction,that/which,/ke/
+4,y,conjunction,and,/i/
+5,a,preposition,to/at,/a/
+6,en,preposition,in/on,/en/
+7,un,determiner,a/an,/un/
+8,ser,verb,to be,/seɾ/
+9,se,pronoun,oneself/himself/herself,/se/
+10,no,adverb,no/not,/no/
+11,haber,verb,to have (auxiliary),/a.ˈβeɾ/
+12,por,preposition,for/by,/poɾ/
+13,con,preposition,with,/kon/
+14,su,determiner,his/her/your/their,/su/
+15,para,preposition,for/in order to,/ˈpa.ɾa/
+16,como,adverb,like/as,/ˈko.mo/
+17,estar,verb,to be,/es.ˈtaɾ/
+18,tener,verb,to have,/te.ˈneɾ/
+19,le,pronoun,to him/her/you,/le/
+20,lo,pronoun,it/him,/lo/
+21,todo,determiner,all/every,/ˈto.ðo/
+22,pero,conjunction,but,/ˈpe.ɾo/
+23,más,adverb,more,/mas/
+24,hacer,verb,to do/make,/a.ˈθeɾ/
+25,o,conjunction,or,/o/
+26,poder,verb,to be able to/can,/po.ˈðeɾ/
+27,decir,verb,to say/tell,/de.ˈθiɾ/
+28,este,determiner,this,/ˈes.te/
+29,ir,verb,to go,/iɾ/
+30,otro,determiner,other/another,/ˈo.tɾo/
+31,ese,determiner,that,/ˈe.se/
+32,la,determiner,the,/la/
+33,si,conjunction,if,/si/
+34,me,pronoun,me,/me/
+35,ya,adverb,already/now,/ʝa/
+36,ver,verb,to see,/beɾ/
+37,porque,conjunction,because,/ˈpoɾ.ke/
+38,dar,verb,to give,/daɾ/
+39,cuando,conjunction,when,/ˈkwan.do/
+40,él,pronoun,he,/el/
+41,muy,adverb,very,/mwi/
+42,sin,preposition,without,/sin/
+43,vez,noun,time/occasion,/beθ/
+44,mucho,determiner,much/many,/ˈmu.t͡ʃo/
+45,saber,verb,to know,/sa.ˈβeɾ/
+46,qué,pronoun,what,/ke/
+47,sobre,preposition,on/about,/ˈso.βɾe/
+48,mi,determiner,my,/mi/
+49,alguno,determiner,some/any,/al.ˈɣu.no/
+50,mismo,determiner,same,/ˈmiz.mo/
+51,yo,pronoun,I,/ʝo/
+52,también,adverb,also/too,/tam.ˈbjen/
+53,hasta,preposition,until/up to,/ˈas.ta/
+54,año,noun,year,/ˈa.ɲo/
+55,dos,numeral,two,/dos/
+56,querer,verb,to want/love,/ke.ˈɾeɾ/
+57,entre,preposition,between/among,/ˈen.tɾe/
+58,así,adverb,like this/in this way,/a.ˈsi/
+59,primero,adjective,first,/pɾi.ˈme.ɾo/
+60,desde,preposition,from/since,/ˈdez.ðe/
+61,grande,adjective,big/large,/ˈɡɾan.de/
+62,eso,pronoun,that,/ˈe.so/
+63,ni,conjunction,nor/neither,/ni/
+64,nos,pronoun,us,/nos/
+65,llegar,verb,to arrive,/ʎe.ˈɣaɾ/
+66,pasar,verb,to pass/spend (time),/pa.ˈsaɾ/
+67,tiempo,noun,time,/ˈtjem.po/
+68,ella,pronoun,she,/ˈe.ʎa/
+69,día,noun,day,/ˈdi.a/
+70,uno,numeral,one,/ˈu.no/
+71,bien,adverb,well,/bjen/
+72,poco,determiner,little/few,/ˈpo.ko/
+73,deber,verb,should/ought to,/de.ˈβeɾ/
+74,entonces,adverb,then,/en.ˈton.θes/
+75,poner,verb,to put/place,/po.ˈneɾ/
+76,cosa,noun,thing,/ˈko.sa/
+77,tanto,determiner,so much/many,/ˈtan.to/
+78,hombre,noun,man,/ˈom.bɾe/
+79,parecer,verb,to seem/appear,/pa.ɾe.ˈθeɾ/
+80,nuestro,determiner,our,/ˈnwes.tɾo/
+81,tan,adverb,so,/tan/
+82,donde,adverb,where,/ˈdon.de/
+83,ahora,adverb,now,/ˈa.o.ɾa/
+84,parte,noun,part,/ˈpaɾ.te/
+85,después,adverb,after/afterwards,/des.ˈpwes/
+86,vida,noun,life,/ˈbi.ða/
+87,quedar,verb,to stay/remain,/ke.ˈðaɾ/
+88,siempre,adverb,always,/ˈsjem.pɾe/
+89,creer,verb,to believe,/kɾe.ˈeɾ/
+90,hablar,verb,to speak/talk,/a.ˈβlaɾ/
+91,llevar,verb,to carry/take,/ʎe.ˈβaɾ/
+92,dejar,verb,to leave,/de.ˈxaɾ/
+93,nada,pronoun,nothing,/ˈna.ða/
+94,cada,determiner,each/every,/ˈka.ða/
+95,seguir,verb,to follow/continue,/se.ˈɣiɾ/
+96,menos,adverb,less,/ˈme.nos/
+97,nuevo,adjective,new,/ˈnwe.βo/
+98,encontrar,verb,to find,/en.kon.ˈtɾaɾ/
+99,algo,pronoun,something,/ˈal.ɣo/
+100,solo,adjective,alone/only,/ˈso.lo/ 

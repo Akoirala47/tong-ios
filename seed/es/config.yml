@@ -1,0 +1,27 @@
+language: es
+name: Spanish
+framework: ACTFL
+levels:
+  - {code: NL, ordinal: 10, hours_target: 30, name: "Novice Low"}
+  - {code: NM, ordinal: 20, hours_target: 45, name: "Novice Mid"}
+  - {code: NH, ordinal: 30, hours_target: 60, name: "Novice High"}
+  - {code: IL, ordinal: 40, hours_target: 120, name: "Intermediate Low"}
+  - {code: IM, ordinal: 50, hours_target: 240, name: "Intermediate Mid"}
+  - {code: IH, ordinal: 60, hours_target: 360, name: "Intermediate High"}
+  - {code: AL, ordinal: 70, hours_target: 480, name: "Advanced Low"}
+  - {code: AM, ordinal: 80, hours_target: 600, name: "Advanced Mid"}
+  - {code: AH, ordinal: 90, hours_target: 720, name: "Advanced High"}
+  - {code: S, ordinal: 100, hours_target: 900, name: "Superior"}
+
+topic_template: |
+  ACTFL {level} "Can-Do" → {can_do}
+  
+  Generate 6 topical lessons focused on this Can-Do statement. Each lesson should:
+  - Have 8-12 flashcards 
+  - Use 85% high-frequency words (top 4,000), 15% function words
+  - Include practical, culturally relevant examples
+  - Provide an IPA pronunciation for each word
+  - Include a example sentence for each vocabulary word
+  
+  Your JSON output must validate against the given schema. Format each lesson
+  as a distinct unit with a clear objective that builds toward the Can-Do goal. 

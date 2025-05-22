@@ -1,0 +1,435 @@
+{
+  "level_code": "NL",
+  "topic_slug": "communicate-basic-information-about-myself",
+  "topic_title": "communicate basic information about myself.",
+  "can_do_statement": "I can communicate basic information about myself.",
+  "lessons": [
+    {
+      "slug": "greetings-introductions",
+      "title": "Greetings and Introductions",
+      "objective": "Learn how to greet people and introduce yourself.",
+      "cards": [
+        {
+          "front": "Hola",
+          "back": "Hello",
+          "ipa": "/ˈo.la/",
+          "example_sentence": "Hola, me llamo Ana.",
+          "grammar_explanation": "Standard greeting."
+        },
+        {
+          "front": "Me llamo...",
+          "back": "My name is...",
+          "ipa": "/me ˈʝa.mo/",
+          "example_sentence": "Me llamo Carlos.",
+          "grammar_explanation": "Reflexive verb to indicate name."
+        },
+        {
+          "front": "¿Cómo estás?",
+          "back": "How are you?",
+          "ipa": "/ˈko.mo es.ˈtas/",
+          "example_sentence": "¿Cómo estás hoy?",
+          "grammar_explanation": "Informal way to ask how someone is doing."
+        },
+        {
+          "front": "Bien, gracias.",
+          "back": "Good, thank you.",
+          "ipa": "/ˈbjen ˈɡɾa.θjas/",
+          "example_sentence": "Bien, gracias, ¿y tú?",
+          "grammar_explanation": "Common response after being asked how you are."
+        },
+        {
+          "front": "Y tú?",
+          "back": "And you?",
+          "ipa": "/i tu/",
+          "example_sentence": "Bien, gracias, ¿y tú?",
+          "grammar_explanation": "Used to return the question to the speaker."
+        },
+        {
+          "front": "Mucho gusto",
+          "back": "Nice to meet you",
+          "ipa": "/ˈmu.t͡ʃo ˈɣus.to/",
+          "example_sentence": "Mucho gusto, Ana.",
+          "grammar_explanation": "Common phrase after introductions."
+        },
+        {
+          "front": "Adiós",
+          "back": "Goodbye",
+          "ipa": "/a.ˈðjos/",
+          "example_sentence": "Adiós, hasta luego.",
+          "grammar_explanation": "Standard farewell."
+        },
+        {
+          "front": "Hasta luego",
+          "back": "See you later",
+          "ipa": "/ˈas.ta ˈlwe.ɣo/",
+          "example_sentence": "Hasta luego, Carlos.",
+          "grammar_explanation": "Common farewell."
+        }
+      ]
+    },
+    {
+      "slug": "where-are-you-from",
+      "title": "Where Are You From?",
+      "objective": "Learn how to ask and answer questions about origin.",
+      "cards": [
+        {
+          "front": "¿De dónde eres?",
+          "back": "Where are you from?",
+          "ipa": "/de ˈdon.de ˈe.ɾes/",
+          "example_sentence": "¿De dónde eres, Ana?",
+          "grammar_explanation": "Asking someone their origin."
+        },
+        {
+          "front": "Soy de...",
+          "back": "I am from...",
+          "ipa": "/soi de/",
+          "example_sentence": "Soy de España.",
+          "grammar_explanation": "Stating your origin."
+        },
+        {
+          "front": "España",
+          "back": "Spain",
+          "ipa": "/es.ˈpa.ɲa/",
+          "example_sentence": "Mi familia es de España.",
+          "grammar_explanation": "Name of the country."
+        },
+        {
+          "front": "México",
+          "back": "Mexico",
+          "ipa": "/ˈme.xi.ko/",
+          "example_sentence": "Yo soy de México.",
+          "grammar_explanation": "Name of the country."
+        },
+        {
+          "front": "Estados Unidos",
+          "back": "United States",
+          "ipa": "/esˈta.ðos u.ˈni.ðos/",
+          "example_sentence": "Él es de Estados Unidos.",
+          "grammar_explanation": "Name of the country."
+        },
+        {
+          "front": "el país",
+          "back": "the country",
+          "ipa": "/el pa.ˈis/",
+          "example_sentence": "España es un país muy bonito.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "la ciudad",
+          "back": "the city",
+          "ipa": "/la θju.ˈðað/",
+          "example_sentence": "Madrid es la capital de España, una ciudad muy grande.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "¿Es grande?",
+          "back": "Is it big?",
+          "ipa": "/es ˈɡɾan.de/",
+          "example_sentence": "¿Es grande tu ciudad?",
+          "grammar_explanation": "Asking about the size."
+        }
+      ]
+    },
+    {
+      "slug": "age-birthday",
+      "title": "Age and Birthday",
+      "objective": "Learn how to ask and answer questions about age and birthdays.",
+      "cards": [
+        {
+          "front": "¿Cuántos años tienes?",
+          "back": "How old are you?",
+          "ipa": "/ˈkwan.tos ˈa.ɲos ˈtje.nes/",
+          "example_sentence": "¿Cuántos años tienes tú?",
+          "grammar_explanation": "Asking someone's age."
+        },
+        {
+          "front": "Tengo... años.",
+          "back": "I am... years old.",
+          "ipa": "/ˈten.ɡo ˈa.ɲos/",
+          "example_sentence": "Tengo 20 años.",
+          "grammar_explanation": "Stating your age."
+        },
+        {
+          "front": "el año",
+          "back": "the year",
+          "ipa": "/el ˈa.ɲo/",
+          "example_sentence": "Este es el año 2024.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Cumpleaños",
+          "back": "Birthday",
+          "ipa": "/kum.ple.ˈa.ɲos/",
+          "example_sentence": "Mi cumpleaños es en marzo.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "¿Cuándo es tu cumpleaños?",
+          "back": "When is your birthday?",
+          "ipa": "/ˈkwan.do es tu kum.ple.ˈa.ɲos/",
+          "example_sentence": "¿Cuándo es tu cumpleaños este año?",
+          "grammar_explanation": "Asking about birthday date."
+        },
+        {
+          "front": "Es el...",
+          "back": "It is the...",
+          "ipa": "/es el/",
+          "example_sentence": "Es el 15 de mayo.",
+          "grammar_explanation": "Stating the date."
+        },
+        {
+          "front": "Feliz cumpleaños",
+          "back": "Happy birthday",
+          "ipa": "/fe.ˈliz kum.ple.ˈa.ɲos/",
+          "example_sentence": "Feliz cumpleaños, Carlos!",
+          "grammar_explanation": "Birthday wish."
+        },
+        {
+          "front": "nacer",
+          "back": "to be born",
+          "ipa": "/na.ˈθeɾ/",
+          "example_sentence": "Yo nací en 1990.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "el mes",
+          "back": "the month",
+          "ipa": "/el mes/",
+          "example_sentence": "Mi cumpleaños es en el mes de abril.",
+          "grammar_explanation": "Noun"
+        }
+      ]
+    },
+    {
+      "slug": "family-members",
+      "title": "Family Members",
+      "objective": "Learn vocabulary related to family members.",
+      "cards": [
+        {
+          "front": "la familia",
+          "back": "the family",
+          "ipa": "/la fa.ˈmi.lja/",
+          "example_sentence": "Mi familia es muy grande.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "el padre",
+          "back": "the father",
+          "ipa": "/el ˈpa.ðɾe/",
+          "example_sentence": "Mi padre se llama Juan.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "la madre",
+          "back": "the mother",
+          "ipa": "/la ˈma.ðɾe/",
+          "example_sentence": "Mi madre es profesora.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "el hermano",
+          "back": "the brother",
+          "ipa": "/el eɾ.ˈma.no/",
+          "example_sentence": "Tengo un hermano menor.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "la hermana",
+          "back": "the sister",
+          "ipa": "/la eɾ.ˈma.na/",
+          "example_sentence": "Mi hermana es muy inteligente.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Tengo...",
+          "back": "I have...",
+          "ipa": "/ˈten.ɡo/",
+          "example_sentence": "Tengo dos hermanos.",
+          "grammar_explanation": "To express posession."
+        },
+        {
+          "front": "No tengo...",
+          "back": "I don't have...",
+          "ipa": "/no ˈten.ɡo/",
+          "example_sentence": "No tengo hermanos.",
+          "grammar_explanation": "To express lack of possession."
+        },
+        {
+          "front": "Es...",
+          "back": "Is...",
+          "ipa": "/es/",
+          "example_sentence": "Es mi madre.",
+          "grammar_explanation": "To connect the subject with the predicate."
+        },
+        {
+          "front": "los abuelos",
+          "back": "the grandparents",
+          "ipa": "/los a.ˈβwe.los/",
+          "example_sentence": "Amo a mis abuelos.",
+          "grammar_explanation": "Noun, plural"
+        },
+        {
+          "front": "los hijos",
+          "back": "the children",
+          "ipa": "/los ˈi.xos/",
+          "example_sentence": "Ellos tienen dos hijos.",
+          "grammar_explanation": "Noun, plural"
+        }
+      ]
+    },
+    {
+      "slug": "what-do-you-do",
+      "title": "What Do You Do?",
+      "objective": "Learn to ask and answer about professions/occupations.",
+      "cards": [
+        {
+          "front": "¿Qué haces?",
+          "back": "What do you do?",
+          "ipa": "/ke ˈa.θes/",
+          "example_sentence": "¿Qué haces en tu tiempo libre?",
+          "grammar_explanation": "Asking about activities."
+        },
+        {
+          "front": "Soy...",
+          "back": "I am a...",
+          "ipa": "/soi/",
+          "example_sentence": "Soy estudiante.",
+          "grammar_explanation": "Stating your profession/occupation."
+        },
+        {
+          "front": "Estudiante",
+          "back": "Student",
+          "ipa": "/es.tu.ˈdjan.te/",
+          "example_sentence": "Soy estudiante en la universidad.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Profesor/Profesora",
+          "back": "Teacher",
+          "ipa": "/pɾo.fe.ˈsoɾ/",
+          "example_sentence": "Mi madre es profesora de español.",
+          "grammar_explanation": "Noun, masculine/feminine."
+        },
+        {
+          "front": "Trabajo",
+          "back": "I work",
+          "ipa": "/tɾa.ˈβa.xo/",
+          "example_sentence": "Yo trabajo en una oficina.",
+          "grammar_explanation": "Verb."
+        },
+        {
+          "front": "en",
+          "back": "in",
+          "ipa": "/en/",
+          "example_sentence": "Trabajo en la ciudad.",
+          "grammar_explanation": "Preposition."
+        },
+        {
+          "front": "una oficina",
+          "back": "an office",
+          "ipa": "/u.na o.fi.ˈθi.na/",
+          "example_sentence": "Trabajo en una oficina grande.",
+          "grammar_explanation": "Noun phrase."
+        },
+        {
+          "front": "el trabajo",
+          "back": "the job/work",
+          "ipa": "/el tɾa.ˈβa.xo/",
+          "example_sentence": "Me gusta mi trabajo.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "el doctor / la doctora",
+          "back": "the doctor",
+          "ipa": "/el ˈdok.toɾ la ˈdok.to.ɾa/",
+          "example_sentence": "Mi hermano es doctor.",
+          "grammar_explanation": "Noun"
+        },
+        {
+          "front": "el ingeniero / la ingeniera",
+          "back": "the engineer",
+          "ipa": "/el in.xe.ˈnje.ɾo la in.xe.ˈnje.ɾa/",
+          "example_sentence": "Mi hermana es ingeniera.",
+          "grammar_explanation": "Noun"
+        }
+      ]
+    },
+    {
+      "slug": "likes-dislikes",
+      "title": "Likes and Dislikes",
+      "objective": "Learn how to express likes and dislikes.",
+      "cards": [
+        {
+          "front": "Me gusta...",
+          "back": "I like...",
+          "ipa": "/me ˈɡus.ta/",
+          "example_sentence": "Me gusta el café.",
+          "grammar_explanation": "Expressing a like."
+        },
+        {
+          "front": "No me gusta...",
+          "back": "I don't like...",
+          "ipa": "/no me ˈɡus.ta/",
+          "example_sentence": "No me gusta el frío.",
+          "grammar_explanation": "Expressing a dislike."
+        },
+        {
+          "front": "el café",
+          "back": "coffee",
+          "ipa": "/el ka.ˈfe/",
+          "example_sentence": "Me gusta el café con leche.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "el té",
+          "back": "tea",
+          "ipa": "/el te/",
+          "example_sentence": "Prefiero el té al café.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "la música",
+          "back": "music",
+          "ipa": "/la ˈmu.si.ka/",
+          "example_sentence": "Me gusta mucho la música.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "mucho",
+          "back": "a lot",
+          "ipa": "/ˈmu.t͡ʃo/",
+          "example_sentence": "Me gusta mucho bailar.",
+          "grammar_explanation": "Adverb."
+        },
+        {
+          "front": "bailar",
+          "back": "to dance",
+          "ipa": "/bai.ˈlaɾ/",
+          "example_sentence": "Me gusta bailar salsa.",
+          "grammar_explanation": "Verb."
+        },
+        {
+          "front": "No mucho",
+          "back": "Not much",
+          "ipa": "/no ˈmu.t͡ʃo/",
+          "example_sentence": "No me gusta mucho el trabajo.",
+          "grammar_explanation": "Not a lot."
+        },
+        {
+          "front": "leer",
+          "back": "to read",
+          "ipa": "/le.ˈeɾ/",
+          "example_sentence": "Me gusta leer libros.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "la television",
+          "back": "television",
+          "ipa": "/la te.le.βi.ˈsjon/",
+          "example_sentence": "Me gusta ver la television.",
+          "grammar_explanation": "Noun"
+        }
+      ]
+    }
+  ]
+}

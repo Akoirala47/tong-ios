@@ -1,0 +1,428 @@
+{
+  "level_code": "AH",
+  "topic_slug": "provide-a-structured-argument-to-support-my-opinions",
+  "topic_title": "provide a structured argument to support my opinions.",
+  "can_do_statement": "I can provide a structured argument to support my opinions.",
+  "lessons": [
+    {
+      "slug": "introduccion-argumentacion",
+      "title": "Introducción a la Argumentación",
+      "objective": "Identify key components of an argument (thesis, evidence, conclusion).",
+      "cards": [
+        {
+          "front": "opinión",
+          "back": "opinion",
+          "ipa": "/o.piˈnjon/",
+          "example_sentence": "Mi opinión sobre el tema es diferente.",
+          "grammar_explanation": "Feminine noun. Singular: opinión, Plural: opiniones"
+        },
+        {
+          "front": "argumento",
+          "back": "argument",
+          "ipa": "/aɾ.ɣuˈmen.to/",
+          "example_sentence": "Presentó un argumento sólido para su defensa.",
+          "grammar_explanation": "Masculine noun. Singular: argumento, Plural: argumentos"
+        },
+        {
+          "front": "evidencia",
+          "back": "evidence",
+          "ipa": "/e.βiˈden.θja/",
+          "example_sentence": "La evidencia apoya su teoría.",
+          "grammar_explanation": "Feminine noun. Singular: evidencia, Plural: evidencias"
+        },
+        {
+          "front": "conclusión",
+          "back": "conclusion",
+          "ipa": "/kon.kluˈsjon/",
+          "example_sentence": "La conclusión del informe es clara.",
+          "grammar_explanation": "Feminine noun. Singular: conclusión, Plural: conclusiones"
+        },
+        {
+          "front": "punto de vista",
+          "back": "point of view",
+          "ipa": "/ˈpun.to de ˈβis.ta/",
+          "example_sentence": "Tenemos diferentes puntos de vista sobre esta cuestión.",
+          "grammar_explanation": "Masculine noun. Singular: punto de vista, Plural: puntos de vista"
+        },
+        {
+          "front": "razón",
+          "back": "reason",
+          "ipa": "/raˈθon/",
+          "example_sentence": "No hay razón para preocuparse.",
+          "grammar_explanation": "Feminine noun. Singular: razón, Plural: razones"
+        },
+        {
+          "front": "por lo tanto",
+          "back": "therefore",
+          "ipa": "/poɾ lo ˈtan.to/",
+          "example_sentence": "Está lloviendo, por lo tanto, no saldremos.",
+          "grammar_explanation": "Adverbial phrase used as a connector"
+        },
+        {
+          "front": "apoyar",
+          "back": "to support",
+          "ipa": "/a.poˈʝaɾ/",
+          "example_sentence": "Apoyo la idea de reciclar más.",
+          "grammar_explanation": "Regular -ar verb"
+        }
+      ]
+    },
+    {
+      "slug": "conectores-argumentativos",
+      "title": "Conectores Argumentativos",
+      "objective": "Use connectors to link ideas in an argument.",
+      "cards": [
+        {
+          "front": "además",
+          "back": "furthermore/besides",
+          "ipa": "/a.ðeˈmas/",
+          "example_sentence": "Ademá, es importante considerar el impacto ambiental.",
+          "grammar_explanation": "Adverb."
+        },
+        {
+          "front": "sin embargo",
+          "back": "however",
+          "ipa": "/sin emˈbar.ɣo/",
+          "example_sentence": "La película es larga, sin embargo, es muy buena.",
+          "grammar_explanation": "Adverbial phrase."
+        },
+        {
+          "front": "en cambio",
+          "back": "instead",
+          "ipa": "/en ˈkam.bjo/",
+          "example_sentence": "No quiero ir al cine, en cambio, prefiero quedarme en casa.",
+          "grammar_explanation": "Adverbial phrase."
+        },
+        {
+          "front": "por ejemplo",
+          "back": "for example",
+          "ipa": "/poɾ eˈxem.plo/",
+          "example_sentence": "Muchas ciudades, por ejemplo, Madrid y Barcelona, tienen problemas de contaminación.",
+          "grammar_explanation": "Adverbial phrase."
+        },
+        {
+          "front": "es decir",
+          "back": "that is to say",
+          "ipa": "/es deˈθiɾ/",
+          "example_sentence": "Necesitamos ahorrar energía, es decir, apagar las luces cuando salimos.",
+          "grammar_explanation": "Adverbial phrase."
+        },
+        {
+          "front": "en conclusión",
+          "back": "in conclusion",
+          "ipa": "/en kon.kluˈsjon/",
+          "example_sentence": "En conclusión, la educación es fundamental para el desarrollo.",
+          "grammar_explanation": "Adverbial phrase."
+        },
+        {
+          "front": "por consiguiente",
+          "back": "consequently",
+          "ipa": "/poɾ konˈsi.ɣjen.te/",
+          "example_sentence": "No estudió, por consiguiente, suspendió el examen.",
+          "grammar_explanation": "Adverbial phrase."
+        },
+        {
+          "front": "dado que",
+          "back": "given that",
+          "ipa": "/ˈda.ðo ke/",
+          "example_sentence": "Dado que no tengo tiempo, no podré asistir a la reunión.",
+          "grammar_explanation": "Conjunction."
+        },
+        {
+          "front": "debido a",
+          "back": "due to",
+          "ipa": "/deˈβi.ðo a/",
+          "example_sentence": "Debido a la lluvia, el partido se ha cancelado.",
+          "grammar_explanation": "Prepositional phrase."
+        }
+      ]
+    },
+    {
+      "slug": "expresiones-de-opinion",
+      "title": "Expresiones de Opinión",
+      "objective": "Utilize phrases for expressing opinions and beliefs with nuance.",
+      "cards": [
+        {
+          "front": "a mi parecer",
+          "back": "in my opinion/it seems to me",
+          "ipa": "/a mi pa.ɾeˈθeɾ/",
+          "example_sentence": "A mi parecer, la película es un éxito.",
+          "grammar_explanation": "Phrase to express opinion."
+        },
+        {
+          "front": "desde mi punto de vista",
+          "back": "from my point of view",
+          "ipa": "/ˈdez.de mi ˈpun.to de ˈβis.ta/",
+          "example_sentence": "Desde mi punto de vista, la ley es injusta.",
+          "grammar_explanation": "Phrase to express opinion."
+        },
+        {
+          "front": "creo que",
+          "back": "I believe that",
+          "ipa": "/ˈkɾe.o ke/",
+          "example_sentence": "Creo que es importante votar.",
+          "grammar_explanation": "Common expression of opinion."
+        },
+        {
+          "front": "me parece que",
+          "back": "it seems to me that",
+          "ipa": "/me paˈɾe.θe ke/",
+          "example_sentence": "Me parece que deberíamos considerar otras opciones.",
+          "grammar_explanation": "Common expression of opinion."
+        },
+        {
+          "front": "estoy convencido de que",
+          "back": "I am convinced that",
+          "ipa": "/esˈtoj kom.benˈθi.ðo de ke/",
+          "example_sentence": "Estoy convencido de que la energía renovable es el futuro.",
+          "grammar_explanation": "Expresses strong conviction."
+        },
+        {
+          "front": "es evidente que",
+          "back": "it is evident that",
+          "ipa": "/es e.βiˈden.te ke/",
+          "example_sentence": "Es evidente que necesitamos un cambio.",
+          "grammar_explanation": "Expresses obviousness."
+        },
+        {
+          "front": "en mi opinión",
+          "back": "in my opinion",
+          "ipa": "/en mi o.piˈnjon/",
+          "example_sentence": "En mi opinión, deberíamos invertir en educación.",
+          "grammar_explanation": "Common expression of opinion."
+        },
+        {
+          "front": "a mi modo de ver",
+          "back": "the way I see it",
+          "ipa": "/a mi ˈmo.ðo de βeɾ/",
+          "example_sentence": "A mi modo de ver, necesitamos más igualdad.",
+          "grammar_explanation": "Phrase to express personal perspective."
+        },
+        {
+          "front": "según entiendo",
+          "back": "as I understand it",
+          "ipa": "/seˈɣun enˈtjen.do/",
+          "example_sentence": "Según entiendo, el proyecto está en marcha.",
+          "grammar_explanation": "Expresses understanding of something."
+        }
+      ]
+    },
+    {
+      "slug": "refutar-argumentos",
+      "title": "Refutar Argumentos",
+      "objective": "Practice phrases for disagreeing and rebutting arguments respectfully.",
+      "cards": [
+        {
+          "front": "no estoy de acuerdo",
+          "back": "I don't agree",
+          "ipa": "/no esˈtoj de aˈkweɾ.ðo/",
+          "example_sentence": "No estoy de acuerdo con esa idea.",
+          "grammar_explanation": "Common phrase for disagreement."
+        },
+        {
+          "front": "no creo que sea así",
+          "back": "I don't think that's the case",
+          "ipa": "/no ˈkɾe.o ke ˈse.a aˈsi/",
+          "example_sentence": "No creo que sea así, hay otros factores a considerar.",
+          "grammar_explanation": "Polite way to disagree."
+        },
+        {
+          "front": "entiendo tu punto, pero",
+          "back": "I understand your point, but",
+          "ipa": "/enˈtjen.do tu ˈpun.to pe.ɾo/",
+          "example_sentence": "Entiendo tu punto, pero creo que te equivocas.",
+          "grammar_explanation": "Acknowledges the other person's view before disagreeing."
+        },
+        {
+          "front": "a pesar de que",
+          "back": "despite the fact that",
+          "ipa": "/a peˈsaɾ de ke/",
+          "example_sentence": "A pesar de que es difícil, debemos intentarlo.",
+          "grammar_explanation": "Introduces a contrasting idea."
+        },
+        {
+          "front": "sin embargo",
+          "back": "however",
+          "ipa": "/sin emˈbar.ɣo/",
+          "example_sentence": "Es una buena idea, sin embargo, es costosa.",
+          "grammar_explanation": "Introduces a contrasting idea or rebuttal."
+        },
+        {
+          "front": "al contrario",
+          "back": "on the contrary",
+          "ipa": "/al konˈtra.ɾjo/",
+          "example_sentence": "No es aburrido, al contrario, es muy interesante.",
+          "grammar_explanation": "Directly contradicts a previous statement."
+        },
+        {
+          "front": "eso no es del todo cierto",
+          "back": "that's not entirely true",
+          "ipa": "/ˈe.so no es del ˈto.ðo ˈθjeɾ.to/",
+          "example_sentence": "Eso no es del todo cierto, hay excepciones.",
+          "grammar_explanation": "Challenges the accuracy of a statement."
+        },
+        {
+          "front": "me permito dudar",
+          "back": "I beg to differ",
+          "ipa": "/me perˈmi.to duˈðaɾ/",
+          "example_sentence": "Me permito dudar de esa afirmación.",
+          "grammar_explanation": "Formal way to express disagreement."
+        },
+        {
+          "front": "no estoy seguro de que",
+          "back": "I'm not sure that",
+          "ipa": "/no esˈtoj seˈɣu.ɾo de ke/",
+          "example_sentence": "No estoy seguro de que sea la mejor solución.",
+          "grammar_explanation": "Expresses uncertainty and disagreement."
+        }
+      ]
+    },
+    {
+      "slug": "temas-de-debate-actuales",
+      "title": "Temas de Debate Actuales",
+      "objective": "Apply argumentation skills to discuss current events in the Spanish-speaking world.",
+      "cards": [
+        {
+          "front": "cambio climático",
+          "back": "climate change",
+          "ipa": "/ˈkam.bjo kliˈma.ti.ko/",
+          "example_sentence": "El cambio climático es un problema global.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "energía renovable",
+          "back": "renewable energy",
+          "ipa": "/e.neɾˈxi.a re.noˈβa.βle/",
+          "example_sentence": "La energía renovable es una alternativa sostenible.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "inmigración",
+          "back": "immigration",
+          "ipa": "/in.mi.ɣɾaˈθjon/",
+          "example_sentence": "La inmigración es un tema controvertido.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "desigualdad social",
+          "back": "social inequality",
+          "ipa": "/de.si.ɣwalˈdaθ soˈθjal/",
+          "example_sentence": "La desigualdad social es un problema grave en muchos países.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "inteligencia artificial",
+          "back": "artificial intelligence",
+          "ipa": "/in.te.liˈxen.θja aɾ.ti.fiˈθjal/",
+          "example_sentence": "La inteligencia artificial está transformando el mundo.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "globalización",
+          "back": "globalization",
+          "ipa": "/ɡlo.βa.li.θaˈθjon/",
+          "example_sentence": "La globalización tiene efectos positivos y negativos.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "salud pública",
+          "back": "public health",
+          "ipa": "/ˈsa.luθ ˈpu.βli.ka/",
+          "example_sentence": "La salud pública es una prioridad para el gobierno.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "educación superior",
+          "back": "higher education",
+          "ipa": "/e.ðu.kaˈθjon su.peˈɾjoɾ/",
+          "example_sentence": "La educación superior es fundamental para el desarrollo profesional.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "brecha salarial",
+          "back": "wage gap",
+          "ipa": "/ˈbɾe.t͡ʃa sa.laˈɾjal/",
+          "example_sentence": "La brecha salarial entre hombres y mujeres es un problema persistente.",
+          "grammar_explanation": "Feminine noun."
+        }
+      ]
+    },
+    {
+      "slug": "practica-debate-formal",
+      "title": "Práctica: Debate Formal",
+      "objective": "Participate in a structured debate using acquired vocabulary and argumentation skills.",
+      "cards": [
+        {
+          "front": "moderador",
+          "back": "moderator",
+          "ipa": "/mo.ðe.ɾaˈðoɾ/",
+          "example_sentence": "El moderador guiará el debate.",
+          "grammar_explanation": "Masculine noun. Also used as adjective."
+        },
+        {
+          "front": "ponente",
+          "back": "speaker/presenter",
+          "ipa": "/poˈnen.te/",
+          "example_sentence": "Cada ponente tendrá cinco minutos.",
+          "grammar_explanation": "Masculine/Feminine noun."
+        },
+        {
+          "front": "refutación",
+          "back": "rebuttal",
+          "ipa": "/re.fu.taˈθjon/",
+          "example_sentence": "La refutación fue muy convincente.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "réplica",
+          "back": "reply/response",
+          "ipa": "/ˈre.pli.ka/",
+          "example_sentence": "El ponente tuvo la oportunidad de dar una réplica.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "turno de palabra",
+          "back": "speaking turn",
+          "ipa": "/ˈtuɾ.no de paˈla.βɾa/",
+          "example_sentence": "Espera tu turno de palabra.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "mocion",
+          "back": "motion",
+          "ipa": "/moˈθjon/",
+          "example_sentence": "La moción fue aprobada por la mayoría.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "intervención",
+          "back": "intervention/speech",
+          "ipa": "/in.teɾ.βenˈθjon/",
+          "example_sentence": "Su intervención fue muy elocuente.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "argumento en contra",
+          "back": "counter-argument",
+          "ipa": "/aɾ.ɣuˈmen.to en ˈkon.tɾa/",
+          "example_sentence": "Presentó un argumento en contra muy sólido.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "estar a favor de",
+          "back": "to be in favor of",
+          "ipa": "/esˈtaɾ a faˈβoɾ de/",
+          "example_sentence": "Estoy a favor de la legalización.",
+          "grammar_explanation": "Phrase indicating support."
+        },
+        {
+          "front": "estar en contra de",
+          "back": "to be against",
+          "ipa": "/esˈtaɾ en ˈkon.tɾa de/",
+          "example_sentence": "Estoy en contra de esa política.",
+          "grammar_explanation": "Phrase indicating opposition."
+        }
+      ]
+    }
+  ]
+}

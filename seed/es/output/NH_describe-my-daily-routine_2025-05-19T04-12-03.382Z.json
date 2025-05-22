@@ -1,0 +1,386 @@
+{
+  "level_code": "NH",
+  "topic_slug": "describe-my-daily-routine",
+  "topic_title": "describe my daily routine.",
+  "can_do_statement": "I can describe my daily routine.",
+  "lessons": [
+    {
+      "slug": "waking-up",
+      "title": "Waking Up",
+      "objective": "I can talk about what I do when I wake up.",
+      "cards": [
+        {
+          "front": "Me despierto",
+          "back": "I wake up",
+          "ipa": "/me des.ˈpjeɾ.to/",
+          "example_sentence": "Me despierto a las siete de la mañana.",
+          "grammar_explanation": "Reflexive verb; conjugated for 'yo'"
+        },
+        {
+          "front": "Despertarse",
+          "back": "To wake up",
+          "ipa": "/des.peɾ.ˈtaɾ.se/",
+          "example_sentence": "Es importante despertarse temprano.",
+          "grammar_explanation": "Reflexive verb; conjugated for 'yo'"
+        },
+        {
+          "front": "La mañana",
+          "back": "The morning",
+          "ipa": "/la ma.ˈɲa.na/",
+          "example_sentence": "Me gusta tomar café por la mañana.",
+          "grammar_explanation": "Feminine noun"
+        },
+        {
+          "front": "Luego",
+          "back": "Then/Later",
+          "ipa": "/ˈlwe.ɣo/",
+          "example_sentence": "Luego, me levanto de la cama.",
+          "grammar_explanation": "Adverb of time"
+        },
+        {
+          "front": "Levantarse",
+          "back": "To get up",
+          "ipa": "/le.βan.ˈtaɾ.se/",
+          "example_sentence": "No quiero levantarme hoy.",
+          "grammar_explanation": "Reflexive verb"
+        },
+        {
+          "front": "Primero",
+          "back": "First",
+          "ipa": "/pɾi.ˈme.ɾo/",
+          "example_sentence": "Primero, abro los ojos.",
+          "grammar_explanation": "Adjective"
+        },
+        {
+          "front": "Después",
+          "back": "After",
+          "ipa": "/des.ˈpwes/",
+          "example_sentence": "Después, voy al baño.",
+          "grammar_explanation": "Adverb of time"
+        },
+        {
+          "front": "Un día",
+          "back": "One day",
+          "ipa": "/un ˈdi.a/",
+          "example_sentence": "Un día de estos voy a dormir hasta tarde.",
+          "grammar_explanation": "Masculine Noun"
+        }
+      ]
+    },
+    {
+      "slug": "morning-routine",
+      "title": "Morning Routine",
+      "objective": "I can describe my morning activities.",
+      "cards": [
+        {
+          "front": "Ducharse",
+          "back": "To take a shower",
+          "ipa": "/du.ˈt͡ʃaɾ.se/",
+          "example_sentence": "Me gusta ducharme con agua caliente.",
+          "grammar_explanation": "Reflexive verb"
+        },
+        {
+          "front": "El baño",
+          "back": "The bathroom",
+          "ipa": "/el ˈba.ɲo/",
+          "example_sentence": "Voy al baño después de levantarme.",
+          "grammar_explanation": "Masculine noun"
+        },
+        {
+          "front": "Cepillarse los dientes",
+          "back": "To brush one's teeth",
+          "ipa": "/θe.pi.ˈʎaɾ.se los ˈdjen.tes/",
+          "example_sentence": "Siempre me cepillo los dientes.",
+          "grammar_explanation": "Reflexive verb"
+        },
+        {
+          "front": "Desayunar",
+          "back": "To have breakfast",
+          "ipa": "/de.sa.ʝu.ˈnaɾ/",
+          "example_sentence": "Desayuno cereal y fruta.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "La cocina",
+          "back": "The kitchen",
+          "ipa": "/la ko.ˈθi.na/",
+          "example_sentence": "Preparo el desayuno en la cocina.",
+          "grammar_explanation": "Feminine noun"
+        },
+        {
+          "front": "Preparar",
+          "back": "To prepare",
+          "ipa": "/pɾe.pa.ˈɾaɾ/",
+          "example_sentence": "Preparo mi almuerzo para el trabajo.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Siempre",
+          "back": "Always",
+          "ipa": "/ˈsjem.pɾe/",
+          "example_sentence": "Siempre llego tarde.",
+          "grammar_explanation": "Adverb"
+        },
+        {
+          "front": "A veces",
+          "back": "Sometimes",
+          "ipa": "/a ˈβe.θes/",
+          "example_sentence": "A veces, desayuno fuera de casa.",
+          "grammar_explanation": "Adverbial phrase"
+        }
+      ]
+    },
+    {
+      "slug": "work-school-day",
+      "title": "Work/School Day",
+      "objective": "I can describe my activities at work or school.",
+      "cards": [
+        {
+          "front": "Trabajar",
+          "back": "To work",
+          "ipa": "/tɾa.βa.ˈxaɾ/",
+          "example_sentence": "Tengo que trabajar hoy.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "La escuela",
+          "back": "The school",
+          "ipa": "/la es.ˈkwe.la/",
+          "example_sentence": "Voy a la escuela por la mañana.",
+          "grammar_explanation": "Feminine noun"
+        },
+        {
+          "front": "Estudiar",
+          "back": "To study",
+          "ipa": "/es.tu.ˈðjaɾ/",
+          "example_sentence": "Necesito estudiar para el examen.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Almorzar",
+          "back": "To have lunch",
+          "ipa": "/al.mor.ˈθaɾ/",
+          "example_sentence": "Almuerzo con mis amigos.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "La clase",
+          "back": "The class",
+          "ipa": "/la ˈkla.se/",
+          "example_sentence": "Tengo una clase de español.",
+          "grammar_explanation": "Feminine noun"
+        },
+        {
+          "front": "Llegar",
+          "back": "To arrive",
+          "ipa": "/ʎe.ˈɣaɾ/",
+          "example_sentence": "Llego tarde a la oficina.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Un rato",
+          "back": "A while",
+          "ipa": "/un ˈra.to/",
+          "example_sentence": "Estudio un rato antes de almorzar.",
+          "grammar_explanation": "Masculine noun"
+        },
+        {
+          "front": "Casi",
+          "back": "Almost",
+          "ipa": "/ˈka.si/",
+          "example_sentence": "Casi termino mi trabajo.",
+          "grammar_explanation": "Adverb"
+        }
+      ]
+    },
+    {
+      "slug": "afternoon-activities",
+      "title": "Afternoon Activities",
+      "objective": "I can talk about what I do in the afternoon.",
+      "cards": [
+        {
+          "front": "La tarde",
+          "back": "The afternoon",
+          "ipa": "/la ˈtaɾ.de/",
+          "example_sentence": "En la tarde, hago ejercicio.",
+          "grammar_explanation": "Feminine noun"
+        },
+        {
+          "front": "Hacer ejercicio",
+          "back": "To exercise",
+          "ipa": "/a.ˈθeɾ e.xer.ˈθi.θjo/",
+          "example_sentence": "Hago ejercicio en el gimnasio.",
+          "grammar_explanation": "Expression"
+        },
+        {
+          "front": "Volver",
+          "back": "To return",
+          "ipa": "/bol.ˈβeɾ/",
+          "example_sentence": "Vuelvo a casa a las seis.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Descansar",
+          "back": "To rest",
+          "ipa": "/des.kan.ˈsaɾ/",
+          "example_sentence": "Me gusta descansar un poco.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Ver la tele",
+          "back": "To watch TV",
+          "ipa": "/beɾ la ˈte.le/",
+          "example_sentence": "Veo la tele después de trabajar.",
+          "grammar_explanation": "Expression"
+        },
+        {
+          "front": "Un poco",
+          "back": "A little",
+          "ipa": "/un ˈpo.ko/",
+          "example_sentence": "Duermo un poco la siesta.",
+          "grammar_explanation": "Adverbial phrase"
+        },
+        {
+          "front": "La siesta",
+          "back": "The nap",
+          "ipa": "/la ˈsjes.ta/",
+          "example_sentence": "Duermo un poco la siesta.",
+          "grammar_explanation": "Noun"
+        },
+        {
+          "front": "Casi nunca",
+          "back": "Almost Never",
+          "ipa": "/ˈka.si ˈnun.ka/",
+          "example_sentence": "Casi nunca salgo los lunes.",
+          "grammar_explanation": "Adverb"
+        }
+      ]
+    },
+    {
+      "slug": "evening-routine",
+      "title": "Evening Routine",
+      "objective": "I can describe my evening routine.",
+      "cards": [
+        {
+          "front": "La noche",
+          "back": "The night",
+          "ipa": "/la ˈno.t͡ʃe/",
+          "example_sentence": "Salgo con amigos por la noche.",
+          "grammar_explanation": "Feminine noun"
+        },
+        {
+          "front": "Cenar",
+          "back": "To have dinner",
+          "ipa": "/θe.ˈnaɾ/",
+          "example_sentence": "Ceno con mi familia.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Relajarse",
+          "back": "To relax",
+          "ipa": "/re.la.ˈxaɾ.se/",
+          "example_sentence": "Me relajo leyendo un libro.",
+          "grammar_explanation": "Reflexive verb"
+        },
+        {
+          "front": "Leer",
+          "back": "To read",
+          "ipa": "/le.ˈeɾ/",
+          "example_sentence": "Me gusta leer antes de dormir.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Hablar",
+          "back": "To talk",
+          "ipa": "/a.ˈβlaɾ/",
+          "example_sentence": "Hablo con mi madre por teléfono.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "La televisión",
+          "back": "The television",
+          "ipa": "/la te.le.βi.ˈsjon/",
+          "example_sentence": "Veo la televisión un poco.",
+          "grammar_explanation": "Feminine noun"
+        },
+        {
+          "front": "Todo",
+          "back": "Everything",
+          "ipa": "/ˈto.ðo/",
+          "example_sentence": "Hago todo lo que puedo para relajarme.",
+          "grammar_explanation": "Determiner/Pronoun"
+        },
+        {
+          "front": "Algo",
+          "back": "Something",
+          "ipa": "/ˈal.ɣo/",
+          "example_sentence": "Siempre como algo antes de dormir.",
+          "grammar_explanation": "Pronoun"
+        }
+      ]
+    },
+    {
+      "slug": "going-to-bed",
+      "title": "Going to Bed",
+      "objective": "I can talk about what I do before going to bed.",
+      "cards": [
+        {
+          "front": "Dormir",
+          "back": "To sleep",
+          "ipa": "/dor.ˈmiɾ/",
+          "example_sentence": "Quiero dormir mucho.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Acostarse",
+          "back": "To go to bed",
+          "ipa": "/a.kos.ˈtaɾ.se/",
+          "example_sentence": "Me acuesto a las once.",
+          "grammar_explanation": "Reflexive verb"
+        },
+        {
+          "front": "El libro",
+          "back": "The book",
+          "ipa": "/el ˈli.βɾo/",
+          "example_sentence": "Leo un libro en la cama.",
+          "grammar_explanation": "Masculine noun"
+        },
+        {
+          "front": "Apagar",
+          "back": "To turn off",
+          "ipa": "/a.pa.ˈɣaɾ/",
+          "example_sentence": "Apago la luz antes de dormir.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "Soñar",
+          "back": "To dream",
+          "ipa": "/so.ˈɲaɾ/",
+          "example_sentence": "Me gusta soñar con viajar.",
+          "grammar_explanation": "Verb"
+        },
+        {
+          "front": "También",
+          "back": "Also",
+          "ipa": "/tam.ˈbjen/",
+          "example_sentence": "También tomo agua antes de dormir.",
+          "grammar_explanation": "Adverb"
+        },
+        {
+          "front": "Ya",
+          "back": "Already/Now",
+          "ipa": "/ʝa/",
+          "example_sentence": "Ya es hora de dormir.",
+          "grammar_explanation": "Adverb"
+        },
+        {
+          "front": "Cada día",
+          "back": "Each day",
+          "ipa": "/ˈka.ða ˈdi.a/",
+          "example_sentence": "Cada día tengo una rutina diferente.",
+          "grammar_explanation": "Phrase"
+        }
+      ]
+    }
+  ]
+}

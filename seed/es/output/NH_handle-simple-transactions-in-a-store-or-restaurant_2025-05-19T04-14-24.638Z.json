@@ -1,0 +1,393 @@
+{
+  "level_code": "NH",
+  "topic_slug": "handle-simple-transactions-in-a-store-or-restaurant",
+  "topic_title": "handle simple transactions in a store or restaurant.",
+  "can_do_statement": "I can handle simple transactions in a store or restaurant.",
+  "lessons": [
+    {
+      "slug": "greetings-and-introductions",
+      "title": "Greetings and Introductions at a Store",
+      "objective": "Greet a store employee and understand simple questions.",
+      "cards": [
+        {
+          "front": "Hola",
+          "back": "Hello",
+          "ipa": "/ˈo.la/",
+          "example_sentence": "Hola, ¿cómo está?",
+          "grammar_explanation": "Common greeting; '¿cómo está?' is formal 'How are you?'"
+        },
+        {
+          "front": "Buenos días",
+          "back": "Good morning",
+          "ipa": "/ˈbwe.nos ˈdi.as/",
+          "example_sentence": "Buenos días, ¿en qué puedo ayudarle?",
+          "grammar_explanation": "Used from sunrise to noon."
+        },
+        {
+          "front": "Buenas tardes",
+          "back": "Good afternoon/evening",
+          "ipa": "/ˈbwe.nas ˈtaɾ.des/",
+          "example_sentence": "Buenas tardes, busco un libro.",
+          "grammar_explanation": "Used from noon to sunset."
+        },
+        {
+          "front": "¿Qué tal?",
+          "back": "How's it going?",
+          "ipa": "/ˈke tal/",
+          "example_sentence": "¿Qué tal? ¿Puedo ayudarte?",
+          "grammar_explanation": "Informal greeting"
+        },
+        {
+          "front": "Sí",
+          "back": "Yes",
+          "ipa": "/si/",
+          "example_sentence": "Sí, por favor.",
+          "grammar_explanation": "Affirmative response."
+        },
+        {
+          "front": "No",
+          "back": "No",
+          "ipa": "/no/",
+          "example_sentence": "No, gracias.",
+          "grammar_explanation": "Negative response."
+        },
+        {
+          "front": "¿Puedo ayudarle?",
+          "back": "Can I help you?",
+          "ipa": "/ˈpwe.ðo a.ʝuˈðaɾ.le/",
+          "example_sentence": "¿Puedo ayudarle con algo?",
+          "grammar_explanation": "Formal way to offer help."
+        },
+        {
+          "front": "Gracias",
+          "back": "Thank you",
+          "ipa": "/ˈɡɾa.θjas/",
+          "example_sentence": "Gracias por su ayuda.",
+          "grammar_explanation": "Common expression of gratitude."
+        }
+      ]
+    },
+    {
+      "slug": "asking-for-items",
+      "title": "Asking for Items in a Store",
+      "objective": "Ask for common items in a store using simple phrases.",
+      "cards": [
+        {
+          "front": "Quiero",
+          "back": "I want",
+          "ipa": "/ˈkje.ɾo/",
+          "example_sentence": "Quiero un kilo de manzanas.",
+          "grammar_explanation": "Form of 'querer' (to want)."
+        },
+        {
+          "front": "Necesito",
+          "back": "I need",
+          "ipa": "/ne.θeˈsi.to/",
+          "example_sentence": "Necesito una botella de agua.",
+          "grammar_explanation": "Form of 'necesitar' (to need)."
+        },
+        {
+          "front": "Busco",
+          "back": "I'm looking for",
+          "ipa": "/ˈbus.ko/",
+          "example_sentence": "Busco un libro de cocina.",
+          "grammar_explanation": "Form of 'buscar' (to look for)."
+        },
+        {
+          "front": "Tienen",
+          "back": "Do you have?",
+          "ipa": "/ˈtje.nen/",
+          "example_sentence": "¿Tienen pan fresco?",
+          "grammar_explanation": "Form of 'tener' (to have) used as a question."
+        },
+        {
+          "front": "Un",
+          "back": "A/An",
+          "ipa": "/un/",
+          "example_sentence": "Quiero un café, por favor.",
+          "grammar_explanation": "Masculine indefinite article."
+        },
+        {
+          "front": "Una",
+          "back": "A/An",
+          "ipa": "/ˈu.na/",
+          "example_sentence": "Necesito una bolsa, por favor.",
+          "grammar_explanation": "Feminine indefinite article."
+        },
+        {
+          "front": "Por favor",
+          "back": "Please",
+          "ipa": "/poɾ faˈβoɾ/",
+          "example_sentence": "Un kilo de tomates, por favor.",
+          "grammar_explanation": "Common expression of politeness."
+        },
+        {
+          "front": "¿Dónde está?",
+          "back": "Where is...?",
+          "ipa": "/ˈdon.de esˈta/",
+          "example_sentence": "¿Dónde está el baño?",
+          "grammar_explanation": "Useful for asking location of items or places."
+        },
+        {
+          "front": "Algo más?",
+          "back": "Anything else?",
+          "ipa": "/ˈal.ɣo mas/",
+          "example_sentence": "¿Algo más para hoy?",
+          "grammar_explanation": "What the cashier says after serving you."
+        }
+      ]
+    },
+    {
+      "slug": "ordering-food-drinks",
+      "title": "Ordering Food and Drinks",
+      "objective": "Order simple food and drinks in a restaurant or cafe.",
+      "cards": [
+        {
+          "front": "Quisiera",
+          "back": "I would like",
+          "ipa": "/kiˈsje.ɾa/",
+          "example_sentence": "Quisiera un café con leche, por favor.",
+          "grammar_explanation": "More polite form of 'querer'."
+        },
+        {
+          "front": "Para mí",
+          "back": "For me",
+          "ipa": "/ˈpa.ɾa mi/",
+          "example_sentence": "Para mí, un zumo de naranja.",
+          "grammar_explanation": "Used when ordering for oneself."
+        },
+        {
+          "front": "De",
+          "back": "Of/From",
+          "ipa": "/de/",
+          "example_sentence": "Un vaso de agua, por favor.",
+          "grammar_explanation": "Preposition showing origin or composition."
+        },
+        {
+          "front": "Con",
+          "back": "With",
+          "ipa": "/kon/",
+          "example_sentence": "Un café con leche.",
+          "grammar_explanation": "Preposition indicating accompaniment."
+        },
+        {
+          "front": "Sin",
+          "back": "Without",
+          "ipa": "/sin/",
+          "example_sentence": "Un café sin azúcar.",
+          "grammar_explanation": "Preposition indicating absence."
+        },
+        {
+          "front": "La cuenta, por favor",
+          "back": "The bill, please",
+          "ipa": "/la ˈkwen.ta poɾ faˈβoɾ/",
+          "example_sentence": "La cuenta, por favor, estoy listo.",
+          "grammar_explanation": "Requesting the bill at a restaurant."
+        },
+        {
+          "front": "¿Qué me recomienda?",
+          "back": "What do you recommend?",
+          "ipa": "/ˈke me re.ko.mjen.da/",
+          "example_sentence": "¿Qué me recomienda para cenar?",
+          "grammar_explanation": "Asking for a recommendation."
+        },
+        {
+          "front": "Agua",
+          "back": "Water",
+          "ipa": "/ˈa.ɣwa/",
+          "example_sentence": "Quiero un vaso de agua, por favor.",
+          "grammar_explanation": "Basic drink order."
+        }
+      ]
+    },
+    {
+      "slug": "asking-about-prices",
+      "title": "Asking About Prices",
+      "objective": "Ask about the prices of items.",
+      "cards": [
+        {
+          "front": "¿Cuánto cuesta?",
+          "back": "How much does it cost?",
+          "ipa": "/ˈkwan.to ˈkwes.ta/",
+          "example_sentence": "¿Cuánto cuesta esta camisa?",
+          "grammar_explanation": "General way to ask about price."
+        },
+        {
+          "front": "¿Cuánto es?",
+          "back": "How much is it?",
+          "ipa": "/ˈkwan.to es/",
+          "example_sentence": "¿Cuánto es en total?",
+          "grammar_explanation": "Asking the total amount."
+        },
+        {
+          "front": "Es caro",
+          "back": "It's expensive",
+          "ipa": "/es ˈka.ɾo/",
+          "example_sentence": "Este reloj es muy caro.",
+          "grammar_explanation": "Expressing that something is expensive."
+        },
+        {
+          "front": "Es barato",
+          "back": "It's cheap",
+          "ipa": "/es baˈɾa.to/",
+          "example_sentence": "Esta camiseta es muy barata.",
+          "grammar_explanation": "Expressing that something is cheap."
+        },
+        {
+          "front": "Precio",
+          "back": "Price",
+          "ipa": "/ˈpɾe.θjo/",
+          "example_sentence": "El precio es muy bueno.",
+          "grammar_explanation": "Noun for price."
+        },
+        {
+          "front": "Vale",
+          "back": "It's worth",
+          "ipa": "/ˈba.le/",
+          "example_sentence": "Vale mucho dinero.",
+          "grammar_explanation": "To be worth."
+        },
+        {
+          "front": "Todo",
+          "back": "All",
+          "ipa": "/ˈto.ðo/",
+          "example_sentence": "¿Cuánto es todo?",
+          "grammar_explanation": "Refering to the total amount."
+        },
+        {
+          "front": "Descuento",
+          "back": "Discount",
+          "ipa": "/desˈkwen.to/",
+          "example_sentence": "¿Tienen un descuento para estudiantes?",
+          "grammar_explanation": "Asking about discounts"
+        }
+      ]
+    },
+    {
+      "slug": "making-payment",
+      "title": "Making Payment",
+      "objective": "Understand and use basic payment phrases.",
+      "cards": [
+        {
+          "front": "Tarjeta",
+          "back": "Card",
+          "ipa": "/taɾˈxe.ta/",
+          "example_sentence": "¿Aceptan tarjeta de crédito?",
+          "grammar_explanation": "Referring to a credit or debit card."
+        },
+        {
+          "front": "Efectivo",
+          "back": "Cash",
+          "ipa": "/e.fekˈti.βo/",
+          "example_sentence": "Pago en efectivo.",
+          "grammar_explanation": "Paying with cash."
+        },
+        {
+          "front": "Propina",
+          "back": "Tip",
+          "ipa": "/pɾoˈpi.na/",
+          "example_sentence": "Voy a dejar una propina.",
+          "grammar_explanation": "Money given as a gratuity."
+        },
+        {
+          "front": "Cambio",
+          "back": "Change",
+          "ipa": "/ˈkam.bjo/",
+          "example_sentence": "Aquí tiene su cambio.",
+          "grammar_explanation": "Money returned after payment."
+        },
+        {
+          "front": "Aceptan",
+          "back": "Do you accept?",
+          "ipa": "/a.θepˈtan/",
+          "example_sentence": "¿Aceptan euros?",
+          "grammar_explanation": "Form of 'aceptar' (to accept)."
+        },
+        {
+          "front": "Aquí tiene",
+          "back": "Here you go",
+          "ipa": "/aˈki ˈtje.ne/",
+          "example_sentence": "Aquí tiene el dinero.",
+          "grammar_explanation": "Giving something to someone."
+        },
+        {
+          "front": "Total",
+          "back": "Total",
+          "ipa": "/toˈtal/",
+          "example_sentence": "El total es 20 euros.",
+          "grammar_explanation": "The sum of the bill."
+        },
+        {
+          "front": "Gracias, adiós",
+          "back": "Thank you, goodbye",
+          "ipa": "/ˈɡɾa.θjas aˈðjos/",
+          "example_sentence": "Gracias, adiós, hasta luego.",
+          "grammar_explanation": "Farewell expression."
+        }
+      ]
+    },
+    {
+      "slug": "handling-problems",
+      "title": "Handling Simple Problems",
+      "objective": "Communicate simple problems or issues.",
+      "cards": [
+        {
+          "front": "Perdón",
+          "back": "Excuse me",
+          "ipa": "/peɾˈðon/",
+          "example_sentence": "Perdón, me equivoqué.",
+          "grammar_explanation": "Used to apologize or get someone's attention."
+        },
+        {
+          "front": "Hay un problema",
+          "back": "There is a problem",
+          "ipa": "/ai un pɾoˈβle.ma/",
+          "example_sentence": "Hay un problema con mi orden.",
+          "grammar_explanation": "Stating that there is an issue."
+        },
+        {
+          "front": "No funciona",
+          "back": "It doesn't work",
+          "ipa": "/no funˈθjo.na/",
+          "example_sentence": "La tarjeta no funciona.",
+          "grammar_explanation": "Describing something that is not working."
+        },
+        {
+          "front": "Está roto",
+          "back": "It's broken",
+          "ipa": "/esˈta ˈro.to/",
+          "example_sentence": "El vaso está roto.",
+          "grammar_explanation": "Describing something that is broken."
+        },
+        {
+          "front": "Falta",
+          "back": "Is missing",
+          "ipa": "/ˈfal.ta/",
+          "example_sentence": "Falta un tenedor.",
+          "grammar_explanation": "Something is missing"
+        },
+        {
+          "front": "Otra",
+          "back": "Another",
+          "ipa": "/ˈo.tɾa/",
+          "example_sentence": "Quisiera otra cuchara.",
+          "grammar_explanation": "Another one."
+        },
+        {
+          "front": "Sucio",
+          "back": "Dirty",
+          "ipa": "/ˈsu.θjo/",
+          "example_sentence": "Este plato está sucio.",
+          "grammar_explanation": "Describing something that is dirty."
+        },
+        {
+          "front": "Equivocado",
+          "back": "Wrong",
+          "ipa": "/e.ki.βoˈka.do/",
+          "example_sentence": "La orden está equivocada.",
+          "grammar_explanation": "Describing something that is wrong."
+        }
+      ]
+    }
+  ]
+}

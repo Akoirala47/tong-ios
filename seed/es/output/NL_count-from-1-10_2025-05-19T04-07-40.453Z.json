@@ -1,0 +1,386 @@
+{
+  "level_code": "NL",
+  "topic_slug": "count-from-1-10",
+  "topic_title": "count from 1-10.",
+  "can_do_statement": "I can count from 1-10.",
+  "lessons": [
+    {
+      "slug": "lesson-1-introductions",
+      "title": "Lesson 1: Greetings and Numbers 1-3",
+      "objective": "Greet someone and count to three in simple scenarios.",
+      "cards": [
+        {
+          "front": "Uno",
+          "back": "One",
+          "ipa": "/ˈu.no/",
+          "example_sentence": "Hay uno libro.",
+          "grammar_explanation": "Masculine singular. 'Un' before masculine nouns."
+        },
+        {
+          "front": "Dos",
+          "back": "Two",
+          "ipa": "/dos/",
+          "example_sentence": "Tengo dos gatos.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Tres",
+          "back": "Three",
+          "ipa": "/tɾes/",
+          "example_sentence": "Ella tiene tres perros.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Hola",
+          "back": "Hello",
+          "ipa": "/ˈo.la/",
+          "example_sentence": "Hola, ¿cómo estás?",
+          "grammar_explanation": "Common greeting."
+        },
+        {
+          "front": "¿Qué tal?",
+          "back": "What's up?",
+          "ipa": "/ˈke ˈtal/",
+          "example_sentence": "¿Qué tal, amigo?",
+          "grammar_explanation": "Informal greeting."
+        },
+        {
+          "front": "Sí",
+          "back": "Yes",
+          "ipa": "/si/",
+          "example_sentence": "¿Es uno? Sí.",
+          "grammar_explanation": "Affirmative response."
+        },
+        {
+          "front": "Soy",
+          "back": "I am",
+          "ipa": "/soi/",
+          "example_sentence": "Soy yo.",
+          "grammar_explanation": "First-person singular form of 'ser'."
+        },
+        {
+          "front": "de",
+          "back": "of",
+          "ipa": "/de/",
+          "example_sentence": "Soy de España.",
+          "grammar_explanation": "Indicates origin."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-2-ordering-food",
+      "title": "Lesson 2: Ordering Food - Numbers 4-6",
+      "objective": "Order food using numbers 4-6.",
+      "cards": [
+        {
+          "front": "Cuatro",
+          "back": "Four",
+          "ipa": "/ˈkwatɾo/",
+          "example_sentence": "Quiero cuatro tacos, por favor.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Cinco",
+          "back": "Five",
+          "ipa": "/ˈθinko/",
+          "example_sentence": "Ella pide cinco churros.",
+          "grammar_explanation": "Pronounced with a 'th' sound in Spain."
+        },
+        {
+          "front": "Seis",
+          "back": "Six",
+          "ipa": "/seis/",
+          "example_sentence": "Necesito seis naranjas.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Por favor",
+          "back": "Please",
+          "ipa": "/poɾ faˈβoɾ/",
+          "example_sentence": "Un café, por favor.",
+          "grammar_explanation": "Polite request."
+        },
+        {
+          "front": "Quiero",
+          "back": "I want",
+          "ipa": "/ˈkjeɾo/",
+          "example_sentence": "Quiero dos empanadas.",
+          "grammar_explanation": "First-person singular of 'querer'."
+        },
+        {
+          "front": "Tengo",
+          "back": "I have",
+          "ipa": "/ˈtenɡo/",
+          "example_sentence": "Tengo seis pesos.",
+          "grammar_explanation": "First person of 'tener' "
+        },
+        {
+          "front": "un",
+          "back": "a",
+          "ipa": "/un/",
+          "example_sentence": "Quiero un agua, por favor.",
+          "grammar_explanation": "Masculine singular article."
+        },
+        {
+          "front": "a",
+          "back": "to",
+          "ipa": "/a/",
+          "example_sentence": "Voy a la tienda.",
+          "grammar_explanation": "Preposition"
+        }
+      ]
+    },
+    {
+      "slug": "lesson-3-telling-time",
+      "title": "Lesson 3: Telling Time - Numbers 7-9",
+      "objective": "Tell time in whole hours using numbers 7-9.",
+      "cards": [
+        {
+          "front": "Siete",
+          "back": "Seven",
+          "ipa": "/ˈsjete/",
+          "example_sentence": "Son las siete de la mañana.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Ocho",
+          "back": "Eight",
+          "ipa": "/ˈot͡ʃo/",
+          "example_sentence": "Llegamos a las ocho.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Nueve",
+          "back": "Nine",
+          "ipa": "/ˈnweβe/",
+          "example_sentence": "La clase empieza a las nueve.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Es la una",
+          "back": "It's one o'clock",
+          "ipa": "/ˈes la ˈu.na/",
+          "example_sentence": "Es la una de la tarde.",
+          "grammar_explanation": "Used for 1:00."
+        },
+        {
+          "front": "Son las...",
+          "back": "It's ... o'clock",
+          "ipa": "/son las/",
+          "example_sentence": "Son las ocho.",
+          "grammar_explanation": "Used for hours 2-12."
+        },
+        {
+          "front": "Tiempo",
+          "back": "Time",
+          "ipa": "/ˈtjempo/",
+          "example_sentence": "¿Qué hora es?",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "y",
+          "back": "and",
+          "ipa": "/i/",
+          "example_sentence": "Uno y dos son tres.",
+          "grammar_explanation": "Conjunction."
+        },
+        {
+          "front": "En",
+          "back": "In",
+          "ipa": "/en/",
+          "example_sentence": "En la mañana.",
+          "grammar_explanation": "Preposition."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-4-counting-objects",
+      "title": "Lesson 4: Counting Objects - Number 10 and Review",
+      "objective": "Count objects using numbers 1-10.",
+      "cards": [
+        {
+          "front": "Diez",
+          "back": "Ten",
+          "ipa": "/ˈdjes/",
+          "example_sentence": "Tengo diez dedos.",
+          "grammar_explanation": "Doesn't change with gender."
+        },
+        {
+          "front": "Uno, dos, tres...",
+          "back": "One, two, three...",
+          "ipa": "/ˈu.no ˈdos ˈtɾes/",
+          "example_sentence": "Uno, dos, tres, cuatro, cinco...",
+          "grammar_explanation": "Beginning of a count."
+        },
+        {
+          "front": "¿Cuántos?",
+          "back": "How many?",
+          "ipa": "/ˈkwantos/",
+          "example_sentence": "¿Cuántos libros tienes?",
+          "grammar_explanation": "Masculine plural. Used to ask about quantity."
+        },
+        {
+          "front": "la",
+          "back": "the",
+          "ipa": "/la/",
+          "example_sentence": "La clase es buena.",
+          "grammar_explanation": "Feminine singular."
+        },
+        {
+          "front": "hay",
+          "back": "there is/are",
+          "ipa": "/ai/",
+          "example_sentence": "Hay dos perros.",
+          "grammar_explanation": "Impersonal form of haber."
+        },
+        {
+          "front": "y",
+          "back": "and",
+          "ipa": "/i/",
+          "example_sentence": "Dos y dos son cuatro.",
+          "grammar_explanation": "Conjunction."
+        },
+        {
+          "front": "Todo",
+          "back": "all",
+          "ipa": "/ˈto.ðo/",
+          "example_sentence": "Todo está bien.",
+          "grammar_explanation": "Determiner."
+        },
+        {
+          "front": "Me",
+          "back": "me",
+          "ipa": "/me/",
+          "example_sentence": "Me llamo...",
+          "grammar_explanation": "Pronoun."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-5-ages",
+      "title": "Lesson 5: Ages - Practice with Numbers 1-10",
+      "objective": "Understand and ask ages using numbers from 1-10.",
+      "cards": [
+        {
+          "front": "¿Cuántos años tienes?",
+          "back": "How old are you?",
+          "ipa": "/ˈkwantos ˈaɲos ˈtjenes/",
+          "example_sentence": "¿Cuántos años tienes tú?",
+          "grammar_explanation": "Common question to ask age."
+        },
+        {
+          "front": "Tengo [number] años",
+          "back": "I am [number] years old",
+          "ipa": "/ˈtenɡo ˈaɲos/",
+          "example_sentence": "Tengo cinco años.",
+          "grammar_explanation": "Statement to express age."
+        },
+        {
+          "front": "Él tiene",
+          "back": "He has",
+          "ipa": "/el ˈtjene/",
+          "example_sentence": "Él tiene uno año.",
+          "grammar_explanation": "Third-person singular."
+        },
+        {
+          "front": "Ella tiene",
+          "back": "She has",
+          "ipa": "/ˈeʎa ˈtjene/",
+          "example_sentence": "Ella tiene seis años.",
+          "grammar_explanation": "Third-person singular."
+        },
+        {
+          "front": "¿Qué?",
+          "back": "What?",
+          "ipa": "/ke/",
+          "example_sentence": "¿Qué hora es?",
+          "grammar_explanation": "Interrogative pronoun"
+        },
+        {
+          "front": "Es",
+          "back": "is",
+          "ipa": "/es/",
+          "example_sentence": "Es un libro.",
+          "grammar_explanation": "Third-person singular form of 'ser'."
+        },
+        {
+          "front": "a",
+          "back": "to",
+          "ipa": "/a/",
+          "example_sentence": "Vamos a la playa.",
+          "grammar_explanation": "Preposition."
+        },
+        {
+          "front": "todo",
+          "back": "all",
+          "ipa": "/ˈto.ðo/",
+          "example_sentence": "Todo bien.",
+          "grammar_explanation": "Adjective."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-6-phone-numbers",
+      "title": "Lesson 6: Phone Numbers - Practicing 0-10",
+      "objective": "Understand and say simple phone numbers.",
+      "cards": [
+        {
+          "front": "Cero",
+          "back": "Zero",
+          "ipa": "/ˈθeɾo/",
+          "example_sentence": "Mi número de teléfono tiene un cero.",
+          "grammar_explanation": "Pronounced with a 'th' sound in Spain."
+        },
+        {
+          "front": "Mi número es...",
+          "back": "My number is...",
+          "ipa": "/mi ˈnu.me.ɾo es/",
+          "example_sentence": "Mi número es uno, dos, tres...",
+          "grammar_explanation": "How to start saying your number."
+        },
+        {
+          "front": "El número",
+          "back": "The number",
+          "ipa": "/el ˈnu.me.ɾo/",
+          "example_sentence": "El número es importante.",
+          "grammar_explanation": "A number."
+        },
+        {
+          "front": "De",
+          "back": "of",
+          "ipa": "/de/",
+          "example_sentence": "Soy de México.",
+          "grammar_explanation": "Preposition."
+        },
+        {
+          "front": "No",
+          "back": "no",
+          "ipa": "/no/",
+          "example_sentence": "No quiero.",
+          "grammar_explanation": "Adverb."
+        },
+        {
+          "front": "todo",
+          "back": "all",
+          "ipa": "/ˈto.ðo/",
+          "example_sentence": "Todo bien.",
+          "grammar_explanation": "Adjective."
+        },
+        {
+          "front": "Otro",
+          "back": "another",
+          "ipa": "/ˈo.tɾo/",
+          "example_sentence": "Quiero otro.",
+          "grammar_explanation": "Adjective."
+        },
+        {
+          "front": "más",
+          "back": "more",
+          "ipa": "/mas/",
+          "example_sentence": "Quiero más.",
+          "grammar_explanation": "Adverb."
+        }
+      ]
+    }
+  ]
+}

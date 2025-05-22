@@ -1,0 +1,407 @@
+{
+  "level_code": "NM",
+  "topic_slug": "talk-about-my-hobbies-and-what-i-like-to-do",
+  "topic_title": "talk about my hobbies and what I like to do.",
+  "can_do_statement": "I can talk about my hobbies and what I like to do.",
+  "lessons": [
+    {
+      "slug": "lesson-1-introducing-hobbies",
+      "title": "Introducing Hobbies",
+      "objective": "Learn basic vocabulary for hobbies and how to say what you like.",
+      "cards": [
+        {
+          "front": "Me gusta...",
+          "back": "I like...",
+          "ipa": "/me ˈɣus.ta/",
+          "example_sentence": "Me gusta mucho leer libros.",
+          "grammar_explanation": "Use 'Me gusta' followed by an infinitive verb."
+        },
+        {
+          "front": "Yo quiero...",
+          "back": "I want to...",
+          "ipa": "/ʝo ˈkje.ɾo/",
+          "example_sentence": "Yo quiero hablar español.",
+          "grammar_explanation": "Use 'Yo quiero' followed by an infinitive verb."
+        },
+        {
+          "front": "Leer",
+          "back": "To read",
+          "ipa": "/le.ˈeɾ/",
+          "example_sentence": "A mí me gusta leer.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Escribir",
+          "back": "To write",
+          "ipa": "/es.kɾi.ˈβiɾ/",
+          "example_sentence": "Me gusta escribir en mi diario.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Escuchar música",
+          "back": "To listen to music",
+          "ipa": "/es.ku.ˈt͡ʃaɾ ˈmu.si.ka/",
+          "example_sentence": "Siempre me gusta escuchar música cuando estudio.",
+          "grammar_explanation": "Verb + noun."
+        },
+        {
+          "front": "Ver la tele",
+          "back": "To watch TV",
+          "ipa": "/beɾ la ˈte.le/",
+          "example_sentence": "Me gusta ver la tele después del trabajo.",
+          "grammar_explanation": "Verb + noun."
+        },
+        {
+          "front": "Cocinar",
+          "back": "To cook",
+          "ipa": "/ko.ki.ˈnaɾ/",
+          "example_sentence": "Quiero cocinar algo nuevo.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Bailar",
+          "back": "To dance",
+          "ipa": "/bai.ˈlaɾ/",
+          "example_sentence": "Me gusta mucho bailar salsa.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Hablar",
+          "back": "To talk/speak",
+          "ipa": "/a.ˈβlaɾ/",
+          "example_sentence": "Quiero hablar con mis amigos.",
+          "grammar_explanation": "Infinitive form."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-2-sports-and-exercise",
+      "title": "Sports and Exercise",
+      "objective": "Learn vocabulary related to sports and physical activities.",
+      "cards": [
+        {
+          "front": "Deporte",
+          "back": "Sport",
+          "ipa": "/de.ˈpoɾ.te/",
+          "example_sentence": "¿Cuál es tu deporte favorito?",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Fútbol",
+          "back": "Soccer",
+          "ipa": "/ˈfuð.βol/",
+          "example_sentence": "Me gusta ver partidos de fútbol.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Baloncesto",
+          "back": "Basketball",
+          "ipa": "/ba.lon.ˈθes.to/",
+          "example_sentence": "Jugar baloncesto es mi deporte favorito.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Nadar",
+          "back": "To swim",
+          "ipa": "/na.ˈðaɾ/",
+          "example_sentence": "Me gusta nadar en la piscina.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Correr",
+          "back": "To run",
+          "ipa": "/ko.ˈreɾ/",
+          "example_sentence": "Me gusta correr en el parque.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Hacer ejercicio",
+          "back": "To exercise",
+          "ipa": "/a.ˈθeɾ e.xeɾ.ˈθi.θjo/",
+          "example_sentence": "Yo quiero hacer ejercicio todos los días.",
+          "grammar_explanation": "Verb + noun."
+        },
+        {
+          "front": "Gimnasio",
+          "back": "Gym",
+          "ipa": "/xim.ˈna.sjo/",
+          "example_sentence": "Voy al gimnasio tres veces por semana.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Caminar",
+          "back": "To walk",
+          "ipa": "/ka.mi.ˈnaɾ/",
+          "example_sentence": "Me gusta caminar en la playa.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Jugar",
+          "back": "To play",
+          "ipa": "/xu.ˈɣaɾ/",
+          "example_sentence": "Me gusta jugar videojuegos.",
+          "grammar_explanation": "Infinitive form."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-3-artistic-pursuits",
+      "title": "Artistic Pursuits",
+      "objective": "Learn vocabulary for artistic hobbies like painting, drawing, and music.",
+      "cards": [
+        {
+          "front": "Arte",
+          "back": "Art",
+          "ipa": "/ˈaɾ.te/",
+          "example_sentence": "Me gusta mucho el arte moderno.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Pintar",
+          "back": "To paint",
+          "ipa": "/pin.ˈtaɾ/",
+          "example_sentence": "Me gusta pintar paisajes.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Dibujar",
+          "back": "To draw",
+          "ipa": "/di.βu.ˈxaɾ/",
+          "example_sentence": "Quiero dibujar un retrato.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Música",
+          "back": "Music",
+          "ipa": "/ˈmu.si.ka/",
+          "example_sentence": "Me gusta escuchar música clásica.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Cantar",
+          "back": "To sing",
+          "ipa": "/kan.ˈtaɾ/",
+          "example_sentence": "Me gusta cantar en la ducha.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Tocar un instrumento",
+          "back": "To play an instrument",
+          "ipa": "/to.ˈkaɾ un ins.tɾu.ˈmen.to/",
+          "example_sentence": "Quiero tocar un instrumento musical.",
+          "grammar_explanation": "Verb phrase."
+        },
+        {
+          "front": "Fotografía",
+          "back": "Photography",
+          "ipa": "/fo.to.ɣɾa.ˈfi.a/",
+          "example_sentence": "Me gusta la fotografía de paisajes.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Crear",
+          "back": "To create",
+          "ipa": "/kɾe.ˈaɾ/",
+          "example_sentence": "Me gusta crear cosas nuevas.",
+          "grammar_explanation": "Infinitive form."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-4-outdoor-activities",
+      "title": "Outdoor Activities",
+      "objective": "Learn vocabulary related to enjoying the outdoors.",
+      "cards": [
+        {
+          "front": "Naturaleza",
+          "back": "Nature",
+          "ipa": "/na.tu.ɾa.ˈle.θa/",
+          "example_sentence": "Me gusta estar en la naturaleza.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Montaña",
+          "back": "Mountain",
+          "ipa": "/mon.ˈta.ɲa/",
+          "example_sentence": "Me gusta caminar en la montaña.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Playa",
+          "back": "Beach",
+          "ipa": "/ˈpla.ʝa/",
+          "example_sentence": "Me gusta ir a la playa en verano.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Jardín",
+          "back": "Garden",
+          "ipa": "/xaɾ.ˈðin/",
+          "example_sentence": "Me gusta trabajar en el jardín.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Viajar",
+          "back": "To travel",
+          "ipa": "/bja.ˈxaɾ/",
+          "example_sentence": "Quiero viajar por el mundo.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Explorar",
+          "back": "To explore",
+          "ipa": "/eks.plo.ˈɾaɾ/",
+          "example_sentence": "Me gusta explorar lugares nuevos.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Aire libre",
+          "back": "Outdoors",
+          "ipa": "/ˈai.ɾe ˈli.βɾe/",
+          "example_sentence": "Me gusta estar al aire libre.",
+          "grammar_explanation": "Phrase."
+        },
+        {
+          "front": "Observar",
+          "back": "To observe",
+          "ipa": "/ob.ser.ˈβaɾ/",
+          "example_sentence": "Me gusta observar las estrellas.",
+          "grammar_explanation": "Infinitive form."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-5-social-activities",
+      "title": "Social Activities",
+      "objective": "Learn vocabulary for activities you do with others.",
+      "cards": [
+        {
+          "front": "Amigos",
+          "back": "Friends",
+          "ipa": "/a.ˈmi.ɣos/",
+          "example_sentence": "Me gusta pasar tiempo con mis amigos.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Familia",
+          "back": "Family",
+          "ipa": "/fa.ˈmi.lja/",
+          "example_sentence": "Me gusta visitar a mi familia.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Fiesta",
+          "back": "Party",
+          "ipa": "/ˈfjes.ta/",
+          "example_sentence": "Me gusta ir a fiestas con mis amigos.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Cine",
+          "back": "Cinema/Movies",
+          "ipa": "/ˈθi.ne/",
+          "example_sentence": "Me gusta ir al cine.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Restaurante",
+          "back": "Restaurant",
+          "ipa": "/res.tau.ˈɾan.te/",
+          "example_sentence": "Me gusta comer en restaurantes nuevos.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Conversar",
+          "back": "To converse/chat",
+          "ipa": "/kon.ber.ˈsaɾ/",
+          "example_sentence": "Me gusta conversar con mis amigos.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Reunión",
+          "back": "Meeting/Gathering",
+          "ipa": "/reu̯.ˈnjon/",
+          "example_sentence": "Tenemos una reunión familiar el domingo.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Visitar",
+          "back": "To visit",
+          "ipa": "/bi.si.ˈtaɾ/",
+          "example_sentence": "Me gusta visitar museos.",
+          "grammar_explanation": "Infinitive form."
+        }
+      ]
+    },
+    {
+      "slug": "lesson-6-relaxing-hobbies",
+      "title": "Relaxing Hobbies",
+      "objective": "Learn vocabulary for hobbies that help you relax and unwind.",
+      "cards": [
+        {
+          "front": "Relajar",
+          "back": "To relax",
+          "ipa": "/re.la.ˈxaɾ/",
+          "example_sentence": "Me gusta relajarme en casa.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Dormir",
+          "back": "To sleep",
+          "ipa": "/doɾ.ˈmiɾ/",
+          "example_sentence": "Me gusta dormir hasta tarde los fines de semana.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Meditar",
+          "back": "To meditate",
+          "ipa": "/me.ði.ˈtaɾ/",
+          "example_sentence": "Quiero meditar todos los días.",
+          "grammar_explanation": "Infinitive form."
+        },
+        {
+          "front": "Té",
+          "back": "Tea",
+          "ipa": "/te/",
+          "example_sentence": "Me gusta beber té por la noche.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Café",
+          "back": "Coffee",
+          "ipa": "/ka.ˈfe/",
+          "example_sentence": "Me gusta beber café por la mañana.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Leer un libro",
+          "back": "To read a book",
+          "ipa": "/le.ˈeɾ un ˈli.βɾo/",
+          "example_sentence": "Me gusta leer un libro antes de dormir.",
+          "grammar_explanation": "Verb + noun."
+        },
+        {
+          "front": "Cine en casa",
+          "back": "Home cinema",
+          "ipa": "/ˈθi.ne en ˈka.sa/",
+          "example_sentence": "Me gusta hacer cine en casa los fines de semana.",
+          "grammar_explanation": "Noun + preposition + noun"
+        },
+        {
+          "front": "Silencio",
+          "back": "Silence",
+          "ipa": "/si.ˈlen.θjo/",
+          "example_sentence": "Necesito un poco de silencio.",
+          "grammar_explanation": "Noun."
+        },
+        {
+          "front": "Descansar",
+          "back": "To rest",
+          "ipa": "/des.kan.ˈsaɾ/",
+          "example_sentence": "Necesito descansar después del trabajo.",
+          "grammar_explanation": "Infinitive form."
+        }
+      ]
+    }
+  ]
+}

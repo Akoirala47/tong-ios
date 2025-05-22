@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4B87AD382DCED08A004F2EC1 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD372DCED08A004F2EC1 /* Auth */; };
+		4B87AD3A2DCED08A004F2EC1 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD392DCED08A004F2EC1 /* Functions */; };
+		4B87AD3C2DCED08A004F2EC1 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD3B2DCED08A004F2EC1 /* PostgREST */; };
+		4B87AD3E2DCED08A004F2EC1 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD3D2DCED08A004F2EC1 /* Realtime */; };
+		4B87AD402DCED08A004F2EC1 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD3F2DCED08A004F2EC1 /* Storage */; };
+		4B87AD4B2DCED30E004F2EC1 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD4A2DCED30E004F2EC1 /* Supabase */; };
+		4B87AD4E2DCEDA02004F2EC1 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD4D2DCEDA02004F2EC1 /* GoogleSignIn */; };
+		4B87AD502DCEDA02004F2EC1 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B87AD4F2DCEDA02004F2EC1 /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4B41B6ED2DCE83580012B2F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +40,22 @@
 		4B41B6F62DCE83580012B2F5 /* tong-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tong-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4B87AD522DCEDD1A004F2EC1 /* Exceptions for "tong-ios" folder in "tong-ios" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4B41B6DB2DCE83560012B2F5 /* tong-ios */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4B41B6DE2DCE83560012B2F5 /* tong-ios */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4B87AD522DCEDD1A004F2EC1 /* Exceptions for "tong-ios" folder in "tong-ios" target */,
+			);
 			path = "tong-ios";
 			sourceTree = "<group>";
 		};
@@ -52,6 +76,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B87AD3C2DCED08A004F2EC1 /* PostgREST in Frameworks */,
+				4B87AD3A2DCED08A004F2EC1 /* Functions in Frameworks */,
+				4B87AD4B2DCED30E004F2EC1 /* Supabase in Frameworks */,
+				4B87AD502DCEDA02004F2EC1 /* GoogleSignInSwift in Frameworks */,
+				4B87AD382DCED08A004F2EC1 /* Auth in Frameworks */,
+				4B87AD402DCED08A004F2EC1 /* Storage in Frameworks */,
+				4B87AD3E2DCED08A004F2EC1 /* Realtime in Frameworks */,
+				4B87AD4E2DCEDA02004F2EC1 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +110,7 @@
 				4B41B6DE2DCE83560012B2F5 /* tong-ios */,
 				4B41B6EF2DCE83580012B2F5 /* tong-iosTests */,
 				4B41B6F92DCE83580012B2F5 /* tong-iosUITests */,
+				4B87AD492DCED30E004F2EC1 /* Frameworks */,
 				4B41B6DD2DCE83560012B2F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +123,13 @@
 				4B41B6F62DCE83580012B2F5 /* tong-iosUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B87AD492DCED30E004F2EC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +152,14 @@
 			);
 			name = "tong-ios";
 			packageProductDependencies = (
+				4B87AD372DCED08A004F2EC1 /* Auth */,
+				4B87AD392DCED08A004F2EC1 /* Functions */,
+				4B87AD3B2DCED08A004F2EC1 /* PostgREST */,
+				4B87AD3D2DCED08A004F2EC1 /* Realtime */,
+				4B87AD3F2DCED08A004F2EC1 /* Storage */,
+				4B87AD4A2DCED30E004F2EC1 /* Supabase */,
+				4B87AD4D2DCEDA02004F2EC1 /* GoogleSignIn */,
+				4B87AD4F2DCEDA02004F2EC1 /* GoogleSignInSwift */,
 			);
 			productName = "tong-ios";
 			productReference = 4B41B6DC2DCE83560012B2F5 /* tong-ios.app */;
@@ -195,6 +243,10 @@
 			);
 			mainGroup = 4B41B6D32DCE83560012B2F5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				4B87AD4C2DCEDA02004F2EC1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4B41B6DD2DCE83560012B2F5 /* Products */;
 			projectDirPath = "";
@@ -396,8 +448,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tong-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 4F72ML82HK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tong-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,8 +478,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tong-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 4F72ML82HK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tong-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +608,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		4B87AD4C2DCEDA02004F2EC1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B87AD372DCED08A004F2EC1 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		4B87AD392DCED08A004F2EC1 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		4B87AD3B2DCED08A004F2EC1 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		4B87AD3D2DCED08A004F2EC1 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		4B87AD3F2DCED08A004F2EC1 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		4B87AD4A2DCED30E004F2EC1 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD362DCED08A004F2EC1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		4B87AD4D2DCEDA02004F2EC1 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD4C2DCEDA02004F2EC1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		4B87AD4F2DCEDA02004F2EC1 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B87AD4C2DCEDA02004F2EC1 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B41B6D42DCE83560012B2F5 /* Project object */;
 }

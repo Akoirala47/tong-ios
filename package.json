@@ -1,0 +1,14 @@
+{
+  "name": "tong-ios-tools",
+  "version": "1.0.0",
+  "description": "Tools for content management in Tong iOS app",
+  "scripts": {
+    "generate-swift": "node generate-content-swift.js",
+    "seed-supabase": "node seed-to-supabase.js",
+    "seed-all": "bash seed.sh && node seed-to-supabase.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.8",
+    "dotenv": "^16.5.0"
+  }
+}

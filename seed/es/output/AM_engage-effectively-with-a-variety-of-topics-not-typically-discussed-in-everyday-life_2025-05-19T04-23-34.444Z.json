@@ -1,0 +1,428 @@
+{
+  "level_code": "AM",
+  "topic_slug": "engage-effectively-with-a-variety-of-topics-not-typically-discussed-in-everyday-life",
+  "topic_title": "engage effectively with a variety of topics not typically discussed in everyday life.",
+  "can_do_statement": "I can engage effectively with a variety of topics not typically discussed in everyday life.",
+  "lessons": [
+    {
+      "slug": "existential-philosophy",
+      "title": "Existential Philosophy",
+      "objective": "Discuss basic concepts of existential philosophy.",
+      "cards": [
+        {
+          "front": "Existencialismo",
+          "back": "Existentialism",
+          "ipa": "/ek.sis.ten.θja.ˈlis.mo/",
+          "example_sentence": "El existencialismo enfatiza la libertad individual y la responsabilidad.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Absurdo",
+          "back": "Absurd",
+          "ipa": "/ab.ˈsur.ðo/",
+          "example_sentence": "La vida a veces parece absurda, sin un propósito claro.",
+          "grammar_explanation": "Masculine noun or adjective."
+        },
+        {
+          "front": "Angustia",
+          "back": "Anguish",
+          "ipa": "/aŋ.ˈɡus.tja/",
+          "example_sentence": "La angustia existencial surge de la libertad de elegir.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Autenticidad",
+          "back": "Authenticity",
+          "ipa": "/au.ten.ti.θi.ˈðað/",
+          "example_sentence": "Buscar la autenticidad significa vivir de acuerdo con tus propios valores.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Nihilismo",
+          "back": "Nihilism",
+          "ipa": "/ni.i.ˈlis.mo/",
+          "example_sentence": "El nihilismo niega la existencia de valores o significado inherentes.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Ser y tiempo",
+          "back": "Being and Time",
+          "ipa": "/ˈseɾ i ˈtjem.po/",
+          "example_sentence": "\"Ser y tiempo\" es una obra fundamental de Martin Heidegger.",
+          "grammar_explanation": "Phrase reference to a key work."
+        },
+        {
+          "front": "Sartre",
+          "back": "Sartre",
+          "ipa": "/ˈsaɾ.tɾe/",
+          "example_sentence": "Sartre fue un importante filósofo existencialista francés.",
+          "grammar_explanation": "Proper noun (philosopher's name)."
+        },
+        {
+          "front": "Esencia",
+          "back": "Essence",
+          "ipa": "/e.ˈsen.θja/",
+          "example_sentence": "Sartre creía que la existencia precede a la esencia.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Heidegger",
+          "back": "Heidegger",
+          "ipa": "/ˈxaj.de.ɣeɾ/",
+          "example_sentence": "Heidegger es conocido por sus ideas sobre el ser.",
+          "grammar_explanation": "Proper noun (philosopher's name)."
+        }
+      ]
+    },
+    {
+      "slug": "quantum-physics",
+      "title": "Quantum Physics",
+      "objective": "Understand and discuss basic concepts in quantum physics.",
+      "cards": [
+        {
+          "front": "Mecánica cuántica",
+          "back": "Quantum mechanics",
+          "ipa": "/me.ˈka.ni.ka ˈkwan.ti.ka/",
+          "example_sentence": "La mecánica cuántica describe el comportamiento de la materia a nivel atómico.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Entrelazamiento cuántico",
+          "back": "Quantum entanglement",
+          "ipa": "/en.tɾe.la.θa.ˈmjen.to ˈkwan.ti.ko/",
+          "example_sentence": "El entrelazamiento cuántico conecta dos partículas de forma inexplicable.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Superposición",
+          "back": "Superposition",
+          "ipa": "/su.peɾ.po.si.ˈθjon/",
+          "example_sentence": "En la superposición, una partícula puede estar en múltiples estados a la vez.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Función de onda",
+          "back": "Wave function",
+          "ipa": "/fun.ˈθjon de ˈon.da/",
+          "example_sentence": "La función de onda describe la probabilidad de encontrar una partícula en un lugar determinado.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Cuanto",
+          "back": "Quantum",
+          "ipa": "/ˈkwan.to/",
+          "example_sentence": "Un cuanto es la unidad mínima de energía.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Principio de incertidumbre",
+          "back": "Uncertainty principle",
+          "ipa": "/pɾin.ˈθi.pjo de in.θeɾ.ˈtim.bɾe/",
+          "example_sentence": "El principio de incertidumbre limita la precisión con la que podemos conocer la posición y el momento de una partícula.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Túnel cuántico",
+          "back": "Quantum tunneling",
+          "ipa": "/ˈtu.nel ˈkwan.ti.ko/",
+          "example_sentence": "El túnel cuántico permite a las partículas atravesar barreras que normalmente no podrían.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Átomo",
+          "back": "Atom",
+          "ipa": "/ˈa.to.mo/",
+          "example_sentence": "El átomo es la unidad básica de la materia.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Partícula",
+          "back": "Particle",
+          "ipa": "/paɾ.ˈti.ku.la/",
+          "example_sentence": "Las partículas pueden comportarse como ondas.",
+          "grammar_explanation": "Feminine noun."
+        }
+      ]
+    },
+    {
+      "slug": "ancient-mayan-civilization",
+      "title": "Ancient Mayan Civilization",
+      "objective": "Discuss aspects of the ancient Mayan civilization.",
+      "cards": [
+        {
+          "front": "Jeroglíficos mayas",
+          "back": "Mayan hieroglyphs",
+          "ipa": "/xe.ɾo.ˈɣli.fi.kos ˈma.ʝas/",
+          "example_sentence": "Los jeroglíficos mayas eran un sistema de escritura complejo.",
+          "grammar_explanation": "Masculine plural noun."
+        },
+        {
+          "front": "Calendario maya",
+          "back": "Mayan calendar",
+          "ipa": "/ka.len.ˈda.ɾjo ˈma.ʝa/",
+          "example_sentence": "El calendario maya era muy preciso y complejo.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Códices mayas",
+          "back": "Mayan codices",
+          "ipa": "/ˈko.ði.θes ˈma.ʝas/",
+          "example_sentence": "Pocos códices mayas sobrevivieron a la conquista española.",
+          "grammar_explanation": "Masculine plural noun."
+        },
+        {
+          "front": "Chichen Itza",
+          "back": "Chichen Itza",
+          "ipa": "/t͡ʃi.ˈt͡ʃen iˈtsa/",
+          "example_sentence": "Chichen Itza es uno de los sitios arqueológicos mayas más famosos.",
+          "grammar_explanation": "Proper noun (location)."
+        },
+        {
+          "front": "Tikal",
+          "back": "Tikal",
+          "ipa": "/ti.ˈkal/",
+          "example_sentence": "Tikal fue una importante ciudad maya en Guatemala.",
+          "grammar_explanation": "Proper noun (location)."
+        },
+        {
+          "front": "Estela",
+          "back": "Stele",
+          "ipa": "/es.ˈte.la/",
+          "example_sentence": "Las estelas mayas a menudo contienen inscripciones jeroglíficas.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Sacrificios humanos",
+          "back": "Human sacrifices",
+          "ipa": "/sa.kɾi.ˈfi.θjos u.ˈma.nos/",
+          "example_sentence": "Los sacrificios humanos eran parte de la religión maya.",
+          "grammar_explanation": "Masculine plural noun."
+        },
+        {
+          "front": "Popol Vuh",
+          "back": "Popol Vuh",
+          "ipa": "/po.ˈpol ˈβu/",
+          "example_sentence": "El Popol Vuh es un libro sagrado de los mayas.",
+          "grammar_explanation": "Proper noun (book title)."
+        },
+        {
+          "front": "Glifo",
+          "back": "Glyph",
+          "ipa": "/ˈɡli.fo/",
+          "example_sentence": "Cada glifo representa un sonido o una idea.",
+          "grammar_explanation": "Masculine noun."
+        }
+      ]
+    },
+    {
+      "slug": "the-ethics-of-artificial-intelligence",
+      "title": "The Ethics of Artificial Intelligence",
+      "objective": "Discuss ethical considerations related to artificial intelligence.",
+      "cards": [
+        {
+          "front": "Inteligencia artificial",
+          "back": "Artificial intelligence",
+          "ipa": "/in.te.li.ˈxen.θja aɾ.ti.fi.ˈθjal/",
+          "example_sentence": "La inteligencia artificial está transformando muchas industrias.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Algoritmo",
+          "back": "Algorithm",
+          "ipa": "/al.ɣo.ˈɾit.mo/",
+          "example_sentence": "Los algoritmos son la base de la inteligencia artificial.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Sesgo algorítmico",
+          "back": "Algorithmic bias",
+          "ipa": "/ˈses.ɣo al.ɣo.ˈɾit.mi.ko/",
+          "example_sentence": "El sesgo algorítmico puede llevar a decisiones injustas.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Aprendizaje automático",
+          "back": "Machine learning",
+          "ipa": "/a.pɾen.di.ˈsa.xe au.to.ˈma.ti.ko/",
+          "example_sentence": "El aprendizaje automático permite a las máquinas aprender de los datos.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Ética de la IA",
+          "back": "AI ethics",
+          "ipa": "/ˈe.ti.ka de la ˈi ˈa/",
+          "example_sentence": "La ética de la IA es crucial para un desarrollo responsable.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Transparencia",
+          "back": "Transparency",
+          "ipa": "/tɾans.pa.ˈɾen.θja/",
+          "example_sentence": "La transparencia es importante para entender cómo toman decisiones los sistemas de IA.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Responsabilidad",
+          "back": "Responsibility",
+          "ipa": "/re.spon.sa.βi.li.ˈðað/",
+          "example_sentence": "Es importante definir la responsabilidad en caso de errores de la IA.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Privacidad",
+          "back": "Privacy",
+          "ipa": "/pɾi.βa.θi.ˈðað/",
+          "example_sentence": "La IA plantea preocupaciones sobre la privacidad de los datos.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Automatización",
+          "back": "Automation",
+          "ipa": "/au.to.ma.ti.sa.ˈθjon/",
+          "example_sentence": "La automatización del trabajo es un tema ético clave.",
+          "grammar_explanation": "Feminine noun."
+        }
+      ]
+    },
+    {
+      "slug": "the-future-of-space-exploration",
+      "title": "The Future of Space Exploration",
+      "objective": "Discuss future possibilities and challenges in space exploration.",
+      "cards": [
+        {
+          "front": "Exploración espacial",
+          "back": "Space exploration",
+          "ipa": "/eks.plo.ɾa.ˈθjon es.pa.ˈθjal/",
+          "example_sentence": "La exploración espacial es un campo con mucho futuro.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Colonización espacial",
+          "back": "Space colonization",
+          "ipa": "/ko.lo.ni.sa.ˈθjon es.pa.ˈθjal/",
+          "example_sentence": "La colonización espacial podría ser necesaria para la supervivencia de la humanidad.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Viaje interestelar",
+          "back": "Interstellar travel",
+          "ipa": "/ˈbja.xe in.teɾ.es.te.ˈlaɾ/",
+          "example_sentence": "El viaje interestelar presenta enormes desafíos técnicos.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Exoplaneta",
+          "back": "Exoplanet",
+          "ipa": "/eks.pla.ˈne.ta/",
+          "example_sentence": "Se han descubierto miles de exoplanetas en los últimos años.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Astrobiología",
+          "back": "Astrobiology",
+          "ipa": "/as.tɾo.βjo.lo.ˈxi.a/",
+          "example_sentence": "La astrobiología busca vida en otros planetas.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Recursos espaciales",
+          "back": "Space resources",
+          "ipa": "/re.ˈkuɾ.sos es.pa.ˈθja.les/",
+          "example_sentence": "La minería de recursos espaciales podría ser rentable en el futuro.",
+          "grammar_explanation": "Masculine plural noun."
+        },
+        {
+          "front": "Agencia espacial",
+          "back": "Space agency",
+          "ipa": "/a.ˈxen.θja es.pa.ˈθjal/",
+          "example_sentence": "La NASA es una famosa agencia espacial.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Propulsión espacial",
+          "back": "Space propulsion",
+          "ipa": "/pɾo.pul.ˈsjon es.pa.ˈθjal/",
+          "example_sentence": "Se están desarrollando nuevos sistemas de propulsión espacial.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Órbita",
+          "back": "Orbit",
+          "ipa": "/ˈoɾ.βi.ta/",
+          "example_sentence": "Los satélites giran en órbita alrededor de la Tierra.",
+          "grammar_explanation": "Feminine noun."
+        }
+      ]
+    },
+    {
+      "slug": "contemporary-art-movements",
+      "title": "Contemporary Art Movements",
+      "objective": "Discuss contemporary art movements and their significance.",
+      "cards": [
+        {
+          "front": "Arte contemporáneo",
+          "back": "Contemporary art",
+          "ipa": "/ˈaɾ.te kon.tem.po.ˈɾa.neo/",
+          "example_sentence": "El arte contemporáneo a menudo desafía las convenciones tradicionales.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Minimalismo",
+          "back": "Minimalism",
+          "ipa": "/mi.ni.ma.ˈlis.mo/",
+          "example_sentence": "El minimalismo se caracteriza por la simplicidad y la reducción a lo esencial.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Arte conceptual",
+          "back": "Conceptual art",
+          "ipa": "/ˈaɾ.te kon.θep.ˈtwal/",
+          "example_sentence": "En el arte conceptual, la idea es más importante que la ejecución.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Arte urbano",
+          "back": "Urban art",
+          "ipa": "/ˈaɾ.te uɾ.ˈβa.no/",
+          "example_sentence": "El arte urbano se encuentra a menudo en espacios públicos.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Performance art",
+          "back": "Performance art",
+          "ipa": "/peɾ.ˈfoɾ.mans ˈaɾt/",
+          "example_sentence": "El performance art involucra acciones en vivo frente a una audiencia.",
+          "grammar_explanation": "Borrowed term."
+        },
+        {
+          "front": "Instalación artística",
+          "back": "Art installation",
+          "ipa": "/ins.ta.la.ˈθjon aɾ.ˈtis.ti.ka/",
+          "example_sentence": "Una instalación artística transforma un espacio con elementos diversos.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Postmodernismo",
+          "back": "Postmodernism",
+          "ipa": "/pos.teɾ.no.ˈðeɾ.nis.mo/",
+          "example_sentence": "El postmodernismo cuestiona las grandes narrativas y los valores tradicionales.",
+          "grammar_explanation": "Masculine noun."
+        },
+        {
+          "front": "Vanguardia",
+          "back": "Avant-garde",
+          "ipa": "/baŋ.ˈɡwaɾ.dja/",
+          "example_sentence": "Las vanguardias artísticas buscan romper con las normas establecidas.",
+          "grammar_explanation": "Feminine noun."
+        },
+        {
+          "front": "Bienal",
+          "back": "Biennial",
+          "ipa": "/bjeˈnal/",
+          "example_sentence": "La bienal de Venecia es un importante evento de arte contemporáneo.",
+          "grammar_explanation": "Feminine noun."
+        }
+      ]
+    }
+  ]
+}

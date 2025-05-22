@@ -1,0 +1,547 @@
+{
+  "level_code": "NM",
+  "topic_slug": "talk-about-my-family-members-and-friends",
+  "topic_title": "talk about my family members and friends.",
+  "can_do_statement": "I can talk about my family members and friends.",
+  "lessons": [
+    {
+      "slug": "introducing-family",
+      "title": "Introducing My Family",
+      "objective": "Introduce immediate family members using basic vocabulary.",
+      "cards": [
+        {
+          "front": "Mi madre",
+          "back": "My mother",
+          "ipa": "/mi ˈma.ðɾe/",
+          "example_sentence": "Esta es mi madre. Se llama Elena.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi padre",
+          "back": "My father",
+          "ipa": "/mi ˈpa.ðɾe/",
+          "example_sentence": "Él es mi padre. Es muy simpático.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi hermano",
+          "back": "My brother",
+          "ipa": "/mi eɾ.ˈma.no/",
+          "example_sentence": "Tengo un hermano. Se llama Carlos.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi hermana",
+          "back": "My sister",
+          "ipa": "/mi eɾ.ˈma.na/",
+          "example_sentence": "Ella es mi hermana. Es muy inteligente.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Tengo",
+          "back": "I have",
+          "ipa": "/ˈten.ɡo/",
+          "example_sentence": "Tengo dos hermanos.",
+          "grammar_explanation": "First-person singular conjugation of 'tener'."
+        },
+        {
+          "front": "Se llama",
+          "back": "His/Her name is",
+          "ipa": "/se ˈʝa.ma/",
+          "example_sentence": "Mi padre se llama Juan.",
+          "grammar_explanation": "Reflexive verb 'llamarse' (to be named)."
+        },
+        {
+          "front": "Es",
+          "back": "He/She is",
+          "ipa": "/es/",
+          "example_sentence": "Mi hermana es estudiante.",
+          "grammar_explanation": "Third-person singular conjugation of 'ser'."
+        },
+        {
+          "front": "y",
+          "back": "and",
+          "ipa": "/i/",
+          "example_sentence": "Tengo un hermano y una hermana.",
+          "grammar_explanation": "Conjunction"
+        },
+        {
+          "front": "un",
+          "back": "a",
+          "ipa": "/un/",
+          "example_sentence": "Tengo un gato.",
+          "grammar_explanation": "Masculine singular indefinite article"
+        },
+        {
+          "front": "una",
+          "back": "a (feminine)",
+          "ipa": "/ˈu.na/",
+          "example_sentence": "Tengo una hermana.",
+          "grammar_explanation": "Feminine singular indefinite article"
+        },
+        {
+          "front": "otro",
+          "back": "another",
+          "ipa": "/ˈo.tɾo/",
+          "example_sentence": "Tengo otro amigo.",
+          "grammar_explanation": "Another"
+        }
+      ]
+    },
+    {
+      "slug": "describing-family-members",
+      "title": "Describing Family Members",
+      "objective": "Describe family members using simple adjectives.",
+      "cards": [
+        {
+          "front": "Es simpático",
+          "back": "He is nice",
+          "ipa": "/es sim.ˈpa.ti.ko/",
+          "example_sentence": "Mi padre es muy simpático.",
+          "grammar_explanation": "'Ser' (to be) + adjective."
+        },
+        {
+          "front": "Es inteligente",
+          "back": "She is intelligent",
+          "ipa": "/es in.te.li.ˈxen.te/",
+          "example_sentence": "Mi hermana es inteligente.",
+          "grammar_explanation": "'Ser' (to be) + adjective."
+        },
+        {
+          "front": "Es alto",
+          "back": "He is tall",
+          "ipa": "/es ˈal.to/",
+          "example_sentence": "Mi hermano es alto.",
+          "grammar_explanation": "'Ser' (to be) + adjective."
+        },
+        {
+          "front": "Es baja",
+          "back": "She is short",
+          "ipa": "/es ˈba.xa/",
+          "example_sentence": "Mi madre es baja.",
+          "grammar_explanation": "'Ser' (to be) + adjective."
+        },
+        {
+          "front": "Es joven",
+          "back": "He/She is young",
+          "ipa": "/es ˈxo.βen/",
+          "example_sentence": "Mi hermano es joven.",
+          "grammar_explanation": "'Ser' (to be) + adjective."
+        },
+        {
+          "front": "Es mayor",
+          "back": "He/She is older",
+          "ipa": "/es ma.ˈʝoɾ/",
+          "example_sentence": "Mi padre es mayor.",
+          "grammar_explanation": "'Ser' (to be) + adjective."
+        },
+        {
+          "front": "muy",
+          "back": "very",
+          "ipa": "/mwi/",
+          "example_sentence": "Ella es muy inteligente.",
+          "grammar_explanation": "Adverb modifying an adjective."
+        },
+        {
+          "front": "pero",
+          "back": "but",
+          "ipa": "/ˈpe.ɾo/",
+          "example_sentence": "Mi hermano es alto, pero mi padre es bajo.",
+          "grammar_explanation": "Conjunction expressing contrast."
+        },
+        {
+          "front": "también",
+          "back": "also",
+          "ipa": "/tam.ˈbjen/",
+          "example_sentence": "Mi madre es inteligente, mi padre también.",
+          "grammar_explanation": "Adverb: also"
+        },
+        {
+          "front": "Es gracioso",
+          "back": "He is funny",
+          "ipa": "/es ɡɾaˈθjo.so/",
+          "example_sentence": "Mi hermano es gracioso.",
+          "grammar_explanation": "'Ser' (to be) + adjective"
+        },
+        {
+          "front": "Es seria",
+          "back": "She is serious",
+          "ipa": "/es ˈse.ɾja/",
+          "example_sentence": "Mi hermana es seria.",
+          "grammar_explanation": "'Ser' (to be) + adjective"
+        },
+        {
+          "front": "no es",
+          "back": "is not",
+          "ipa": "/no es/",
+          "example_sentence": "Mi padre no es bajo.",
+          "grammar_explanation": "Negation of 'ser'."
+        }
+      ]
+    },
+    {
+      "slug": "extended-family",
+      "title": "Talking About Extended Family",
+      "objective": "Name and describe grandparents and other relatives.",
+      "cards": [
+        {
+          "front": "Mi abuela",
+          "back": "My grandmother",
+          "ipa": "/mi a.ˈβwe.la/",
+          "example_sentence": "Mi abuela es muy cariñosa.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi abuelo",
+          "back": "My grandfather",
+          "ipa": "/mi a.ˈβwe.lo/",
+          "example_sentence": "Mi abuelo es muy sabio.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi tío",
+          "back": "My uncle",
+          "ipa": "/mi ˈti.o/",
+          "example_sentence": "Mi tío vive en México.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi tía",
+          "back": "My aunt",
+          "ipa": "/mi ˈti.a/",
+          "example_sentence": "Mi tía es doctora.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi primo",
+          "back": "My cousin (male)",
+          "ipa": "/mi ˈpɾi.mo/",
+          "example_sentence": "Mi primo es estudiante.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi prima",
+          "back": "My cousin (female)",
+          "ipa": "/mi ˈpɾi.ma/",
+          "example_sentence": "Mi prima es muy divertida.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "también",
+          "back": "also, too",
+          "ipa": "/tam.ˈbjen/",
+          "example_sentence": "Mi abuelo es viejo y mi abuela también.",
+          "grammar_explanation": "Adverb."
+        },
+        {
+          "front": "vive",
+          "back": "lives",
+          "ipa": "/ˈbi.βe/",
+          "example_sentence": "Mi tío vive en España.",
+          "grammar_explanation": "third-person singular of vivir"
+        },
+        {
+          "front": "en",
+          "back": "in",
+          "ipa": "/en/",
+          "example_sentence": "Mi tía vive en Francia.",
+          "grammar_explanation": "Preposition"
+        },
+        {
+          "front": "La hija de",
+          "back": "The daughter of",
+          "ipa": "/la ˈi.xa de/",
+          "example_sentence": "Mi prima es la hija de mi tía.",
+          "grammar_explanation": "Grammatical construction"
+        },
+        {
+          "front": "El hijo de",
+          "back": "The son of",
+          "ipa": "/el ˈi.xo de/",
+          "example_sentence": "Mi primo es el hijo de mi tío.",
+          "grammar_explanation": "Grammatical construction"
+        },
+        {
+          "front": "Es amable",
+          "back": "Is kind",
+          "ipa": "/es a.ˈma.βle/",
+          "example_sentence": "Mi abuela es amable.",
+          "grammar_explanation": "ser + adjective"
+        }
+      ]
+    },
+    {
+      "slug": "introducing-friends",
+      "title": "Introducing My Friends",
+      "objective": "Introduce friends using names and basic characteristics.",
+      "cards": [
+        {
+          "front": "Mi amigo",
+          "back": "My friend (male)",
+          "ipa": "/mi a.ˈmi.ɣo/",
+          "example_sentence": "Él es mi amigo Juan.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Mi amiga",
+          "back": "My friend (female)",
+          "ipa": "/mi a.ˈmi.ɣa/",
+          "example_sentence": "Ella es mi amiga Ana.",
+          "grammar_explanation": "Possessive adjective 'mi' (my) + noun."
+        },
+        {
+          "front": "Es de",
+          "back": "He/She is from",
+          "ipa": "/es de/",
+          "example_sentence": "Mi amigo es de España.",
+          "grammar_explanation": "'Ser' (to be) + preposition."
+        },
+        {
+          "front": "Le gusta",
+          "back": "He/She likes",
+          "ipa": "/le ˈɡus.ta/",
+          "example_sentence": "A mi amiga le gusta bailar.",
+          "grammar_explanation": "Indirect object pronoun 'le' + verb 'gustar'."
+        },
+        {
+          "front": "nosotros",
+          "back": "we",
+          "ipa": "/no.ˈso.tɾos/",
+          "example_sentence": "Nosotros somos amigos.",
+          "grammar_explanation": "Pronoun."
+        },
+        {
+          "front": "pasar tiempo",
+          "back": "to spend time",
+          "ipa": "/pa.ˈsaɾ ˈtjem.po/",
+          "example_sentence": "Me gusta pasar tiempo con mis amigos.",
+          "grammar_explanation": "Verb phrase."
+        },
+        {
+          "front": "con",
+          "back": "with",
+          "ipa": "/kon/",
+          "example_sentence": "Me gusta pasar tiempo con mi familia.",
+          "grammar_explanation": "Preposition"
+        },
+        {
+          "front": "Son",
+          "back": "They are",
+          "ipa": "/son/",
+          "example_sentence": "Ellos son mis amigos.",
+          "grammar_explanation": "Third-person plural of 'ser'"
+        },
+        {
+          "front": "Ellos",
+          "back": "They (masculine)",
+          "ipa": "/ˈe.ʎos/",
+          "example_sentence": "Ellos son estudiantes.",
+          "grammar_explanation": "Masculine Plural Pronoun"
+        },
+        {
+          "front": "Ellas",
+          "back": "They (feminine)",
+          "ipa": "/ˈe.ʎas/",
+          "example_sentence": "Ellas son mis amigas.",
+          "grammar_explanation": "Feminine Plural Pronoun"
+        },
+        {
+          "front": "también",
+          "back": "also, too",
+          "ipa": "/tam.ˈbjen/",
+          "example_sentence": "Mi amigo es alto, mi amiga también.",
+          "grammar_explanation": "Adverb"
+        },
+        {
+          "front": "Es divertido",
+          "back": "He/She is fun",
+          "ipa": "/es di.βeɾ.ˈti.ðo/",
+          "example_sentence": "Mi amigo es divertido.",
+          "grammar_explanation": "Ser + Adjective"
+        }
+      ]
+    },
+    {
+      "slug": "talking-about-activities",
+      "title": "Talking About Activities with Family and Friends",
+      "objective": "Discuss common activities done with family and friends.",
+      "cards": [
+        {
+          "front": "Nos gusta comer",
+          "back": "We like to eat",
+          "ipa": "/nos ˈɡus.ta ko.ˈmeɾ/",
+          "example_sentence": "Nos gusta comer pizza.",
+          "grammar_explanation": "Indirect object pronoun 'nos' + verb 'gustar' + infinitive."
+        },
+        {
+          "front": "Nos gusta ver",
+          "back": "We like to watch",
+          "ipa": "/nos ˈɡus.ta βeɾ/",
+          "example_sentence": "Nos gusta ver películas.",
+          "grammar_explanation": "Indirect object pronoun 'nos' + verb 'gustar' + infinitive."
+        },
+        {
+          "front": "Nos gusta hablar",
+          "back": "We like to talk",
+          "ipa": "/nos ˈɡus.ta a.ˈβlaɾ/",
+          "example_sentence": "Nos gusta hablar de libros.",
+          "grammar_explanation": "Indirect object pronoun 'nos' + verb 'gustar' + infinitive."
+        },
+        {
+          "front": "Ir al cine",
+          "back": "To go to the movies",
+          "ipa": "/iɾ al ˈθi.ne/",
+          "example_sentence": "Nosotros vamos al cine.",
+          "grammar_explanation": "Verb phrase."
+        },
+        {
+          "front": "ir",
+          "back": "to go",
+          "ipa": "/iɾ/",
+          "example_sentence": "Vamos a ir de compras.",
+          "grammar_explanation": "Verb in infinitive form."
+        },
+        {
+          "front": "al",
+          "back": "to the",
+          "ipa": "/al/",
+          "example_sentence": "Vamos al parque.",
+          "grammar_explanation": "Contraction of 'a' + 'el'."
+        },
+        {
+          "front": "podemos",
+          "back": "we can",
+          "ipa": "/po.ˈde.mos/",
+          "example_sentence": "Podemos ir al cine mañana.",
+          "grammar_explanation": "Conjugation of the verb poder."
+        },
+        {
+          "front": "Comer",
+          "back": "To eat",
+          "ipa": "/ko.ˈmeɾ/",
+          "example_sentence": "Nos gusta comer en casa.",
+          "grammar_explanation": "Infinitive form"
+        },
+        {
+          "front": "Ver",
+          "back": "To see",
+          "ipa": "/beɾ/",
+          "example_sentence": "Nos gusta ver el fútbol.",
+          "grammar_explanation": "Infinitive form"
+        },
+        {
+          "front": "Hablar",
+          "back": "To speak",
+          "ipa": "/a.ˈβlaɾ/",
+          "example_sentence": "Nos gusta hablar español.",
+          "grammar_explanation": "Infinitive form"
+        },
+        {
+          "front": "jugar",
+          "back": "to play",
+          "ipa": "/xu.ˈɡaɾ/",
+          "example_sentence": "A mis amigos y a mí nos gusta jugar al fútbol.",
+          "grammar_explanation": "Infinitive form"
+        },
+        {
+          "front": "A mi me gusta",
+          "back": "I like",
+          "ipa": "/a mi me ˈɣus.ta/",
+          "example_sentence": "A mi me gusta cantar.",
+          "grammar_explanation": "Gramatical construction"
+        }
+      ]
+    },
+    {
+      "slug": "family-traditions",
+      "title": "Describing Family Traditions",
+      "objective": "Describe simple family traditions using basic phrases.",
+      "cards": [
+        {
+          "front": "Siempre celebramos",
+          "back": "We always celebrate",
+          "ipa": "/ˈsjem.pɾe θe.le.ˈβɾa.mos/",
+          "example_sentence": "Siempre celebramos la Navidad.",
+          "grammar_explanation": "Adverb 'siempre' + verb 'celebrar' (to celebrate)."
+        },
+        {
+          "front": "Cada año",
+          "back": "Every year",
+          "ipa": "/ˈka.ða ˈa.ɲo/",
+          "example_sentence": "Cada año vamos a la playa.",
+          "grammar_explanation": "Adverbial phrase."
+        },
+        {
+          "front": "Nos reunimos",
+          "back": "We get together",
+          "ipa": "/nos re.u.ˈni.mos/",
+          "example_sentence": "Nos reunimos en casa de mi abuela.",
+          "grammar_explanation": "Reflexive verb 'reunirse' (to get together)."
+        },
+        {
+          "front": "Comemos juntos",
+          "back": "We eat together",
+          "ipa": "/ko.ˈme.mos ˈxun.tos/",
+          "example_sentence": "Comemos juntos el Día de Acción de Gracias.",
+          "grammar_explanation": "Verb 'comer' (to eat) + adverb 'juntos' (together)."
+        },
+        {
+          "front": "Damos regalos",
+          "back": "We give gifts",
+          "ipa": "/ˈda.mos re.ˈɣa.los/",
+          "example_sentence": "Damos regalos en Navidad.",
+          "grammar_explanation": "Verb 'dar' (to give) + noun 'regalos' (gifts)."
+        },
+        {
+          "front": "Nuestra familia",
+          "back": "Our family",
+          "ipa": "/ˈnwes.tɾa fa.ˈmi.lja/",
+          "example_sentence": "Nuestra familia es muy grande.",
+          "grammar_explanation": "Possessive adjective + noun"
+        },
+        {
+          "front": "siempre",
+          "back": "always",
+          "ipa": "/ˈsjem.pɾe/",
+          "example_sentence": "Siempre comemos juntos.",
+          "grammar_explanation": "Adverb."
+        },
+        {
+          "front": "Celebramos",
+          "back": "We celebrate",
+          "ipa": "/θe.le.ˈβɾa.mos/",
+          "example_sentence": "Celebramos el cumpleaños de mi padre.",
+          "grammar_explanation": "Verb conjugation"
+        },
+        {
+          "front": "Visitamos",
+          "back": "We visit",
+          "ipa": "/bi.siˈta.mos/",
+          "example_sentence": "Visitamos a mis abuelos en verano.",
+          "grammar_explanation": "Verb conjugation"
+        },
+        {
+          "front": "Preparamos",
+          "back": "We prepare",
+          "ipa": "/pɾe.paˈɾa.mos/",
+          "example_sentence": "Preparamos la cena juntos.",
+          "grammar_explanation": "Verb conjugation"
+        },
+        {
+          "front": "Cantamos",
+          "back": "We sing",
+          "ipa": "/kanˈta.mos/",
+          "example_sentence": "Cantamos en la fiesta.",
+          "grammar_explanation": "Verb conjugation"
+        },
+        {
+          "front": "recibimos",
+          "back": "we receive",
+          "ipa": "/re.θi.ˈβi.mos/",
+          "example_sentence": "Recibimos regalos en Navidad.",
+          "grammar_explanation": "We receive"
+        }
+      ]
+    }
+  ]
+}

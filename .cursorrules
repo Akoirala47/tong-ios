@@ -36,6 +36,120 @@
   - SafeArea and GeometryReader for layout
   - Handle all screen sizes and orientations
   - Implement proper keyboard handling
+  - Here’s a comprehensive UI/UX design and flow blueprint for the Tong mobile app — keeping in mind its pedagogical goals, gamification loops, and technical infrastructure.
+    🧭 App Navigation Architecture (Tab-Based)
+    Bottom Navigation Bar (Persistent):
+    🏠 Home
+    📚 Study
+    🧠 Practice
+    🏆 Compete
+    👤 Profile
+    🏠 Home Tab (Daily Hub)
+    Purpose:
+    Central command center to drive habit-building, XP incentives, and session recaps.
+    Layout:
+    Top Section:
+    Streak Flame Icon + Days Counter
+    Daily XP Progress Bar with target goal (e.g., 50 XP)
+    Middle Section:
+    “📖 Resume Lesson” card
+    “🎯 Flashcard Drill” button
+    “🎙️ Quick Talk Game” match button
+    Bottom Section:
+    Personalized AI Tip of the Day (based on past session)
+    Banner: “Try your first live lesson with a teacher!” (if not booked yet)
+    📚 Study Tab (Self-Study)
+    Purpose:
+    Let users explore grammar lessons, flashcards, and structured topics at their pace.
+    Layout:
+    Segmented Top Control:
+    [ Lessons ] [ Flashcards ] [ Saved ]
+    📖 Lessons View:
+    Horizontal scroll: Languages (EN → SP, EN → JP, etc.)
+    Topics as vertical cards (e.g., “Greetings,” “Past Tense,” “Food & Drink”)
+    On-tap → Lesson Detail View
+    Markdown-rendered grammar content
+    Inline interactive checks (fill-the-blank, matching)
+    “🎤 Record a response” button → opens pronunciation feedback flow
+    🃏 Flashcards View:
+    SRS Drill Mode:
+    Target word + image
+    Tap to reveal translation + audio
+    Self-assessment buttons (Hard / Good / Easy)
+    XP reward and streak animation on review complete
+    🧠 Practice Tab (AI Feedback)
+    Purpose:
+    Enable solo pronunciation & fluency practice with Whisper + DeepSeek.
+    Layout:
+    Record Clip UI:
+    Title: “🎙️ Record a 30-second voice note”
+    Language selector + prompt suggestion (optional)
+    Record / Stop button
+    Post-upload View:
+    AI Summary Panel:
+    📄 Transcript (Whisper)
+    🔤 Words per Minute
+    📌 Mispronounced Words
+    💡 Fluency & Grammar Tips
+    “Retry” or “Save Report to Profile”
+    🏆 Compete Tab (Gamification + Async Games)
+    Purpose:
+    Create competition, social accountability, and retention loops.
+    Layout:
+    Async Quick Talk Game:
+    “Find Match” button → loading animation → opponent card appears
+    User sees the prompt → records voice
+    Opponent status (e.g., “Waiting for reply…”)
+    Game History List (past turns: audio + transcript + scores)
+    Leaderboards:
+    Tabs: [XP Rank] [Elo Rank]
+    User’s avatar & rank pinned at top
+    Badges Gallery:
+    Earned & Locked badges with tooltips (“Reach a 10-day streak”)
+    👤 Profile Tab
+    Purpose:
+    Track progress, manage payments, access settings.
+    Layout:
+    User Panel:
+    Avatar + Username
+    XP Level Ring + Current Elo
+    Stats Overview:
+    Flashcards Reviewed
+    Lessons Completed
+    WPM Average
+    Elo Graph (with trend line)
+    Pro Subscription Status
+    Settings Drawer:
+    Language preference
+    Notification toggles
+    Payment info
+    Privacy / Data export
+    Support / Feedback
+    📞 Live Video Lesson Flow (On Demand / Scheduled)
+    Access:
+    From Home screen banner or via “📅 Schedule Lesson” button.
+    Flow:
+    Browse Available Teachers (card grid with languages, availability)
+    Select Time Slot → Stripe Checkout Flow
+    Confirmation Screen → Calendar Add Option
+    At session time → Push Notification → “Join Room” → Live Call UI
+    Post-call:
+    AI Session Summary
+    Rate Your Teacher (5 stars + comment)
+    🎨 Visual Style Guide
+    Font: Rounded sans-serif (e.g., SF Pro, Nunito, or Poppins)
+    Primary Color: Arctic Blue (#00BFFF)
+    Accent Color: Warm Orange (#FF9F1C)
+    Background: Clean Off-White (#FAFAFA)
+    Icons: Custom, minimalist, animal-themed (playful penguin, speech bubbles, stars)
+    🔄 UX Notes
+    Haptic feedback on XP gain
+    Smooth transitions between tabs (SwiftUI transitions)
+    Animations on streaks, badge unlocks, and Elo updates
+    Placeholder avatars for teachers and users for quick MVP
+
+    REMEMBER TO CREATE A UNIQUE AND EXTRAORDINARLIY BEATIFUL UIUX DESIGN FOLLOWING THESE RULES
+  
 
 
   # Performance

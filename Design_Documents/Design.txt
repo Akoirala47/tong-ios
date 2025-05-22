@@ -1,0 +1,975 @@
+Tong Mobile Language Learning Application – Comprehensive Technical, Workflow & Curriculum Design
+Task‑by‑Task Master Spec • v3.0.2 (May 19 2025) – Focused Build Specification
+0. Executive Overview
+Tong is a fully‑featured, mobile‑first language‑learning ecosystem meticulously engineered to foster genuine communicative competence. It's built around five concentric, mutually reinforcing motivational and pedagogical loops:
+(1) Micro‑lesson Mastery: Bite-sized, interactive lessons focusing on specific vocabulary, grammar points, or communicative functions, designed for quick wins and building foundational knowledge. Each lesson is a self-contained unit, ensuring focused learning without cognitive overload.
+(2) Error‑driven Review: An intelligent review system, powered by a sophisticated Spaced Repetition System (SRS) and analysis of learner errors. This loop ensures that challenging material is revisited optimally, converting weaknesses into strengths. It's not just about repetition, but targeted repetition.
+(3) Periodic Boss Assessment: Comprehensive, milestone-based assessments at the end of each learning "band." These "Boss Battles" test cumulative knowledge and application in a simulated, slightly higher-stakes environment, providing a clear sense of progression and achievement.
+(4) Social Competition: Gamified elements, including Elo-rated asynchronous audio-only speaking duels (Quick Games) and leaderboards, designed to harness the power of friendly competition and social accountability to drive engagement and consistent practice.
+(5) Real‑time Human Interaction (Teacher-Led): The pinnacle of the learning experience, offering paid 1-on-1 live WebRTC video sessions with vetted teachers for personalized coaching and direct conversational practice.
+The pedagogical spine of Tong is the ACTFL proficiency scale (Novice Low → Intermediate Mid → Advanced High → Superior). Content and assessments are carefully mapped to these proficiency bands, ensuring a structured and measurable journey towards fluency.
+Cutting-edge AI services (specifically Whisper V3 for highly accurate transcription and DeepSeek V3 for nuanced language analysis and feedback) are deeply integrated to automate and scale spoken‑language feedback, providing learners with insights traditionally only available through direct tutor interaction. The backend infrastructure leverages Supabase, an opinionated, serverless BaaS (Backend-as-a-Service) platform, for its robust PostgreSQL database, authentication, real-time capabilities, edge functions, and storage, significantly reducing backend development overhead. To maximize development velocity and ensure consistency, all application code (iOS native and Deno-based Edge Functions) resides in a single mono‑repository, streamlining Continuous Integration and Continuous Deployment (CI/CD) pipelines.
+Key Product Pillars & Differentiators:
+Self‑study Path (The Foundation):
+Learn: Structured lessons introducing new concepts within the current ACTFL band.
+Review: Personalized flashcard drills and error correction exercises based on SRS and past performance.
+Boss: Challenging assessments to confirm mastery of a band before progressing.
+Band-scoped Flashcards: All flashcards are contextualized within the current learning band, ensuring relevance.
+No Heart/Life Gating: Progress is driven by mastery and effort, not artificial timers or consumable "lives," promoting sustained engagement.
+Asynchronous Voice Games (Peer-to-Peer Audio Duels):
+Turn‑based Speaking Duels (Audio-Only): Users engage in "Quick Talk" games, exchanging short voice messages on given prompts with other learners.
+Elo‑rated: A skill-based rating system ensures fair matchmaking and tracks speaking proficiency progression.
+Bootstraps Social Motivation: The desire to improve one's Elo rating and compete on leaderboards encourages frequent speaking practice.
+Live Teacher Sessions (Personalized Expert Video Guidance):
+Paid 1‑on‑1 WebRTC Video Calls: Secure, high-quality video calls with qualified language teachers.
+Post‑lesson AI Transcripts & Analysis: Students receive detailed, AI-generated reports on their performance during the session, including transcripts, error correction, and fluency metrics.
+Gamification & Monetisation (Engagement & Sustainability):
+Core Mechanics: Experience Points (XP), daily streaks, leveling system, Elo ratings, and competitive leaderboards.
+Tong Pro Subscription: A premium offering that unlocks unlimited AI usage (voice note analysis, game turn analysis, session reports), priority queues for support or certain features, and potentially exclusive content or early access.
+Operational Excellence (Reliability & Scalability):
+Automated Tests: Comprehensive unit, integration, and UI tests to ensure code quality and prevent regressions.
+Observability Dashboards: Real-time monitoring of key system metrics, application performance, and API usage.
+Cost Guardrails: Proactive measures and alerts to manage cloud service expenditures (AI APIs, WebRTC infrastructure, Supabase).
+Progressive Feature‑Flag Framework: Enables controlled rollouts of new features, A/B testing, and rapid rollback capabilities.
+1. Repository & Environment
+1.1 Create Mono‑Repo (tong‑app)
+The decision for a mono-repository is driven by the desire for simplified dependency management, atomic cross-project commits (e.g., an API change in functions/ and its corresponding client update in ios/ can be part of the same PR and commit), and streamlined CI/CD setup.
+Directory Standard – A clear, conventional structure is crucial for maintainability:
+ios/: Contains the entire Xcode project for the native iOS application.
+Tong.xcodeproj: The main Xcode project file.
+Sources/: Swift source code, organized by feature or architectural layer (e.g., Services/, Views/, ViewModels/, Models/, Utils/).
+Resources/: Assets like images, localization files, etc.
+Packages/: Swift Package Manager dependencies will be managed here.
+Configurations/: Separate Info.plist files (e.g., Info-Debug.plist, Info-Release.plist, Info-TestFlight.plist) for different build configurations, allowing distinct bundle identifiers, API keys (referenced via build settings), or feature flags per environment.
+functions/: Houses all serverless Supabase Edge Functions, written in Deno (TypeScript).
+Organization by feature domain (e.g., ai/processPracticeAudio.ts, payments/stripeWebhook.ts, games/submitTurn.ts, scheduler/rebuildLeaderboards.ts) makes navigation and ownership clear. Each function typically resides in its own file or a subdirectory if it has associated helper modules.
+.github/workflows/: YAML files defining GitHub Actions for CI/CD.
+ios-ci.yml: Handles building, testing, and potentially archiving the iOS app.
+deno-ci.yml: Handles linting, testing, and deploying Deno Edge Functions.
+supabase-ci.yml: Handles Supabase schema migrations and database tests.
+Commit Hooks – Automated checks before commits are accepted, enforced using tools like Husky:
+Pre‑commit Linting:
+SwiftFormat: Automatically formats Swift code according to defined style rules, ensuring consistency.
+deno fmt: Automatically formats Deno TypeScript/JavaScript code.
+Secret‑Scanner: Tools like gitleaks or trufflehog scan staged files for accidentally committed secrets (API keys, passwords), preventing them from entering the repository history.
+1.2 Supabase Project Bootstrap
+Leveraging Supabase CLI for local development and linking to a cloud-hosted project.
+Initialise Project: supabase init creates the local Supabase environment configuration. supabase login and supabase link --project-ref <your-project-id> connect the local setup to the remote Supabase project.
+Region Selection: us‑east‑1 (N. Virginia) is chosen for the Supabase project. This decision is based on the anticipated geographical concentration of initial beta testers and aims to minimize latency for core database operations and Edge Function invocations for this user group. This can be revisited as the user base grows and diversifies.
+Realtime Configuration: Supabase Realtime is enabled by default for the project, allowing WebSocket connections for instant data synchronization and push notifications for features like asynchronous game turn updates and live teacher call signaling. Replication for specific tables will be configured as needed.
+Row Security (RLS): Enabled by default at the project level. This mandates that all table access must be explicitly granted via RLS policies, adopting a "secure by default" posture.
+Local Dev DB Images: For hermetic (isolated and reproducible) testing, especially for CI, local Supabase development instances (supabase start) can be used. Snapshots or migration rollbacks (supabase db reset) allow tests to run against a known database state.
+1.3 CI Pipeline (GitHub Actions)
+Automated workflows triggered on pushes or pull requests to main and feature branches.
+iOS Job (ios-ci.yml):
+Runs on a macOS-latest runner.
+xcode-select might be needed to specify the Xcode version if multiple are available on the runner.
+Caching: CocoaPods (~/.cocoapods) and Swift Package Manager build artifacts (.build/) are cached between runs to speed up build times.
+Testing: xcodebuild -workspace Tong.xcworkspace -scheme Tong -destination 'platform=iOS Simulator,name=iPhone 15' -enableCodeCoverage YES test | xcpretty executes unit and UI tests. xcprettyformats the output for better readability. Code coverage reports can be generated and uploaded.
+Deno Job (deno-ci.yml):
+Runs on an ubuntu-latest runner.
+Linting & Formatting Check: deno lint and deno fmt --check ensure code quality and style adherence.
+Testing: deno test --allow-net --allow-env --coverage=cov_profile runs tests for Edge Functions. --allow-netand --allow-env grant necessary permissions for tests that might make external calls or read environment variables (e.g., mock API keys). Coverage reports can be generated (deno coverage cov_profile).
+Supabase Job (supabase-ci.yml):
+Runs on an ubuntu-latest runner.
+Ephemeral Postgres: A temporary local Postgres instance is spun up using Docker, often via supabase start.
+Schema Migrations: supabase db push (or applying migrations sequentially from supabase/migrations/) ensures the schema is up-to-date.
+SQL Unit Tests: pgTap (a SQL testing framework) tests are executed against the ephemeral database to validate RLS policies, functions, triggers, and complex queries directly within Postgres. This might involve running a script like psql -U postgres -d postgres -f tests/sql/run_tests.sql.
+1.4 Secrets Management
+Robust handling of sensitive information is paramount.
+.env.example: A template file committed to the repository. It lists all environment variables required by the iOS app and Edge Functions (e.g., SUPABASE_URL=__MISSING__, SUPABASE_ANON_KEY=__MISSING__, WHISPER_API_KEY=__MISSING__, STRIPE_PUBLISHABLE_KEY=__MISSING__). Developers copy this to .env and fill in their local development values. .env itself is gitignored.
+GitHub Secrets: Production and staging values for API keys, database passwords, etc., are stored as encrypted secrets at the GitHub repository or organization level.
+Actions Injection: GitHub Actions workflows securely inject these secrets as environment variables into the CI runner environments. These are masked in logs by default.
+CI Failure on Missing Keys: A script within the CI jobs checks if any required environment variable (as defined perhaps by checking against .env.example or a predefined list) still holds the __MISSING__ placeholder or is unset. If so, the build fails, preventing deployments with incomplete configurations.
+2. Database & Security (Postgres + RLS)
+The Supabase-managed PostgreSQL database is the single source of truth. RLS is the primary mechanism for data access control.
+2.1 Schema Migration – Detailed Table Spec
+Migrations are managed using supabase/migrations/<timestamp>_migration_name.sql files.
+profiles (Stores user-specific data beyond auth.users)
+user_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE: Foreign key to Supabase's built-in auth.users table. ON DELETE CASCADE ensures profile data is removed if the auth user is deleted.
+display_name TEXT CHECK (char_length(display_name) >= 3 AND char_length(display_name) <= 50): User's chosen public name.
+avatar_url TEXT: URL to the user's avatar image (potentially stored in Supabase Storage).
+xp BIGINT DEFAULT 0 CHECK (xp >= 0): Total experience points earned.
+level INT DEFAULT 1 CHECK (level >= 1): Current user level, derived from XP.
+streak INT DEFAULT 0 CHECK (streak >= 0): Current daily engagement streak.
+elo INT DEFAULT 1200 CHECK (elo >= 0): Elo rating for Quick Games. Initialized at a common starting value.
+pro_subscription BOOLEAN DEFAULT FALSE: Flag indicating if the user has an active Tong Pro subscription.
+pro_subscription_expires_at TIMESTAMPTZ: Timestamp for when the pro subscription ends, if applicable.
+created_at TIMESTAMPTZ DEFAULT now(): Timestamp of profile creation.
+updated_at TIMESTAMPTZ: Timestamp of last profile update (automatically updated by a trigger).
+Indexes: CREATE INDEX idx_profiles_elo ON profiles(elo); for leaderboard and matchmaking.
+languages (Languages offered for learning)
+language_id SERIAL PRIMARY KEY: Auto-incrementing integer ID.
+code CHAR(2) UNIQUE NOT NULL: ISO 639-1 language code (e.g., en, es, fr).
+name TEXT UNIQUE NOT NULL: Full language name (e.g., "English", "Spanish", "French").
+flag_emoji TEXT: Emoji representing the language flag (e.g., "🇬🇧", "🇪🇸", "🇫🇷").
+bands (Proficiency levels within each language, e.g., Novice-Low, Novice-Mid)
+band_id SERIAL PRIMARY KEY: Auto-incrementing integer ID.
+language_id INT NOT NULL REFERENCES languages(language_id) ON DELETE CASCADE: Links to the language this band belongs to.
+short_label TEXT NOT NULL: Concise label (e.g., "N1", "I2", "A3").
+long_label TEXT NOT NULL: Descriptive label (e.g., "Novice Low", "Intermediate Mid", "Advanced High"). Aligns with ACTFL or CEFR.
+order_idx INT NOT NULL: Defines the progression order of bands within a language.
+units_required INT NOT NULL CHECK (units_required > 0): Number of core units a user must complete to be eligible for this band's Boss Battle.
+Indexes: CREATE UNIQUE INDEX idx_bands_language_order ON bands(language_id, order_idx);
+user_band_progress (Tracks user progress through each band of a language)
+user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE: Foreign key to the user.
+band_id INT NOT NULL REFERENCES bands(band_id) ON DELETE CASCADE: Foreign key to the band.
+units_completed INT DEFAULT 0 CHECK (units_completed >= 0): Number of units completed by the user in this band.
+boss_passed BOOLEAN DEFAULT FALSE: Flag indicating if the user has passed the Boss Battle for this band.
+started_at TIMESTAMPTZ DEFAULT now(): When the user first started this band (e.g., completed first unit or explicitly started).
+passed_at TIMESTAMPTZ: Timestamp when the user passed the Boss Battle for this band.
+PRIMARY KEY (user_id, band_id)
+units / lessons / cards (Hierarchical content structure)
+units (Thematic collections of lessons within a band)
+unit_id SERIAL PRIMARY KEY
+band_id INT NOT NULL REFERENCES bands(band_id) ON DELETE CASCADE
+title TEXT NOT NULL
+description TEXT
+order_idx INT NOT NULL
+Indexes: CREATE UNIQUE INDEX idx_units_band_order ON units(band_id, order_idx);
+lessons (Specific learning objectives within a unit)
+lesson_id SERIAL PRIMARY KEY
+unit_id INT NOT NULL REFERENCES units(unit_id) ON DELETE CASCADE
+title TEXT NOT NULL
+lesson_type TEXT NOT NULL (e.g., 'vocabulary', 'grammar', 'comprehension', 'pronunciation_focus')
+content_json JSONB: Flexible field for lesson content, could be Markdown, interactive exercise definitions, etc.
+xp_value INT DEFAULT 15 CHECK (xp_value >=0): XP awarded for completing this lesson.
+order_idx INT NOT NULL
+Indexes: CREATE UNIQUE INDEX idx_lessons_unit_order ON lessons(unit_id, order_idx);
+cards (Individual flashcards, typically linked to lessons)
+card_id SERIAL PRIMARY KEY
+lesson_id INT REFERENCES lessons(lesson_id) ON DELETE SET NULL: Card can optionally be linked to a specific lesson. If a lesson is deleted, the card remains but is unlinked.
+language_id INT NOT NULL REFERENCES languages(language_id): Target language of the card.
+target_text TEXT NOT NULL: Word or phrase in the target language.
+native_text TEXT NOT NULL: Translation in the user's native language (or a common reference language like English).
+audio_url TEXT: URL to an audio pronunciation of target_text (Supabase Storage).
+image_url TEXT: URL to an illustrative image (Supabase Storage).
+answer_json JSONB: Stores correct answers and acceptable alternatives. Example: {"type": "translation", "correct": ["hello"], "alternatives": ["hi", "hey"]} or {"type": "multiple_choice", "options": ["A", "B", "C"], "correct": "A"}. This structure provides flexibility for different question types and spelling/phrasing variations.
+difficulty_rating INT DEFAULT 3 CHECK (difficulty_rating BETWEEN 1 AND 5): Admin-set initial difficulty (1-easy, 5-hard).
+card_reviews (User-specific Spaced Repetition System (SRS) data for each card)
+user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE
+card_id INT NOT NULL REFERENCES cards(card_id) ON DELETE CASCADE
+interval INT DEFAULT 0: Current SRS interval in days.
+ease_factor FLOAT DEFAULT 2.5: SM-2 ease factor, influencing interval growth.
+repetitions INT DEFAULT 0: Number of times the card has been successfully recalled.
+next_review_at DATE NOT NULL: Date when this card is due for review.
+last_reviewed_at TIMESTAMPTZ: Timestamp of the last review.
+PRIMARY KEY (user_id, card_id)
+Indexes: CREATE INDEX idx_card_reviews_next_review ON card_reviews(user_id, next_review_at); for efficient querying of due cards.
+learn_errors (Tracks user mistakes during learning activities for targeted review)
+user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE
+card_id INT NOT NULL REFERENCES cards(card_id) ON DELETE CASCADE
+error_count INT DEFAULT 1 CHECK (error_count > 0): Frequency of incorrect answers for this card.
+last_error_at TIMESTAMPTZ DEFAULT now(): Timestamp of the most recent error.
+error_details JSONB: Optional field to store specifics about the error (e.g., what wrong answer was given).
+PRIMARY KEY (user_id, card_id)
+boss_tests (Definitions for end-of-band assessments)
+boss_test_id SERIAL PRIMARY KEY
+band_id INT UNIQUE NOT NULL REFERENCES bands(band_id) ON DELETE CASCADE: Each band has one unique boss test.
+title TEXT NOT NULL
+items_json JSONB NOT NULL: An ordered array defining the questions. Each item specifies type (e.g., 'multiple_choice_text', 'translate_text_to_audio', 'listen_and_type', 'speak_phrase'), content (question text, audio URL, image URL, options), and correct answer(s).
+time_limit_seconds INT CHECK (time_limit_seconds > 0): Duration allowed for the test.
+pass_score_pct INT NOT NULL CHECK (pass_score_pct > 0 AND pass_score_pct <= 100): Minimum percentage score to pass.
+Game & Live Ops Tables:
+quick_games (Asynchronous Audio-Only Games):
+game_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+language_id INT NOT NULL REFERENCES languages(language_id)
+player1_id UUID NOT NULL REFERENCES auth.users(id)
+player2_id UUID REFERENCES auth.users(id) (NULL if waiting for opponent or vs AI)
+current_turn_player_id UUID REFERENCES auth.users(id)
+status TEXT NOT NULL DEFAULT 'pending_player2' (e.g., pending_player2, player1_turn, player2_turn, completed, expired)
+winner_id UUID REFERENCES auth.users(id)
+elo_change_p1 INT, elo_change_p2 INT
+created_at TIMESTAMPTZ DEFAULT now()
+last_turn_at TIMESTAMPTZ
+expires_at TIMESTAMPTZ: Timestamp for when a turn or game might expire.
+Indexes: CREATE INDEX idx_quick_games_status_lang ON quick_games(status, language_id); for matchmaking.
+quick_game_turns (Turns for Asynchronous Audio-Only Games):
+turn_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+game_id UUID NOT NULL REFERENCES quick_games(game_id) ON DELETE CASCADE
+player_id UUID NOT NULL REFERENCES auth.users(id)
+turn_number INT NOT NULL
+prompt_text TEXT (optional prompt for the turn)
+audio_url TEXT NOT NULL (Supabase Storage link to the voice note)
+transcript TEXT
+ai_analysis JSONB (Stores feedback like WPM, unique words, filler words from DeepSeek)
+submitted_at TIMESTAMPTZ DEFAULT now()
+practice_reports (For self-study voice note analysis):
+report_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE
+language_id INT NOT NULL REFERENCES languages(language_id)
+audio_url TEXT NOT NULL
+transcript TEXT
+feedback JSONB (Detailed feedback from DeepSeek: WPM, mispronunciations array, fluency score, grammar tips)
+created_at TIMESTAMPTZ DEFAULT now()
+teacher_slots (Teacher availability for Video Lessons):
+slot_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+teacher_id UUID NOT NULL REFERENCES auth.users(id) (Assuming teachers are also users with a specific role)
+start_time TIMESTAMPTZ NOT NULL
+end_time TIMESTAMPTZ NOT NULL
+status TEXT DEFAULT 'available' (e.g., available, booked, tentative_booking)
+booking_id UUID REFERENCES bookings(booking_id) ON DELETE SET NULL
+price_usd DECIMAL(10,2) (If price varies per slot/teacher)
+CHECK (end_time > start_time)
+Indexes: CREATE INDEX idx_teacher_slots_teacher_start ON teacher_slots(teacher_id, start_time);
+bookings (Student bookings for Teacher Video Lessons):
+booking_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+student_id UUID NOT NULL REFERENCES auth.users(id)
+teacher_id UUID NOT NULL REFERENCES auth.users(id)
+slot_id UUID UNIQUE NOT NULL REFERENCES teacher_slots(slot_id)
+session_start_time TIMESTAMPTZ NOT NULL
+session_end_time TIMESTAMPTZ NOT NULL
+status TEXT NOT NULL (e.g., pending_payment, confirmed, completed, cancelled_student, cancelled_teacher)
+stripe_payment_intent_id TEXT
+created_at TIMESTAMPTZ DEFAULT now()
+session_analysis (Post-Live Teacher Video Lesson reports):
+analysis_id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+booking_id UUID NOT NULL REFERENCES bookings(booking_id) ON DELETE CASCADE
+student_id UUID NOT NULL REFERENCES auth.users(id)
+teacher_id UUID NOT NULL REFERENCES auth.users(id)
+diarized_transcript_url TEXT (Link to full session transcript, possibly with speaker labels)
+student_feedback JSONB (DeepSeek analysis of student's speech: fluency, complexity, accuracy scores, specific examples)
+teacher_notes TEXT (Optional notes from the teacher)
+created_at TIMESTAMPTZ DEFAULT now()
+leaderboard_cache (Pre-calculated leaderboard data for fast reads):
+leaderboard_type TEXT NOT NULL (e.g., weekly_xp, all_time_xp, language_elo_es)
+rank INT NOT NULL
+user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE
+score BIGINT NOT NULL (XP or Elo score)
+updated_at TIMESTAMPTZ DEFAULT now()
+PRIMARY KEY (leaderboard_type, rank)
+Indexes: CREATE INDEX idx_leaderboard_user ON leaderboard_cache(leaderboard_type, user_id);
+remote_config (For feature flags and dynamic app configuration)
+key TEXT PRIMARY KEY: Unique key for the config item (e.g., enableNewFeatureX, paywallPriceTierA).
+value JSONB NOT NULL: The configuration value (can be boolean, string, number, object, array).
+description TEXT: Human-readable description of the config item.
+updated_at TIMESTAMPTZ DEFAULT now(): When this config was last updated.
+2.2 Row‑Level Security (RLS) Policies
+RLS policies are SQL conditions that are implicitly ANDed to any query. auth.uid() returns the ID of the currently authenticated user.
+Default Deny (Implicit): Supabase starts with no access; policies grant specific permissions.
+User-Owned Data (e.g., profiles, card_reviews, user_band_progress, learn_errors, practice_reports):
+CREATE POLICY "Users can manage their own data." ON <table> FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+This common pattern allows users to perform any operation (SELECT, INSERT, UPDATE, DELETE) only on rows where their user_id matches. WITH CHECK applies to INSERT/UPDATE.
+Read‑Only Global Tables (languages, bands, units, lessons, cards, boss_tests, remote_config):
+CREATE POLICY "Public read access for global content." ON <table> FOR SELECT USING (true);
+These tables contain general application content or configuration and should be readable by any authenticated user. No INSERT, UPDATE, or DELETE is allowed for regular users. Content management would be done via admin tools or specific Edge Functions using a service role.
+Conditional Multi‑User Access (quick_games, quick_game_turns):
+For quick_games:
+CREATE POLICY "Players can view and update their own games." ON quick_games FOR ALL USING (auth.uid() = player1_id OR auth.uid() = player2_id) WITH CHECK (auth.uid() = current_turn_player_id OR (status = 'pending_player2' AND auth.uid() = player1_id)); (This is a simplified example; actual policies might be more granular for SELECT, UPDATE based on game state).
+For quick_game_turns:
+CREATE POLICY "Players can view turns in their games and insert their own." ON quick_game_turns FOR SELECT USING (game_id IN (SELECT game_id FROM quick_games WHERE auth.uid() = player1_id OR auth.uid() = player2_id));
+CREATE POLICY "Players can insert their own turns." ON quick_game_turns FOR INSERT WITH CHECK (auth.uid() = player_id AND game_id IN (SELECT game_id FROM quick_games WHERE auth.uid() = current_turn_player_id));
+Teacher-Specific Access (teacher_slots, bookings where teacher is involved):
+Teachers might have policies to manage their teacher_slots (auth.uid() = teacher_id).
+Both student and teacher can view their shared bookings.
+Service Role Bypass: Edge Functions using the service_role_key (stored securely as an environment variable) bypass RLS entirely. This is necessary for operations like:
+The scheduler/rebuildLeaderboards.ts function, which needs to read all profiles data.
+Admin functions for content management.
+Webhook handlers that update data based on external events (e.g., Stripe).
+Caution: Use the service role key sparingly and only within trusted server-side code.
+3. Authentication & Onboarding
+Utilizing Supabase's built-in auth schema and GoTrue-powered services.
+3.1 Email/Password + Magic‑Link
+Email/Password: Standard sign-up and sign-in flow. Supabase handles email confirmation, password resets. Client-side (Swift) will use supabase.auth.signUp(email:password:) and supabase.auth.signIn(email:password:).
+Magic‑Link: Passwordless login. User enters email, receives a link, clicks it to log in. Client-side: supabase.auth.signInWithOtp(email:). Deep linking must be configured in the iOS app to handle the magic link URL.
+OAuth (Stretch Goal):
+Integrate "Sign in with Apple" and "Sign in with Google" for convenience.
+Requires configuration in Supabase dashboard (client IDs, secrets) and corresponding setup in Apple Developer portal / Google Cloud Console.
+Client-side: supabase.auth.signInWith(provider: .apple / .google).
+Offline Tolerance & Cached Mode:
+If login/API calls fail due to no network connectivity, the app should gracefully degrade.
+Detection: Use NWPathMonitor in Swift to detect network status.
+Behavior:
+Display a prominent banner (e.g., "Offline Mode: Some features may be unavailable").
+Allow access to locally cached data (e.g., previously synced flashcards from SQLite, downloaded lesson content).
+Disable features requiring network (e.g., starting new games, booking sessions, fetching new content).
+Queue up actions (like card review submissions) to be synced when connectivity is restored.
+This implies a local caching strategy (see 4.1 FlashcardService).
+3.2 Automatic Profile Seed
+Ensures essential user-specific records are created immediately upon new user registration.
+Supabase after insert Trigger on auth.users: This is the preferred, more robust method.
+A PostgreSQL function (e.g., handle_new_user()) is created:
+      CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS TRIGGER AS $$
+BEGIN
+  INSERT INTO public.profiles (user_id, display_name) -- display_name could be derived from email initially
+  VALUES (NEW.id, SUBSTRING(NEW.email FROM 1 FOR POSITION('@' IN NEW.email) - 1));
+
+  -- Optionally, seed initial progress for a default language if desired
+  -- INSERT INTO public.user_band_progress (user_id, band_id)
+  -- VALUES (NEW.id, (SELECT band_id FROM bands WHERE language_id = <default_lang_id> AND order_idx = 0 LIMIT 1));
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+    
+SECURITY DEFINER allows the function to run with the permissions of the user who defined it (typically an admin), enabling it to insert into public.profiles.
+Swift Fallback (Client-Side Attempt): Less ideal due to potential race conditions or client-side failures, but can serve as a backup.
+After successful sign-up/first login, the Swift app attempts to fetch the user's profile from /rest/v1/profiles?user_id=eq.{auth.uid()}&select=*.
+If this returns a 404 (or an empty array, depending on Supabase client behavior for empty results with RLS), it means the profile wasn't created by the trigger (or the trigger failed).
+The client then makes an idempotent POST request to a Supabase Edge Function or rpc (Remote Procedure Call) endpoint, e.g., rpc.init_user_profile().
+This rpc.init_user_profile() function would attempt to INSERT ... ON CONFLICT DO NOTHING into profiles and user_band_progress to ensure it only creates records if they don't exist.
+4. Core Learning Loop – Service Layer (Swift)
+These services encapsulate the business logic for the main learning activities, interacting with Supabase via the Swift client library and managing local state/cache where appropriate. They are designed to be testable and independent of UI.
+4.1 FlashcardService
+Manages the Spaced Repetition System (SRS) logic and flashcard data.
+SM‑2 Algorithm Implementation:
+A pure Swift struct or class implementing the SM-2 algorithm precisely.
+Key inputs: user's quality of response (e.g., 0-5 scale mapping to "Blackout," "Incorrect," "Difficult," "Good," "Easy"), current interval, ease factor, repetitions.
+Key outputs: new interval, new ease factor, updated repetitions.
+Ease Factor Floor: The ease factor (EF) will not drop below 1.3, preventing cards from becoming stuck in extremely short review cycles if consistently answered poorly.
+calculateNextReview(quality: Int, interval: Int, easeFactor: Double, repetitions: Int) -> (newInterval: Int, newEaseFactor: Double, newRepetitions: Int, nextReviewDate: Date)
+Local Cache (SQLite via GRDB.swift or Core Data):
+Purpose: Enables offline flashcard drills and faster UI loading.
+Schema: Mirrors relevant parts of cards and card_reviews tables (e.g., card_id, target_text, native_text, audio_url, image_url, interval, ease_factor, next_review_at).
+Synchronization:
+Initial Sync/Delta Sync: When online, fetches due cards and cards for active lessons from Supabase and updates the local SQLite DB.
+Offline Drills: When offline, FlashcardService reads from and writes review updates (new SRS parameters, last_reviewed_at) to SQLite.
+Sync Queue & Flush: Review updates made offline are added to a "sync queue" (could be a separate SQLite table or in-memory array persisted to disk). When network connectivity is restored, this queue is processed, and updates are batch-POSTed to the card_reviews table in Supabase. Use UPSERT(insert on conflict update) for card_reviews.
+Fetching Due Cards:
+getDueCards(limit: Int) -> AnyPublisher<[CardReviewData], Error>: Fetches cards where next_review_at <= today() from local cache, ordered by urgency.
+4.2 LearnService
+Manages the presentation of new lesson content and associated exercises.
+Fetching Lessons:
+getLessonsForBand(bandId: Int) -> AnyPublisher<[Lesson], Error>
+SQL equivalent: SELECT * FROM lessons WHERE band_id = :activeBand AND lesson_id NOT IN (SELECT lesson_id FROM user_lesson_progress WHERE user_id = :userId AND completed_at IS NOT NULL) ORDER BY order_idx;
+(Assumes a user_lesson_progress table to track lesson completion: user_id, lesson_id, completed_at).
+Generating Distractors for Exercises (e.g., multiple-choice questions):
+When a card/concept is presented in a multiple-choice format, effective distractors are crucial.
+Strategy:
+Identify the correct card.
+Fetch 2-3 other cards from the same lesson or unit (sibling cards).
+Ensure distinctness:
+Distractors should not have the same native_text (translation) as the correct answer.
+Ideally, distractors should be semantically related but clearly incorrect (e.g., for "apple," distractors might be "pear," "banana," not "car"). This often requires manual curation or more advanced NLP if fully automated.
+Avoid distractors that are too obviously wrong or too similar to the correct answer, making the choice trivial or confusing.
+This logic might reside within the LearnService or be part of the content_json structure for lessons if distractors are pre-defined.
+4.3 ReviewService
+Focuses on cards that the user has struggled with or are due for SRS review. This is distinct from learning new cards.
+Fetching Cards for Review:
+getReviewItems(limit: Int = 10) -> AnyPublisher<[ReviewableCard], Error>
+Combines two sources:
+Error-Driven: Cards from learn_errors where the user has previously made mistakes. Prioritize cards with higher error_count or more recent last_error_at.
+SRS-Driven: Cards from card_reviews where next_review_at <= today().
+SQL equivalent (simplified):
+      (
+  SELECT c.*, lr.last_error_at AS sort_key, 'error' as source
+  FROM cards c JOIN learn_errors lr ON c.card_id = lr.card_id
+  WHERE lr.user_id = :userId
+)
+UNION ALL
+(
+  SELECT c.*, cr.next_review_at AS sort_key, 'srs' as source
+  FROM cards c JOIN card_reviews cr ON c.card_id = cr.card_id
+  WHERE cr.user_id = :userId AND cr.next_review_at <= NOW()::date
+)
+ORDER BY sort_key ASC -- or DESC depending on how you want to prioritize
+LIMIT :limit;
+    
+IGNORE_WHEN_COPYING_START
+content_copy download 
+Use code with caution. SQL
+IGNORE_WHEN_COPYING_END
+The service would then apply further logic to de-duplicate and potentially interleave these items intelligently.
+4.4 BossBattleService
+Manages the state and logic for the end-of-band assessments ("Boss Battles").
+State Machine: Manages the flow of the Boss Battle.
+enum BossBattleState { case intro, inProgress(startTime: Date, remainingTime: TimeInterval), completed(score: Double), passed, failed }
+Uses Combine's @Published property to expose state changes to the UI.
+Fetching Test Definition:
+getBossTest(bandId: Int) -> AnyPublisher<BossTest, Error>: Fetches from boss_tests table.
+Timer Logic:
+Driven via Timer.publish(every: 0.1, on: .main, in: .common).autoconnect() from the Combine framework.
+Updates a @Published var remainingTime: TimeInterval property.
+UI elements (like a progress bar) subscribe to remainingTime.
+Answer Submission & Scoring:
+Accepts user answers for each item in boss_tests.items_json.
+Calculates score based on correct answers vs. total items.
+Atomic Supabase Update on Pass/Fail:
+When the battle is completed, results are submitted to Supabase within a transaction to ensure atomicity, especially when updating user_band_progress.
+Uses rpc for transactional updates if complex logic is involved:
+      -- Supabase RPC function: complete_boss_battle(user_id_in, band_id_in, score_in, passed_in)
+BEGIN;
+-- Log the attempt (e.g., into a boss_attempts table)
+INSERT INTO boss_attempts (user_id, band_id, score, passed, attempted_at)
+VALUES (user_id_in, band_id_in, score_in, passed_in, now());
+
+-- If passed, update progress
+IF passed_in THEN
+  UPDATE user_band_progress
+  SET boss_passed = TRUE, passed_at = now(), units_completed = (SELECT units_required FROM bands WHERE band_id = band_id_in) -- Mark all units as done
+  WHERE user_id = user_id_in AND band_id = band_id_in;
+END IF;
+COMMIT;
+    
+IGNORE_WHEN_COPYING_START
+content_copy download 
+Use code with caution. SQL
+IGNORE_WHEN_COPYING_END
+The Swift service calls this RPC: supabase.rpc("complete_boss_battle", params: [...]).
+4.5 GamificationService
+Central hub for managing XP, levels, streaks, and broadcasting game-related events.
+XP Table & Logic: Defines XP awards for various actions.
+Card review (SM-2 "Easy" or "Good"): 5 XP
+Lesson completion: 15 XP
+Bonus for zero errors during lesson exercises: +5 XP (total 20 XP)
+Boss Battle pass: 100 XP
+Quick-talk (asynchronous audio game) win: 50 XP
+Quick-talk loss/draw: 15 XP (participation reward)
+Live teacher session (video, ≥ 15 minutes duration): 120 XP
+Level Formula:
+level = floor(sqrt(total_xp / 50))
+This provides a non-linear progression, requiring more XP for higher levels. The constant 50 can be tuned.
+XP thresholds for levels: Level 1 (0 XP), Level 2 (50 XP), Level 3 (200 XP), Level 4 (450 XP), etc.
+Streak Management:
+On app open / relevant activity, check profiles.last_active_at (a new column might be needed, or infer from last xp_event).
+If today - last_active_at == 1 day, increment profiles.streak.
+If today - last_active_at > 1 day, reset profiles.streak to 1 (if activity today) or 0.
+Update profiles.last_active_at to now().
+Progress Rings Data Source: Provides data for UI elements.
+Global Progress: (Total bands passed for current language) / (Total bands available in current language)
+SELECT COUNT(*) FROM user_band_progress WHERE user_id = :uid AND language_id = :lid AND boss_passed = TRUE
+SELECT COUNT(*) FROM bands WHERE language_id = :lid
+Current Band Progress: user_band_progress.units_completed / bands.units_required for the active band.
+Boss Battle Eligibility/Status: user_band_progress.units_completed >= bands.units_required (eligible) AND !user_band_progress.boss_passed (not yet passed) → Show Boss Battle CTA. If boss_passed → 100%.
+Event Emission for Reactive UI:
+let gameEventPublisher = PassthroughSubject<GameEvent, Never>()
+enum GameEvent { case xpEarned(amount: Int, newTotalXp: Int), levelUp(newLevel: Int), streakExtended(days: Int), streakLost }
+When XP is awarded, level changes, or streak updates, the GamificationService calls gameEventPublisher.send(...).
+UI components (e.g., XP bar, level display, profile screen) subscribe to gameEventPublisher to reactively update themselves without tight coupling.
+Updating Supabase:
+All gamification changes (XP, level, streak) are persisted to the profiles table.
+An xp_events table can log individual XP gains for audit/history: (event_id, user_id, amount, source_type, source_id, created_at). source_type could be 'lesson', 'review', 'boss', 'quick_game_win'.
+5. User Interface – Screen Blueprints (SwiftUI)
+Focus on key interactions, information hierarchy, and visual design language.
+5.1 StudyMenuView (Main Dashboard / Home Screen)
+The primary entry point after login, offering an overview and navigation.
+LanguagePillScroller:
+A ScrollView(.horizontal) containing a LazyHStack of "pills" (capsule-shaped buttons).
+Each pill represents a language the user is learning or can start learning (e.g., "🇪🇸 Spanish", "🇫🇷 French", "➕ Add Language").
+Tapping a language pill updates an AppState.selectedLanguage: Language observable object, which other views react to, filtering content dynamically.
+RecentActivityList / "What's New" Feed:
+Displays a summary of recent achievements or notable events (e.g., "You extended your streak to 5 days!", "New Boss Battle unlocked for Spanish N2!", "You won a Quick Talk game!").
+Data sourced from a local cache of xp_events or a dedicated user_notifications table.
+Uses List with a DiffableDataSource (or ForEach with identifiable data) for efficient updates. Each item could be a custom cell with an icon and descriptive text.
+5.2 LanguageDashboardView (Per-Language Home)
+Accessed after selecting a language from StudyMenuView. Focuses on progress within that specific language.
+ScrollView Container: The main view is a ScrollView to accommodate varying content height.
+HeaderCard: A prominent card at the top.
+Displays the selected language name and flag.
+Features a large circular progress ring visualizing Global Progress (total bands passed / total bands in language).
+The ring's fill uses an animated kaleidoscope gradient (e.g., AngularGradient with shifting colors) for visual appeal.
+BandTracker: A horizontally scrollable ScrollView(.horizontal) with a LazyHStack of BandChip views.
+BandChip: Represents a proficiency band (e.g., "N1," "N2," "I1").
+Displays the band's short_label.
+Contains a smaller sub-progress ring showing units_completed / units_required for that band.
+Shows a status icon:
+🔒 (Lock icon): Band is not yet accessible (previous band not passed).
+▶️ (Play icon / Active highlight): Current active band the user is working on.
+✅ (Checkmark icon): Band has been completed (Boss Battle passed).
+Tapping an accessible band chip might scroll the StudyModesCarousel to focus on that band or navigate to a band-specific overview.
+StudyModesCarousel: A TabView with TabViewStyle(.page(indexDisplayMode: .never)) to create a swipeable carousel for Learn, Review, and Boss modes for the currently active band.
+LearnCard: CTA to start or continue the next available lesson in the active band. Shows progress like "Lesson 3/10".
+ReviewCard: CTA to start a review session. Shows number of due cards/errors, e.g., "15 Cards Due."
+BossCard: CTA to attempt the Boss Battle for the active band. Only active if units_completed >= units_required. Shows status like "Ready to Battle!" or "Complete 2 more units."
+FlashcardSection:
+Displays a small sample of recently learned or due flashcards (e.g., 3-5 cards horizontally scrollable).
+If no cards are associated with the user yet (e.g., new user, new language), it shows a CTA button: "Add Cards by Completing Your First Lesson!"
+5.3 LearnView / ReviewView (Core Study Interface)
+The screen where users interact with individual flashcards or lesson exercises.
+Card Style & Glassmorphism:
+Cards are presented with a "glassmorphism" effect:
+A Material.thick or Material.ultraThinMaterial background (from SwiftUI) provides the blur.
+RoundedRectangle(cornerRadius: 20) for the shape.
+Subtle border and shadow(radius: 10) to lift it off the page.
+Content (text, images) is placed on top of this blurred background.
+Gesture Navigation:
+Swipe Left (Incorrect/Hard): User swipes the card left to indicate they didn't know the answer or found it difficult.
+Swipe Right (Correct/Easy): User swipes right for a correct answer.
+Swipe Up/Down (Skip - Optional): Could be used to skip a card if undecided, moving it to the back of the current queue.
+Undo Functionality: A dedicated "Undo" button allows the user to go back to the immediately previous card and re-evaluate their answer. This state (previous card and its answer) needs to be temporarily stored. Limited to one step back to prevent gaming the system.
+Audio Playback:
+For cards with audio, a speaker icon button is present.
+Uses AVFoundation's AVAudioPlayer (or AVAudioEngine with AVAudioPlayerNode for more control if sound effects or mixing are needed).
+Aim for zero-latency playback on tap by pre-loading or efficiently streaming audio. If audio URLs are from Supabase Storage, consider local caching of frequently accessed audio files.
+Input Methods:
+Multiple Choice: Tap to select.
+Text Input: Native TextField for translation or fill-in-the-blanks.
+Self-Assessment Buttons: "Easy," "Good," "Hard," "Again" buttons for SRS input after revealing the answer.
+5.4 BossBattleView
+The interface for timed, end-of-band assessments.
+Radial Timer:
+A circular progress bar animates around the border of the screen or around a central element, visually depleting as time runs out.
+Implemented using Circle shape with .trim(from: 0, to: progress) and stroke.
+The progress value is updated by the BossBattleService's timer.
+Haptic Feedback:
+UINotificationFeedbackGenerator or UIImpactFeedbackGenerator provides haptic cues:
+Subtle tap when time is 50% gone.
+More insistent taps or vibration when 10 seconds remaining.
+A distinct haptic for test submission or time up.
+Question Presentation: Mixed-modality questions are presented one by one. Clear "Next" button.
+Result Sheet:
+Presented modally (.sheet) upon completion.
+Shows score, pass/fail status, XP earned.
+Includes a Share Card (UIImage Renderer):
+A graphically rich summary of the achievement (e.g., "I passed the Spanish N2 Boss Battle on Tong!").
+Generated by rendering a SwiftUI view hierarchy into a UIImage using ImageRenderer (iOS 16+).
+This image can then be shared via the standard iOS Share Sheet (UIActivityViewController).
+5.5 FlashcardDrillView (Dedicated SRS Practice Screen)
+Optimized for rapid review of flashcards.
+Flip Animation:
+Cards have a front (e.g., target language word) and a back (e.g., native translation, example sentence).
+Tapping the card triggers a flip animation.
+Achieved using UIView.transition(with:duration:options:animations:completion:) with .transitionFlipFromRight or .transitionFlipFromLeft, bridged into SwiftUI using a UIViewRepresentablewrapper if a native SwiftUI matchedGeometryEffect or .rotation3DEffect isn't sufficient or performant enough.
+Keyboard Shortcuts (for iPad / External Keyboards):
+Space bar: Maps to the "Easy" or "Reveal Answer" button.
+Number keys (1-4): Could map to difficulty ratings ("Again," "Hard," "Good," "Easy").
+Implemented using .keyboardShortcut() SwiftUI modifier.
+5.6 QuickGameViews (Asynchronous Audio-Only Duels)
+Interface for managing and playing turn-based asynchronous audio games.
+Game List View: Shows active games, pending invites, completed games. Each item shows opponent, last turn time, whose turn it is.
+Game Play View (Audio-Focused):
+Predictive Turn ETA Bar:
+Visually indicates how much time the opponent has left to make their turn (e.g., "Opponent has 8 hours left"). Max 12 hours by default, configurable.
+Calculated from quick_games.last_turn_at + turn_duration_limit.
+Could be a shrinking progress bar or just text.
+Voice Recording Interface: Mic button, waveform visualization during recording, timer for audio input.
+GameTimeline / Chat History (Audio Turns):
+A List or ScrollView displaying turns as chat bubbles (player's on right, opponent's on left).
+Each bubble contains:
+Player avatar/name.
+Audio player for the voice note.
+Transcript of the voice note.
+Optionally, a summary of AI feedback for that turn (e.g., WPM, key phrases).
+Turns are grouped by day (e.g., "Today," "Yesterday," "May 17") using a DiffableDataSource with sections or custom grouping logic.
+5.7 VideoCallView (Live Teacher Sessions Only)
+Interface for real-time WebRTC video calls exclusively with teachers.
+Layout & Controls:
+Main view for remote teacher's video.
+Picture-in-Picture (PiP) draggable view for local camera preview.
+Controls: Mute/unmute microphone, enable/disable camera, flip camera (front/rear), end call.
+Optional: Chat messaging overlay for text communication during the video call.
+Adaptive to Split-Screen Multitasking (iPad):
+The UI should reflow gracefully when the app enters iPadOS split-screen mode. Video views might need to resize, controls might rearrange.
+Test with various split ratios.
+Picture-in-Picture (System Level for Backgrounding):
+When the user backgrounds the app during a teacher call, the video call should continue in a system PiP window (requires AVKit and specific entitlements like com.apple.developer.avfoundation.multitasking-camera-access).
+5.8 Accessibility & Localization
+Ensuring the app is usable by everyone.
+Accessibility:
+Target Size: All interactive controls (buttons, toggles, list items) must have a minimum tap target size of 44x44 points. Use padding or .contentShape(Rectangle()) to increase tap areas if visual elements are smaller.
+VoiceOver:
+All UI elements must have descriptive accessibilityLabels.
+Elements that change state (e.g., play/pause button) should update their label or hint.
+Custom controls need to implement UIAccessibility protocol methods if using UIKit components, or use SwiftUI accessibility modifiers (.accessibilityValue(), .accessibilityHint(), .accessibilityAction()).
+Labels are localized.
+Dynamic Type: All text should scale correctly with the user's preferred font size settings. Use SwiftUI's .font(.system(...)) or custom fonts that support dynamic type.
+Color Contrast: Ensure sufficient contrast between text and background colors (WCAG AA standard).
+Localization:
+All user-facing strings are stored in Localizable.strings files for each supported language.
+Use NSLocalizedString or SwiftUI's Text("key") which automatically looks up keys.
+Layouts must support Right-to-Left (RTL) languages (e.g., Arabic, Hebrew). SwiftUI handles most mirroring automatically if environment(\.layoutDirection) is respected. Test thoroughly.
+Dates, times, and numbers are formatted according to the user's locale.
+6. AI & Edge‑Function Pipelines (Deno/TypeScript)
+Serverless functions orchestrating AI model interactions and backend logic. These run on Supabase's Deno-based Edge Function environment.
+6.1 Voice‑Note Analysis Pipeline (Function: ai/processPracticeAudio.ts)
+Triggered typically by a Supabase Storage event (new file uploaded to a specific practice-audio bucket) or a direct HTTP call from the client after upload. This is for self-study voice notes.
+Validate Storage Event / Input:
+If triggered by Storage: Parse event payload to get bucket ID and object path.
+If HTTP: Validate JWT for auth, parse request body for audio URL or metadata.
+Security/Cost Control:
+Retrieve file metadata (e.g., using Supabase Storage API or ffprobe if file is downloaded).
+Reject files > 5 MB (configurable limit).
+Reject audio duration > 30 seconds (configurable). ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio.wav can get duration.
+Download & Pre-process Audio:
+Download the audio file from Supabase Storage into the Edge Function's temporary memory/filesystem.
+Down-sample with ffmpeg: Convert to 16 kHz mono WAV format. This is often optimal for speech recognition APIs like Whisper and reduces file size/processing cost.
+FFmpeg can be bundled with the Edge Function or accessed via a WASM version if available and practical for Deno. A simpler approach might be to ensure the client uploads in the correct format, but server-side normalization is more robust.
+Command: ffmpeg -i input.mp4 -ac 1 -ar 16000 output.wav (example).
+Transcribe with Whisper V3:
+Construct a POST request to the Whisper V3 API endpoint.
+Include the (down-sampled) audio file data in the request body (e.g., multipart/form-data).
+Set appropriate headers (Authorization with Whisper API key, Content-Type).
+Handle API response: Parse the JSON transcript. Error handling for API failures (rate limits, bad audio).
+Analyze with DeepSeek V3:
+Construct Prompt:
+      {
+  "model": "deepseek-coder", // Or appropriate chat model if V3 has one
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a CEFR B2 level English pronunciation and fluency coach. Analyze the provided transcript. Identify potential mispronunciations (suggest correct pronunciation if possible), calculate words per minute (WPM), and provide 1-2 concise, actionable tips for improvement. Respond in JSON format with keys: 'wpm', 'potential_mispronunciations' (array of objects with 'word' and 'suggestion'), 'fluency_tips' (array of strings)."
+    },
+    {
+      "role": "user",
+      "content": "Transcript: \"${transcriptFromWhisper}\" Original audio duration: ${durationInSeconds} seconds."
+    }
+  ],
+  "temperature": 0.3 // Lower temperature for more deterministic feedback
+}
+    
+IGNORE_WHEN_COPYING_START
+content_copy download 
+Use code with caution. Json
+IGNORE_WHEN_COPYING_END
+POST this JSON to the DeepSeek V3 API endpoint.
+Handle API response: Parse the JSON feedback. Error handling.
+Store Results:
+Insert a new row into the practice_reports table in Supabase.
+Include user_id, language_id, original audio_url, Whisper transcript, sample_rate (e.g., 16000), calculated wpm, the mispronunciations array, and fluency_tips from DeepSeek's JSON output.
+Optionally, send a Supabase Realtime message or push notification to the client indicating the report is ready.
+6.2 Quick‑Game Turn Processor (Function: games/processTurn.ts)
+Triggered when a user submits their audio turn in an asynchronous Quick Game.
+Input Validation: Receive game_id, player_id, audio_url (from client after upload to Storage). Validate that it's this player's turn in the specified game.
+Voice Analysis (Reuses parts of 6.1 for audio processing):
+Download audio, down-sample if needed.
+Transcribe with Whisper V3.
+DeepSeek Analysis (Modified Prompt for Game Context):
+      {
+  "model": "deepseek-coder", // Or chat model
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are analyzing a turn in a spoken language game. Based on the transcript, calculate words per minute (WPM), count unique words, and estimate the filler-word ratio (e.g., uh, um). Identify 1-2 key phrases or vocabulary used. Respond in JSON: {'wpm', 'unique_word_count', 'filler_word_ratio_pct', 'key_phrases': []}."
+    },
+    {
+      "role": "user",
+      "content": "Transcript: \"${transcript}\" Audio duration: ${durationInSeconds} seconds."
+    }
+  ]
+}
+    
+IGNORE_WHEN_COPYING_START
+content_copy download 
+Use code with caution. Json
+IGNORE_WHEN_COPYING_END
+Store Turn Data:
+Insert a new row into quick_game_turns with game_id, player_id, turn_number, audio_url, transcript, and the AI analysis JSON.
+Update Game State:
+Update the quick_games table: set current_turn_player_id to the opponent, update last_turn_at.
+Check for game completion conditions (e.g., max turns reached). If completed, calculate Elo, determine winner (could be AI-judged based on metrics or a simple rule for now), and update game status.
+Notify Opponent:
+Send a Supabase Realtime message on a channel specific to the game (e.g., quick-game:${game_id}) or the opponent's user channel.
+Payload: { type: 'NEW_TURN', gameId: '...', nextPlayerId: '...' }.
+This triggers a push notification or in-app update for the opponent.
+6.3 Post‑Session Analysis (Function: ai/processSession.ts for Teacher Video Lessons)
+Triggered after a live teacher video session ends, usually by the client app signaling completion and providing URLs to recorded audio tracks from the video call.
+Input: booking_id, student_audio_url, teacher_audio_url (or a single mixed audio URL if client-side/server-side mixing is done during the video call).
+Audio Processing:
+Download audio tracks.
+Merge Tracks (if separate): Use ffmpeg to combine student and teacher audio into a single stereo or dual-mono track. ffmpeg -i student.wav -i teacher.wav -filter_complex "[0:a][1:a]amerge=inputs=2[aout]" -map "[aout]" output_merged.wav
+(Alternative: If client records a single mixed track, this step is simpler).
+Diarized Transcription with Whisper V3 (or specialized diarization API):
+Send the merged audio to Whisper V3. Some Whisper implementations or wrappers support speaker diarization (identifying who spoke when). If Whisper V3 itself doesn't offer robust diarization, an additional step with a dedicated diarization model/API might be needed before or after transcription to segment the transcript by speaker.
+The goal is a transcript like: [Student: "Hello, how are you?"] [Teacher: "I'm fine, thanks! And you?"]
+DeepSeek Grammar & Fluency Rubric for Student (from Teacher Session):
+Extract only the student's utterances from the diarized transcript.
+Construct Prompt:
+      {
+  "model": "deepseek-coder", // Or chat model
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an expert language tutor analyzing a student's performance in a conversation with a teacher. Based on their utterances, evaluate their: \n1. Fluency (flow, hesitations, pace) \n2. Grammatical Accuracy (correctness of structures) \n3. Lexical Complexity (range and appropriateness of vocabulary) \nScore each on a scale of 0-5. Provide specific examples from the transcript to support your scores and offer 2-3 targeted suggestions for improvement. Respond in JSON: {'scores': {'fluency': 0-5, 'accuracy': 0-5, 'complexity': 0-5}, 'strengths': [string], 'areas_for_improvement': [{'example_from_transcript': string, 'suggestion': string}]}"
+    },
+    {
+      "role": "user",
+      "content": "Student's utterances: \"${student_transcript_segments}\""
+    }
+  ]
+}
+    
+IGNORE_WHEN_COPYING_START
+content_copy download 
+Use code with caution. Json
+IGNORE_WHEN_COPYING_END
+POST to DeepSeek, parse JSON response.
+Store Analysis:
+Insert into session_analysis table: booking_id, student_id, teacher_id, URL to the (potentially stored) diarized transcript, and the structured JSON feedback from DeepSeek.
+6.4 Payment Webhook Handler (Function: payments/webhook.ts)
+An HTTP endpoint exposed by Supabase Edge Functions to receive webhooks from Stripe.
+Verify Stripe Signature:
+Crucial for security. Use the stripe.webhooks.constructEvent() method from the Stripe Node.js SDK (or equivalent Deno library).
+Requires the raw request body and the Stripe-Signature header. The webhook signing secret is stored as an environment variable.
+If verification fails, return 400 Bad Request.
+Idempotency:
+Stripe events have an id (e.g., evt_xxxx). Store processed event IDs (e.g., in a simple processed_stripe_eventstable with event_id TEXT PRIMARY KEY, processed_at TIMESTAMPTZ) to prevent duplicate processing if Stripe retries a webhook.
+If event.id already exists, return 200 OK immediately.
+Handle Event Types (e.g., switch (event.type)):
+customer.subscription.created, customer.subscription.updated:
+Extract customer_id, subscription_id, status, current_period_end from event.data.object.
+Update the profiles table:
+UPDATE profiles SET pro_subscription = (status === 'active' || status === 'trialing'), pro_subscription_expires_at = to_timestamp(current_period_end), stripe_customer_id = customer_id, stripe_subscription_id = id WHERE stripe_customer_id = customer_id; (or map user via metadata if user_id was passed to Stripe).
+Send an in-app message via Supabase Realtime to the user confirming their Pro status.
+customer.subscription.deleted:
+Set pro_subscription = FALSE in profiles.
+invoice.payment_succeeded:
+If for a one-time booking (teacher session): Update bookings table status to confirmed. Send confirmation notification.
+invoice.payment_failed:
+Notify user, potentially update subscription status if it leads to cancellation.
+Return 200 OK: Acknowledge receipt of the webhook to Stripe.
+6.5 Leaderboard Rebuilder (Function: scheduler/rebuildLeaderboards.ts)
+A scheduled Edge Function (e.g., runs daily or hourly via Supabase's pg_cron or an external cron job service hitting an HTTP trigger).
+Clear Existing Cache: DELETE FROM leaderboard_cache WHERE leaderboard_type IN ('weekly_xp', 'all_time_xp', ...);
+Calculate Weekly Rolling XP:
+Requires xp_events table: SELECT user_id, SUM(amount) as weekly_score FROM xp_events WHERE created_at >= NOW() - INTERVAL '7 days' GROUP BY user_id ORDER BY weekly_score DESC LIMIT 100;
+Iterate and INSERT INTO leaderboard_cache (leaderboard_type, rank, user_id, score) VALUES ('weekly_xp', rank_num, user_id, weekly_score);
+Calculate All-Time XP:
+SELECT user_id, xp as total_score FROM profiles ORDER BY total_score DESC LIMIT 100;
+Iterate and insert into leaderboard_cache with leaderboard_type = 'all_time_xp'.
+Calculate Elo Ranking Percentiles (per language):
+For each language_id:
+SELECT user_id, elo, PERCENT_RANK() OVER (ORDER BY elo DESC) as percentile FROM profiles WHERE EXISTS (SELECT 1 FROM user_band_progress ubp WHERE ubp.user_id = profiles.user_id AND ubp.band_id IN (SELECT band_id FROM bands WHERE language_id = :current_language_id)) ORDER BY elo DESC LIMIT 100;
+Iterate and insert into leaderboard_cache with leaderboard_type = 'elo_lang_XX' (e.g., elo_lang_es). Score could be Elo, or rank based on Elo.
+Result: leaderboard_cache table is populated with fresh data, enabling O(1) (actually O(N) for top N, but very fast) reads for leaderboard displays in the app. SELECT * FROM leaderboard_cache WHERE leaderboard_type = 'weekly_xp' ORDER BY rank ASC;
+7. Monetisation & Feature Gating
+Strategies for revenue generation and managing access to premium features.
+7.1 Paywall Flow
+Triggered when a free-tier user attempts to access a Pro feature beyond their quota.
+Condition: !profiles.pro_subscription AND (ai_calls_today >= daily_ai_limit OR active_quick_games >= max_concurrent_games).
+Tracking ai_calls_today and active_quick_games might require additional columns on profiles or related tables, updated by Edge Functions or triggers.
+Presentation: Show a FullScreenCover SwiftUI view. This is a modal that covers the entire screen.
+Content: Compelling copy highlighting Pro benefits (unlimited AI, more games, support teachers, etc.). Clearly display monthly/annual pricing options. "Restore Purchases" button.
+A/B Testing Price Copy/Layout (via remote_config):
+Fetch paywall configuration from remote_config table (e.g., key: paywall_config_v1).
+value JSON: {"headline": "Unlock Your Fluency Faster!", "price_options": [{"id": "monthly", "display": "$9.99/month"}, {"id": "annual", "display": "$79.99/year", "badge": "Save 30%"}]}
+The app dynamically renders the paywall based on this config. Different user segments (see 11.2 A/B Framework) might receive different paywall configurations.
+Purchase Action: Tapping a price option initiates the Stripe purchase flow using the Stripe iOS SDK.
+Success/Failure: On successful purchase, dismiss the paywall, update local pro_subscription state, and refresh user profile from Supabase. On failure/cancellation, dismiss or show an error.
+7.2 Usage Quotas (Free Tier)
+Limits enforced to encourage upgrading to Pro.
+AI Voice Notes (Self-Study Practice): 3 per day.
+Tracked in profiles.daily_ai_voice_notes_used (reset daily by a scheduler or on first use of a new day).
+Quick Games (Asynchronous Audio-Only): 2 concurrent active games.
+Count active games for user from quick_games table where status NOT IN ('completed', 'expired').
+Live Teacher Sessions (Video): Paid only. No free quota.
+Enforcement (Client-Side & Server-Side):
+Client-Side (Swift): Check local state/profile data before allowing action. Provides immediate UX feedback (e.g., disable button, show "Upgrade" prompt).
+Server-Side (Edge Functions): Crucial. Edge Functions (e.g., ai/processPracticeAudio.ts, games/findOpponent.ts) must re-verify quotas against the database before performing costly operations or creating resources. This prevents malicious users from bypassing client-side checks. If quota exceeded, return a specific error code (e.g., 429 Too Many Requests or a custom 403 Forbidden with error details).
+8. Real‑Time Communication (WebRTC for Teacher Video Lessons)
+For live video/audio sessions exclusively between students and teachers.
+8.1 Signalling Server (for Teacher Video Lessons)
+Facilitates the negotiation of WebRTC connections (exchanging SDP offers/answers and ICE candidates) for scheduled teacher sessions.
+Primary: Supabase Realtime Channel:
+A dedicated channel per call room: rtc:{roomId} (where roomId is unique, e.g., booking_id for the teacher session).
+Clients (student and teacher iOS apps) subscribe to this channel using supabase.channel('rtc:{roomId}').
+Messages: JSON payloads broadcasted on the channel.
+{ "type": "offer", "sdp": { ...session_description_protocol... } }
+{ "type": "answer", "sdp": { ... } }
+{ "type": "ice_candidate", "candidate": { ...ice_candidate_details... } }
+{ "type": "user_joined", "userId": "..." }
+{ "type": "user_left", "userId": "..." }
+The client sending the message excludes itself from receiving its own broadcast if Supabase Realtime supports this, or handles it client-side.
+Fallback WebSocket Server (Optional, Feature-Flag Controlled):
+ws.tong-signal.app (custom domain for a dedicated WebSocket server).
+Rationale: If Supabase Realtime exhibits latency > 500ms consistently for signaling messages during teacher sessions, or if its concurrency limits become an issue, a dedicated WebSocket server might be considered.
+Feature Flag: Controlled by remote_config key like use_dedicated_signaling_server: true/false. The WebRTC client layer would choose the signaling mechanism based on this flag.
+8.2 STUN/TURN Infrastructure (for Teacher Video Lessons)
+Essential for NAT traversal in WebRTC, specifically for teacher video sessions.
+STUN (Session Traversal Utilities for NAT): Helps peers discover their public IP address and port.
+Public STUN servers can be used (e.g., stun:stun.l.google.com:19302).
+TURN (Traversal Using Relays around NAT): Acts as a relay when direct peer-to-peer connection fails for video calls. This is critical for call reliability but incurs bandwidth costs.
+Deploy coturn Clusters: Open-source TURN server software.
+Host coturn instances on cloud VMs (e.g., AWS EC2, DigitalOcean Droplets) in multiple regions to minimize latency for users globally:
+us-east (e.g., N. Virginia)
+eu-central (e.g., Frankfurt)
+ap-southeast (e.g., Singapore)
+Configure with authentication (long-term credentials or time-limited credentials generated per call).
+Bandwidth Auditing & Alerts:
+coturn logs contain information about data relayed.
+Daily Cron Job: A script (e.g., Python/Bash running on a utility server or a scheduled Lambda/Cloud Function) parses coturn logs.
+Pipe to CloudWatch Logs (or similar): Aggregate logs for centralized analysis and metric extraction (e.g., total GB relayed per day per region for teacher video calls).
+CloudWatch Alarm / Slack Alert: If daily relayed data > 10 GB/day per region (configurable threshold), send an alert to a Slack channel for investigation. This helps monitor and control TURN server costs for video sessions.
+8.3 WebRTC Client Layer (Swift, for Teacher Video Lessons)
+Abstraction over the underlying WebRTC library (e.g., GoogleWebRTC) for teacher video calls.
+Wrapper Class: A Swift class TeacherVideoCallManager or similar.
+Initializes RTCPeerConnectionFactory, RTCPeerConnection.
+Manages local media streams (RTCAudioTrack, RTCVideoTrack).
+Handles offer/answer creation and ICE candidate gathering for video calls.
+Combine Publishers for State:
+@Published var connectionState: RTCIceConnectionState = .new
+@Published var remoteVideoTrack: RTCVideoTrack?
+@Published var signalingState: RTCSignalingState = .stable
+UI views subscribe to these publishers to react to connection changes, display remote video, etc., during teacher sessions.
+Auto-Reconnect Logic on ICE Failure (for Teacher Video Calls):
+If RTCIceConnectionState transitions to failed:
+Attempt an ICE restart: peerConnection.restartIce().
+If restart fails or is not supported, potentially attempt to tear down and re-establish the RTCPeerConnection after a short delay (with backoff).
+Notify the user (student/teacher) of connection issues.
+This requires careful state management to avoid race conditions.
+9. Scheduling & Booking (Teacher Video Sessions)
+9.1 Teacher Availability Console
+A simple web application for teachers to manage their schedules for video lessons.
+Technology: Next.js (React framework) hosted on Vercel or Netlify.
+Uses supabase-js client library for authentication and data interaction.
+Authentication: Secured by Supabase OAuth or email/password. Teachers log in with their Tong user accounts (assuming a role column in profiles or a separate teachers table linked to auth.users).
+Functionality (CRUD for teacher_slots):
+View: Calendar display (e.g., using FullCalendar.io or a simpler custom grid) showing existing available and booked slots for video lessons.
+Create: Allow teachers to define blocks of availability for video lessons. The system would then break these blocks into bookable slot durations (e.g., 30-minute or 1-hour slots).
+Update/Delete: Modify or remove available (unbooked) video lesson slots.
+RLS: Teachers can only CRUD their own teacher_slots (enforced by RLS policy: USING (auth.uid() = teacher_id)).
+9.2 Student Booking Flow (iOS App for Teacher Video Sessions)
+Fetch Available Slots:
+Client requests available video lesson slots for a specific language_id or teacher_id.
+SELECT ts.*, p.display_name as teacher_name FROM teacher_slots ts JOIN profiles p ON ts.teacher_id = p.user_id WHERE ts.status = 'available' AND ts.start_time >= now() AND ts.language_id = :selected_language_id ORDER BY ts.start_time ASC;
+Timezone Conversion: Server stores start_time / end_time in UTC (TIMESTAMPTZ). Client displays these times converted to the user's local timezone.
+Reserve Slot (Optimistic Lock / Tentative Booking):
+When a student selects a video lesson slot, the client calls an Edge Function rpc.reserve_slot(slot_id_in).
+This function:
+Checks if the slot is still available.
+Updates teacher_slots.status to tentative_booking and sets a tentative_booking_expires_at = now() + INTERVAL '10 minutes'. It also records the student_id attempting the booking.
+Returns success/failure to the client.
+The client then proceeds to Stripe payment for the video lesson.
+A scheduled job or trigger could periodically clean up expired tentative_booking slots, reverting them to available.
+Stripe Payment & Confirmation:
+Client uses Stripe iOS SDK to collect payment details and confirm the payment intent created for this video lesson booking.
+Webhook Success (invoice.payment_succeeded or payment_intent.succeeded):
+The payments/webhook.ts Edge Function (see 6.4) handles the webhook.
+It verifies the payment is for the tentatively booked video lesson slot.
+Atomically:
+Creates a new row in bookings table (status = 'confirmed').
+Updates teacher_slots.status to booked and links it to the new booking_id.
+Sends confirmation push notifications/Realtime messages to student and teacher for the video lesson.
+Rollback/Failure: If payment fails or the 10-minute reservation window expires before payment confirmation, the teacher_slots.status should revert to available. The payments/webhook.ts or a separate cleanup function handles this.
+9.3 Push Notifications (APNs via Firebase Admin SDK or direct APNs)
+For timely alerts and re-engagement.
+Token Storage:
+device_tokens table: (user_id UUID, token TEXT, device_os TEXT, created_at TIMESTAMPTZ), with PRIMARY KEY (user_id, token).
+Client app registers for push notifications, gets the APNs device token, and sends it to an Edge Function to be stored in this table.
+Sending Logic (Edge Function notifications/sendPushNotification.ts):
+Takes user_id, title, body, payload (for deep linking) as input.
+Fetches APNs token(s) for the user_id from device_tokens.
+Uses Firebase Admin SDK (recommended for cross-platform later and easier API):
+admin.messaging().sendToDevice(token, message)
+(Or, direct APNs: construct JSON payload, use HTTP/2 client to connect to APNs server).
+Handles success/failure responses, prunes invalid/expired tokens from device_tokens.
+Triggers for Push Notifications:
+Booking confirmation (student & teacher for video lesson).
+Session reminder (e.g., 1 hour and 15 minutes before video lesson).
+Quick Game: opponent's audio turn submitted.
+Streak reminders (if user hasn't practiced by evening).
+New feature announcements (targeted).
+10. Quality Assurance & Compliance
+10.1 Crash Reporting
+Firebase Crashlytics:
+Integrate Firebase SDK into the iOS app.
+Crashlytics automatically captures and reports crashes.
+Custom Keys & Logs: Log relevant context (e.g., current_view, user_id, active_language) to aid debugging: Crashlytics.crashlytics().setCustomValue(...), Crashlytics.crashlytics().log(...).
+App Version Tags:
+Set CFBundleVersion (build number) and CFBundleShortVersionString (marketing version) in Info.plist.
+Differentiate builds in Crashlytics dashboard by version to track stability of TestFlight vs. App Store releases. This is usually handled automatically by Crashlytics using these plist values.
+10.2 Automated Tests
+Unit Tests (XCTest in Swift, deno test for Edge Functions):
+SM‑2 Math: Verify FlashcardService's SRS calculations for various inputs.
+Elo Calculation: Test the Elo update logic (likely in an Edge Function or a shared utility) with various win/loss scenarios and K-factors to prevent rating inflation/deflation.
+Review Queue Logic: Test ReviewService's logic for selecting and prioritizing cards from learn_errors and card_reviews.
+Edge Function Input Validation: Test how functions handle malformed inputs, missing auth, etc.
+UI Tests (XCUITest in Swift):
+Automate critical user flows:
+Onboarding: Sign up, initial profile setup.
+Paywall: Triggering paywall, (mocked) purchase flow.
+Lesson Completion: Navigating to a lesson, interacting with an exercise, completing it.
+Video Call (Teacher Session): (Challenging to fully automate WebRTC) At least test UI elements of VideoCallView, connecting to a mock signaling server if possible, and basic state changes (connecting, connected, disconnected).
+Integration Tests (Can be part of XCUITest or separate):
+Test interactions between Swift services and (mocked or local) Supabase backend.
+Test Edge Function to Edge Function calls or Edge Function to AI API calls (with mocks for external APIs).
+10.3 Observability
+Monitoring system health and performance.
+Target: Grafana Dashboards: Grafana connects to various data sources to create unified dashboards.
+Postgres Metrics (from Supabase's provided metrics or a custom exporter if needed):
+Transactions Per Second (TPS), query latency, active connections, replication lag, disk/CPU usage.
+Edge Function Metrics (Supabase dashboard provides some, or custom logging to a service Grafana can query):
+p95/p99 invocation latency, error rates, invocation counts.
+AI API Costs & Usage:
+Whisper/DeepSeek: Track token counts/audio minutes processed per function call. Log this data to a Supabase table or a dedicated analytics service. Create metrics for total daily/hourly usage and estimated cost.
+TURN Server Bandwidth (Coturn for Teacher Video Lessons):
+As per 8.2, logs piped to CloudWatch. Create CloudWatch metrics for relayed GB, then visualize in Grafana.
+Stripe MRR/Revenue:
+Stripe provides its own dashboard. If needed, key revenue metrics can be pulled via Stripe API by a scheduled function and stored/visualized in Grafana for a single pane of glass view.
+Alerting (Alertmanager or Cloud-native alerting like CloudWatch Alarms):
+Rule Example: If Edge Function error_rate (for function X) > 5% for 5 minutes, trigger an alert.
+Integration: Alertmanager can send notifications to PagerDuty, Slack, email.
+Other alerts: High DB CPU, low disk space, excessive TURN bandwidth for video calls, API key nearing expiry.
+10.4 Privacy & Compliance
+Handling user data responsibly.
+Transcript Encryption at Rest (Supabase Storage):
+Supabase Storage supports server-side encryption (SSE) with platform-managed keys by default.
+For enhanced control (if required by specific compliance regimes), consider client-side encryption before uploading transcripts/audio, or use customer-managed encryption keys (CMEK) if Supabase offers it. AES-256 is a strong standard.
+GDPR Export Endpoint (functions/account/exportData.ts):
+A secure Edge Function, callable by an authenticated user.
+Gathers all personal data related to the auth.uid():
+profiles record.
+card_reviews, learn_errors, user_band_progress.
+quick_game_turns (audio URLs, transcripts).
+practice_reports (audio URLs, transcripts, feedback).
+bookings, session_analysis (transcripts, feedback).
+Compiles this data into a machine-readable format (JSON or zipped CSVs).
+Provides it as a download or emails a secure link to the user.
+Delete Account Functionality:
+User-initiated from app settings.
+Cascade Delete in Postgres: ON DELETE CASCADE on foreign keys ensures that when a user is deleted from auth.users, their linked data in profiles, card_reviews, etc., is automatically removed.
+Purge AI Data from S3 (Supabase Storage):
+Supabase Storage objects (audio files, transcripts if stored as files) associated with the user need to be deleted.
+This might require an Edge Function that lists and deletes objects based on user_id in their path.
+Alternatively, if objects are not directly linked via path, a user_data_deletion_queue table could log user_ids, and a cleanup function processes it, deleting associated Storage objects.
+S3 Lifecycle Policy (if applicable directly, or mimicked): While Supabase Storage abstracts S3, if you had direct S3 access, you could use lifecycle policies to expire objects. For Supabase, manual deletion via API is typical.
+11. Analytics & Experimentation
+Understanding user behavior and testing hypotheses for features being built.
+11.1 Event Taxonomy
+A structured list of events tracked in the app. Consistency in naming and parameters is key.
+Core Events:
+app_open: App launched from cold start or foregrounded after >30 mins.
+screen_view: (screen_name: String)
+user_signup: (method: 'email' | 'google' | 'apple')
+Learning Loop Events:
+lesson_start: (lesson_id: Int, band_id: Int, language_code: String)
+lesson_complete: (lesson_id: Int, band_id: Int, duration_seconds: Int, errors_made: Int)
+review_session_start: (card_count: Int)
+review_session_complete: (cards_reviewed: Int, duration_seconds: Int, avg_ease_factor: Float)
+card_reviewed: (card_id: Int, quality_response: Int, new_interval: Int)
+boss_battle_start: (band_id: Int)
+boss_battle_complete: (band_id: Int, score_pct: Int, passed: Bool, duration_seconds: Int)
+Social & AI Events:
+voice_note_submit: (context: 'self_study' | 'quick_game_audio', duration_seconds: Int)
+ai_feedback_received: (context: 'self_study' | 'quick_game_audio' | 'live_teacher_session', processing_time_ms: Int)
+quick_game_create: (language_code: String)
+quick_game_turn_submit: (game_id: UUID, turn_number: Int)
+quick_game_complete: (game_id: UUID, result: 'win' | 'loss' | 'draw', elo_change: Int)
+Monetization & Live Session Events:
+video_call_start: (type: 'teacher_session', room_id: UUID) (Note: type is now fixed)
+video_call_complete: (type: 'teacher_session', duration_seconds: Int) (Note: type is now fixed)
+teacher_slot_booked: (teacher_id: UUID, slot_id: UUID, price_usd: Decimal)
+paywall_view: (source_trigger: String)
+purchase_attempt: (product_id: String, price: Decimal)
+purchase_success: (product_id: String, transaction_id: String)
+purchase_fail: (product_id: String, error_code: String)
+Serialization & Transport:
+All events are structured as JSON objects.
+Include common properties with every event: event_name, timestamp_utc, user_id, app_version, os_version, device_model, session_id.
+POSTed batched to TelemetryDeck (a privacy-focused analytics service). TelemetryDeck client SDKs handle batching and sending.
+11.2 A/B Framework
+For controlled experimentation of features during development or phased rollout.
+experiments Table (Supabase):
+exp_id TEXT PRIMARY KEY (e.g., paywall_price_2025_q3)
+name TEXT NOT NULL (Human-readable name)
+description TEXT
+variants JSONB NOT NULL (e.g., {"control": {"weight": 50}, "variant_A": {"weight": 50, "config_key": "paywallPriceTierA"}, "variant_B": {"weight": 0, "config_key": "paywallPriceTierB"}})
+config_key refers to a key in remote_config that holds the actual variant configuration.
+rollout_pct INT DEFAULT 100 CHECK (rollout_pct >= 0 AND rollout_pct <= 100) (Percentage of eligible users included in this experiment).
+is_active BOOLEAN DEFAULT TRUE
+start_date TIMESTAMPTZ, end_date TIMESTAMPTZ
+Client-Side Logic (Swift ExperimentGate):
+Fetch Active Experiments: On app launch (or periodically), fetch all experiments where is_active = TRUEand current date is within start_date/end_date.
+User Bucketing: For each active experiment:
+If user is part of the rollout_pct (e.g., hash(user_id + exp_id) % 100 < rollout_pct).
+Assign user to a variant based on weights (e.g., hash(user_id + exp_id) % total_weight).
+Store the assigned variant (e.g., variant_A) locally for consistency for that user for the duration of the experiment (e.g., in UserDefaults or a local DB).
+Expose Variant Configuration: The ExperimentGate helper provides functions like getPaywallConfig() -> PaywallConfig. Internally, it checks if the user is in an active paywall experiment, gets their assigned variant, and fetches the corresponding configuration from remote_config via the config_key. If not in an experiment or no variant assigned, it returns a default configuration.
+Analytics: All tracked events (11.1) should also include experiment_id and variant_name properties if the user is part of an active experiment when the event occurs. This allows segmenting analytics data by experiment variant to measure impact of features under A/B test.
+Change Log
+v3.0 (May 19 2025) – Rewritten into high‑granularity master spec. Added exhaustive table definitions, UI accessibility notes, observability, quota enforcement, privacy compliance, A/B testing, and explicit OKRs.
+v3.0.1 (Previous Enhanced Version) - Significantly expanded detail across all sections, providing more rationale, examples, deeper technical specifications for database tables, AI prompts, service logic, UI interactions, and operational considerations.
+v3.0.2 (Current Focused Build Specification) - Refined scope: WebRTC video chat is now exclusively for 1-on-1 teacher lessons. Quick Games are asynchronous peer-to-peer audio-only duels. Removed post-build sections (Launch, OKRs) to focus strictly on the "what to build" specification. Updated relevant sections (Overview, UI, AI Pipelines, Real-Time Communication, Analytics) to reflect these changes.

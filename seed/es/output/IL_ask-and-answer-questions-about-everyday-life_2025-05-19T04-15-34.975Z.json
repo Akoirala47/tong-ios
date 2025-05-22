@@ -1,0 +1,421 @@
+{
+  "level_code": "IL",
+  "topic_slug": "ask-and-answer-questions-about-everyday-life",
+  "topic_title": "ask and answer questions about everyday life.",
+  "can_do_statement": "I can ask and answer questions about everyday life.",
+  "lessons": [
+    {
+      "slug": "greetings-introductions",
+      "title": "Greetings and Introductions",
+      "objective": "Ask and respond to basic greetings and introductions.",
+      "cards": [
+        {
+          "front": "¿Cómo estás?",
+          "back": "How are you?",
+          "ipa": "ˈko.mo es.ˈtas",
+          "example_sentence": "¿Cómo estás hoy, Ana?",
+          "grammar_explanation": "Informal greeting; formal is '¿Cómo está?'"
+        },
+        {
+          "front": "Estoy bien, gracias.",
+          "back": "I'm fine, thank you.",
+          "ipa": "es.ˈtoi βjen ˈɡɾa.θjas",
+          "example_sentence": "Estoy bien, gracias por preguntar.",
+          "grammar_explanation": "Use 'gracias' to express gratitude."
+        },
+        {
+          "front": "¿Qué tal?",
+          "back": "What's up?/How's it going?",
+          "ipa": "ke tal",
+          "example_sentence": "¿Qué tal el trabajo?",
+          "grammar_explanation": "Informal greeting, similar to '¿Cómo estás?'"
+        },
+        {
+          "front": "Mucho gusto.",
+          "back": "Nice to meet you.",
+          "ipa": "ˈmu.t͡ʃo ˈɣus.to",
+          "example_sentence": "Mucho gusto, soy Juan.",
+          "grammar_explanation": "Used upon first meeting someone."
+        },
+        {
+          "front": "¿Cómo te llamas?",
+          "back": "What's your name?",
+          "ipa": "ˈko.mo te ˈʝa.mas",
+          "example_sentence": "¿Cómo te llamas? Yo soy María.",
+          "grammar_explanation": "Informal way to ask someone's name."
+        },
+        {
+          "front": "Me llamo...",
+          "back": "My name is...",
+          "ipa": "me ˈʝa.mo",
+          "example_sentence": "Me llamo Carlos.",
+          "grammar_explanation": "Response to '¿Cómo te llamas?'"
+        },
+        {
+          "front": "Encantado/a.",
+          "back": "Pleased to meet you.",
+          "ipa": "en.kan.ˈta.ðo/a",
+          "example_sentence": "Encantada de conocerte.",
+          "grammar_explanation": "Masculine 'Encantado,' feminine 'Encantada.'"
+        },
+        {
+          "front": "Igualmente.",
+          "back": "Likewise/Same here.",
+          "ipa": "i.ɣwal.ˈmen.te",
+          "example_sentence": "-Mucho gusto. -Igualmente.",
+          "grammar_explanation": "Used as a response to 'Mucho gusto' or 'Encantado.'"
+        }
+      ]
+    },
+    {
+      "slug": "daily-routines",
+      "title": "Daily Routines",
+      "objective": "Ask and answer questions about daily activities.",
+      "cards": [
+        {
+          "front": "¿A qué hora te levantas?",
+          "back": "What time do you get up?",
+          "ipa": "a ke ˈo.ɾa te le.ˈβan.tas",
+          "example_sentence": "¿A qué hora te levantas los fines de semana?",
+          "grammar_explanation": "Reflexive verb 'levantarse'."
+        },
+        {
+          "front": "Me levanto a las...",
+          "back": "I get up at...",
+          "ipa": "me le.ˈβan.to a las",
+          "example_sentence": "Me levanto a las siete de la mañana.",
+          "grammar_explanation": "Use 'a las' for specific times."
+        },
+        {
+          "front": "¿Qué haces por la mañana?",
+          "back": "What do you do in the morning?",
+          "ipa": "ke ˈa.θes poɾ la ma.ˈɲa.na",
+          "example_sentence": "¿Qué haces por la mañana antes de ir a trabajar?",
+          "grammar_explanation": "'Por la mañana' means 'in the morning.'"
+        },
+        {
+          "front": "Desayuno y voy a trabajar.",
+          "back": "I have breakfast and go to work.",
+          "ipa": "de.sai.ˈu.no i βoi a tra.βa.ˈxaɾ",
+          "example_sentence": "Normalmente desayuno y voy a trabajar en autobús.",
+          "grammar_explanation": "'Desayunar' means 'to have breakfast.'"
+        },
+        {
+          "front": "¿Trabajas?",
+          "back": "Do you work?",
+          "ipa": "tra.ˈβa.xas",
+          "example_sentence": "¿Trabajas en una oficina o desde casa?",
+          "grammar_explanation": "Simple present tense of 'trabajar' (to work)."
+        },
+        {
+          "front": "Sí, trabajo en...",
+          "back": "Yes, I work at...",
+          "ipa": "si tra.ˈβa.xo en",
+          "example_sentence": "Sí, trabajo en una escuela.",
+          "grammar_explanation": "Answer to '¿Trabajas?'"
+        },
+        {
+          "front": "¿Qué haces por la tarde?",
+          "back": "What do you do in the afternoon?",
+          "ipa": "ke ˈa.θes poɾ la ˈtaɾ.de",
+          "example_sentence": "¿Qué haces por la tarde después del trabajo?",
+          "grammar_explanation": "'Por la tarde' means 'in the afternoon/evening.'"
+        },
+        {
+          "front": "Ceno y veo la tele.",
+          "back": "I have dinner and watch TV.",
+          "ipa": "ˈθe.no i ˈβe.o la ˈte.le",
+          "example_sentence": "Normalmente ceno y veo la tele con mi familia.",
+          "grammar_explanation": "'Cenar' means 'to have dinner.'"
+        },
+        {
+          "front": "¿A qué hora te acuestas?",
+          "back": "What time do you go to bed?",
+          "ipa": "a ke ˈo.ɾa te a.ˈkwes.tas",
+          "example_sentence": "¿A qué hora te acuestas los días laborales?",
+          "grammar_explanation": "Reflexive verb 'acostarse' (to go to bed)."
+        }
+      ]
+    },
+    {
+      "slug": "asking-for-directions",
+      "title": "Asking for Directions",
+      "objective": "Ask for and understand basic directions.",
+      "cards": [
+        {
+          "front": "Perdón, ¿dónde está...?",
+          "back": "Excuse me, where is...?",
+          "ipa": "peɾ.ˈðon ˈdon.de es.ˈta",
+          "example_sentence": "Perdón, ¿dónde está el museo?",
+          "grammar_explanation": "Essential phrase for asking location."
+        },
+        {
+          "front": "¿Cómo llego a...?",
+          "back": "How do I get to...?",
+          "ipa": "ˈko.mo ˈʎe.ɣo a",
+          "example_sentence": "¿Cómo llego a la estación de tren?",
+          "grammar_explanation": "Useful for finding a destination."
+        },
+        {
+          "front": "Está cerca/lejos.",
+          "back": "It's near/far.",
+          "ipa": "es.ˈta ˈθeɾ.ka/ˈle.xos",
+          "example_sentence": "El banco está cerca de aquí.",
+          "grammar_explanation": "Adverbs of proximity."
+        },
+        {
+          "front": "Gira a la derecha/izquierda.",
+          "back": "Turn right/left.",
+          "ipa": "ˈxi.ɾa a la de.ˈɾe.t͡ʃa/is.ˈkjeɾ.ða",
+          "example_sentence": "Gira a la derecha en la próxima calle.",
+          "grammar_explanation": "Basic directional commands."
+        },
+        {
+          "front": "Siga recto.",
+          "back": "Go straight ahead.",
+          "ipa": "ˈsi.ɣa ˈrek.to",
+          "example_sentence": "Siga recto hasta el semáforo.",
+          "grammar_explanation": "Useful for indicating a straight path."
+        },
+        {
+          "front": "En la esquina.",
+          "back": "On the corner.",
+          "ipa": "en la es.ˈki.na",
+          "example_sentence": "La farmacia está en la esquina.",
+          "grammar_explanation": "Common location description."
+        },
+        {
+          "front": "¿Está muy lejos?",
+          "back": "Is it very far?",
+          "ipa": "es.ˈta mwi ˈle.xos",
+          "example_sentence": "¿Está muy lejos de aquí la playa?",
+          "grammar_explanation": "Checking the distance to a place."
+        },
+        {
+          "front": "No, está a cinco minutos.",
+          "back": "No, it's five minutes away.",
+          "ipa": "no es.ˈta a ˈθiŋ.ko mi.ˈnu.tos",
+          "example_sentence": "No, está a cinco minutos caminando.",
+          "grammar_explanation": "Giving an estimate of distance."
+        },
+        {
+          "front": "Gracias por tu ayuda.",
+          "back": "Thank you for your help.",
+          "ipa": "ˈɡɾa.θjas poɾ tu a.ˈʝu.ða",
+          "example_sentence": "Gracias por tu ayuda, ahora sé cómo llegar.",
+          "grammar_explanation": "Expressing gratitude for assistance."
+        }
+      ]
+    },
+    {
+      "slug": "ordering-food-at-a-restaurant",
+      "title": "Ordering Food at a Restaurant",
+      "objective": "Order food and drinks at a restaurant and ask about the menu.",
+      "cards": [
+        {
+          "front": "¿Qué me recomienda?",
+          "back": "What do you recommend?",
+          "ipa": "ke me re.ko.mjen.da",
+          "example_sentence": "¿Qué me recomienda de postre?",
+          "grammar_explanation": "Asking for suggestions."
+        },
+        {
+          "front": "Quisiera...",
+          "back": "I would like...",
+          "ipa": "ki.ˈsje.ɾa",
+          "example_sentence": "Quisiera un café, por favor.",
+          "grammar_explanation": "Polite way to order."
+        },
+        {
+          "front": "Para mí...",
+          "back": "For me...",
+          "ipa": "ˈpa.ɾa mi",
+          "example_sentence": "Para mí, una paella, por favor.",
+          "grammar_explanation": "Specifying your order."
+        },
+        {
+          "front": "¿Qué lleva este plato?",
+          "back": "What's in this dish?",
+          "ipa": "ke ˈʎe.βa ˈes.te ˈpla.to",
+          "example_sentence": "¿Qué lleva este plato? Soy alérgico al pescado.",
+          "grammar_explanation": "Asking about ingredients."
+        },
+        {
+          "front": "¿Tiene opciones vegetarianas?",
+          "back": "Do you have vegetarian options?",
+          "ipa": "ˈtje.ne op.ˈθjo.nes be.xe.ta.ˈɾja.nas",
+          "example_sentence": "¿Tiene opciones vegetarianas en el menú?",
+          "grammar_explanation": "Asking for dietary options."
+        },
+        {
+          "front": "La cuenta, por favor.",
+          "back": "The bill, please.",
+          "ipa": "la ˈkwen.ta poɾ fa.ˈβoɾ",
+          "example_sentence": "La cuenta, por favor, estamos listos para pagar.",
+          "grammar_explanation": "Requesting the bill."
+        },
+        {
+          "front": "Buen provecho.",
+          "back": "Enjoy your meal.",
+          "ipa": "ˈbwen pɾo.ˈβe.t͡ʃo",
+          "example_sentence": "Buen provecho a todos.",
+          "grammar_explanation": "Common phrase said before eating."
+        },
+        {
+          "front": "¿Qué desea tomar?",
+          "back": "What would you like to drink?",
+          "ipa": "ke de.ˈse.a to.ˈmaɾ",
+          "example_sentence": "¿Qué desea tomar, señor?",
+          "grammar_explanation": "Waiter asking for your drink order."
+        },
+        {
+          "front": "Un vaso de agua, por favor.",
+          "back": "A glass of water, please.",
+          "ipa": "un ˈba.so de ˈa.ɣwa poɾ fa.ˈβoɾ",
+          "example_sentence": "Un vaso de agua, por favor, tengo mucha sed.",
+          "grammar_explanation": "Ordering a glass of water."
+        }
+      ]
+    },
+    {
+      "slug": "shopping-for-groceries",
+      "title": "Shopping for Groceries",
+      "objective": "Ask about products and prices at a grocery store.",
+      "cards": [
+        {
+          "front": "¿Cuánto cuesta...?",
+          "back": "How much does... cost?",
+          "ipa": "ˈkwan.to ˈkwes.ta",
+          "example_sentence": "¿Cuánto cuesta un kilo de manzanas?",
+          "grammar_explanation": "Essential for asking price."
+        },
+        {
+          "front": "Cuesta...",
+          "back": "It costs...",
+          "ipa": "ˈkwes.ta",
+          "example_sentence": "Cuesta dos euros.",
+          "grammar_explanation": "Answering about price."
+        },
+        {
+          "front": "¿Dónde puedo encontrar...?",
+          "back": "Where can I find...?",
+          "ipa": "ˈdon.de ˈpwe.ðo en.kon.ˈtɾaɾ",
+          "example_sentence": "¿Dónde puedo encontrar el aceite de oliva?",
+          "grammar_explanation": "Asking for location of items."
+        },
+        {
+          "front": "Necesito...",
+          "back": "I need...",
+          "ipa": "ne.θe.ˈsi.to",
+          "example_sentence": "Necesito leche y pan.",
+          "grammar_explanation": "Expressing your needs."
+        },
+        {
+          "front": "¿Tiene...?",
+          "back": "Do you have...?",
+          "ipa": "ˈtje.ne",
+          "example_sentence": "¿Tiene huevos orgánicos?",
+          "grammar_explanation": "Asking if an item is available."
+        },
+        {
+          "front": "Quisiera un kilo de...",
+          "back": "I would like a kilo of...",
+          "ipa": "ki.ˈsje.ɾa un ˈki.lo de",
+          "example_sentence": "Quisiera un kilo de naranjas.",
+          "grammar_explanation": "Ordering by weight."
+        },
+        {
+          "front": "¿Algo más?",
+          "back": "Anything else?",
+          "ipa": "ˈal.ɣo mas",
+          "example_sentence": "¿Algo más, señor?",
+          "grammar_explanation": "Cashier asking if you need anything else."
+        },
+        {
+          "front": "No, gracias, es todo.",
+          "back": "No, thank you, that's all.",
+          "ipa": "no ˈɡɾa.θjas es ˈto.ðo",
+          "example_sentence": "No, gracias, es todo por hoy.",
+          "grammar_explanation": "Ending the transaction."
+        },
+        {
+          "front": "La bolsa, por favor.",
+          "back": "A bag, please.",
+          "ipa": "la ˈbol.sa poɾ fa.ˈβoɾ",
+          "example_sentence": "La bolsa, por favor, para llevar las compras.",
+          "grammar_explanation": "Requesting a shopping bag."
+        }
+      ]
+    },
+    {
+      "slug": "making-plans-with-friends",
+      "title": "Making Plans with Friends",
+      "objective": "Ask and answer questions to arrange plans with friends.",
+      "cards": [
+        {
+          "front": "¿Qué vas a hacer hoy?",
+          "back": "What are you going to do today?",
+          "ipa": "ke βas a a.ˈθeɾ oi",
+          "example_sentence": "¿Qué vas a hacer hoy por la tarde?",
+          "grammar_explanation": "Inquiring about someone's plans."
+        },
+        {
+          "front": "¿Estás libre mañana?",
+          "back": "Are you free tomorrow?",
+          "ipa": "es.ˈtas ˈli.βɾe ma.ˈɲa.na",
+          "example_sentence": "¿Estás libre mañana para tomar un café?",
+          "grammar_explanation": "Checking availability."
+        },
+        {
+          "front": "¿Te gustaría...?",
+          "back": "Would you like to...?",
+          "ipa": "te ɣus.ta.ˈɾi.a",
+          "example_sentence": "¿Te gustaría ir al cine?",
+          "grammar_explanation": "Making an invitation."
+        },
+        {
+          "front": "Sí, me gustaría mucho.",
+          "back": "Yes, I would like to very much.",
+          "ipa": "si me ɣus.ta.ˈɾi.a ˈmu.t͡ʃo",
+          "example_sentence": "Sí, me gustaría mucho ir contigo.",
+          "grammar_explanation": "Accepting an invitation."
+        },
+        {
+          "front": "Lo siento, no puedo.",
+          "back": "I'm sorry, I can't.",
+          "ipa": "lo ˈsjen.to no ˈpwe.ðo",
+          "example_sentence": "Lo siento, no puedo, tengo mucho trabajo.",
+          "grammar_explanation": "Declining an invitation."
+        },
+        {
+          "front": "¿A qué hora quedamos?",
+          "back": "What time shall we meet?",
+          "ipa": "a ke ˈo.ɾa ke.ˈða.mos",
+          "example_sentence": "¿A qué hora quedamos en el parque?",
+          "grammar_explanation": "Arranging a meeting time."
+        },
+        {
+          "front": "Quedamos a las...",
+          "back": "Let's meet at...",
+          "ipa": "ke.ˈða.mos a las",
+          "example_sentence": "Quedamos a las seis en punto.",
+          "grammar_explanation": "Suggesting a meeting time."
+        },
+        {
+          "front": "¿Dónde nos encontramos?",
+          "back": "Where shall we meet?",
+          "ipa": "ˈdon.de nos en.kon.ˈtɾa.mos",
+          "example_sentence": "¿Dónde nos encontramos, en el centro comercial?",
+          "grammar_explanation": "Arranging a meeting place."
+        },
+        {
+          "front": "¡Nos vemos!",
+          "back": "See you!",
+          "ipa": "nos ˈβe.mos",
+          "example_sentence": "¡Nos vemos mañana!",
+          "grammar_explanation": "Saying goodbye with plans to meet."
+        }
+      ]
+    }
+  ]
+}

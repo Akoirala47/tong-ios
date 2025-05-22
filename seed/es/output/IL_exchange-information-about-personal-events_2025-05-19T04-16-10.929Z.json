@@ -1,0 +1,477 @@
+{
+  "level_code": "IL",
+  "topic_slug": "exchange-information-about-personal-events",
+  "topic_title": "exchange information about personal events.",
+  "can_do_statement": "I can exchange information about personal events.",
+  "lessons": [
+    {
+      "slug": "past-weekend",
+      "title": "What did you do last weekend?",
+      "objective": "To talk about activities from the previous weekend using simple past tense.",
+      "cards": [
+        {
+          "front": "Fin de semana",
+          "back": "Weekend",
+          "ipa": "/ˈfin de seˈma.na/",
+          "example_sentence": "¿Qué hiciste el fin de semana pasado?",
+          "grammar_explanation": "Masculine noun. Usually combined with 'pasado' (past) to refer to the last weekend."
+        },
+        {
+          "front": "Fui",
+          "back": "I went",
+          "ipa": "/fwi/",
+          "example_sentence": "Fui al cine con mis amigos.",
+          "grammar_explanation": "Past tense of the verb 'ir' (to go)."
+        },
+        {
+          "front": "Vi",
+          "back": "I saw",
+          "ipa": "/bi/",
+          "example_sentence": "Vi una película muy buena.",
+          "grammar_explanation": "Past tense of the verb 'ver' (to see)."
+        },
+        {
+          "front": "Comí",
+          "back": "I ate",
+          "ipa": "/koˈmi/",
+          "example_sentence": "Comí tacos en un restaurante.",
+          "grammar_explanation": "Past tense of the verb 'comer' (to eat)."
+        },
+        {
+          "front": "Descansé",
+          "back": "I rested",
+          "ipa": "/des.kanˈse/",
+          "example_sentence": "Descansé en casa todo el día.",
+          "grammar_explanation": "Past tense of the verb 'descansar' (to rest)."
+        },
+        {
+          "front": "Trabajé",
+          "back": "I worked",
+          "ipa": "/tɾa.βaˈxe/",
+          "example_sentence": "Trabajé mucho el sábado.",
+          "grammar_explanation": "Past tense of the verb 'trabajar' (to work)."
+        },
+        {
+          "front": "Estudié",
+          "back": "I studied",
+          "ipa": "/es.tuˈdje/",
+          "example_sentence": "Estudié para el examen de español.",
+          "grammar_explanation": "Past tense of the verb 'estudiar' (to study)."
+        },
+        {
+          "front": "Hablé",
+          "back": "I talked",
+          "ipa": "/a.ˈβle/",
+          "example_sentence": "Hablé con mi familia por teléfono.",
+          "grammar_explanation": "Past tense of the verb 'hablar' (to talk)."
+        },
+        {
+          "front": "Con mis amigos",
+          "back": "With my friends",
+          "ipa": "/kon mis aˈmi.ɣos/",
+          "example_sentence": "Salí con mis amigos el sábado por la noche.",
+          "grammar_explanation": "Common phrase to describe companionship."
+        },
+        {
+          "front": "En casa",
+          "back": "At home",
+          "ipa": "/en ˈka.sa/",
+          "example_sentence": "Me quedé en casa viendo películas.",
+          "grammar_explanation": "Means ‘at home’ or ‘in the house’."
+        }
+      ]
+    },
+    {
+      "slug": "birthdays",
+      "title": "Birthday Celebrations",
+      "objective": "To discuss birthday celebrations and related activities.",
+      "cards": [
+        {
+          "front": "Cumpleaños",
+          "back": "Birthday",
+          "ipa": "/kum.pleˈa.ɲos/",
+          "example_sentence": "¿Cuándo es tu cumpleaños?",
+          "grammar_explanation": "Masculine noun. Can also mean 'birthday party'."
+        },
+        {
+          "front": "Fiesta",
+          "back": "Party",
+          "ipa": "/ˈfjes.ta/",
+          "example_sentence": "Tuve una fiesta para mi cumpleaños.",
+          "grammar_explanation": "Feminine noun. Often includes food, music, and friends."
+        },
+        {
+          "front": "Regalo",
+          "back": "Gift",
+          "ipa": "/reˈɣa.lo/",
+          "example_sentence": "Recibí muchos regalos bonitos.",
+          "grammar_explanation": "Masculine noun. Can be a physical item or an experience."
+        },
+        {
+          "front": "Pastel",
+          "back": "Cake",
+          "ipa": "/pasˈtel/",
+          "example_sentence": "Comimos pastel de chocolate.",
+          "grammar_explanation": "Masculine noun. A traditional part of birthday celebrations."
+        },
+        {
+          "front": "Velas",
+          "back": "Candles",
+          "ipa": "/ˈbe.las/",
+          "example_sentence": "Soplé las velas del pastel.",
+          "grammar_explanation": "Feminine plural noun. Represents the age of the person."
+        },
+        {
+          "front": "Celebrar",
+          "back": "To celebrate",
+          "ipa": "/θe.leˈβɾaɾ/",
+          "example_sentence": "Vamos a celebrar mi cumpleaños en un restaurante.",
+          "grammar_explanation": "A verb meaning to do something special for an event."
+        },
+        {
+          "front": "Familia",
+          "back": "Family",
+          "ipa": "/faˈmi.lja/",
+          "example_sentence": "Pasé mi cumpleaños con mi familia.",
+          "grammar_explanation": "Feminine noun. Important part of celebrations."
+        },
+        {
+          "front": "Amigos",
+          "back": "Friends",
+          "ipa": "/aˈmi.ɣos/",
+          "example_sentence": "Invité a mis amigos a mi fiesta.",
+          "grammar_explanation": "Masculine plural noun. Companions and social support."
+        },
+        {
+          "front": "Un año más",
+          "back": "One more year",
+          "ipa": "/un ˈa.ɲo mas/",
+          "example_sentence": "Cumplo un año más.",
+          "grammar_explanation": "Common phrase when referring to getting older."
+        },
+        {
+          "front": "¡Feliz cumpleaños!",
+          "back": "Happy birthday!",
+          "ipa": "/feˈliz kum.pleˈa.ɲos/",
+          "example_sentence": "¡Feliz cumpleaños! ¡Que tengas un buen día!",
+          "grammar_explanation": "Standard birthday greeting."
+        }
+      ]
+    },
+    {
+      "slug": "vacation-plans",
+      "title": "Planning a Vacation",
+      "objective": "To discuss plans and expectations for an upcoming vacation.",
+      "cards": [
+        {
+          "front": "Vacaciones",
+          "back": "Vacation",
+          "ipa": "/ba.kaˈθjo.nes/",
+          "example_sentence": "¿Adónde vas de vacaciones?",
+          "grammar_explanation": "Feminine plural noun. Usually refers to a longer break."
+        },
+        {
+          "front": "Viajar",
+          "back": "To travel",
+          "ipa": "/bjaˈxaɾ/",
+          "example_sentence": "Quiero viajar a España.",
+          "grammar_explanation": "A verb used for longer trips."
+        },
+        {
+          "front": "Avión",
+          "back": "Airplane",
+          "ipa": "/aˈβjon/",
+          "example_sentence": "Vamos en avión.",
+          "grammar_explanation": "Masculine noun. Means of transport."
+        },
+        {
+          "front": "Hotel",
+          "back": "Hotel",
+          "ipa": "/oˈtel/",
+          "example_sentence": "Nos quedaremos en un hotel cerca de la playa.",
+          "grammar_explanation": "Masculine noun. Place to stay."
+        },
+        {
+          "front": "Playa",
+          "back": "Beach",
+          "ipa": "/ˈpla.ʝa/",
+          "example_sentence": "Quiero ir a la playa todos los días.",
+          "grammar_explanation": "Feminine noun. Popular vacation destination."
+        },
+        {
+          "front": "Reservar",
+          "back": "To reserve",
+          "ipa": "/re.seɾˈβaɾ/",
+          "example_sentence": "Necesito reservar el hotel pronto.",
+          "grammar_explanation": "A verb meaning to book something in advance."
+        },
+        {
+          "front": "Maleta",
+          "back": "Suitcase",
+          "ipa": "/maˈle.ta/",
+          "example_sentence": "Estoy preparando mi maleta.",
+          "grammar_explanation": "Feminine noun. Used for carrying belongings."
+        },
+        {
+          "front": "Pronto",
+          "back": "Soon",
+          "ipa": "/ˈpɾon.to/",
+          "example_sentence": "Nos vamos de vacaciones pronto.",
+          "grammar_explanation": "Adverb meaning in the near future."
+        },
+        {
+          "front": "Relajarme",
+          "back": "To relax",
+          "ipa": "/re.laˈxaɾ.me/",
+          "example_sentence": "Quiero relajarme en mis vacaciones.",
+          "grammar_explanation": "Reflexive verb. ‘Me relajaré’ means ‘I will relax’."
+        },
+        {
+          "front": "Disfrutar",
+          "back": "To enjoy",
+          "ipa": "/dis.fɾuˈtaɾ/",
+          "example_sentence": "Quiero disfrutar mucho.",
+          "grammar_explanation": "A verb meaning to experience happiness and pleasure from something."
+        }
+      ]
+    },
+    {
+      "slug": "holidays",
+      "title": "Discussing Holidays",
+      "objective": "To exchange information about holidays and traditions.",
+      "cards": [
+        {
+          "front": "Día festivo",
+          "back": "Holiday",
+          "ipa": "/ˈdi.a fesˈti.βo/",
+          "example_sentence": "¿Cuál es tu día festivo favorito?",
+          "grammar_explanation": "Masculine noun. A day of celebration or remembrance."
+        },
+        {
+          "front": "Navidad",
+          "back": "Christmas",
+          "ipa": "/na.βiˈdad/",
+          "example_sentence": "Celebramos la Navidad con la familia.",
+          "grammar_explanation": "Feminine noun. Christian holiday."
+        },
+        {
+          "front": "Año Nuevo",
+          "back": "New Year",
+          "ipa": "/ˈa.ɲo ˈnwe.βo/",
+          "example_sentence": "Celebramos el Año Nuevo con fuegos artificiales.",
+          "grammar_explanation": "Masculine noun. Celebration of a new calendar year."
+        },
+        {
+          "front": "Tradición",
+          "back": "Tradition",
+          "ipa": "/tɾa.ðiˈθjon/",
+          "example_sentence": "¿Cuál es tu tradición favorita?",
+          "grammar_explanation": "Feminine noun. Customs or beliefs passed down generations."
+        },
+        {
+          "front": "Regalos",
+          "back": "Gifts",
+          "ipa": "/reˈɣa.los/",
+          "example_sentence": "Intercambiamos regalos en Navidad.",
+          "grammar_explanation": "Masculine plural noun. Often exchanged during holidays."
+        },
+        {
+          "front": "Comida",
+          "back": "Food",
+          "ipa": "/koˈmi.ða/",
+          "example_sentence": "La comida de Navidad es deliciosa.",
+          "grammar_explanation": "Feminine noun. Special dishes prepared during holidays."
+        },
+        {
+          "front": "Familiares",
+          "back": "Relatives",
+          "ipa": "/fa.miˈlja.ɾes/",
+          "example_sentence": "Visitamos a nuestros familiares durante las fiestas.",
+          "grammar_explanation": "Masculine plural noun. Members of the family."
+        },
+        {
+          "front": "Celebración",
+          "back": "Celebration",
+          "ipa": "/θe.le.βɾaˈθjon/",
+          "example_sentence": "La celebración fue muy divertida.",
+          "grammar_explanation": "Feminine noun. A festive event."
+        },
+        {
+          "front": "Decoraciones",
+          "back": "Decorations",
+          "ipa": "/de.ko.ɾaˈθjo.nes/",
+          "example_sentence": "Pusimos decoraciones en casa.",
+          "grammar_explanation": "Feminine plural noun. Used to decorate the house for holidays."
+        },
+        {
+          "front": "Recuerdos",
+          "back": "Memories",
+          "ipa": "/reˈkwer.dos/",
+          "example_sentence": "Tenemos muchos buenos recuerdos de las fiestas.",
+          "grammar_explanation": "Masculine plural noun. Things we remember."
+        }
+      ]
+    },
+    {
+      "slug": "recent-activities",
+      "title": "Talking about Recent Activities",
+      "objective": "To share information about activities recently undertaken using present perfect tense.",
+      "cards": [
+        {
+          "front": "He",
+          "back": "I have",
+          "ipa": "/e/",
+          "example_sentence": "He ido al cine.",
+          "grammar_explanation": "Auxiliary verb for the present perfect tense."
+        },
+        {
+          "front": "Has",
+          "back": "You have",
+          "ipa": "/as/",
+          "example_sentence": "¿Has visitado Madrid?",
+          "grammar_explanation": "Auxiliary verb for the present perfect tense (informal)."
+        },
+        {
+          "front": "Hemos",
+          "back": "We have",
+          "ipa": "/ˈe.mos/",
+          "example_sentence": "Hemos comido paella.",
+          "grammar_explanation": "Auxiliary verb for the present perfect tense."
+        },
+        {
+          "front": "Viajado",
+          "back": "Traveled",
+          "ipa": "/bjaˈxa.ðo/",
+          "example_sentence": "He viajado por Europa.",
+          "grammar_explanation": "Past participle of 'viajar'."
+        },
+        {
+          "front": "Visto",
+          "back": "Seen",
+          "ipa": "/ˈbis.to/",
+          "example_sentence": "He visto esa película.",
+          "grammar_explanation": "Past participle of 'ver'."
+        },
+        {
+          "front": "Hecho",
+          "back": "Done/Made",
+          "ipa": "/ˈe.t͡ʃo/",
+          "example_sentence": "He hecho la tarea.",
+          "grammar_explanation": "Past participle of 'hacer'."
+        },
+        {
+          "front": "Comido",
+          "back": "Eaten",
+          "ipa": "/koˈmi.do/",
+          "example_sentence": "He comido tacos.",
+          "grammar_explanation": "Past participle of 'comer'."
+        },
+        {
+          "front": "Visitado",
+          "back": "Visited",
+          "ipa": "/bi.siˈta.do/",
+          "example_sentence": "He visitado a mi abuela.",
+          "grammar_explanation": "Past participle of 'visitar'."
+        },
+        {
+          "front": "Últimamente",
+          "back": "Lately/Recently",
+          "ipa": "/ˈul.ti.maˈmen.te/",
+          "example_sentence": "Últimamente he estado muy ocupado.",
+          "grammar_explanation": "Adverb indicating recent timeframe."
+        },
+        {
+          "front": "Nunca",
+          "back": "Never",
+          "ipa": "/ˈnun.ka/",
+          "example_sentence": "Nunca he ido a Argentina.",
+          "grammar_explanation": "Adverb indicating absence of previous experience."
+        }
+      ]
+    },
+    {
+      "slug": "daily-routines",
+      "title": "Describing Daily Routines",
+      "objective": "To describe daily activities and routines using reflexive verbs and adverbs of frequency.",
+      "cards": [
+        {
+          "front": "Me levanto",
+          "back": "I get up",
+          "ipa": "/me leˈβan.to/",
+          "example_sentence": "Me levanto a las siete.",
+          "grammar_explanation": "Reflexive verb 'levantarse'."
+        },
+        {
+          "front": "Me ducho",
+          "back": "I take a shower",
+          "ipa": "/me ˈðu.t͡ʃo/",
+          "example_sentence": "Me ducho por la mañana.",
+          "grammar_explanation": "Reflexive verb 'ducharse'."
+        },
+        {
+          "front": "Desayuno",
+          "back": "I have breakfast",
+          "ipa": "/de.saˈʝu.no/",
+          "example_sentence": "Desayuno cereales y café.",
+          "grammar_explanation": "Verb 'desayunar'."
+        },
+        {
+          "front": "Voy al trabajo",
+          "back": "I go to work",
+          "ipa": "/ˈboi al tɾaˈβa.xo/",
+          "example_sentence": "Voy al trabajo en autobús.",
+          "grammar_explanation": "Phrase indicating going to work."
+        },
+        {
+          "front": "Almuerzo",
+          "back": "I have lunch",
+          "ipa": "/alˈmwer.θo/",
+          "example_sentence": "Almuerzo a la una.",
+          "grammar_explanation": "Verb 'almorzar'."
+        },
+        {
+          "front": "Ceno",
+          "back": "I have dinner",
+          "ipa": "/ˈθe.no/",
+          "example_sentence": "Ceno con mi familia.",
+          "grammar_explanation": "Verb 'cenar'."
+        },
+        {
+          "front": "Me acuesto",
+          "back": "I go to bed",
+          "ipa": "/me aˈkwes.to/",
+          "example_sentence": "Me acuesto a las diez.",
+          "grammar_explanation": "Reflexive verb 'acostarse'."
+        },
+        {
+          "front": "Siempre",
+          "back": "Always",
+          "ipa": "/ˈsjem.pɾe/",
+          "example_sentence": "Siempre tomo café por la mañana.",
+          "grammar_explanation": "Adverb of frequency."
+        },
+        {
+          "front": "A veces",
+          "back": "Sometimes",
+          "ipa": "/a ˈbe.θes/",
+          "example_sentence": "A veces voy al cine.",
+          "grammar_explanation": "Adverb of frequency."
+        },
+        {
+          "front": "Normalmente",
+          "back": "Normally/Usually",
+          "ipa": "/noɾ.malˈmen.te/",
+          "example_sentence": "Normalmente leo antes de dormir.",
+          "grammar_explanation": "Adverb of frequency."
+        },
+        {
+          "front": "Nunca",
+          "back": "Never",
+          "ipa": "/ˈnun.ka/",
+          "example_sentence": "Nunca llego tarde al trabajo.",
+          "grammar_explanation": "Adverb of frequency"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "level_code": "NM",
+  "topic_slug": "state-the-time",
+  "topic_title": "state the time.",
+  "can_do_statement": "I can state the time.",
+  "lessons": [
+    {
+      "slug": "numbers-1-12",
+      "title": "Numbers 1-12 for Time",
+      "objective": "To learn and use numbers 1-12 to tell time.",
+      "cards": [
+        {
+          "front": "uno",
+          "back": "one",
+          "ipa": "/ˈu.no/",
+          "example_sentence": "Es la una de la tarde.",
+          "grammar_explanation": "Used for 'one o'clock', agrees in gender."
+        },
+        {
+          "front": "dos",
+          "back": "two",
+          "ipa": "/dos/",
+          "example_sentence": "Son las dos de la mañana.",
+          "grammar_explanation": "Used for 'two o'clock'."
+        },
+        {
+          "front": "tres",
+          "back": "three",
+          "ipa": "/tɾes/",
+          "example_sentence": "Son las tres de la tarde.",
+          "grammar_explanation": "Used for 'three o'clock'."
+        },
+        {
+          "front": "cuatro",
+          "back": "four",
+          "ipa": "/ˈkwa.tɾo/",
+          "example_sentence": "Son las cuatro de la noche.",
+          "grammar_explanation": "Used for 'four o'clock'."
+        },
+        {
+          "front": "cinco",
+          "back": "five",
+          "ipa": "/ˈθin.ko/",
+          "example_sentence": "Son las cinco de la mañana.",
+          "grammar_explanation": "Used for 'five o'clock'."
+        },
+        {
+          "front": "seis",
+          "back": "six",
+          "ipa": "/seis/",
+          "example_sentence": "Son las seis de la tarde.",
+          "grammar_explanation": "Used for 'six o'clock'."
+        },
+        {
+          "front": "siete",
+          "back": "seven",
+          "ipa": "/ˈsje.te/",
+          "example_sentence": "Son las siete de la mañana.",
+          "grammar_explanation": "Used for 'seven o'clock'."
+        },
+        {
+          "front": "ocho",
+          "back": "eight",
+          "ipa": "/ˈo.t͡ʃo/",
+          "example_sentence": "Son las ocho de la noche.",
+          "grammar_explanation": "Used for 'eight o'clock'."
+        },
+        {
+          "front": "nueve",
+          "back": "nine",
+          "ipa": "/ˈnwe.βe/",
+          "example_sentence": "Son las nueve de la mañana.",
+          "grammar_explanation": "Used for 'nine o'clock'."
+        },
+        {
+          "front": "diez",
+          "back": "ten",
+          "ipa": "/djes/",
+          "example_sentence": "Son las diez de la noche.",
+          "grammar_explanation": "Used for 'ten o'clock'."
+        },
+        {
+          "front": "once",
+          "back": "eleven",
+          "ipa": "/ˈon.θe/",
+          "example_sentence": "Son las once de la mañana.",
+          "grammar_explanation": "Used for 'eleven o'clock'."
+        },
+        {
+          "front": "doce",
+          "back": "twelve",
+          "ipa": "/ˈdo.θe/",
+          "example_sentence": "Son las doce de la noche.",
+          "grammar_explanation": "Used for 'twelve o'clock'."
+        }
+      ]
+    },
+    {
+      "slug": "o-clock-and-half-past",
+      "title": "O'Clock and Half Past",
+      "objective": "To tell time on the hour and half-hour.",
+      "cards": [
+        {
+          "front": "Es la una.",
+          "back": "It's one o'clock.",
+          "ipa": "/es la ˈu.na/",
+          "example_sentence": "Es la una de la tarde.",
+          "grammar_explanation": "Use 'Es la' for one o'clock."
+        },
+        {
+          "front": "Son las dos.",
+          "back": "It's two o'clock.",
+          "ipa": "/son las dos/",
+          "example_sentence": "Son las dos de la mañana.",
+          "grammar_explanation": "Use 'Son las' for other hours."
+        },
+        {
+          "front": "y media",
+          "back": "and a half/thirty",
+          "ipa": "/i ˈme.dja/",
+          "example_sentence": "Son las tres y media.",
+          "grammar_explanation": "Add 'y media' for half past the hour."
+        },
+        {
+          "front": "Es la una y media.",
+          "back": "It's half past one.",
+          "ipa": "/es la ˈu.na i ˈme.dja/",
+          "example_sentence": "Es la una y media de la tarde.",
+          "grammar_explanation": "Half past one."
+        },
+        {
+          "front": "Son las cuatro y media.",
+          "back": "It's half past four.",
+          "ipa": "/son las ˈkwa.tɾo i ˈme.dja/",
+          "example_sentence": "Son las cuatro y media de la noche.",
+          "grammar_explanation": "Half past four."
+        },
+        {
+          "front": "Es",
+          "back": "It is",
+          "ipa": "/es/",
+          "example_sentence": "Es tarde.",
+          "grammar_explanation": "A form of the verb 'ser' (to be)."
+        },
+        {
+          "front": "Son",
+          "back": "They are",
+          "ipa": "/son/",
+          "example_sentence": "Son las ocho.",
+          "grammar_explanation": "A form of the verb 'ser' (to be)."
+        },
+        {
+          "front": "la",
+          "back": "the (feminine)",
+          "ipa": "/la/",
+          "example_sentence": "Es la una.",
+          "grammar_explanation": "Feminine definite article."
+        },
+        {
+          "front": "y",
+          "back": "and",
+          "ipa": "/i/",
+          "example_sentence": "Son las dos y media",
+          "grammar_explanation": "Used to join time phrases"
+        }
+      ]
+    },
+    {
+      "slug": "quarter-past-and-to",
+      "title": "Quarter Past and To",
+      "objective": "To tell time using 'y cuarto' and 'menos cuarto'.",
+      "cards": [
+        {
+          "front": "y cuarto",
+          "back": "quarter past",
+          "ipa": "/i ˈkwaɾ.to/",
+          "example_sentence": "Son las cinco y cuarto.",
+          "grammar_explanation": "Add 'y cuarto' for quarter past."
+        },
+        {
+          "front": "menos cuarto",
+          "back": "quarter to",
+          "ipa": "/ˈme.nos ˈkwaɾ.to/",
+          "example_sentence": "Son las seis menos cuarto.",
+          "grammar_explanation": "Use 'menos cuarto' for quarter to."
+        },
+        {
+          "front": "Son las ocho y cuarto.",
+          "back": "It's quarter past eight.",
+          "ipa": "/son las ˈo.t͡ʃo i ˈkwaɾ.to/",
+          "example_sentence": "Son las ocho y cuarto de la mañana.",
+          "grammar_explanation": "Quarter past eight."
+        },
+        {
+          "front": "Son las diez menos cuarto.",
+          "back": "It's quarter to ten.",
+          "ipa": "/son las djes ˈme.nos ˈkwaɾ.to/",
+          "example_sentence": "Son las diez menos cuarto de la noche.",
+          "grammar_explanation": "Quarter to ten."
+        },
+        {
+          "front": "cuarto",
+          "back": "quarter",
+          "ipa": "/ˈkwaɾ.to/",
+          "example_sentence": "Son las nueve y cuarto.",
+          "grammar_explanation": "Refers to a quarter of an hour."
+        },
+        {
+          "front": "menos",
+          "back": "minus/less",
+          "ipa": "/ˈme.nos/",
+          "example_sentence": "Son las siete menos cuarto.",
+          "grammar_explanation": "Indicates time before the hour."
+        },
+        {
+          "front": "cinco",
+          "back": "five",
+          "ipa": "/ˈθin.ko/",
+          "example_sentence": "Son las cinco y cuarto.",
+          "grammar_explanation": "Also previously introduced"
+        },
+        {
+          "front": "nueve",
+          "back": "nine",
+          "ipa": "/ˈnwe.βe/",
+          "example_sentence": "Son las nueve menos cuarto.",
+          "grammar_explanation": "Also previously introduced"
+        }
+      ]
+    },
+    {
+      "slug": "minutes-1-30",
+      "title": "Minutes 1-30",
+      "objective": "To express minutes past the hour (1-30).",
+      "cards": [
+        {
+          "front": "diez",
+          "back": "ten",
+          "ipa": "/djes/",
+          "example_sentence": "Son las tres y diez.",
+          "grammar_explanation": "Ten minutes past."
+        },
+        {
+          "front": "veinte",
+          "back": "twenty",
+          "ipa": "/ˈbei̯n.te/",
+          "example_sentence": "Son las cuatro y veinte.",
+          "grammar_explanation": "Twenty minutes past."
+        },
+        {
+          "front": "Son las cinco y diez.",
+          "back": "It's ten past five.",
+          "ipa": "/son las ˈθin.ko i djes/",
+          "example_sentence": "Son las cinco y diez de la tarde.",
+          "grammar_explanation": "Ten minutes past five."
+        },
+        {
+          "front": "Son las seis y veinte.",
+          "back": "It's twenty past six.",
+          "ipa": "/son las seis i ˈbei̯n.te/",
+          "example_sentence": "Son las seis y veinte de la noche.",
+          "grammar_explanation": "Twenty minutes past six."
+        },
+        {
+          "front": "uno",
+          "back": "one",
+          "ipa": "/ˈu.no/",
+          "example_sentence": "Son las dos y uno.",
+          "grammar_explanation": "One minute past"
+        },
+        {
+          "front": "Son las ocho y cinco.",
+          "back": "It's five past eight",
+          "ipa": "/son las ˈo.t͡ʃo i ˈθin.ko/",
+          "example_sentence": "Son las ocho y cinco de la mañana.",
+          "grammar_explanation": "Expressing minutes with 'y'"
+        },
+        {
+          "front": "veinticinco",
+          "back": "twenty-five",
+          "ipa": "/bei̯n.ti.ˈθin.ko/",
+          "example_sentence": "Son las diez y veinticinco.",
+          "grammar_explanation": "Twenty-five minutes past"
+        },
+        {
+          "front": "Son las nueve y veinticinco.",
+          "back": "It's twenty-five past nine.",
+          "ipa": "/son las ˈnwe.βe i bei̯n.ti.ˈθin.ko/",
+          "example_sentence": "Son las nueve y veinticinco de la mañana.",
+          "grammar_explanation": "More specific time."
+        }
+      ]
+    },
+    {
+      "slug": "minutes-31-59",
+      "title": "Minutes 31-59",
+      "objective": "To express minutes until the hour (31-59).",
+      "cards": [
+        {
+          "front": "menos veinte",
+          "back": "twenty to",
+          "ipa": "/ˈme.nos ˈbei̯n.te/",
+          "example_sentence": "Son las cuatro menos veinte.",
+          "grammar_explanation": "Twenty minutes to the hour."
+        },
+        {
+          "front": "menos diez",
+          "back": "ten to",
+          "ipa": "/ˈme.nos djes/",
+          "example_sentence": "Son las cinco menos diez.",
+          "grammar_explanation": "Ten minutes to the hour."
+        },
+        {
+          "front": "Son las siete menos veinte.",
+          "back": "It's twenty to seven.",
+          "ipa": "/son las ˈsje.te ˈme.nos ˈbei̯n.te/",
+          "example_sentence": "Son las siete menos veinte de la tarde.",
+          "grammar_explanation": "Twenty minutes to seven."
+        },
+        {
+          "front": "Son las ocho menos diez.",
+          "back": "It's ten to eight.",
+          "ipa": "/son las ˈo.t͡ʃo ˈme.nos djes/",
+          "example_sentence": "Son las ocho menos diez de la noche.",
+          "grammar_explanation": "Ten minutes to eight."
+        },
+        {
+          "front": "Son las nueve menos cinco.",
+          "back": "It's five to nine.",
+          "ipa": "/son las ˈnwe.βe ˈme.nos ˈθin.ko/",
+          "example_sentence": "Son las nueve menos cinco de la mañana.",
+          "grammar_explanation": "Five minutes to nine."
+        },
+        {
+          "front": "uno",
+          "back": "one",
+          "ipa": "/ˈu.no/",
+          "example_sentence": "Son las dos menos uno.",
+          "grammar_explanation": "One minute to the hour"
+        },
+        {
+          "front": "Son las seis menos uno.",
+          "back": "It's one to six.",
+          "ipa": "/son las seis ˈme.nos ˈu.no/",
+          "example_sentence": "Son las seis menos uno de la tarde.",
+          "grammar_explanation": "Expressing minutes until the hour"
+        },
+        {
+          "front": "treinta",
+          "back": "thirty",
+          "ipa": "/ˈtɾei̯n.ta/",
+          "example_sentence": "Son las ocho menos treinta.",
+          "grammar_explanation": "thirty minutes till the hour"
+        }
+      ]
+    },
+    {
+      "slug": "times-of-day",
+      "title": "Times of Day",
+      "objective": "To specify morning, afternoon, and night.",
+      "cards": [
+        {
+          "front": "de la mañana",
+          "back": "in the morning",
+          "ipa": "/de la ma.ˈɲa.na/",
+          "example_sentence": "Son las ocho de la mañana.",
+          "grammar_explanation": "Used for times in the morning."
+        },
+        {
+          "front": "de la tarde",
+          "back": "in the afternoon/evening",
+          "ipa": "/de la ˈtaɾ.de/",
+          "example_sentence": "Son las tres de la tarde.",
+          "grammar_explanation": "Used for times in the afternoon/evening."
+        },
+        {
+          "front": "de la noche",
+          "back": "at night",
+          "ipa": "/de la ˈno.t͡ʃe/",
+          "example_sentence": "Son las diez de la noche.",
+          "grammar_explanation": "Used for times at night."
+        },
+        {
+          "front": "¿Qué hora es?",
+          "back": "What time is it?",
+          "ipa": "/ke ˈo.ɾa es/",
+          "example_sentence": "¿Qué hora es ahora?",
+          "grammar_explanation": "Common way to ask the time."
+        },
+        {
+          "front": "Es mediodía",
+          "back": "It's noon",
+          "ipa": "/es me.ðjoˈdi.a/",
+          "example_sentence": "Es mediodía en México.",
+          "grammar_explanation": "Refers to the middle of the day"
+        },
+        {
+          "front": "Es medianoche",
+          "back": "It's midnight",
+          "ipa": "/es me.ðjaˈno.t͡ʃe/",
+          "example_sentence": "Es medianoche en España.",
+          "grammar_explanation": "Refers to the middle of the night"
+        },
+        {
+          "front": "hora",
+          "back": "hour",
+          "ipa": "/ˈo.ɾa/",
+          "example_sentence": "¿Qué hora es?",
+          "grammar_explanation": "The unit of time"
+        },
+        {
+          "front": "ahora",
+          "back": "now",
+          "ipa": "/a.ˈo.ɾa/",
+          "example_sentence": "¿Qué hora es ahora?",
+          "grammar_explanation": "A time-related adverb"
+        }
+      ]
+    }
+  ]
+}

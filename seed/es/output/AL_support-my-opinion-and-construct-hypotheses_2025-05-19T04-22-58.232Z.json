@@ -1,0 +1,407 @@
+{
+  "level_code": "AL",
+  "topic_slug": "support-my-opinion-and-construct-hypotheses",
+  "topic_title": "support my opinion and construct hypotheses.",
+  "can_do_statement": "I can support my opinion and construct hypotheses.",
+  "lessons": [
+    {
+      "slug": "opinions-intro",
+      "title": "Introducing Opinions",
+      "objective": "To introduce basic phrases for stating personal opinions.",
+      "cards": [
+        {
+          "front": "Creo que...",
+          "back": "I believe that...",
+          "ipa": "/ˈkɾe.o ke/",
+          "example_sentence": "Creo que es importante reciclar.",
+          "grammar_explanation": "Used to introduce a personal belief or opinion."
+        },
+        {
+          "front": "Pienso que...",
+          "back": "I think that...",
+          "ipa": "/ˈpjen.so ke/",
+          "example_sentence": "Pienso que el arte moderno es fascinante.",
+          "grammar_explanation": "Similar to 'creo que', but can also imply a less firm belief."
+        },
+        {
+          "front": "En mi opinión...",
+          "back": "In my opinion...",
+          "ipa": "/en mi o.pi.ˈnjon/",
+          "example_sentence": "En mi opinión, la comida mexicana es la mejor.",
+          "grammar_explanation": "Formal way to introduce a personal opinion."
+        },
+        {
+          "front": "Me parece que...",
+          "back": "It seems to me that...",
+          "ipa": "/me pa.ˈɾe.θe ke/",
+          "example_sentence": "Me parece que va a llover hoy.",
+          "grammar_explanation": "Expressing an impression or feeling."
+        },
+        {
+          "front": "A mi parecer...",
+          "back": "In my view...",
+          "ipa": "/a mi pa.ɾe.ˈθeɾ/",
+          "example_sentence": "A mi parecer, la solución es más simple.",
+          "grammar_explanation": "Similar to 'en mi opinión', but slightly more personal."
+        },
+        {
+          "front": "Según yo...",
+          "back": "According to me...",
+          "ipa": "/se.ˈɣun ʝo/",
+          "example_sentence": "Según yo, la película es aburrida.",
+          "grammar_explanation": "Emphasizes the personal nature of the opinion."
+        },
+        {
+          "front": "Para mí...",
+          "back": "For me...",
+          "ipa": "/ˈpa.ɾa mi/",
+          "example_sentence": "Para mí, la música es esencial.",
+          "grammar_explanation": "Expressing a personal value or preference."
+        },
+        {
+          "front": "Es importante...",
+          "back": "It's important...",
+          "ipa": "/es im.por.ˈtan.te/",
+          "example_sentence": "Es importante respetar otras culturas.",
+          "grammar_explanation": "Stating the importance of something."
+        }
+      ]
+    },
+    {
+      "slug": "supporting-opinions-reasons",
+      "title": "Supporting Opinions: Giving Reasons",
+      "objective": "To learn phrases for providing reasons to support opinions.",
+      "cards": [
+        {
+          "front": "Porque...",
+          "back": "Because...",
+          "ipa": "/ˈpoɾ.ke/",
+          "example_sentence": "Creo que es importante reciclar porque ayuda al planeta.",
+          "grammar_explanation": "The most common way to give a reason."
+        },
+        {
+          "front": "Ya que...",
+          "back": "Since...",
+          "ipa": "/ʝa ke/",
+          "example_sentence": "Ya que tenemos tiempo, podemos ir al museo.",
+          "grammar_explanation": "Similar to 'porque', but often introduces a more obvious reason."
+        },
+        {
+          "front": "Dado que...",
+          "back": "Given that...",
+          "ipa": "/ˈda.ðo ke/",
+          "example_sentence": "Dado que no hay evidencia, no puedo creerlo.",
+          "grammar_explanation": "More formal way to say 'since' or 'because'."
+        },
+        {
+          "front": "Debido a...",
+          "back": "Due to...",
+          "ipa": "/de.ˈβi.ðo a/",
+          "example_sentence": "El concierto fue cancelado debido a la lluvia.",
+          "grammar_explanation": "Explaining a cause or reason for something."
+        },
+        {
+          "front": "A causa de...",
+          "back": "Because of...",
+          "ipa": "/a ˈkau.sa de/",
+          "example_sentence": "A causa de la crisis, muchas empresas quebraron.",
+          "grammar_explanation": "Similar to 'debido a', but can imply a more negative cause."
+        },
+        {
+          "front": "Por esta razón...",
+          "back": "For this reason...",
+          "ipa": "/poɾ ˈes.ta ra.ˈθon/",
+          "example_sentence": "Por esta razón, debemos actuar ahora.",
+          "grammar_explanation": "Introducing a conclusion based on a previous reason."
+        },
+        {
+          "front": "Es que...",
+          "back": "It's that...",
+          "ipa": "/es ke/",
+          "example_sentence": "No puedo ir, es que estoy enfermo.",
+          "grammar_explanation": "Informal way to give a reason or excuse."
+        },
+        {
+          "front": "Puesto que...",
+          "back": "Since...",
+          "ipa": "/ˈpwes.to ke/",
+          "example_sentence": "Puesto que todos están de acuerdo, sigamos adelante.",
+          "grammar_explanation": "A formal expression equivalent to \"since\" or \"given that\""
+        }
+      ]
+    },
+    {
+      "slug": "hypotheses-possibilities",
+      "title": "Forming Hypotheses: Expressing Possibilities",
+      "objective": "To learn how to express hypotheses and possibilities using subjunctive.",
+      "cards": [
+        {
+          "front": "Es posible que...",
+          "back": "It's possible that...",
+          "ipa": "/es po.ˈsi.βle ke/",
+          "example_sentence": "Es posible que llueva mañana.",
+          "grammar_explanation": "Requires subjunctive in the subordinate clause."
+        },
+        {
+          "front": "Puede ser que...",
+          "back": "It may be that...",
+          "ipa": "/ˈpwe.de seɾ ke/",
+          "example_sentence": "Puede ser que haya tráfico.",
+          "grammar_explanation": "Another common way to express possibility, requires subjunctive."
+        },
+        {
+          "front": "Quizás...",
+          "back": "Maybe...",
+          "ipa": "/ki.ˈθas/",
+          "example_sentence": "Quizás vaya a la fiesta.",
+          "grammar_explanation": "Can be used alone or with 'que' + subjunctive."
+        },
+        {
+          "front": "Tal vez...",
+          "back": "Perhaps...",
+          "ipa": "/tal beθ/",
+          "example_sentence": "Tal vez tenga razón.",
+          "grammar_explanation": "Similar to 'quizás', can be used alone or with 'que' + subjunctive."
+        },
+        {
+          "front": "Es probable que...",
+          "back": "It's probable that...",
+          "ipa": "/es pɾo.ˈβa.βle ke/",
+          "example_sentence": "Es probable que gane el equipo.",
+          "grammar_explanation": "Requires subjunctive, expressing a higher degree of possibility."
+        },
+        {
+          "front": "A lo mejor...",
+          "back": "Maybe/Perhaps...",
+          "ipa": "/a lo me.ˈxoɾ/",
+          "example_sentence": "A lo mejor nos vemos mañana.",
+          "grammar_explanation": "Informal way to express possibility."
+        },
+        {
+          "front": "Si tuviera...",
+          "back": "If I had...",
+          "ipa": "/si tu.ˈβje.ɾa/",
+          "example_sentence": "Si tuviera dinero, viajaría por el mundo.",
+          "grammar_explanation": "Conditional clause using the imperfect subjunctive."
+        },
+        {
+          "front": "En caso de que...",
+          "back": "In case that...",
+          "ipa": "/en ˈka.so de ke/",
+          "example_sentence": "En caso de que llueva, trae un paraguas.",
+          "grammar_explanation": "Requires subjunctive, expressing a contingency."
+        },
+        {
+          "front": "Podría ser que...",
+          "back": "It could be that...",
+          "ipa": "/po.ˈðɾi.a seɾ ke/",
+          "example_sentence": "Podría ser que se hayan retrasado.",
+          "grammar_explanation": "Suggests a possibility, requires subjunctive."
+        }
+      ]
+    },
+    {
+      "slug": "hypotheses-results",
+      "title": "Hypotheses: Expected Results",
+      "objective": "To learn how to explain the potential results of different hypothesis.",
+      "cards": [
+        {
+          "front": "Si... entonces...",
+          "back": "If... then...",
+          "ipa": "/si en.ˈton.θes/",
+          "example_sentence": "Si estudias, entonces aprobarás el examen.",
+          "grammar_explanation": "Basic structure for stating a conditional statement."
+        },
+        {
+          "front": "En ese caso...",
+          "back": "In that case...",
+          "ipa": "/en ˈe.se ˈka.so/",
+          "example_sentence": "En ese caso, tendremos que buscar otra solución.",
+          "grammar_explanation": "Used to introduce a consequence of a previous statement."
+        },
+        {
+          "front": "Por consiguiente...",
+          "back": "Consequently...",
+          "ipa": "/poɾ kon.se.ˈɣjen.te/",
+          "example_sentence": "Por consiguiente, debemos actuar con precaución.",
+          "grammar_explanation": "Formal way to introduce a logical consequence."
+        },
+        {
+          "front": "Por lo tanto...",
+          "back": "Therefore...",
+          "ipa": "/poɾ lo ˈtan.to/",
+          "example_sentence": "Por lo tanto, es necesario tomar medidas.",
+          "grammar_explanation": "Similar to 'por consiguiente', but slightly more common."
+        },
+        {
+          "front": "Así que...",
+          "back": "So...",
+          "ipa": "/a.ˈsi ke/",
+          "example_sentence": "Así que debemos prepararnos bien.",
+          "grammar_explanation": "Informal way to introduce a consequence."
+        },
+        {
+          "front": "De lo contrario...",
+          "back": "Otherwise...",
+          "ipa": "/de lo kon.ˈtɾa.ɾjo/",
+          "example_sentence": "Debemos llegar a tiempo, de lo contrario, perderemos el vuelo.",
+          "grammar_explanation": "Stating the negative consequence of not doing something."
+        },
+        {
+          "front": "En consecuencia...",
+          "back": "As a consequence...",
+          "ipa": "/en kon.se.ˈkwen.θja/",
+          "example_sentence": "En consecuencia, la situación ha empeorado.",
+          "grammar_explanation": "Formal way to introduce a result."
+        },
+        {
+          "front": "Si no...",
+          "back": "If not...",
+          "ipa": "/si no/",
+          "example_sentence": "Si no llueve, iremos al parque.",
+          "grammar_explanation": "Used to introduce the alternative result of an event."
+        }
+      ]
+    },
+    {
+      "slug": "complex-arguments",
+      "title": "Constructing Complex Arguments",
+      "objective": "To integrate various phrases to form comprehensive arguments and support hypotheses.",
+      "cards": [
+        {
+          "front": "No obstante...",
+          "back": "Nevertheless...",
+          "ipa": "/no os.ˈtan.te/",
+          "example_sentence": "La idea es buena, no obstante, tiene algunos problemas.",
+          "grammar_explanation": "Introduces a contrasting point."
+        },
+        {
+          "front": "Sin embargo...",
+          "back": "However...",
+          "ipa": "/sin em.ˈβaɾ.ɣo/",
+          "example_sentence": "Estoy de acuerdo contigo, sin embargo, hay que considerar...",
+          "grammar_explanation": "Similar to 'no obstante', more commonly used."
+        },
+        {
+          "front": "A pesar de...",
+          "back": "Despite...",
+          "ipa": "/a pe.ˈsaɾ de/",
+          "example_sentence": "A pesar de la lluvia, disfrutamos del día.",
+          "grammar_explanation": "Acknowledges a contrary factor."
+        },
+        {
+          "front": "En cambio...",
+          "back": "Instead...",
+          "ipa": "/en ˈkam.bjo/",
+          "example_sentence": "No quiero ir al cine, en cambio, prefiero leer.",
+          "grammar_explanation": "Introduces an alternative."
+        },
+        {
+          "front": "Incluso si...",
+          "back": "Even if...",
+          "ipa": "/in.ˈklu.so si/",
+          "example_sentence": "Incluso si es difícil, debemos intentarlo.",
+          "grammar_explanation": "Emphasizes the importance regardless of difficulty."
+        },
+        {
+          "front": "Además...",
+          "back": "Furthermore...",
+          "ipa": "/a.ˈðe.mas/",
+          "example_sentence": "Además, es importante considerar el costo.",
+          "grammar_explanation": "Adds more information to support the argument."
+        },
+        {
+          "front": "Por otro lado...",
+          "back": "On the other hand...",
+          "ipa": "/poɾ ˈo.tɾo ˈla.do/",
+          "example_sentence": "Por otro lado, hay que considerar los beneficios.",
+          "grammar_explanation": "Introduces a contrasting viewpoint."
+        },
+        {
+          "front": "En resumen...",
+          "back": "In summary...",
+          "ipa": "/en re.ˈsu.men/",
+          "example_sentence": "En resumen, la propuesta es viable.",
+          "grammar_explanation": "Concludes the argument by summarizing key points."
+        }
+      ]
+    },
+    {
+      "slug": "applying-real-world",
+      "title": "Applying Hypotheses to Real-World Scenarios",
+      "objective": "Apply learned vocabulary and grammar to formulate opinions and hypothesis to real-world scenarios.",
+      "cards": [
+        {
+          "front": "Si hubiera sabido...",
+          "back": "If I had known...",
+          "ipa": "/si u.ˈβi.e.ɾa sa.ˈβi.ðo/",
+          "example_sentence": "Si hubiera sabido, habría traído un paraguas.",
+          "grammar_explanation": "Expressing regret about something in the past."
+        },
+        {
+          "front": "Deberíamos considerar...",
+          "back": "We should consider...",
+          "ipa": "/de.βe.ˈɾi.a.mos kon.si.de.ˈɾaɾ/",
+          "example_sentence": "Deberíamos considerar el impacto ambiental.",
+          "grammar_explanation": "Suggesting something to take into account."
+        },
+        {
+          "front": "Es crucial que...",
+          "back": "It's crucial that...",
+          "ipa": "/es kɾu.ˈθjal ke/",
+          "example_sentence": "Es crucial que actuemos ahora para resolver el problema.",
+          "grammar_explanation": "Emphasizing the importance of something."
+        },
+        {
+          "front": "Según los expertos...",
+          "back": "According to the experts...",
+          "ipa": "/se.ˈɣun los eks.ˈpeɾ.tos/",
+          "example_sentence": "Según los expertos, el cambio climático es real.",
+          "grammar_explanation": "Citing an authority to support a statement."
+        },
+        {
+          "front": "En teoría...",
+          "back": "In theory...",
+          "ipa": "/en te.o.ˈɾi.a/",
+          "example_sentence": "En teoría, la solución es simple.",
+          "grammar_explanation": "Expressing what should be the case in an ideal situation."
+        },
+        {
+          "front": "En la práctica...",
+          "back": "In practice...",
+          "ipa": "/en la ˈpɾak.ti.ka/",
+          "example_sentence": "En la práctica, es más complicado.",
+          "grammar_explanation": "Expressing the reality of a situation as opposed to the ideal."
+        },
+        {
+          "front": "A largo plazo...",
+          "back": "In the long term...",
+          "ipa": "/a ˈlaɾ.ɣo ˈpla.θo/",
+          "example_sentence": "A largo plazo, esta inversión será beneficiosa.",
+          "grammar_explanation": "Indicating the effects over an extended period."
+        },
+        {
+          "front": "A corto plazo...",
+          "back": "In the short term...",
+          "ipa": "/a ˈkoɾ.to ˈpla.θo/",
+          "example_sentence": "A corto plazo, tendremos que hacer algunos sacrificios.",
+          "grammar_explanation": "Indicating the immediate effects."
+        },
+        {
+          "front": "Considerando todo...",
+          "back": "Considering everything...",
+          "ipa": "/kon.si.de.ˈɾan.do ˈto.ðo/",
+          "example_sentence": "Considerando todo, creo que debemos aceptar la oferta.",
+          "grammar_explanation": "Weighing all aspects before making a decision."
+        },
+        {
+          "front": "En última instancia...",
+          "back": "Ultimately...",
+          "ipa": "/en ˈul.ti.ma ins.ˈtan.θja/",
+          "example_sentence": "En última instancia, la decisión es tuya.",
+          "grammar_explanation": "Expressing the final outcome or decision."
+        }
+      ]
+    }
+  ]
+}
