@@ -174,7 +174,7 @@ struct FlashcardHomeView: View {
                     Spacer()
                     Picker("Level", selection: $viewModel.selectedLevel) {
                         ForEach(viewModel.levels, id: \.id) { level in
-                            Text(level.name).tag(level as DBLanguageLevel?)
+                            Text(level.name).tag(level as SupabaseLanguageLevel?)
                         }
                     }
                     .pickerStyle(MenuPickerStyle())
@@ -436,7 +436,7 @@ struct ActionCard: View {
 struct LessonDetailView: View {
     let lesson: ContentModels.Lesson?
     let userId: String
-    @State private var flashcards: [DBFlashcard] = []
+    @State private var flashcards: [SupabaseFlashcard] = []
     @State private var isLoading = false
     @Environment(\.presentationMode) private var presentationMode
     
@@ -530,7 +530,7 @@ struct LessonDetailView: View {
 
 // Flashcard Item in Lesson Detail
 struct FlashcardItemView: View {
-    let card: DBFlashcard
+    let card: SupabaseFlashcard
     @State private var isExpanded = false
     
     var body: some View {

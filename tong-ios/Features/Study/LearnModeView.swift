@@ -317,6 +317,12 @@ struct LearnModeView: View {
         self.userId = "preview-user"
         // This initializer is only used for previews
     }
+    
+    // Add the standard initializer for normal usage
+    init(languageCode: String, userId: String, forPreview: Bool = false) {
+        self.languageCode = languageCode
+        self.userId = userId
+    }
 }
 
 // MARK: - Models for Learn Mode

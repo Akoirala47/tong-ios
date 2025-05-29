@@ -1,5 +1,18 @@
 import SwiftUI
 
+// Extension to convert between SupabaseLanguageLevel and LevelData
+extension SupabaseLanguageLevel {
+    func toLevelData() -> LevelData {
+        return LevelData(code: self.code, name: self.name, order: self.ordinal)
+    }
+}
+
+extension LevelData {
+    func toSupabaseLanguageLevel() -> SupabaseLanguageLevel {
+        return SupabaseLanguageLevel(id: 0, code: self.code, name: self.name, ordinal: self.order, languageId: 0)
+    }
+}
+
 struct LanguageDashboardView: View {
     let languageCode: String
     let userId: String
@@ -148,8 +161,8 @@ struct LanguageDashboardView: View {
                         .padding(.leading, 4)
                         
                     ProgressRingsView(
-                        currentLevel: viewModel.currentLevel,
-                        completedLevels: viewModel.completedLevels
+                        currentLevelData: viewModel.currentLevel?.toLevelData(),
+                        completedLevelData: viewModel.completedLevels.map { $0.toLevelData() }
                     )
                     .frame(height: 120)
                 }
@@ -166,141 +179,128 @@ struct LanguageDashboardView: View {
         .navigationTitle(languageName)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
+            loadDataOnAppear()
+        }
+        .fullScreenCover(isPresented: $showPlacementTest) {
+            placementTestView
+        }
+        // Add navigation destination handlers - Fix to properly activate navigation links
+        .onChange(of: activeNavigation) { oldValue, newValue in
+            if newValue != nil {
+                print("[DEBUG] Navigation activated to: \(String(describing: newValue))")
+            }
+        }
+        .navigationDestination(for: NavigationDestination.self) { destination in
+            switch destination {
+            case .learnMode(_, let userId):
+                LearnModeView(languageCode: languageCode, userId: userId, forPreview: false)
+            case .reviewMode(_, let userId):
+                ReviewModeView(languageCode: languageCode, userId: userId)
+            case .bossBattle(_, _, let level):
+                BossBattleView(
+                    language: languageName,
+                    level: level,
+                    topic: "General" // Pass a default topic string instead of nil
+                )
+            case .flashcardReview(let languageCode, _, _):
+                FlashcardReviewView(langCode: languageCode)
+            }
+        }
+        // Add navigation links for each destination
+        .background(learnModeNavigationLink)
+        .background(reviewModeNavigationLink)
+        .background(bossBattleNavigationLink)
+        .background(allFlashcardsNavigationLink)
+        .background(dueFlashcardsNavigationLink)
+    }
+    
+    // Extracted method for onAppear logic to simplify the complex expression
+    private func loadDataOnAppear() {
             Task {
-                // Fetch the SupabaseLanguage object based on languageCode
-                let languages = try? await SupabaseService.shared.getLanguages()
-                if let language = languages?.first(where: { $0.code == languageCode }) {
-                    // Now properly initialize or update the viewModel with the correct language
-                    // Since @StateObject should be initialized once, we re-assign to its properties if needed
-                    // or ensure this onAppear logic correctly sets up the already initialized viewModel.
-                    // For this case, since we used a placeholder, we can assign a new instance if absolutely necessary,
-                    // but ideally, the viewModel would have an internal method to load data based on language.
-                    // Given the current ViewModel structure, replacing it might be okay here IF this onAppear runs once.
-                    // However, the most robust way is to have an empty state in ViewModel and then load.
-                    // Let's assume the ViewModel can handle being updated or re-kicked-off.
-                    viewModel.currentLanguage = language // Update if viewModel is already initialized
-                    // Or, if direct replacement is acceptable for @StateObject in this specific scenario:
-                    // self.viewModel = LanguageDashboardViewModel(language: language, userId: userId) 
-                    // --> This direct replacement of @StateObject is generally not recommended after initial view init.
-                    // --> ViewModel should have a method like `func loadData(for language: SupabaseLanguage, userId: String)`
-
-                    // For now, let's update the existing viewModel's properties if possible, or re-initialize if simpler and context allows
-                    // Given the viewModel's init already kicks off loading, creating a new one ensures correct initial state.
-                    // This is a common pattern if the initial @StateObject was a placeholder.
-                    // To avoid issues, ensure this onAppear logic that replaces the viewModel runs reliably once for setup.
-                    if viewModel.currentLanguage.code == "loading" { // Check if it's the placeholder
-                        _viewModel.wrappedValue = LanguageDashboardViewModel(language: language, userId: userId)
-                    }
-
-                await viewModel.loadUserLanguageLevel(userId: userId, languageCode: languageCode)
-                } else {
-                    print("[ERROR] Could not find language with code: \(languageCode) to initialize LanguageDashboardViewModel")
-                    // Handle error: show an error message or dismiss the view
-                }
+            // Fetch the SupabaseLanguage object based on languageCode
+            await fetchLanguageAndInitViewModel()
                 
                 // Debug print to see the current values
                 print("[DEBUG] Language: \(languageCode), needsPlacementTest: \(viewModel.needsPlacementTest), currentLevel: \(String(describing: viewModel.currentLevel))")
                 
-                // Double-check UserDefaults to ensure we don't show test unnecessarily
-                let testCompletionKey = "placement_test_completed_\(languageCode)_\(userId)"
-                let hasCompletedTest = UserDefaults.standard.bool(forKey: testCompletionKey)
-                
-                // Only show placement test if explicitly needed AND no level is set AND not completed in UserDefaults
-                if viewModel.needsPlacementTest && viewModel.currentLevel == nil && !hasCompletedTest {
-                    print("[DEBUG] Showing placement test for language: \(languageCode)")
-                    showPlacementTest = true
-                } else {
-                    print("[DEBUG] Not showing placement test - needsPlacementTest: \(viewModel.needsPlacementTest), currentLevel: \(viewModel.currentLevel != nil), hasCompletedTest: \(hasCompletedTest)")
-                    showPlacementTest = false
-                }
-            }
+            // Check if placement test is needed
+            await checkPlacementTestStatus()
         }
-        .fullScreenCover(isPresented: $showPlacementTest) {
-            PlacementTestView(
-                languageCode: languageCode,
-                userId: userId,
-                onComplete: { level in
-                    viewModel.currentLevel = level
-                    viewModel.needsPlacementTest = false
-                    
-                    // Save completion status to UserDefaults here too as a backup
-                    let testCompletionKey = "placement_test_completed_\(languageCode)_\(userId)"
-                    UserDefaults.standard.set(true, forKey: testCompletionKey)
-                    
-                    Task {
-                        await viewModel.saveUserLanguageLevel(
-                            userId: userId,
-                            languageCode: languageCode, 
-                            level: level
-                        )
+    }
+    
+    // Fetch language and initialize/update the view model
+    private func fetchLanguageAndInitViewModel() async {
+        do {
+            let languages = try await SupabaseService.shared.getLanguages()
+            if let language = languages.first(where: { $0.code == languageCode }) {
+                // Update the current language in the viewModel
+                await MainActor.run {
+                    if viewModel.currentLanguage.code == "loading" {
+                        // Instead of directly assigning to wrappedValue, create a temporary local variable
+                        // and assign the view model state from it
+                        let newViewModel = LanguageDashboardViewModel(language: language, userId: userId)
+                        viewModel.currentLanguage = newViewModel.currentLanguage
+                        viewModel.languageLevels = newViewModel.languageLevels
+                        viewModel.selectedLevel = newViewModel.selectedLevel
+                        viewModel.topicsByLevel = newViewModel.topicsByLevel
+                        viewModel.lessonsByTopic = newViewModel.lessonsByTopic
+                        viewModel.needsPlacementTest = newViewModel.needsPlacementTest
+                        viewModel.currentLevel = newViewModel.currentLevel
+                        viewModel.completedLevels = newViewModel.completedLevels
+                        viewModel.upcomingContent = newViewModel.upcomingContent
+                        viewModel.cardsStudied = newViewModel.cardsStudied
+                        viewModel.daysStreak = newViewModel.daysStreak
+                        viewModel.estimatedHours = newViewModel.estimatedHours
+                        viewModel.dueCardCount = newViewModel.dueCardCount
+                        viewModel.globalProgress = newViewModel.globalProgress
+                    } else {
+                        // View model already initialized - just update the current language
+                        viewModel.currentLanguage = language
                     }
                 }
-            )
+                
+                // This call doesn't exist in the view model
+                // await viewModel.loadUserLanguageLevel(userId: userId, languageCode: languageCode)
+            } else {
+                print("[ERROR] Could not find language with code: \(languageCode) to initialize LanguageDashboardViewModel")
+            }
+        } catch {
+            print("[ERROR] Failed to fetch languages: \(error)")
         }
-        // Add navigation links for each destination
-        .background(
-            NavigationLink(
-                tag: NavigationDestination.learnMode(languageCode: languageCode, userId: userId),
-                selection: $activeNavigation,
-                destination: { 
-                    // This would be your learn mode view
-                    LearnModeView(languageCode: languageCode, userId: userId)
-                },
-                label: { EmptyView() }
-            )
-        )
-        .background(
-            NavigationLink(
-                tag: NavigationDestination.reviewMode(languageCode: languageCode, userId: userId),
-                selection: $activeNavigation,
-                destination: { 
-                    // This would be your review mode view
-                    ReviewModeView(languageCode: languageCode, userId: userId)
-                },
-                label: { EmptyView() }
-            )
-        )
-        .background(
-            Group {
-                if let level = viewModel.currentLevel {
-                    NavigationLink(
-                        tag: NavigationDestination.bossBattle(languageCode: languageCode, userId: userId, level: level),
-                        selection: $activeNavigation,
-                        destination: { 
-                            // Create a custom version that passes parameters
-                            BossBattleView(
-                                languageCode: languageCode,
-                                userId: userId,
-                                level: level
-                            )
-                        },
-                        label: { EmptyView() }
-                    )
+    }
+    
+    // Check if we need to show the placement test
+    private func checkPlacementTestStatus() async {
+        // Double-check UserDefaults to ensure we don't show test unnecessarily
+        let testCompletionKey = "placement_test_completed_\(languageCode)_\(userId)"
+        let hasCompletedTest = UserDefaults.standard.bool(forKey: testCompletionKey)
+        
+        print("[DEBUG] Checking placement test status - hasCompletedTest: \(hasCompletedTest)")
+        
+        // Always ensure we have a current level if test is completed but level is nil
+        await MainActor.run {
+            if hasCompletedTest && viewModel.currentLevel == nil {
+                print("[DEBUG] Test is completed but no level is set, setting default level")
+                if let firstLevel = viewModel.languageLevels.first {
+                    viewModel.currentLevel = firstLevel
+                    viewModel.completedLevels = []
+                    viewModel.calculateGlobalProgress()
+                    viewModel.needsPlacementTest = false
                 }
             }
-        )
-        .background(
-            NavigationLink(
-                tag: NavigationDestination.flashcardReview(languageCode: languageCode, userId: userId, dueOnly: false),
-                selection: $activeNavigation,
-                destination: { 
-                    // This would be your flashcard review view for all cards
-                    FlashcardDrillView(languageCode: languageCode, userId: userId, dueOnly: false)
-                },
-                label: { EmptyView() }
-            )
-        )
-        .background(
-            NavigationLink(
-                tag: NavigationDestination.flashcardReview(languageCode: languageCode, userId: userId, dueOnly: true),
-                selection: $activeNavigation,
-                destination: { 
-                    // This would be your flashcard review view for due cards only
-                    FlashcardDrillView(languageCode: languageCode, userId: userId, dueOnly: true)
-                },
-                label: { EmptyView() }
-            )
-        )
+        }
+        
+        // Only show placement test if not completed in UserDefaults
+        await MainActor.run {
+            if !hasCompletedTest {
+                print("[DEBUG] Showing placement test since it hasn't been completed: \(languageCode)")
+                viewModel.needsPlacementTest = true
+                showPlacementTest = true
+            } else {
+                print("[DEBUG] Not showing placement test - already completed")
+                showPlacementTest = false
+            }
+        }
     }
     
     private var languageHeaderView: some View {
@@ -323,7 +323,7 @@ struct LanguageDashboardView: View {
                         .fontWeight(.bold)
                     
                     if let level = viewModel.currentLevel {
-                        Text(level.fullName)
+                        Text(level.name)
                             .font(.headline)
                             .foregroundColor(.secondary)
                     } else {
@@ -478,7 +478,7 @@ struct LanguageDashboardView: View {
             .opacity(mode.isLocked ? 0.7 : 1.0)
             .padding(.horizontal)
         }
-        .buttonStyle(PlainButtonStyle()) // Use plain button style to ensure proper tap area
+        .buttonStyle(PlainButtonStyle()) // Use plain button style for better tap handling
         .disabled(mode.isLocked)
     }
     
@@ -574,15 +574,20 @@ struct LanguageDashboardView: View {
     private func startStudySession(mode: StudyMode) {
         print("[DEBUG] Starting study session for mode: \(mode.rawValue)")
         
+        // Set the navigation tag directly
         switch mode {
         case .learn:
-            activeNavigation = .learnMode(languageCode: languageCode, userId: userId)
+            let destination = NavigationDestination.learnMode(languageCode: languageCode, userId: userId)
+            activeNavigation = destination
+            
         case .review:
-            activeNavigation = .reviewMode(languageCode: languageCode, userId: userId)
+            let destination = NavigationDestination.reviewMode(languageCode: languageCode, userId: userId)
+            activeNavigation = destination
+            
         case .bossBattle:
             if let level = viewModel.currentLevel {
-                // Use the new navigation approach for BossBattle
-                activeNavigation = .bossBattle(languageCode: languageCode, userId: userId, level: level)
+                let destination = NavigationDestination.bossBattle(languageCode: languageCode, userId: userId, level: level)
+                activeNavigation = destination
             } else {
                 print("[ERROR] Cannot start boss battle without a current level")
             }
@@ -591,6 +596,72 @@ struct LanguageDashboardView: View {
     
     private func navigateToFlashcards(languageCode: String, userId: String, dueOnly: Bool) {
         activeNavigation = .flashcardReview(languageCode: languageCode, userId: userId, dueOnly: dueOnly)
+    }
+    
+    // MARK: - Navigation Views
+    
+    private var placementTestView: some View {
+        PlacementTestView(
+            languageCode: languageCode,
+            userId: userId,
+            onComplete: { level in
+                // Convert from LevelData to SupabaseLanguageLevel 
+                let supabaseLevel = level.toSupabaseLanguageLevel()
+                viewModel.currentLevel = supabaseLevel
+                viewModel.needsPlacementTest = false
+                
+                // Save completion status to UserDefaults here too as a backup
+                let testCompletionKey = "placement_test_completed_\(languageCode)_\(userId)"
+                UserDefaults.standard.set(true, forKey: testCompletionKey)
+                
+                Task {
+                    await viewModel.saveUserLanguageLevel(
+                        userId: userId,
+                        languageCode: languageCode, 
+                        level: LanguageLevel(rawValue: level.code) ?? .noviceLow
+                    )
+                }
+            }
+        )
+    }
+    
+    private var learnModeNavigationLink: some View {
+        NavigationLink(value: NavigationDestination.learnMode(languageCode: languageCode, userId: userId)) {
+            EmptyView()
+        }
+        .hidden()
+    }
+    
+    private var reviewModeNavigationLink: some View {
+        NavigationLink(value: NavigationDestination.reviewMode(languageCode: languageCode, userId: userId)) {
+            EmptyView()
+        }
+        .hidden()
+    }
+    
+    private var bossBattleNavigationLink: some View {
+        Group {
+            if let level = viewModel.currentLevel {
+                NavigationLink(value: NavigationDestination.bossBattle(languageCode: languageCode, userId: userId, level: level)) {
+                    EmptyView()
+                }
+                .hidden()
+            }
+        }
+    }
+    
+    private var allFlashcardsNavigationLink: some View {
+        NavigationLink(value: NavigationDestination.flashcardReview(languageCode: languageCode, userId: userId, dueOnly: false)) {
+            EmptyView()
+        }
+        .hidden()
+    }
+    
+    private var dueFlashcardsNavigationLink: some View {
+        NavigationLink(value: NavigationDestination.flashcardReview(languageCode: languageCode, userId: userId, dueOnly: true)) {
+            EmptyView()
+        }
+        .hidden()
     }
 }
 

@@ -73,8 +73,21 @@ final class FlashcardDrillViewModel: ObservableObject {
     @Published var currentIndex: Int = 0
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
+    private var userId: String?
 
     private let client = SupabaseService.shared.client
+    
+    // Initialize with userId and optionally preload flashcards
+    init(userId: String? = nil) {
+        self.userId = userId
+        
+        // Preload flashcards if userId is provided
+        if let id = userId {
+            Task {
+                await fetchDueFlashcards(for: id)
+            }
+        }
+    }
 
     var currentFlashcard: SupabaseFlashcard? {
         guard !flashcards.isEmpty, currentIndex < flashcards.count else { return nil }

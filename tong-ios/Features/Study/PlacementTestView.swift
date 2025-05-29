@@ -298,10 +298,10 @@ struct PlacementTestView: View {
     }
     
     private func saveTestResults(level: LevelData) async {
+        print("[DEBUG] Saving placement test results for \(languageCode), level: \(level.code), userId: \(userId)")
+        
         do {
-            print("[DEBUG] Saving placement test results for \(languageCode), level: \(level.code)")
-            
-            // Save both the language level and a record of test completion
+            print("[DEBUG] Attempting to upsert to user_placement_tests...")
             let response = try await SupabaseService.shared.client
                 .from("user_placement_tests")
                 .upsert([
@@ -309,13 +309,17 @@ struct PlacementTestView: View {
                     "lang_code": languageCode,
                     "level_code": level.code,
                     "completed_at": ISO8601DateFormatter().string(from: Date()),
-                    "has_taken_test": "true"  // Keep as string "true" as this is what the DB expects
-                ])
+                    "has_taken_test": "true" // Reverted to string "true"
+                ], onConflict: "user_id,lang_code")
                 .execute()
-            
-            print("[DEBUG] Successfully saved test results: \(String(data: response.data, encoding: .utf8) ?? "no data")")
-            
-            // Also ensure the user_language_levels record exists - this is the primary record used for level tracking
+            print("[DEBUG] Successfully upserted to user_placement_tests. Response: \(String(data: response.data, encoding: .utf8) ?? "no data")")
+        } catch {
+            print("[ERROR] Failed to upsert to user_placement_tests. Language: \(languageCode), Level: \(level.code), User: \(userId). Error: \(error). Localized Description: \(error.localizedDescription)")
+            // Optionally rethrow or handle more gracefully if one part can fail but the other should proceed
+        }
+        
+        do {
+            print("[DEBUG] Attempting to upsert to user_language_levels...")
             let levelResponse = try await SupabaseService.shared.client
                 .from("user_language_levels")
                 .upsert([
@@ -323,20 +327,20 @@ struct PlacementTestView: View {
                     "lang_code": languageCode,
                     "level_code": level.code,
                     "updated_at": ISO8601DateFormatter().string(from: Date())
-                ])
+                ], onConflict: "user_id,lang_code") // Added onConflict
                 .execute()
-            
-            print("[DEBUG] User language level saved: \(String(data: levelResponse.data, encoding: .utf8) ?? "no data")")
-            
-            // Create a key that will be used for UserDefaults to ensure persistence between app launches
-            let testCompletionKey = "placement_test_completed_\(languageCode)_\(userId)"
-            UserDefaults.standard.set(true, forKey: testCompletionKey)
-            
-            print("[DEBUG] Also saved completion status to UserDefaults with key: \(testCompletionKey)")
-            
+            print("[DEBUG] Successfully upserted to user_language_levels. Response: \(String(data: levelResponse.data, encoding: .utf8) ?? "no data")")
         } catch {
-            print("[ERROR] Error saving test results: \(error)")
+            print("[ERROR] Failed to upsert to user_language_levels. Language: \(languageCode), Level: \(level.code), User: \(userId). Error: \(error). Localized Description: \(error.localizedDescription)")
         }
+        
+        // Create a key that will be used for UserDefaults to ensure persistence between app launches
+        // This should ideally only happen if both saves are successful, or handled based on specific requirements.
+        // For now, keeping it outside the individual try-catch blocks for simplicity of this diff.
+        let testCompletionKey = "placement_test_completed_\(languageCode)_\(userId)"
+        UserDefaults.standard.set(true, forKey: testCompletionKey) // Consider if this should be conditional
+        
+        print("[DEBUG] Also saved completion status to UserDefaults with key: \(testCompletionKey)")
     }
     
     private func levelDescriptionView(_ level: LevelData) -> some View {

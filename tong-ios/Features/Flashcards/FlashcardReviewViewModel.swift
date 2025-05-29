@@ -188,7 +188,7 @@ class FlashcardReviewViewModel: ObservableObject {
             newInterval = difficulty == .hard ? 3 : (difficulty == .good ? 4 : 5)
         default:
             // Calculate interval based on previous interval and ease factor
-            let baseInterval = Double(currentInterval) * Double(difficulty.rawValue) * 0.5
+            let baseInterval = Double(currentInterval) * easeFactor // Use the calculated easeFactor
             newInterval = max(1, Int(baseInterval))
         }
         

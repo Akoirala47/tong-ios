@@ -53,10 +53,10 @@ class FlashcardHomeViewModel: ObservableObject, @unchecked Sendable {
         errorMessage = nil
         
         do {
-            let fetchedLanguages = try await SupabaseManager.shared.fetchLanguages()
+            let getLanguages = try await SupabaseService.shared.getLanguages()
             
             DispatchQueue.main.async {
-                self.languages = fetchedLanguages
+                self.languages = getLanguages
                 self.isLoading = false
             }
         } catch {
@@ -72,15 +72,15 @@ class FlashcardHomeViewModel: ObservableObject, @unchecked Sendable {
         errorMessage = nil
         
         do {
-            let fetchedLevels = try await SupabaseManager.shared.fetchLanguageLevels(for: language.id)
+            let getLanguageLevels = try await SupabaseService.shared.getLanguageLevels(for: language.id)
             
             DispatchQueue.main.async {
                 self.selectedLanguage = language
-                self.levels = fetchedLevels
+                self.levels = getLanguageLevels
                 self.isLoading = false
                 
                 // Select first level by default
-                if let firstLevel = fetchedLevels.first {
+                if let firstLevel = getLanguageLevels.first {
                     Task { await self.selectLevel(firstLevel) }
                 }
             }
@@ -104,17 +104,17 @@ class FlashcardHomeViewModel: ObservableObject, @unchecked Sendable {
         errorMessage = nil
         
         do {
-            let fetchedTopics = try await SupabaseManager.shared.fetchTopics(for: level.id)
+            let getTopics = try await SupabaseService.shared.getTopics(for: level.id)
             
             // Convert DBTopic to ContentModels.Topic
-            let contentTopics = fetchedTopics.map { dbTopic -> ContentModels.Topic in
+            let contentTopics = getTopics.map { dbTopic -> ContentModels.Topic in
                 return ContentModels.Topic(
                     id: UUID(),
                     slug: dbTopic.slug,
                     title: dbTopic.title,
-                    canDoStatement: dbTopic.canDoStatement,
+                    canDoStatement: dbTopic.canDoStatement!,
                     levelCode: level.code,
-                    langCode: selectedLanguage?.code ?? "es",
+                    langCode: selectedLanguage!.code,
                     lessons: []
                 )
             }
@@ -144,7 +144,7 @@ class FlashcardHomeViewModel: ObservableObject, @unchecked Sendable {
         do {
             // We need to find the corresponding DBTopic first
             // This is a temporary solution - ideally we'd store the original ID
-            let dbTopics = try await SupabaseManager.shared.fetchTopics(for: selectedLevel?.id ?? 0)
+            let dbTopics = try await SupabaseService.shared.getTopics(for: selectedLevel?.id ?? 0)
             let dbTopic = dbTopics.first { $0.title == topic.title && $0.slug == topic.slug }
             
             guard let dbTopic = dbTopic else {
@@ -155,16 +155,16 @@ class FlashcardHomeViewModel: ObservableObject, @unchecked Sendable {
                 return
             }
             
-            let fetchedLessons = try await SupabaseManager.shared.fetchLessons(for: dbTopic.id)
+            let getLessons = try await SupabaseService.shared.getLessons(for: dbTopic.id)
             
             // Convert DBLesson to ContentModels.Lesson
-            let contentLessons = fetchedLessons.map { dbLesson -> ContentModels.Lesson in
+            let contentLessons = getLessons.map { dbLesson -> ContentModels.Lesson in
                 return ContentModels.Lesson(
                     id: UUID(),
-                    slug: dbLesson.slug,
+                    slug: dbLesson.id,
                     title: dbLesson.title,
-                    objective: dbLesson.objective,
-                    orderInTopic: dbLesson.orderInTopic,
+                    objective: "Learn " + dbLesson.title,
+                    orderInTopic: dbLesson.orderInTopic ?? 1,
                     content: dbLesson.content,
                     cards: []
                 )
@@ -193,7 +193,7 @@ class FlashcardHomeViewModel: ObservableObject, @unchecked Sendable {
     // Returns the number of cards due for review
     func getDueCardCount(for userId: String) async -> Int {
         do {
-            let dueCards = try await SupabaseManager.shared.fetchDueFlashcards(for: userId)
+            let dueCards = try await SupabaseService.shared.getDueFlashcards(for: userId, langCode: "es")
             return dueCards.count
         } catch {
             print("Error fetching due cards: \(error.localizedDescription)")
@@ -202,18 +202,18 @@ class FlashcardHomeViewModel: ObservableObject, @unchecked Sendable {
     }
     
     // Load a specific lesson and its flashcards
-    func loadLesson(_ lesson: ContentModels.Lesson) async -> [DBFlashcard] {
+    func loadLesson(_ lesson: ContentModels.Lesson) async -> [SupabaseFlashcard] {
         do {
             // Find the corresponding DBLesson by title and slug
-            let dbLessons = try await SupabaseManager.shared.fetchLessons(for: 0)  // We need a better way to find the right lesson
-            let dbLesson = dbLessons.first { $0.title == lesson.title && $0.slug == lesson.slug }
+            let dbLessons = try await SupabaseService.shared.getLessons(for: "0")
+            let dbLesson = dbLessons.first { $0.title == lesson.title }
             
             guard let dbLesson = dbLesson else {
                 print("Error: Could not find corresponding database lesson")
                 return []
             }
             
-            let flashcards = try await SupabaseManager.shared.fetchFlashcards(for: dbLesson.id)
+            let flashcards = try await SupabaseService.shared.getFlashcards(for: dbLesson.id)
             return flashcards
         } catch {
             print("Error loading flashcards: \(error.localizedDescription)")

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LessonView: View {
     @StateObject var viewModel: LessonViewModel
-    let lesson: SupabaseLesson
+    @State var lesson: SupabaseLesson
     @State private var lessonFlashcards: [SupabaseFlashcard] = []
     @State private var showPracticeSheet = false
     @State private var practiceCard: SupabaseFlashcard?
@@ -46,7 +46,7 @@ struct LessonView: View {
                 }
                 .padding()
                 .frame(maxWidth: .infinity, minHeight: 300)
-            } else if let lesson = lesson {
+            } else {
                 VStack(alignment: .leading, spacing: 20) {
                     // Progress bar
                     ProgressView(value: progress)
@@ -59,13 +59,6 @@ struct LessonView: View {
                             .font(.title)
                             .fontWeight(.bold)
                             .padding(.horizontal)
-                        
-                        if let subtitle = lesson.subtitle, !subtitle.isEmpty {
-                            Text(subtitle)
-                                .font(.headline)
-                                .foregroundColor(.secondary)
-                                .padding(.horizontal)
-                        }
                         
                         // Markdown content
                         if let content = lesson.content, !content.isEmpty {
@@ -103,7 +96,9 @@ struct LessonView: View {
                         
                         // Practice button
                         Button(action: {
-                            practicePronunciation(for: lesson)
+                            if let firstCard = lessonFlashcards.first {
+                                practicePronunciation(for: firstCard)
+                            }
                         }) {
                             Text("Practice Now")
                                 .font(.headline)
@@ -120,10 +115,6 @@ struct LessonView: View {
                     .cornerRadius(12)
                 }
                 .padding()
-            } else {
-                Text("Lesson not found")
-                    .foregroundColor(.secondary)
-                    .padding()
             }
         }
         .navigationTitle("Lesson")
@@ -215,7 +206,16 @@ struct VocabularyItem: View {
 struct LessonView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LessonView(lesson: SupabaseLesson(id: "1", title: "Sample Lesson", subtitle: "A brief description", content: "This is a sample lesson content."))
+            LessonView(
+                viewModel: LessonViewModel(lesson: SupabaseLesson.example),
+                lesson: SupabaseLesson(
+                    id: "1", 
+                    title: "Sample Lesson", 
+                    content: "This is a sample lesson content.", 
+                    topicId: "topic1",
+                    orderInTopic: 1
+                )
+            )
         }
     }
 } 

@@ -2,12 +2,42 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab = 0
+    @StateObject private var authViewModel = AuthViewModel()
+    @StateObject private var statsViewModel = ProfileStatsViewModel()
+    private let userId = "temp-user-id" // Should come from auth service
+    
+    init() {
+        // Reset all placement tests by clearing UserDefaults keys
+        // TEMPORARY CODE: Remove this after testing
+        // resetAllPlacementTests() // Commented out to prevent reset on every launch
+    }
+    
+    // TEMPORARY: Function to reset all placement tests
+    private func resetAllPlacementTests() {
+        print("[DEBUG] Resetting all placement tests")
+        
+        // Get all UserDefaults keys
+        let dictionary = UserDefaults.standard.dictionaryRepresentation()
+        
+        // Find and remove all placement test keys
+        for (key, _) in dictionary {
+            if key.starts(with: "placement_test_completed_") {
+                print("[DEBUG] Removing placement test key: \(key)")
+                UserDefaults.standard.removeObject(forKey: key)
+            }
+        }
+    }
     
     var body: some View {
         TabView(selection: $selectedTab) {
             // Home Tab
             NavigationView {
-                HomeView()
+                HomeView(
+                    drillViewModel: FlashcardDrillViewModel.mockForPreview(),
+                    statsViewModel: statsViewModel,
+                    userId: authViewModel.currentUserId ?? userId,
+                    authViewModel: authViewModel
+                )
             }
             .tabItem {
                 Label("Home", systemImage: "house")
@@ -16,7 +46,10 @@ struct ContentView: View {
             
             // Study Tab
             NavigationView {
-                StudyView()
+                StudyTabView(
+                    drillViewModel: FlashcardDrillViewModel(userId: authViewModel.currentUserId ?? userId), 
+                    userId: authViewModel.currentUserId ?? userId
+                )
             }
             .tabItem {
                 Label("Study", systemImage: "book")
@@ -43,7 +76,11 @@ struct ContentView: View {
             
             // Profile Tab
             NavigationView {
-                ProfileView()
+                ProfileView(
+                    statsViewModel: statsViewModel,
+                    userId: authViewModel.currentUserId ?? userId,
+                    authViewModel: authViewModel
+                )
             }
             .tabItem {
                 Label("Profile", systemImage: "person")
@@ -57,6 +94,8 @@ struct ContentView: View {
 // MARK: - Home Tab
 
 struct HomeView: View {
+    @ObservedObject var drillViewModel: FlashcardDrillViewModel
+    @ObservedObject var statsViewModel: ProfileStatsViewModel
     @State private var streakDays = 5
     @State private var dailyXP = 30
     @State private var dailyXPGoal = 50
@@ -65,114 +104,30 @@ struct HomeView: View {
     @State private var userLanguages: [SupabaseUserLanguageLevel] = []
     @State private var dueCardCounts: [String: Int] = [:]
     
-    private let userId = "temp-user-id" // Should come from auth service
+    private let userId: String
+    private let authViewModel: AuthViewModel
+    
+    init(drillViewModel: FlashcardDrillViewModel, statsViewModel: ProfileStatsViewModel, userId: String, authViewModel: AuthViewModel) {
+        self.drillViewModel = drillViewModel
+        self.statsViewModel = statsViewModel
+        self.userId = userId
+        self.authViewModel = authViewModel
+    }
     
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
                 // Streak and XP Section
-                HStack(spacing: 16) {
-                    // Streak
-                    VStack {
-                        Image(systemName: "flame.fill")
-                            .font(.system(size: 32))
-                            .foregroundColor(.orange)
-                        Text("\(streakDays) days")
-                            .font(.headline)
-                    }
-                    .frame(maxWidth: .infinity)
-                    
-                    // XP Progress
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Daily XP: \(dailyXP)/\(dailyXPGoal)")
-                            .font(.subheadline)
-                        
-                        ProgressView(value: Double(dailyXP), total: Double(dailyXPGoal))
-                            .progressViewStyle(LinearProgressViewStyle(tint: .blue))
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding()
-                .background(Color(.systemBackground))
-                .cornerRadius(12)
-                .shadow(radius: 2)
+                streakAndXPSection
                 
                 // Language cards
-                if !languages.isEmpty {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("Your Languages")
-                            .font(.headline)
-                            .padding(.horizontal)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 15) {
-                                ForEach(languages) { language in
-                                    let dueCount = dueCardCounts[language.code] ?? 0
-                                    let level = userLanguages.first { $0.langCode == language.code }?.levelCode ?? "NL"
-                                    
-                                    LanguageCard(
-                                        language: language,
-                                        level: level,
-                                        dueCount: dueCount
-                                    )
-                                }
-                            }
-                            .padding(.horizontal)
-                        }
-                    }
-                }
+                languageCardsSection
                 
                 // Quick Actions
-                VStack(spacing: 16) {
-                    if let primaryLanguage = languages.first {
-                        NavigationLink(destination: FlashcardReviewView(langCode: primaryLanguage.code)) {
-                            ActionCard(
-                                title: "Resume \(primaryLanguage.name) Flashcards",
-                                subtitle: "\(dueCardCounts[primaryLanguage.code] ?? 0) cards due today",
-                                iconName: "doc.text",
-                                color: .blue
-                            )
-                        }
-                    } else {
-                        NavigationLink(destination: FlashcardReviewView()) {
-                            ActionCard(
-                                title: "Resume Flashcard Review",
-                                subtitle: "5 cards due today",
-                                iconName: "doc.text",
-                                color: .blue
-                            )
-                        }
-                    }
-                    
-                    ActionCard(
-                        title: "Quick Talk Practice",
-                        subtitle: "Practice with AI tutor",
-                        iconName: "mic.fill",
-                        color: .green
-                    )
-                    
-                    ActionCard(
-                        title: "Daily Quiz",
-                        subtitle: "Test your knowledge",
-                        iconName: "checkmark.circle",
-                        color: .purple
-                    )
-                }
+                quickActionsSection
                 
                 // Tip of the Day
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Tip of the Day")
-                        .font(.headline)
-                    
-                    Text("Try to use new vocabulary in context. Make a simple sentence with each new word you learn.")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(.systemBackground))
-                .cornerRadius(12)
-                .shadow(radius: 2)
+                tipOfTheDaySection
                 
                 // Live Lesson Promo
                 PromoCard(
@@ -190,6 +145,133 @@ struct HomeView: View {
             loadUserData()
         }
     }
+    
+    // MARK: - UI Sections
+    
+    private var streakAndXPSection: some View {
+        HStack(spacing: 16) {
+            // Streak
+            VStack {
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 32))
+                    .foregroundColor(.orange)
+                Text("\(streakDays) days")
+                    .font(.headline)
+            }
+            .frame(maxWidth: .infinity)
+            
+            // XP Progress
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Daily XP: \(dailyXP)/\(dailyXPGoal)")
+                    .font(.subheadline)
+                
+                ProgressView(value: Double(dailyXP), total: Double(dailyXPGoal))
+                    .progressViewStyle(LinearProgressViewStyle(tint: .blue))
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(12)
+        .shadow(radius: 2)
+    }
+    
+    private var languageCardsSection: some View {
+        Group {
+            if !languages.isEmpty {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Your Languages")
+                        .font(.headline)
+                        .padding(.horizontal)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 15) {
+                            ForEach(languages) { language in
+                                // Create local constants for the parameter values
+                                let langCode = language.code
+                                let dueCount = dueCardCounts[langCode] ?? 0
+                                let level = userLanguages.first { $0.langCode == langCode }?.levelCode ?? "NL"
+                                
+                                LanguageCard(
+                                    language: language,
+                                    level: level,
+                                    dueCount: dueCount
+                                )
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                }
+            }
+        }
+    }
+    
+    private var quickActionsSection: some View {
+        VStack(spacing: 16) {
+            if let primaryLanguage = languages.first {
+                let languageCode = primaryLanguage.code
+                let cardCount = dueCardCounts[languageCode] ?? 0
+                
+                NavigationLink(destination: FlashcardReviewView(langCode: languageCode)) {
+                    ActionCard(
+                        icon: "doc.text",
+                        title: "Resume \(primaryLanguage.name) Flashcards",
+                        subtitle: "\(cardCount) cards due today",
+                        buttonText: "Start Review",
+                        buttonAction: {},
+                        backgroundColor: Color.blue
+                    )
+                }
+            } else {
+                NavigationLink(destination: FlashcardReviewView()) {
+                    ActionCard(
+                        icon: "doc.text",
+                        title: "Resume Flashcard Review",
+                        subtitle: "5 cards due today",
+                        buttonText: "Start Review",
+                        buttonAction: {},
+                        backgroundColor: Color.blue
+                    )
+                }
+            }
+            
+            ActionCard(
+                icon: "mic.fill",
+                title: "Quick Talk Practice",
+                subtitle: "Practice with AI tutor",
+                buttonText: "Start Practice",
+                buttonAction: { print("Quick Talk tapped") },
+                backgroundColor: Color.green
+            )
+            
+            ActionCard(
+                icon: "checkmark.circle",
+                title: "Daily Quiz",
+                subtitle: "Test your knowledge",
+                buttonText: "Start Quiz",
+                buttonAction: { print("Daily Quiz tapped") },
+                backgroundColor: Color.purple
+            )
+        }
+    }
+    
+    private var tipOfTheDaySection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Tip of the Day")
+                .font(.headline)
+            
+            Text("Try to use new vocabulary in context. Make a simple sentence with each new word you learn.")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(.systemBackground))
+        .cornerRadius(12)
+        .shadow(radius: 2)
+    }
+    
+    // MARK: - Data Loading
     
     private func loadUserData() {
         isLoading = true
@@ -304,189 +386,225 @@ struct LanguageCard: View {
 
 // MARK: - Study Tab
 
-struct StudyView: View {
-    @State private var selectedSegment = 0
-    @State private var selectedLanguage = "es" // Default to Spanish
-    @State private var isLoading = false
-    @State private var languages: [SupabaseLanguage] = []
-    @State private var errorMessage: String? = nil
+// Removing the current StudyView implementation since we're using StudyTabView
+// struct StudyView: View {
+//     @State private var selectedSegment = 0
+//     @State private var selectedLanguage = "es" // Default to Spanish
+//     @State private var isLoading = false
+//     @State private var languages: [SupabaseLanguage] = []
+//     @State private var errorMessage: String? = nil
     
-    var body: some View {
-        VStack(spacing: 0) {
-            // Language Selector
-            ScrollView(.horizontal, showsIndicators: false) {
-                if isLoading {
-                    HStack {
-                        ProgressView()
-                            .padding()
-                        Text("Loading languages...")
-                            .font(.subheadline)
-                    }
-                    .padding(.horizontal)
-                } else if let error = errorMessage {
-                    HStack {
-                        Image(systemName: "exclamationmark.triangle")
-                            .foregroundColor(.orange)
-                        Text(error)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                        Button("Retry") {
-                            loadLanguages()
-                        }
-                        .font(.caption)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 5)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                    }
-                    .padding(.horizontal)
-                } else {
-                    HStack(spacing: 12) {
-                        ForEach(languages) { language in
-                            Button(action: {
-                                selectedLanguage = language.code
-                            }) {
-                                Text(language.name)
-                                    .font(.headline)
-                                    .padding(.vertical, 8)
-                                    .padding(.horizontal, 16)
-                                    .background(
-                                        Capsule()
-                                            .fill(selectedLanguage == language.code ? Color.blue : Color.blue.opacity(0.1))
-                                    )
-                                    .foregroundColor(selectedLanguage == language.code ? .white : .blue)
-                            }
-                        }
-                    }
-                    .padding(.horizontal)
-                }
-            }
-            .padding(.vertical, 8)
-            .onAppear {
-                loadLanguages()
-            }
+//     var body: some View {
+//         VStack(spacing: 0) {
+//             // Language Selector
+//             languageSelectorView
             
-            // Segmented Control
-            Picker("Study Mode", selection: $selectedSegment) {
-                Text("Lessons").tag(0)
-                Text("Flashcards").tag(1)
-                Text("Saved").tag(2)
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
+//             // Segmented Control
+//             Picker("Study Mode", selection: $selectedSegment) {
+//                 Text("Lessons").tag(0)
+//                 Text("Flashcards").tag(1)
+//                 Text("Saved").tag(2)
+//             }
+//             .pickerStyle(SegmentedPickerStyle())
+//             .padding()
             
-            // Content based on selected segment
-            ScrollView {
-                if selectedSegment == 0 {
-                    // Lessons View
-                    VStack(spacing: 16) {
-                        ForEach(1...5, id: \.self) { num in
-                            LessonCard(
-                                title: "Lesson \(num)",
-                                subtitle: sampleLessonSubtitles[num-1],
-                                progress: Double.random(in: 0...1),
-                                lessonId: "lesson-\(num)"
-                            )
-                        }
-                    }
-                    .padding()
-                } else if selectedSegment == 1 {
-                    // Flashcards View
-                    VStack(spacing: 16) {
-                        NavigationLink(destination: FlashcardReviewView(langCode: selectedLanguage)) {
-                            ActionCard(
-                                title: "Start Flashcard Review",
-                                subtitle: "Review today's due cards",
-                                iconName: "rectangle.fill.on.rectangle.fill",
-                                color: .blue
-                            )
-                        }
-                        
-                        Text("Flashcard Decks")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal)
-                        
-                        ForEach(sampleFlashcardDecks, id: \.title) { deck in
-                            FlashcardDeckRow(
-                                title: deck.title,
-                                count: deck.count,
-                                mastered: deck.mastered
-                            )
-                        }
-                    }
-                    .padding()
-                } else {
-                    // Saved View
-                    VStack(spacing: 20) {
-                        Text("You haven't saved any content yet")
-                            .font(.headline)
-                            .foregroundColor(.secondary)
-                        
-                        Image(systemName: "bookmark.slash")
-                            .font(.system(size: 50))
-                            .foregroundColor(.secondary)
-                            .padding()
-                        
-                        Text("Save lessons or flashcards to access them quickly")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding()
-                }
-            }
-        }
-        .navigationTitle("Study")
-    }
+//             // Content based on selected segment
+//             contentView
+//         }
+//         .navigationTitle("Study")
+//     }
     
-    // MARK: - Data Loading
+//     // MARK: - Extracted Views
     
-    private func loadLanguages() {
-        isLoading = true
-        errorMessage = nil
+//     private var languageSelectorView: some View {
+//         ScrollView(.horizontal, showsIndicators: false) {
+//             if isLoading {
+//                 loadingView
+//             } else if errorMessage != nil {
+//                 errorView
+//             } else {
+//                 languageButtons
+//             }
+//         }
+//         .padding(.vertical, 8)
+//         .onAppear {
+//             loadLanguages()
+//         }
+//     }
+    
+//     private var loadingView: some View {
+//         HStack {
+//             ProgressView()
+//                 .padding()
+//             Text("Loading languages...")
+//                 .font(.subheadline)
+//         }
+//         .padding(.horizontal)
+//     }
+    
+//     private var errorView: some View {
+//         HStack {
+//             Image(systemName: "exclamationmark.triangle")
+//                 .foregroundColor(.orange)
+//             Text(errorMessage ?? "Error loading languages")
+//                 .font(.subheadline)
+//                 .foregroundColor(.secondary)
+//             Button("Retry") {
+//                 loadLanguages()
+//             }
+//             .font(.caption)
+//             .padding(.horizontal, 10)
+//             .padding(.vertical, 5)
+//             .background(Color.blue)
+//             .foregroundColor(.white)
+//             .cornerRadius(8)
+//         }
+//         .padding(.horizontal)
+//     }
+    
+//     private var languageButtons: some View {
+//         HStack(spacing: 12) {
+//             ForEach(languages) { language in
+//                 languageButton(for: language)
+//             }
+//         }
+//         .padding(.horizontal)
+//     }
+    
+//     private func languageButton(for language: SupabaseLanguage) -> some View {
+//         Button(action: {
+//             selectedLanguage = language.code
+//         }) {
+//             Text(language.name)
+//                 .font(.headline)
+//                 .padding(.vertical, 8)
+//                 .padding(.horizontal, 16)
+//                 .background(
+//                     Capsule()
+//                         .fill(selectedLanguage == language.code ? Color.blue : Color.blue.opacity(0.1))
+//                 )
+//                 .foregroundColor(selectedLanguage == language.code ? .white : .blue)
+//         }
+//     }
+    
+//     private var contentView: some View {
+//         ScrollView {
+//             if selectedSegment == 0 {
+//                 lessonsView
+//             } else if selectedSegment == 1 {
+//                 flashcardsView
+//             } else {
+//                 savedView
+//             }
+//         }
+//     }
+    
+//     private var lessonsView: some View {
+//         VStack(spacing: 16) {
+//             ForEach(1...5, id: \.self) { num in
+//                 StudyLessonCard(
+//                     title: "Lesson \(num)",
+//                     subtitle: sampleLessonSubtitles[num-1],
+//                     progress: Double.random(in: 0...1),
+//                     lessonId: "lesson-\(num)"
+//                 )
+//             }
+//         }
+//         .padding()
+//     }
+    
+//     private var flashcardsView: some View {
+//         VStack(spacing: 16) {
+//             NavigationLink(destination: FlashcardReviewView(langCode: selectedLanguage)) {
+//                 StudyActionCard(
+//                     title: "Start Flashcard Review",
+//                     subtitle: "Review today's due cards",
+//                     iconName: "rectangle.fill.on.rectangle.fill",
+//                     color: Color.blue
+//                 )
+//             }
+            
+//             Text("Flashcard Decks")
+//                 .font(.headline)
+//                 .frame(maxWidth: .infinity, alignment: .leading)
+//                 .padding(.horizontal)
+            
+//             ForEach(sampleFlashcardDecks, id: \.title) { deck in
+//                 FlashcardDeckRow(
+//                     title: deck.title,
+//                     count: deck.count,
+//                     mastered: deck.mastered
+//                 )
+//             }
+//         }
+//         .padding()
+//     }
+    
+//     private var savedView: some View {
+//         VStack(spacing: 20) {
+//             Text("You haven't saved any content yet")
+//                 .font(.headline)
+//                 .foregroundColor(.secondary)
+            
+//             Image(systemName: "bookmark.slash")
+//                 .font(.system(size: 50))
+//                 .foregroundColor(.secondary)
+//                 .padding()
+            
+//             Text("Save lessons or flashcards to access them quickly")
+//                 .font(.subheadline)
+//                 .foregroundColor(.secondary)
+//                 .multilineTextAlignment(.center)
+//                 .padding(.horizontal)
+//         }
+//         .frame(maxWidth: .infinity, maxHeight: .infinity)
+//         .padding()
+//     }
+    
+//     // MARK: - Data Loading
+    
+//     private func loadLanguages() {
+//         isLoading = true
+//         errorMessage = nil
         
-        Task {
-            do {
-                let fetchedLanguages = try await SupabaseService.shared.getLanguages()
-                DispatchQueue.main.async {
-                    self.languages = fetchedLanguages
+//         Task {
+//             do {
+//                 let fetchedLanguages = try await SupabaseService.shared.getLanguages()
+//                 DispatchQueue.main.async {
+//                     self.languages = fetchedLanguages
                     
-                    // Select the first language if none is selected
-                    if self.languages.count > 0 && self.selectedLanguage.isEmpty {
-                        self.selectedLanguage = self.languages[0].code
-                    }
+//                     // Select the first language if none is selected
+//                     if self.languages.count > 0 && self.selectedLanguage.isEmpty {
+//                         self.selectedLanguage = self.languages[0].code
+//                     }
                     
-                    self.isLoading = false
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    self.errorMessage = "Failed to load languages"
-                    self.isLoading = false
-                }
-                print("Error loading languages: \(error)")
-            }
-        }
-    }
+//                     self.isLoading = false
+//                 }
+//             } catch {
+//                 DispatchQueue.main.async {
+//                     self.errorMessage = "Failed to load languages"
+//                     self.isLoading = false
+//                 }
+//                 print("Error loading languages: \(error)")
+//             }
+//         }
+//     }
     
-    let sampleLessonSubtitles = [
-        "Greetings and Introductions",
-        "Basic Verbs and Questions",
-        "Food and Dining",
-        "Asking for Directions",
-        "Describing Your Family"
-    ]
+//     let sampleLessonSubtitles = [
+//         "Greetings and Introductions",
+//         "Basic Verbs and Questions",
+//         "Food and Dining",
+//         "Asking for Directions",
+//         "Describing Your Family"
+//     ]
     
-    let sampleFlashcardDecks = [
-        (title: "Beginner Vocabulary", count: 50, mastered: 10),
-        (title: "Common Phrases", count: 30, mastered: 15),
-        (title: "Travel Words", count: 25, mastered: 5),
-        (title: "Food and Dining", count: 40, mastered: 8)
-    ]
-}
+//     let sampleFlashcardDecks = [
+//         (title: "Beginner Vocabulary", count: 50, mastered: 10),
+//         (title: "Common Phrases", count: 30, mastered: 15),
+//         (title: "Travel Words", count: 25, mastered: 5),
+//         (title: "Food and Dining", count: 40, mastered: 8)
+//     ]
+// }
 
 // MARK: - Practice Tab
 
@@ -629,4 +747,80 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-} 
+}
+
+// MARK: - Supporting Views for StudyView
+
+// Simple placeholder for LessonCard in StudyView
+// struct StudyLessonCard: View {
+//     var title: String
+//     var subtitle: String
+//     var progress: Double
+//     var lessonId: String
+    
+//     var body: some View {
+//         NavigationLink(destination: Text("Lesson Content: \(title)").navigationTitle(title)) {
+//             VStack(alignment: .leading, spacing: 8) {
+//                 Text(title)
+//                     .font(.headline)
+                
+//                 Text(subtitle)
+//                     .font(.subheadline)
+//                     .foregroundColor(.secondary)
+                
+//                 ProgressView(value: progress)
+//                     .progressViewStyle(LinearProgressViewStyle())
+//                     .accentColor(Color.blue)
+                
+//                 Text("\(Int(progress * 100))% Complete")
+//                     .font(.caption)
+//                     .foregroundColor(.secondary)
+//             }
+//             .padding()
+//             .background(Color(.systemBackground))
+//             .cornerRadius(12)
+//             .shadow(radius: 2)
+//         }
+//         .buttonStyle(PlainButtonStyle())
+//     }
+// }
+
+// Simple placeholder for ActionCard in StudyView
+// struct StudyActionCard: View {
+//     var title: String
+//     var subtitle: String
+//     var iconName: String
+//     var color: Color
+    
+//     var body: some View {
+//         HStack(spacing: 16) {
+//             // Icon
+//             Image(systemName: iconName)
+//                 .font(.system(size: 24))
+//                 .foregroundColor(.white)
+//                 .frame(width: 48, height: 48)
+//                 .background(color)
+//                 .cornerRadius(10)
+            
+//             // Text
+//             VStack(alignment: .leading, spacing: 4) {
+//                 Text(title)
+//                     .font(.headline)
+//                     .foregroundColor(.primary)
+                
+//                 Text(subtitle)
+//                     .font(.subheadline)
+//                     .foregroundColor(.secondary)
+//             }
+            
+//             Spacer()
+            
+//             Image(systemName: "chevron.right")
+//                 .foregroundColor(.secondary)
+//         }
+//         .padding()
+//         .background(Color(.systemBackground))
+//         .cornerRadius(12)
+//         .shadow(radius: 2)
+//     }
+// } 

@@ -182,18 +182,33 @@ struct tong_iosApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if authViewModel.isAuthenticated {
-                ContentView()
+            ZStack {
+                if showSplash {
+                    SplashView()
                         .environmentObject(authViewModel)
-                    .environmentObject(studyViewModel)
-                    .environment(\.colorScheme, ColorScheme.light) // Explicitly use ColorScheme.light
                         .onAppear {
-                        setupUserData()
+                            // Show splash for 2 seconds
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                                withAnimation {
+                                    showSplash = false
+                                }
+                            }
                         }
                 } else {
-                OnboardingView()
+                    if authViewModel.isAuthenticated {
+                        ContentView()
                             .environmentObject(authViewModel)
-                    .environment(\.colorScheme, ColorScheme.light) // Explicitly use ColorScheme.light
+                            .environmentObject(studyViewModel)
+                            .environment(\.colorScheme, ColorScheme.light) // Explicitly use ColorScheme.light
+                            .onAppear {
+                                setupUserData()
+                            }
+                    } else {
+                        OnboardingView()
+                            .environmentObject(authViewModel)
+                            .environment(\.colorScheme, ColorScheme.light) // Explicitly use ColorScheme.light
+                    }
+                }
             }
         }
     }
