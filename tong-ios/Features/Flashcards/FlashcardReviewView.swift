@@ -16,8 +16,8 @@ struct FlashcardReviewView: View {
     // Animation settings
     private let animationDuration: Double = 0.3
     
-    init(langCode: String = "es") {
-        _viewModel = StateObject(wrappedValue: FlashcardReviewViewModel(langCode: langCode))
+    init(langCode: String = "es", userId: String? = nil, dueOnly: Bool = false) {
+        _viewModel = StateObject(wrappedValue: FlashcardReviewViewModel(langCode: langCode, userId: userId, dueOnly: dueOnly))
     }
     
     var body: some View {

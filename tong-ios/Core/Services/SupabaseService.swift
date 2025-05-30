@@ -287,4 +287,68 @@ class SupabaseService {
                 .execute()
         }
     }
+    
+    // MARK: - User Lesson Progress
+    
+    struct SaveLessonProgressPayload: Encodable {
+        let user_id: String
+        let lesson_id: String
+        let completed: Bool
+        let completed_at: String?
+        let progress_percent: Int?
+    }
+    
+    func saveLessonProgress(userId: String, lessonId: String, completed: Bool, progressPercent: Int? = nil) async throws {
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        let completedAtString = completed ? dateFormatter.string(from: Date()) : nil
+        
+        let payload = SaveLessonProgressPayload(
+            user_id: userId,
+            lesson_id: lessonId,
+            completed: completed,
+            completed_at: completedAtString,
+            progress_percent: progressPercent
+        )
+        
+        try await client
+            .from("user_lesson_progress")
+            .upsert(payload, onConflict: "user_id,lesson_id")
+            .execute()
+    }
+    
+    func getUserLessonProgress(userId: String, lessonId: String) async throws -> Bool {
+        struct LessonProgress: Decodable {
+            let completed: Bool
+        }
+        
+        let result: [LessonProgress] = try await client
+            .from("user_lesson_progress")
+            .select("completed")
+            .eq("user_id", value: userId)
+            .eq("lesson_id", value: lessonId)
+            .limit(1)
+            .execute()
+            .value
+        
+        return result.first?.completed ?? false
+    }
+    
+    func getUserCompletedLessons(userId: String, langCode: String) async throws -> [String] {
+        struct CompletedLesson: Decodable {
+            let lesson_id: String
+        }
+        
+        // This assumes there's a way to filter by language code in the progress table
+        // If not, you may need to join tables or implement different logic
+        let result: [CompletedLesson] = try await client
+            .from("user_lesson_progress")
+            .select("lesson_id")
+            .eq("user_id", value: userId)
+            .eq("completed", value: true)
+            .execute()
+            .value
+        
+        return result.map { $0.lesson_id }
+    }
 }

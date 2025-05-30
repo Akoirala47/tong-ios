@@ -5,6 +5,7 @@ struct LearnModeView: View {
     let userId: String
     
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var viewModel: LearnModeViewModel
     @State private var currentIndex = 0
     @State private var showAnswer = false
     @State private var selectedOption: Int? = nil
@@ -13,68 +14,18 @@ struct LearnModeView: View {
     @State private var lives = 3
     @State private var showCompletion = false
     
-    // Sample vocabulary items - in a real app, these would come from your database
-    let vocabItems: [LearnModeVocabItemData] = [
-        LearnModeVocabItemData(
-            word: "Hola",
-            translation: "Hello",
-            pronunciation: "oh-lah",
-            options: ["Hello", "Goodbye", "Thank you", "Please"],
-            correctOptionIndex: 0
-        ),
-        LearnModeVocabItemData(
-            word: "Gracias",
-            translation: "Thank you",
-            pronunciation: "grah-see-as",
-            options: ["Welcome", "Please", "Thank you", "Good morning"],
-            correctOptionIndex: 2
-        ),
-        LearnModeVocabItemData(
-            word: "Adiós",
-            translation: "Goodbye",
-            pronunciation: "ah-dee-ohs",
-            options: ["Hello", "Welcome", "Goodbye", "Good night"],
-            correctOptionIndex: 2
-        ),
-        LearnModeVocabItemData(
-            word: "Por favor",
-            translation: "Please",
-            pronunciation: "pohr fah-vohr",
-            options: ["Thank you", "Please", "You're welcome", "Excuse me"],
-            correctOptionIndex: 1
-        ),
-        LearnModeVocabItemData(
-            word: "Buenos días",
-            translation: "Good morning",
-            pronunciation: "bweh-nohs dee-ahs",
-            options: ["Good night", "Good afternoon", "Good morning", "Good evening"],
-            correctOptionIndex: 2
-        ),
-        LearnModeVocabItemData(
-            word: "Buenas noches",
-            translation: "Good night",
-            pronunciation: "bweh-nahs noh-chehs",
-            options: ["Good morning", "Good evening", "Good afternoon", "Good night"],
-            correctOptionIndex: 3
-        ),
-        LearnModeVocabItemData(
-            word: "Sí",
-            translation: "Yes",
-            pronunciation: "see",
-            options: ["No", "Maybe", "Yes", "Please"],
-            correctOptionIndex: 2
-        ),
-        LearnModeVocabItemData(
-            word: "No",
-            translation: "No",
-            pronunciation: "noh",
-            options: ["Yes", "No", "Maybe", "Hello"],
-            correctOptionIndex: 1
-        ),
-    ]
-    
     var currentItem: LearnModeVocabItemData {
-        vocabItems[currentIndex]
+        guard !viewModel.vocabItems.isEmpty, currentIndex < viewModel.vocabItems.count else {
+            // Provide a fallback item if no data is available
+            return LearnModeVocabItemData(
+                word: "Loading...",
+                translation: "Please wait",
+                pronunciation: "loading",
+                options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+                correctOptionIndex: 0
+            )
+        }
+        return viewModel.vocabItems[currentIndex]
     }
     
     var body: some View {
@@ -82,13 +33,19 @@ struct LearnModeView: View {
             Color(.systemBackground)
                 .edgesIgnoringSafeArea(.all)
             
-            if showCompletion {
+            if viewModel.isLoading {
+                loadingView
+            } else if viewModel.hasError {
+                errorView
+            } else if showCompletion {
                 completionView
+            } else if viewModel.vocabItems.isEmpty {
+                emptyStateView
             } else {
                 contentView
             }
         }
-        .navigationBarTitle("Learn", displayMode: .inline)
+        .navigationBarTitle(viewModel.currentLesson?.title ?? "Learn", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -97,6 +54,84 @@ struct LearnModeView: View {
                 }
             }
         }
+        .onAppear {
+            loadData()
+        }
+    }
+    
+    private func loadData() {
+        Task {
+            await viewModel.loadUserData()
+        }
+    }
+    
+    private var loadingView: some View {
+        VStack(spacing: 20) {
+            ProgressView()
+                .scaleEffect(1.5)
+            
+            Text("Loading lesson content...")
+                .font(.headline)
+                .foregroundColor(.secondary)
+        }
+    }
+    
+    private var errorView: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "exclamationmark.triangle")
+                .font(.system(size: 50))
+                .foregroundColor(.orange)
+            
+            Text("Failed to load content")
+                .font(.headline)
+            
+            if let errorMessage = viewModel.errorMessage {
+                Text(errorMessage)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+            }
+            
+            Button(action: loadData) {
+                Text("Try Again")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
+            .padding(.top)
+        }
+        .padding()
+    }
+    
+    private var emptyStateView: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "book.closed")
+                .font(.system(size: 50))
+                .foregroundColor(.blue)
+            
+            Text("No lessons available")
+                .font(.headline)
+            
+            Text("There are no lessons available at your current level. Please check back later.")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+            
+            Button(action: { dismiss() }) {
+                Text("Return to Dashboard")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
+            .padding(.top)
+        }
+        .padding()
     }
     
     private var contentView: some View {
@@ -105,11 +140,11 @@ struct LearnModeView: View {
             HStack {
                 // Progress bar
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("\(currentIndex + 1) of \(vocabItems.count)")
+                    Text("\(currentIndex + 1) of \(viewModel.vocabItems.count)")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                     
-                    ProgressView(value: Double(currentIndex + 1), total: Double(vocabItems.count))
+                    ProgressView(value: Double(currentIndex + 1), total: Double(viewModel.vocabItems.count))
                         .progressViewStyle(LinearProgressViewStyle(tint: Color(red: 0.0, green: 0.75, blue: 1.0)))
                 }
                 
@@ -126,6 +161,13 @@ struct LearnModeView: View {
             .padding(.horizontal)
             
             Spacer()
+            
+            // Topic and lesson info
+            if let topic = viewModel.currentTopic {
+                Text(topic.title)
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+            }
             
             // Word card
             VStack(spacing: 16) {
@@ -169,7 +211,7 @@ struct LearnModeView: View {
             // Continue button (shown after answer)
             if showAnswer {
                 Button(action: nextItem) {
-                    Text(currentIndex == vocabItems.count - 1 ? "Finish" : "Continue")
+                    Text(currentIndex == viewModel.vocabItems.count - 1 ? "Finish" : "Continue")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
@@ -251,17 +293,25 @@ struct LearnModeView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
             
-            Text("You've learned \(vocabItems.count) new words.")
-                .font(.title3)
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-                .padding()
+            if let lesson = viewModel.currentLesson, let topic = viewModel.currentTopic {
+                Text("You've completed \"\(lesson.title)\" from \"\(topic.title)\"")
+                    .font(.title3)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding()
+            } else {
+                Text("You've learned \(viewModel.vocabItems.count) new words.")
+                    .font(.title3)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding()
+            }
             
             VStack(alignment: .leading, spacing: 16) {
                 HStack {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.green)
-                    Text("Words learned: \(vocabItems.count)")
+                    Text("Words learned: \(viewModel.vocabItems.count)")
                 }
                 
                 HStack {
@@ -282,7 +332,11 @@ struct LearnModeView: View {
             .cornerRadius(16)
             
             Button(action: {
-                dismiss()
+                // Record completion and update progress
+                Task {
+                    await viewModel.recordLessonCompletion()
+                    dismiss()
+                }
             }) {
                 Text("Return to Dashboard")
                     .font(.headline)
@@ -303,7 +357,7 @@ struct LearnModeView: View {
             selectedOption = nil
             isCorrect = nil
             
-            if currentIndex < vocabItems.count - 1 {
+            if currentIndex < viewModel.vocabItems.count - 1 {
                 currentIndex += 1
             } else {
                 showCompletion = true
@@ -315,13 +369,16 @@ struct LearnModeView: View {
     init(forPreview: Bool) {
         self.languageCode = "es"
         self.userId = "preview-user"
-        // This initializer is only used for previews
+        // Initialize the view model
+        self._viewModel = StateObject(wrappedValue: LearnModeViewModel(userId: "preview-user", languageCode: "es"))
     }
     
     // Add the standard initializer for normal usage
     init(languageCode: String, userId: String, forPreview: Bool = false) {
         self.languageCode = languageCode
         self.userId = userId
+        // Initialize the view model
+        self._viewModel = StateObject(wrappedValue: LearnModeViewModel(userId: userId, languageCode: languageCode))
     }
 }
 

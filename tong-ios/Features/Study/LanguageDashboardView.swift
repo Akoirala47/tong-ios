@@ -23,6 +23,7 @@ struct LanguageDashboardView: View {
     
     // Navigation states
     @State private var activeNavigation: NavigationDestination? = nil
+    @State private var isLoading = false
     
     // Initializer to set up the viewModel
     init(languageCode: String, userId: String) {
@@ -149,32 +150,56 @@ struct LanguageDashboardView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 24) {
-                // Header with language info and proficiency
-                languageHeaderView
-                
-                // ACTFL Progress rings showing current level and completed levels
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("ACTFL Proficiency")
-                        .font(.headline)
-                        .padding(.leading, 4)
-                        
-                    ProgressRingsView(
-                        currentLevelData: viewModel.currentLevel?.toLevelData(),
-                        completedLevelData: viewModel.completedLevels.map { $0.toLevelData() }
-                    )
-                    .frame(height: 120)
+        ZStack {
+            ScrollView {
+                VStack(spacing: 24) {
+                    // Header with language info and proficiency
+                    languageHeaderView
+                    
+                    // ACTFL Progress rings showing current level and completed levels
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("ACTFL Proficiency")
+                            .font(.headline)
+                            .padding(.leading, 4)
+                            
+                        ProgressRingsView(
+                            currentLevelData: viewModel.currentLevel?.toLevelData(),
+                            completedLevelData: viewModel.completedLevels.map { $0.toLevelData() }
+                        )
+                        .frame(height: 120)
+                    }
+                    .padding(.vertical, 8)
+                    
+                    // Study modes
+                    studyModesView
+                    
+                    // Flashcards for current level
+                    flashcardsView
                 }
-                .padding(.vertical, 8)
-                
-                // Study modes
-                studyModesView
-                
-                // Flashcards for current level
-                flashcardsView
+                .padding()
             }
-            .padding()
+            
+            // Overlay a loading indicator when isLoading is true
+            if isLoading {
+                ZStack {
+                    Color.black.opacity(0.3)
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    VStack(spacing: 16) {
+                        ProgressView()
+                            .scaleEffect(1.5)
+                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        
+                        Text("Loading...")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                    }
+                    .padding(24)
+                    .background(Color(.systemBackground).opacity(0.8))
+                    .cornerRadius(12)
+                    .shadow(radius: 10)
+                }
+            }
         }
         .navigationTitle(languageName)
         .navigationBarTitleDisplayMode(.inline)
@@ -188,30 +213,17 @@ struct LanguageDashboardView: View {
         .onChange(of: activeNavigation) { oldValue, newValue in
             if newValue != nil {
                 print("[DEBUG] Navigation activated to: \(String(describing: newValue))")
+                // Show loading indicator briefly then navigate
+                isLoading = true
+                // Short delay to ensure UI updates before navigation
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    isLoading = false
+                }
             }
         }
-        .navigationDestination(for: NavigationDestination.self) { destination in
-            switch destination {
-            case .learnMode(_, let userId):
-                LearnModeView(languageCode: languageCode, userId: userId, forPreview: false)
-            case .reviewMode(_, let userId):
-                ReviewModeView(languageCode: languageCode, userId: userId)
-            case .bossBattle(_, _, let level):
-                BossBattleView(
-                    language: languageName,
-                    level: level,
-                    topic: "General" // Pass a default topic string instead of nil
-                )
-            case .flashcardReview(let languageCode, _, _):
-                FlashcardReviewView(langCode: languageCode)
-            }
-        }
-        // Add navigation links for each destination
-        .background(learnModeNavigationLink)
-        .background(reviewModeNavigationLink)
-        .background(bossBattleNavigationLink)
-        .background(allFlashcardsNavigationLink)
-        .background(dueFlashcardsNavigationLink)
+        // Remove navigationDestination since we're using direct NavigationLinks now
+        // Add navigation links for each destination - these are now overlays on the buttons
+        .background(Color.clear) // Placeholder to replace the previous backgrounds
     }
     
     // Extracted method for onAppear logic to simplify the complex expression
@@ -416,70 +428,134 @@ struct LanguageDashboardView: View {
     }
     
     private func studyModeCard(_ mode: StudyMode) -> some View {
-        Button(action: {
-            print("[DEBUG] Tapped study mode: \(mode.rawValue)")
-            if !mode.isLocked {
-                startStudySession(mode: mode)
-            }
-        }) {
-            VStack(alignment: .leading, spacing: 16) {
-                HStack {
-                    // Mode icon
-                    ZStack {
-                        Circle()
-                            .fill(mode.color.opacity(0.2))
-                            .frame(width: 50, height: 50)
+        ZStack {
+            Button(action: {
+                print("[DEBUG] Tapped study mode: \(mode.rawValue)")
+                if !mode.isLocked {
+                    startStudySession(mode: mode)
+                }
+            }) {
+                VStack(alignment: .leading, spacing: 16) {
+                    HStack {
+                        // Mode icon
+                        ZStack {
+                            Circle()
+                                .fill(mode.color.opacity(0.2))
+                                .frame(width: 50, height: 50)
+                            
+                            Image(systemName: mode.icon)
+                                .foregroundColor(mode.color)
+                                .font(.system(size: 24))
+                        }
                         
-                        Image(systemName: mode.icon)
-                            .foregroundColor(mode.color)
-                            .font(.system(size: 24))
+                        Spacer()
+                        
+                        // Lock indicator
+                        if mode.isLocked {
+                            Image(systemName: "lock.fill")
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(mode.rawValue)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(mode.isLocked ? .gray : .primary)
+                        
+                        Text(mode.description)
+                            .font(.subheadline)
+                            .foregroundColor(mode.isLocked ? .gray : .secondary)
+                            .lineLimit(2)
                     }
                     
                     Spacer()
                     
-                    // Lock indicator
-                    if mode.isLocked {
-                        Image(systemName: "lock.fill")
-                            .foregroundColor(.gray)
+                    // Start button
+                    HStack {
+                        Spacer()
+                        
+                        Text("Start")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 24)
+                            .background(mode.isLocked ? Color.gray : mode.color)
+                            .cornerRadius(20)
                     }
                 }
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(mode.rawValue)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(mode.isLocked ? .gray : .primary)
-                    
-                    Text(mode.description)
-                        .font(.subheadline)
-                        .foregroundColor(mode.isLocked ? .gray : .secondary)
-                        .lineLimit(2)
-                }
-                
-                Spacer()
-                
-                // Start button
-                HStack {
-                    Spacer()
-                    
-                    Text("Start")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 8)
-                        .padding(.horizontal, 24)
-                        .background(mode.isLocked ? Color.gray : mode.color)
-                        .cornerRadius(20)
+                .padding()
+                .frame(maxWidth: .infinity, minHeight: 180)
+                .background(Color(.secondarySystemBackground))
+                .cornerRadius(16)
+                .opacity(mode.isLocked ? 0.7 : 1.0)
+                .padding(.horizontal)
+            }
+            .buttonStyle(PlainButtonStyle()) // Use plain button style for better tap handling
+            .disabled(mode.isLocked)
+            
+            // Add actual NavigationLinks based on mode type
+            Group {
+                switch mode {
+                case .learn:
+                    NavigationLink(
+                        destination: LearnModeView(languageCode: languageCode, userId: userId, forPreview: false),
+                        isActive: Binding(
+                            get: { 
+                                if case .learnMode(_, _) = activeNavigation {
+                                    return true
+                                }
+                                return false
+                            },
+                            set: { newValue in
+                                if !newValue {
+                                    activeNavigation = nil
+                                }
+                            }
+                        ),
+                        label: { EmptyView() }
+                    )
+                case .review:
+                    NavigationLink(
+                        destination: ReviewModeView(languageCode: languageCode, userId: userId),
+                        isActive: Binding(
+                            get: { 
+                                if case .reviewMode(_, _) = activeNavigation {
+                                    return true
+                                }
+                                return false
+                            },
+                            set: { newValue in
+                                if !newValue {
+                                    activeNavigation = nil
+                                }
+                            }
+                        ),
+                        label: { EmptyView() }
+                    )
+                case .bossBattle:
+                    if let level = viewModel.currentLevel {
+                        NavigationLink(
+                            destination: BossBattleView(language: languageName, level: level, topic: "General"),
+                            isActive: Binding(
+                                get: { 
+                                    if case .bossBattle(_, _, _) = activeNavigation {
+                                        return true
+                                    }
+                                    return false
+                                },
+                                set: { newValue in
+                                    if !newValue {
+                                        activeNavigation = nil
+                                    }
+                                }
+                            ),
+                            label: { EmptyView() }
+                        )
+                    }
                 }
             }
-            .padding()
-            .frame(maxWidth: .infinity, minHeight: 180)
-            .background(Color(.secondarySystemBackground))
-            .cornerRadius(16)
-            .opacity(mode.isLocked ? 0.7 : 1.0)
-            .padding(.horizontal)
         }
-        .buttonStyle(PlainButtonStyle()) // Use plain button style for better tap handling
-        .disabled(mode.isLocked)
     }
     
     private var flashcardsView: some View {
@@ -510,61 +586,121 @@ struct LanguageDashboardView: View {
                     .cornerRadius(16)
             } else {
                 // Flashcard preview
-                Button(action: {
-                    print("[DEBUG] Tapped flashcard preview")
-                    // Navigate to flashcard drill view with all cards
-                    navigateToFlashcards(languageCode: languageCode, userId: userId, dueOnly: false)
-                }) {
-                    ZStack {
-                        // Card background
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(Color(.secondarySystemBackground))
-                            .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                        
-                        // Card content
-                        VStack(spacing: 20) {
-                            Text(viewModel.currentLevel?.flashcardPreviewWord ?? "Hola")
-                                .font(.system(size: 28, weight: .bold))
-                                .multilineTextAlignment(.center)
+                ZStack {
+                    Button(action: {
+                        print("[DEBUG] Tapped flashcard preview")
+                        // Navigate to flashcard drill view with all cards
+                        navigateToFlashcards(languageCode: languageCode, userId: userId, dueOnly: false)
+                    }) {
+                        ZStack {
+                            // Card background
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color(.secondarySystemBackground))
+                                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
                             
-                            Text("Tap to review")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
+                            // Card content
+                            VStack(spacing: 20) {
+                                Text(viewModel.currentLevel?.flashcardPreviewWord ?? "Hola")
+                                    .font(.system(size: 28, weight: .bold))
+                                    .multilineTextAlignment(.center)
+                                
+                                Text("Tap to review")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
+                            .padding()
                         }
-                        .padding()
+                        .frame(height: 150)
                     }
-                    .frame(height: 150)
+                    .buttonStyle(PlainButtonStyle()) // Use plain button style for better tap handling
+                    
+                    NavigationLink(
+                        destination: FlashcardReviewView(langCode: languageCode, userId: userId, dueOnly: false),
+                        isActive: Binding(
+                            get: { 
+                                if case .flashcardReview(_, _, let dueOnly) = activeNavigation, !dueOnly {
+                                    return true
+                                }
+                                return false
+                            },
+                            set: { newValue in
+                                if !newValue {
+                                    activeNavigation = nil
+                                }
+                            }
+                        ),
+                        label: { EmptyView() }
+                    )
                 }
-                .buttonStyle(PlainButtonStyle()) // Use plain button style for better tap handling
                 
                 // Flashcard stats & review button
                 HStack {
-                    Button(action: {
-                        print("[DEBUG] Tapped Review All")
-                        // Navigate to full flashcard review
-                        navigateToFlashcards(languageCode: languageCode, userId: userId, dueOnly: false)
-                    }) {
-                        Text("Review All")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 12)
-                            .frame(maxWidth: .infinity)
-                            .background(Color(hex: "00BFFF"))
-                            .cornerRadius(12)
+                    ZStack {
+                        Button(action: {
+                            print("[DEBUG] Tapped Review All")
+                            // Navigate to full flashcard review
+                            navigateToFlashcards(languageCode: languageCode, userId: userId, dueOnly: false)
+                        }) {
+                            Text("Review All")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding(.vertical, 12)
+                                .frame(maxWidth: .infinity)
+                                .background(Color(hex: "00BFFF"))
+                                .cornerRadius(12)
+                        }
+                        
+                        NavigationLink(
+                            destination: FlashcardReviewView(langCode: languageCode, userId: userId, dueOnly: false),
+                            isActive: Binding(
+                                get: { 
+                                    if case .flashcardReview(_, _, let dueOnly) = activeNavigation, !dueOnly {
+                                        return true
+                                    }
+                                    return false
+                                },
+                                set: { newValue in
+                                    if !newValue {
+                                        activeNavigation = nil
+                                    }
+                                }
+                            ),
+                            label: { EmptyView() }
+                        )
                     }
                     
-                    Button(action: {
-                        print("[DEBUG] Tapped Due Cards")
-                        // Navigate to due cards only
-                        navigateToFlashcards(languageCode: languageCode, userId: userId, dueOnly: true)
-                    }) {
-                        Text("Due Cards")
-                            .font(.headline)
-                            .foregroundColor(Color(hex: "00BFFF"))
-                            .padding(.vertical, 12)
-                            .frame(maxWidth: .infinity)
-                            .background(Color(hex: "00BFFF").opacity(0.2))
-                            .cornerRadius(12)
+                    ZStack {
+                        Button(action: {
+                            print("[DEBUG] Tapped Due Cards")
+                            // Navigate to due cards only
+                            navigateToFlashcards(languageCode: languageCode, userId: userId, dueOnly: true)
+                        }) {
+                            Text("Due Cards")
+                                .font(.headline)
+                                .foregroundColor(Color(hex: "00BFFF"))
+                                .padding(.vertical, 12)
+                                .frame(maxWidth: .infinity)
+                                .background(Color(hex: "00BFFF").opacity(0.2))
+                                .cornerRadius(12)
+                        }
+                        
+                        NavigationLink(
+                            destination: FlashcardReviewView(langCode: languageCode, userId: userId, dueOnly: true),
+                            isActive: Binding(
+                                get: { 
+                                    if case .flashcardReview(_, _, let dueOnly) = activeNavigation, dueOnly {
+                                        return true
+                                    }
+                                    return false
+                                },
+                                set: { newValue in
+                                    if !newValue {
+                                        activeNavigation = nil
+                                    }
+                                }
+                            ),
+                            label: { EmptyView() }
+                        )
                     }
                 }
             }
@@ -574,20 +710,31 @@ struct LanguageDashboardView: View {
     private func startStudySession(mode: StudyMode) {
         print("[DEBUG] Starting study session for mode: \(mode.rawValue)")
         
-        // Set the navigation tag directly
+        // Set the navigation tag directly and also provide visual feedback
+        @State var isLoading = true
+        
         switch mode {
         case .learn:
             let destination = NavigationDestination.learnMode(languageCode: languageCode, userId: userId)
-            activeNavigation = destination
+            // Force an explicit navigation for better reliability
+            DispatchQueue.main.async {
+                self.activeNavigation = destination
+            }
             
         case .review:
             let destination = NavigationDestination.reviewMode(languageCode: languageCode, userId: userId)
-            activeNavigation = destination
+            // Force an explicit navigation for better reliability
+            DispatchQueue.main.async {
+                self.activeNavigation = destination
+            }
             
         case .bossBattle:
             if let level = viewModel.currentLevel {
                 let destination = NavigationDestination.bossBattle(languageCode: languageCode, userId: userId, level: level)
-                activeNavigation = destination
+                // Force an explicit navigation for better reliability
+                DispatchQueue.main.async {
+                    self.activeNavigation = destination
+                }
             } else {
                 print("[ERROR] Cannot start boss battle without a current level")
             }
@@ -595,7 +742,16 @@ struct LanguageDashboardView: View {
     }
     
     private func navigateToFlashcards(languageCode: String, userId: String, dueOnly: Bool) {
-        activeNavigation = .flashcardReview(languageCode: languageCode, userId: userId, dueOnly: dueOnly)
+        print("[DEBUG] Navigating to flashcards, dueOnly: \(dueOnly)")
+        isLoading = true
+        let destination = NavigationDestination.flashcardReview(languageCode: languageCode, userId: userId, dueOnly: dueOnly)
+        DispatchQueue.main.async {
+            self.activeNavigation = destination
+            // Add a slight delay to ensure UI updates
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.isLoading = false
+            }
+        }
     }
     
     // MARK: - Navigation Views
@@ -623,45 +779,6 @@ struct LanguageDashboardView: View {
                 }
             }
         )
-    }
-    
-    private var learnModeNavigationLink: some View {
-        NavigationLink(value: NavigationDestination.learnMode(languageCode: languageCode, userId: userId)) {
-            EmptyView()
-        }
-        .hidden()
-    }
-    
-    private var reviewModeNavigationLink: some View {
-        NavigationLink(value: NavigationDestination.reviewMode(languageCode: languageCode, userId: userId)) {
-            EmptyView()
-        }
-        .hidden()
-    }
-    
-    private var bossBattleNavigationLink: some View {
-        Group {
-            if let level = viewModel.currentLevel {
-                NavigationLink(value: NavigationDestination.bossBattle(languageCode: languageCode, userId: userId, level: level)) {
-                    EmptyView()
-                }
-                .hidden()
-            }
-        }
-    }
-    
-    private var allFlashcardsNavigationLink: some View {
-        NavigationLink(value: NavigationDestination.flashcardReview(languageCode: languageCode, userId: userId, dueOnly: false)) {
-            EmptyView()
-        }
-        .hidden()
-    }
-    
-    private var dueFlashcardsNavigationLink: some View {
-        NavigationLink(value: NavigationDestination.flashcardReview(languageCode: languageCode, userId: userId, dueOnly: true)) {
-            EmptyView()
-        }
-        .hidden()
     }
 }
 

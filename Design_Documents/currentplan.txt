@@ -1,0 +1,74 @@
+Overall Goal: Ensure the Study Menu and its related features (Learn, Review, Boss Battles) are fully functional, with all data pulled from the database, progression accurately tracked, and gamification elements (XP, streaks) working as intended.
+Phase 1: Solidify Database Schema for Core Progression & Content
+Objective: Create missing tables and add crucial columns to existing ones to support all Study Menu features.
+Tasks:
+Create user_band_progress Table:
+Purpose: Tracks user's completion of units/lessons within a proficiency band and their Boss Battle status for that band.
+Columns: user_id (UUID, FK to auth.users), band_id (INT, FK to language_levels.id), units_completed (INT, default 0), boss_passed (BOOLEAN, default FALSE), started_at (TIMESTAMPTZ, default now()), passed_at (TIMESTAMPTZ, nullable).
+Primary Key: (user_id, band_id).
+(Ref: Design Doc Design_Documents/Design.txt:114)
+Create boss_tests Table:
+Purpose: Stores the definitions and content for end-of-band assessments.
+Columns: boss_test_id (SERIAL PK), band_id (INT, UNIQUE, FK to language_levels.id), title (TEXT NOT NULL), items_json (JSONB NOT NULL, for questions/content), time_limit_seconds (INT, CHECK > 0), pass_score_pct (INT, CHECK > 0 AND <= 100).
+(Ref: Design Doc Design_Documents/Design.txt:166)
+Create learn_errors Table:
+Purpose: Tracks user mistakes during learning activities for targeted review.
+Columns: user_id (UUID, FK to auth.users), card_id (UUID, FK to flashcards.id), error_count (INT, default 1, CHECK > 0), last_error_at (TIMESTAMPTZ, default now()), error_details (JSONB, nullable).
+Primary Key: (user_id, card_id).
+(Ref: Design Doc Design_Documents/Design.txt:159)
+Modify profiles Table:
+Action: Add xp column (BIGINT, default 0, CHECK xp >= 0).
+Action (Optional): Add last_active_at (TIMESTAMPTZ) if not reliably inferable for streak logic.
+(Ref: Design Doc Design_Documents/Design.txt:92)
+Modify language_levels (Bands) Table:
+Action: Add units_required column (INT, NOT NULL, CHECK units_required > 0).
+(Ref: Design Doc Design_Documents/Design.txt:112)
+Modify lessons Table:
+Action: Add lesson_type column (TEXT NOT NULL, e.g., 'vocabulary', 'grammar').
+Action: Add xp_value column (INT, default 15, CHECK xp_value >= 0).
+Action (Consider): Change content column type from TEXT to JSONB for more flexible lesson structures.
+(Ref: Design Doc Design_Documents/Design.txt:134-136)
+Modify flashcards Table (primary flashcard table):
+Action: Add language_id column (INT, FK to languages.id) – if not reliably inferable from lesson/topic/level hierarchy.
+Action: Add answer_json column (JSONB NOT NULL) – for flexible question/answer types (e.g., multiple choice options, correct translation alternatives).
+Action: Add difficulty_rating column (INT, default 3, CHECK BETWEEN 1 AND 5) – admin-set initial difficulty.
+(Ref: Design Doc Design_Documents/Design.txt:142-148)
+Phase 2: Implement Core Service Functions in SupabaseService.swift
+Objective: Create Swift functions to interact with the new/updated database tables.
+Tasks:
+User Band Progress Functions:
+func getUserBandProgress(userId: UUID, bandId: Int) async throws -> UserBandProgress?
+func updateUserBandProgress(userId: UUID, bandId: Int, unitsCompletedIncrement: Int?, bossPassedStatus: Bool?) async throws
+func getOrCreateUserBandProgress(userId: UUID, bandId: Int) async throws -> UserBandProgress (Ensures a record exists before updating).
+Boss Test Functions:
+func getBossTestForBand(bandId: Int) async throws -> BossTest?
+func recordBossTestAttempt(userId: UUID, bandId: Int, score: Double, passed: Bool) async throws (This should also call updateUserBandProgress).
+Learn Errors Functions:
+func logLearnError(userId: UUID, cardId: UUID, errorDetails: [String: Any]?) async throws
+func getLearnErrorsForUser(userId: UUID, langCode: String, limit: Int) async throws -> [LearnError] (May need to join with flashcards to get language context if language_id isn't on flashcards directly).
+Gamification Profile Update Functions:
+func updateUserXPAndLevel(userId: UUID, xpGained: Int) async throws (Calculates new total XP, updates profiles.xp, and updates profiles.level based on the formula: level = floor(sqrt(total_xp / 50))).
+func updateUserStreak(userId: UUID) async throws (Implements logic from Design_Documents/Design.txt:427-431, potentially using profiles.last_active_at).
+Lesson & Flashcard Model Updates:
+Ensure SupabaseLesson and SupabaseFlashcard Swift structs/classes in Models/Study/SupabaseModels.swift are updated to include the new fields.
+Update corresponding fetch functions (e.g., getLessons, getFlashcards) to select these new fields.
+Phase 3: Integrate Services into ViewModels & UI Logic
+Objective: Connect the new backend capabilities to the existing ViewModels and UI components to enable full functionality.
+Tasks:
+LanguageDashboardViewModel.swift:
+Fetch and display units_completed / units_required for each band using getUserBandProgress and language_levels.units_required.
+Determine Boss Battle eligibility (BossCard activation) based on user_band_progress.units_completed >= language_levels.units_required and !user_band_progress.boss_passed.
+LearnModeViewModel (or equivalent):
+When a lesson is completed, call a service function that increments user_band_progress.units_completed.
+Award XP using updateUserXPAndLevel.
+ReviewModeViewModel (or equivalent, possibly part of FlashcardReviewViewModel.swift):
+Modify logic for fetching review items to include cards from getLearnErrorsForUser in addition to SRS-due cards from getDueFlashcards.
+When a card is reviewed (especially if an error was made previously), update learn_errors (e.g., decrement count or remove if now correct).
+Award XP for successful reviews using updateUserXPAndLevel.
+BossBattleViewModel.swift:
+Fetch Boss Battle definition using getBossTestForBand.
+On completion, submit results using recordBossTestAttempt.
+Award significant XP for passing using updateUserXPAndLevel.
+Gamification UI Updates:
+Ensure daily streak logic is called (e.g., on app open or significant activity) via updateUserStreak.
+Display XP, level, and streak accurately in relevant UI locations (e.g., Profile screen, StudyMenuView if applicable).

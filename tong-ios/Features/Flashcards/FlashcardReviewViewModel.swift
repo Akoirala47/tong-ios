@@ -29,8 +29,9 @@ class FlashcardReviewViewModel: ObservableObject {
     
     // MARK: - Private Properties
     private var cancellables = Set<AnyCancellable>()
-    private var userId: String = "temp-user-id" // Should come from auth service
-    private var langCode: String = "es" // Default to Spanish
+    private var userId: String
+    private var langCode: String
+    private var dueOnly: Bool
     
     // Cache of card progress data to avoid redundant lookups
     private var progressCache: [String: (interval: Int, reviewCount: Int)] = [:]
@@ -39,9 +40,10 @@ class FlashcardReviewViewModel: ObservableObject {
     private var currentLanguageCode: String? // Store current language
     
     // MARK: - Initialization
-    init(langCode: String = "es") {
+    init(langCode: String = "es", userId: String? = nil, dueOnly: Bool = false) {
         self.langCode = langCode
-        // In a real app, we would get the authenticated user ID here
+        self.userId = userId ?? SupabaseService.shared.client.auth.currentUser?.id.uuidString ?? UUID().uuidString
+        self.dueOnly = dueOnly
     }
     
     // MARK: - Public Methods
@@ -52,30 +54,34 @@ class FlashcardReviewViewModel: ObservableObject {
         
         Task {
             do {
-                // First try to load due flashcards based on spaced repetition
-                var cards = try await SupabaseService.shared.getDueFlashcards(for: userId, langCode: langCode)
+                var cards: [SupabaseFlashcard] = []
                 
-                // If no cards are due, load some random ones from the first lesson
-                if cards.isEmpty {
+                // First try to load due flashcards based on spaced repetition if dueOnly is true
+                if dueOnly {
+                    cards = try await SupabaseService.shared.getDueFlashcards(for: userId, langCode: langCode)
+                }
+                
+                // If no cards are due or not in dueOnly mode, load some random ones from the first lesson
+                if cards.isEmpty && !dueOnly {
                     // Get the first level for this language
                     let languages = try await SupabaseService.shared.getLanguages()
                     if let language = languages.first(where: { $0.code == langCode }) {
                         let levels = try await SupabaseService.shared.getLanguageLevels(for: language.id)
                         if let firstLevel = levels.first {
                             let topics = try await SupabaseService.shared.getTopics(for: firstLevel.id)
-                            if let firstTopic = topics.first, let topicId = Int(firstTopic.id) {
-                                let lessons = try await SupabaseService.shared.getLessons(for: String(topicId))
+                            if let firstTopic = topics.first {
+                                let lessons = try await SupabaseService.shared.getLessons(for: firstTopic.id)
                                 if let firstLesson = lessons.first {
                                     cards = try await SupabaseService.shared.getFlashcards(for: firstLesson.id)
                                 }
                             }
                         }
                     }
-                    
-                    // If still empty, fall back to sample data
-                    if cards.isEmpty {
-                        cards = sampleFlashcards
-                    }
+                }
+                
+                // If still empty, fall back to sample data
+                if cards.isEmpty {
+                    cards = sampleFlashcards
                 }
                 
                 // Load progress data for each card

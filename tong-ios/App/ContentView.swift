@@ -212,7 +212,7 @@ struct HomeView: View {
                 let languageCode = primaryLanguage.code
                 let cardCount = dueCardCounts[languageCode] ?? 0
                 
-                NavigationLink(destination: FlashcardReviewView(langCode: languageCode)) {
+                NavigationLink(destination: FlashcardReviewView(langCode: languageCode, userId: userId)) {
                     ActionCard(
                         icon: "doc.text",
                         title: "Resume \(primaryLanguage.name) Flashcards",
@@ -223,7 +223,7 @@ struct HomeView: View {
                     )
                 }
             } else {
-                NavigationLink(destination: FlashcardReviewView()) {
+                NavigationLink(destination: FlashcardReviewView(userId: userId)) {
                     ActionCard(
                         icon: "doc.text",
                         title: "Resume Flashcard Review",

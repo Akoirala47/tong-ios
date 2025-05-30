@@ -216,9 +216,8 @@ struct StudyTabView: View {
     @ViewBuilder
     private var languageContentView: some View {
         if let code = selectedLanguage {
-            NavigationStack {
-                LanguageDashboardView(languageCode: code, userId: userId)
-            }
+            // Avoid nested NavigationStacks which can cause navigation issues
+            LanguageDashboardView(languageCode: code, userId: userId)
         } else {
             Text("Please select a language")
                 .foregroundColor(.secondary)
